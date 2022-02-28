@@ -6,9 +6,25 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element audio_clk
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element audio_pll
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
    element clk_50
    {
       datum _sortIndex
@@ -33,6 +49,62 @@
          type = "int";
       }
    }
+   element mtl_clk
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element reset_bridge
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element sdram_clk
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element sys_clk
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element sys_sdram_pll
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element vga_clk
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element video_pll
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -47,27 +119,66 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName">DE2_115_Media_Computer.qpf</parameter>
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
+ <interface
+   name="audio_clk_out"
+   internal="audio_clk.out_clk"
+   type="clock"
+   dir="start" />
  <interface name="clk_50_2_in" internal="clk_50_2.clk_in" type="clock" dir="end" />
  <interface name="clk_50_3_in" internal="clk_50_3.clk_in" type="clock" dir="end" />
  <interface name="clk_50_in" internal="clk_50.clk_in" type="clock" dir="end" />
- <interface name="reset" internal="clk_50.clk_in_reset" type="reset" dir="end" />
  <interface
-   name="reset_0"
-   internal="clk_50_2.clk_in_reset"
+   name="mtl_clk_out"
+   internal="mtl_clk.out_clk"
+   type="clock"
+   dir="start" />
+ <interface
+   name="reset_bridge_in"
+   internal="reset_bridge.in_reset"
    type="reset"
    dir="end" />
  <interface
-   name="reset_1"
-   internal="clk_50_3.clk_in_reset"
-   type="reset"
-   dir="end" />
+   name="sdram_clk_out"
+   internal="sdram_clk.out_clk"
+   type="clock"
+   dir="start" />
+ <interface
+   name="sys_clk_out"
+   internal="sys_clk.out_clk"
+   type="clock"
+   dir="start" />
+ <interface
+   name="vga_clk_out"
+   internal="vga_clk.out_clk"
+   type="clock"
+   dir="start" />
+ <module
+   name="audio_clk"
+   kind="altera_clock_bridge"
+   version="17.1"
+   enabled="1">
+  <parameter name="DERIVED_CLOCK_RATE" value="12288000" />
+  <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
+  <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
+ </module>
+ <module
+   name="audio_pll"
+   kind="altera_up_avalon_audio_pll"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="audio_clk_freq" value="12.288" />
+  <parameter name="device_family" value="Cyclone IV E" />
+  <parameter name="gui_refclk" value="50.0" />
+ </module>
  <module name="clk_50" kind="clock_source" version="17.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -86,6 +197,143 @@
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
+ <module name="mtl_clk" kind="altera_clock_bridge" version="17.1" enabled="1">
+  <parameter name="DERIVED_CLOCK_RATE" value="33300000" />
+  <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
+  <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
+ </module>
+ <module
+   name="reset_bridge"
+   kind="altera_reset_bridge"
+   version="17.1"
+   enabled="1">
+  <parameter name="ACTIVE_LOW_RESET" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="NUM_RESET_OUTPUTS" value="1" />
+  <parameter name="SYNCHRONOUS_EDGES" value="none" />
+  <parameter name="USE_RESET_REQUEST" value="0" />
+ </module>
+ <module
+   name="sdram_clk"
+   kind="altera_clock_bridge"
+   version="17.1"
+   enabled="1">
+  <parameter name="DERIVED_CLOCK_RATE" value="50000000" />
+  <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
+  <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
+ </module>
+ <module name="sys_clk" kind="altera_clock_bridge" version="17.1" enabled="1">
+  <parameter name="DERIVED_CLOCK_RATE" value="50000000" />
+  <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
+  <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
+ </module>
+ <module
+   name="sys_sdram_pll"
+   kind="altera_up_avalon_sys_sdram_pll"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="CIII_boards" value="DE0" />
+  <parameter name="CIV_boards" value="DE2-115" />
+  <parameter name="CV_boards" value="DE10-Standard" />
+  <parameter name="MAX10_boards" value="DE10-Lite" />
+  <parameter name="device_family" value="Cyclone IV E" />
+  <parameter name="gui_outclk" value="50.0" />
+  <parameter name="gui_refclk" value="50.0" />
+  <parameter name="other_boards" value="None" />
+ </module>
+ <module name="vga_clk" kind="altera_clock_bridge" version="17.1" enabled="1">
+  <parameter name="DERIVED_CLOCK_RATE" value="25000000" />
+  <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
+  <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
+ </module>
+ <module
+   name="video_pll"
+   kind="altera_up_avalon_video_pll"
+   version="17.1"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="camera">5MP Digital Camera (THDB_D5M)</parameter>
+  <parameter name="device_family" value="Cyclone IV E" />
+  <parameter name="gui_refclk" value="50.0" />
+  <parameter name="gui_resolution" value="VGA 640x480" />
+  <parameter name="lcd">7" LCD on VEEK-MT and MTL/MTL2 Modules</parameter>
+  <parameter name="lcd_clk_en" value="true" />
+  <parameter name="vga_clk_en" value="true" />
+  <parameter name="video_in_clk_en" value="false" />
+ </module>
+ <connection
+   kind="clock"
+   version="17.1"
+   start="audio_pll.audio_clk"
+   end="audio_clk.in_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clk_50.clk"
+   end="sys_sdram_pll.ref_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clk_50_3.clk"
+   end="audio_pll.ref_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="clk_50_2.clk"
+   end="video_pll.ref_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="video_pll.lcd_clk"
+   end="mtl_clk.in_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="sys_sdram_pll.sdram_clk"
+   end="sdram_clk.in_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="sys_sdram_pll.sys_clk"
+   end="sys_clk.in_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="video_pll.vga_clk"
+   end="vga_clk.in_clk" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50.clk_reset"
+   end="sys_sdram_pll.ref_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50_3.clk_reset"
+   end="audio_pll.ref_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="clk_50_2.clk_reset"
+   end="video_pll.ref_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="reset_bridge.out_reset"
+   end="clk_50.clk_in_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="reset_bridge.out_reset"
+   end="clk_50_2.clk_in_reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="reset_bridge.out_reset"
+   end="clk_50_3.clk_in_reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

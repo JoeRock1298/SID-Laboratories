@@ -1,8 +1,14 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace inst nios_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios_system.clk_50_2 -pg 1 -lvl 1 -y 90
+preplace inst nios_system.clk_50 -pg 1 -lvl 1 -y 30
+preplace inst nios_system.clk_50_3 -pg 1 -lvl 1 -y 150
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)clk_50.clk_in_reset,(SLAVE)nios_system.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.reset_1,(SLAVE)clk_50_3.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)clk_50_2.clk_in_reset,(SLAVE)nios_system.reset_0) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.clk_50_3_in,(SLAVE)clk_50_3.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.clk_50_2_in,(SLAVE)clk_50_2.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.clk_50_in,(SLAVE)clk_50.clk_in) 1 0 1 NJ
+levelinfo -pg 1 0 80 300
+levelinfo -hier nios_system 90 120 290
