@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Feb 28 12:49:04 2022
+Quartus Prime Version : 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+Revision Name : mi_primer_niosii
+Top-level Entity Name : mi_primer_niosii
+Family : Cyclone IV E
+Total logic elements : 2,013
+    Total combinational functions : 1,756
+    Dedicated logic registers : 1,091
+Total registers : 1091
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 175,104
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,12 @@
+module mi_primer_niosii (input iCLK_50, output [7:0] oLEDG);
+	
+	wire reset_n;
+	assign reset_n = 1b'1;
+	
+	nios_system u0 (
+			.clock_50_clk              (iCLK_50),
+			.reset_reset_n             (reset_n),
+			.led_green_external_export (oLEDG)
+		);
+
+endmodule 

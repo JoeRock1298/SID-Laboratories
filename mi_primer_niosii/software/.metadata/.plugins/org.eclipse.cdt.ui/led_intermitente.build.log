@@ -1,0 +1,9 @@
+12:55:14 **** Incremental Build of configuration Nios II for project led_intermitente ****
+make all 
+Info: Building ../led_intermitente_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../led_intermitente_bsp/
+[BSP build complete]
+[led_intermitente build complete]
+
+12:55:15 Build Finished (took 858ms)
+

@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "oHEX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oHEX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oHEX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oHEX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oHEX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oHEX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oHEX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "iCLK_50",
+					"strict" : false
+				},
+				{
+					"name" : "iSW1",
+					"strict" : false
+				},
+				{
+					"name" : "iSW0",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

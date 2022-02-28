@@ -50,3 +50,33 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_Y2 -to iCLK_50
+set_location_assignment PIN_G21 -to oLEDG[7]
+set_location_assignment PIN_G22 -to oLEDG[6]
+set_location_assignment PIN_G20 -to oLEDG[5]
+set_location_assignment PIN_H21 -to oLEDG[4]
+set_location_assignment PIN_E24 -to oLEDG[3]
+set_location_assignment PIN_E25 -to oLEDG[2]
+set_location_assignment PIN_E22 -to oLEDG[1]
+set_location_assignment PIN_E21 -to oLEDG[0]
+set_global_assignment -name VERILOG_INCLUDE_FILE MathFun.vh
+set_global_assignment -name VERILOG_FILE mi_primer_contador.v
+set_global_assignment -name VERILOG_FILE hexTo7seg.v
+set_global_assignment -name VERILOG_FILE contador.v
+set_global_assignment -name QIP_FILE nios_system/synthesis/nios_system.qip
+set_global_assignment -name VERILOG_FILE mi_primer_niosii.v
+set_location_assignment PIN_AB28 -to iSW0
+set_location_assignment PIN_AC28 -to iSW1
+set_location_assignment PIN_H22 -to oHEX[6]
+set_location_assignment PIN_J22 -to oHEX[5]
+set_location_assignment PIN_L25 -to oHEX[4]
+set_location_assignment PIN_L26 -to oHEX[3]
+set_location_assignment PIN_E17 -to oHEX[2]
+set_location_assignment PIN_F22 -to oHEX[1]
+set_location_assignment PIN_G18 -to oHEX[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
