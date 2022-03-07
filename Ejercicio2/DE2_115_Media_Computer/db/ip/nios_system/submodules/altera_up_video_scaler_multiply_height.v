@@ -1,3 +1,16 @@
+// (C) 2001-2017 Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions and other 
+// software and tools, and its AMPP partner logic functions, and any output 
+// files from any of the foregoing (including device programming or simulation 
+// files), and any associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License Subscription 
+// Agreement, Intel FPGA IP License Agreement, or other applicable 
+// license agreement, including, without limitation, that your use is for the 
+// sole purpose of programming logic devices manufactured by Intel and sold by 
+// Intel or its authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+
 // THIS FILE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
@@ -189,8 +202,6 @@ begin
 		width_in <= 'h0;
 	else if (s_multiply_height == STATE_1_LOOP_FIFO)
 		width_in <= 'h0;
-	else if (stream_in_ready & stream_in_valid & stream_in_startofpacket)
-		width_in <= 'h1;
 	else if (stream_in_ready & stream_in_valid)
 		width_in <= width_in + 1;
 end
@@ -199,14 +210,10 @@ always @(posedge clk)
 begin
 	if (reset)
 		width_out <= 'h0;
-	else if	(s_multiply_height == STATE_0_GET_CURRENT_LINE)
-		width_out <= 'h0;
 	else if (fifo_read)
 	begin
 		if (width_out == (WIDTH - 1))
 			width_out <= 'h0;
-		else if (fifo_data_out[DW + 1])
-			width_out <= 'h1;
 		else
 			width_out <= width_out + 1;
 	end
@@ -252,7 +259,7 @@ assign fifo_write					=
 			stream_in_ready & stream_in_valid & ~fifo_full;
 assign fifo_read					=
 		(s_multiply_height == STATE_0_GET_CURRENT_LINE) ?
-			fifo_full &  ~(width_in == WIDTH) :
+			1'b0 :
 			(stream_out_ready | ~stream_out_valid) & ~fifo_empty;
 		
 /*****************************************************************************
@@ -272,10 +279,10 @@ scfifo Multiply_Height_FIFO (
 	// Outputs
 	.q					(fifo_data_out),
 	.empty			(fifo_empty),
-	.full				(fifo_full)
+	.full				(fifo_full),
 	   
 	// synopsys translate_off
-	,
+	
 	.aclr				(),
 	.almost_empty	(),
 	.almost_full	(),

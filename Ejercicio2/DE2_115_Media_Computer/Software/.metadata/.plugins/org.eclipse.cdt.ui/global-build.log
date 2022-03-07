@@ -1,0 +1,35 @@
+14:09:15 **** Incremental Build of configuration Nios II for project interrupt_example ****
+make all 
+Info: Building ../interrupt_example_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../interrupt_example_bsp/
+[BSP build complete]
+Info: Compiling interrupt_example.c to obj/default/interrupt_example.o
+nios2-elf-gcc -xc -MP -MMD -c -I../interrupt_example_bsp//HAL/inc -I../interrupt_example_bsp/ -I../interrupt_example_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/interrupt_example.o interrupt_example.c
+Info: Compiling interval_timer_ISR.c to obj/default/interval_timer_ISR.o
+nios2-elf-gcc -xc -MP -MMD -c -I../interrupt_example_bsp//HAL/inc -I../interrupt_example_bsp/ -I../interrupt_example_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/interval_timer_ISR.o interval_timer_ISR.c
+interval_timer_ISR.c: In function 'interval_timer_isr':
+interval_timer_ISR.c:20:10: warning: suggest explicit braces to avoid ambiguous 'else' [-Wparentheses]
+  else if (key_pressed == KEY1)    // si KEY1 gira a la derecha
+          ^
+Info: Compiling pushbutton_ISR.c to obj/default/pushbutton_ISR.o
+nios2-elf-gcc -xc -MP -MMD -c -I../interrupt_example_bsp//HAL/inc -I../interrupt_example_bsp/ -I../interrupt_example_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/pushbutton_ISR.o pushbutton_ISR.c
+Info: Linking interrupt_example.elf
+nios2-elf-g++  -T'../interrupt_example_bsp//linker.x' -msys-crt0='../interrupt_example_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../interrupt_example_bsp/   -Wl,-Map=interrupt_example.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o interrupt_example.elf obj/default/interrupt_example.o obj/default/interval_timer_ISR.o obj/default/pushbutton_ISR.o -lm -msys-lib=m
+nios2-elf-insert interrupt_example.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1646648953 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/interrupt_example_bsp/../../nios_system.sopcinfo
+Info: (interrupt_example.elf) 33 KBytes program size (code + initialized data).
+Info:                         131032 KBytes free for stack + heap.
+Info: Creating interrupt_example.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source interrupt_example.elf >interrupt_example.objdump
+[interrupt_example build complete]
+14:09:31 **** Build of configuration Nios II for project interrupt_example ****
+make all 
+Info: Building ../interrupt_example_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../interrupt_example_bsp/
+[BSP build complete]
+[interrupt_example build complete]
+14:09:33 **** Incremental Build of configuration Nios II for project interrupt_example ****
+make all 
+Info: Building ../interrupt_example_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../interrupt_example_bsp/
+[BSP build complete]
+[interrupt_example build complete]

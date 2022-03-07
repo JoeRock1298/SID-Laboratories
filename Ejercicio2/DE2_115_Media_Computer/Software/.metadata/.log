@@ -1,0 +1,264 @@
+!SESSION 2022-03-07 11:34:17.638 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2022-03-07 11:35:39.192
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Received fatal alert: handshake_failure. ; version: 1.100.0.v20160217-0435
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 11:37:09.524
+!MESSAGE Indexed 'test_ml_bsp' (83 sources, 64 headers) in 1,81 sec: 1.214 declarations; 2.621 references; 113 unresolved inclusions; 6 syntax errors; 191 unresolved names (4,7 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 11:37:12.165
+!MESSAGE Indexed 'test_ml' (0 sources, 0 headers) in 0,001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.core.resources 2 2 2022-03-07 11:47:55.906
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2022-03-07 11:47:55.906
+!MESSAGE The project description file (.project) for 'test_ml_bsp' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 2 2022-03-07 11:49:08.431
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2022-03-07 11:49:08.431
+!MESSAGE The project description file (.project) for 'RemoteSystemsTempFiles' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 11:49:10.391
+!MESSAGE Indexed 'test_mtl_bsp' (100 sources, 189 headers) in 1,73 sec: 7.143 declarations; 15.700 references; 47 unresolved inclusions; 3 syntax errors; 174 unresolved names (0,76 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 11:49:11.067
+!MESSAGE Indexed 'test_mtl' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 11:51:37.565
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 11:51:39.763
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:10:04.309
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:10:06.494
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:10:31.444
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:10:31.973
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:10:34.091
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:11:15.997
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:11:16.564
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:11:18.767
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:13:46.258
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:13:46.738
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:13:48.893
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:14:20.165
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:14:20.731
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:14:22.875
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:15:25.855
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:15:26.441
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:15:28.557
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:15:54.912
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:15:55.484
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:15:57.615
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:16:57.879
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:16:58.456
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:17:00.552
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:17:54.025
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:17:54.604
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:17:56.771
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:30:01.204
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:30:03.320
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:32:08.184
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:32:08.717
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:32:10.922
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:33:34.305
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:33:34.871
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:33:37.048
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:34:30.056
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:34:30.640
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:34:32.808
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:35:34.799
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:35:35.337
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:35:37.459
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/test_mtl/test_mtl.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 12:43:16.370
+!MESSAGE Indexed 'media_bsp' (100 sources, 184 headers) in 1,49 sec: 6.846 declarations; 15.269 references; 60 unresolved inclusions; 3 syntax errors; 201 unresolved names (0,9 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 12:43:16.944
+!MESSAGE Indexed 'media' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:46:42.368
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 12:46:44.474
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/media/media.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:05:14.626
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:05:15.194
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:05:17.276
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/media/media.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 13:10:39.620
+!MESSAGE Indexed 'media_graphics_HAL_bsp' (100 sources, 185 headers) in 1,64 sec: 6.855 declarations; 15.327 references; 41 unresolved inclusions; 3 syntax errors; 169 unresolved names (0,76 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 13:10:40.199
+!MESSAGE Indexed 'media_graphics_HAL' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:12:49.179
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:12:51.292
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/media_graphics_HAL/media_graphics_HAL.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:53:00.202
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:53:02.317
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/media_graphics_HAL/media_graphics_HAL.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:54:19.480
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:54:21.557
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/media_graphics_HAL/media_graphics_HAL.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:56:38.994
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:56:39.555
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:56:41.688
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/media_graphics_HAL/media_graphics_HAL.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:58:32.764
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:58:33.298
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 13:58:35.494
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/media_graphics_HAL/media_graphics_HAL.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 13:59:22.780
+!MESSAGE Indexed 'interrupt_example_bsp' (100 sources, 185 headers) in 1,42 sec: 6.982 declarations; 15.367 references; 62 unresolved inclusions; 3 syntax errors; 202 unresolved names (0,9 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-07 13:59:23.277
+!MESSAGE Indexed 'interrupt_example' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 14:09:34.658
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 14:09:35.265
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1646648953]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-07 14:09:37.456
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1646648953 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejercicio2/DE2_115_Media_Computer/Software/interrupt_example/interrupt_example.elf]

@@ -1,0 +1,6 @@
+13:10:38 **** Clean-only build of configuration Nios II for project media_graphics_HAL_bsp ****
+make clean 
+[BSP clean complete]
+
+13:10:38 Build Finished (took 215ms)
+

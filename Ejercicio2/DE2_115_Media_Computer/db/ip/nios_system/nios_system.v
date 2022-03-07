@@ -688,8 +688,6 @@ module nios_system (
 		.stream_in_valid          (mtl_pixel_buffer_dma_avalon_pixel_source_valid),         //                  .valid
 		.stream_in_ready          (mtl_pixel_buffer_dma_avalon_pixel_source_ready),         //                  .ready
 		.stream_in_data           (mtl_pixel_buffer_dma_avalon_pixel_source_data),          //                  .data
-		.slave_read               (),                                                       //  avalon_rgb_slave.read
-		.slave_readdata           (),                                                       //                  .readdata
 		.stream_out_ready         (mtl_rgb_resampler_avalon_rgb_source_ready),              // avalon_rgb_source.ready
 		.stream_out_startofpacket (mtl_rgb_resampler_avalon_rgb_source_startofpacket),      //                  .startofpacket
 		.stream_out_endofpacket   (mtl_rgb_resampler_avalon_rgb_source_endofpacket),        //                  .endofpacket
