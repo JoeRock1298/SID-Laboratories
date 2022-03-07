@@ -3,11 +3,14 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="207" />
+   <connections preferredWidth="127" />
    <irq preferredWidth="34" />
+   <name preferredWidth="178" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Project,Library/Basic Functions/Bridges and Adaptors/Reset,Library/Basic Functions/Bridges and Adaptors,Library/Basic Functions,Library/Basic Functions/Bridges and Adaptors/Clock,Library" />
+   expandedCategories="Library/University Program/Audio &amp; Video/Video,Library/University Program/Audio &amp; Video,Library,Project,Library/University Program" />
  <window width="1938" height="1048" x="-9" y="-9" />
+ <generation block_symbol_file="0" />
+ <hdlexample language="VERILOG" />
 </preferences>

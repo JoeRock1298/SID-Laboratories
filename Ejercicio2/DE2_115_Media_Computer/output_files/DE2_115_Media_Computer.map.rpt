@@ -1,0 +1,391 @@
+Analysis & Synthesis report for DE2_115_Media_Computer
+Sat Mar 05 18:36:25 2022
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                              ;
++------------------------------------+------------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Sat Mar 05 18:36:25 2022                    ;
+; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition ;
+; Revision Name                      ; DE2_115_Media_Computer                               ;
+; Top-level Entity Name              ; DE2_115_Media_Computer                               ;
+; Family                             ; Cyclone IV E                                         ;
+; Total logic elements               ; N/A until Partition Merge                            ;
+;     Total combinational functions  ; N/A until Partition Merge                            ;
+;     Dedicated logic registers      ; N/A until Partition Merge                            ;
+; Total registers                    ; N/A until Partition Merge                            ;
+; Total pins                         ; N/A until Partition Merge                            ;
+; Total virtual pins                 ; N/A until Partition Merge                            ;
+; Total memory bits                  ; N/A until Partition Merge                            ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                            ;
+; Total PLLs                         ; N/A until Partition Merge                            ;
++------------------------------------+------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                ;
++----------------------------------------------------------------------------+------------------------+------------------------+
+; Option                                                                     ; Setting                ; Default Value          ;
++----------------------------------------------------------------------------+------------------------+------------------------+
+; Device                                                                     ; EP4CE115F29C7          ;                        ;
+; Top-level entity name                                                      ; DE2_115_Media_Computer ; DE2_115_Media_Computer ;
+; Family name                                                                ; Cyclone IV E           ; Cyclone V              ;
+; Use smart compilation                                                      ; Off                    ; Off                    ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                     ; On                     ;
+; Enable compact report table                                                ; Off                    ; Off                    ;
+; Restructure Multiplexers                                                   ; Auto                   ; Auto                   ;
+; Create Debugging Nodes for IP Cores                                        ; Off                    ; Off                    ;
+; Preserve fewer node names                                                  ; On                     ; On                     ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable                 ; Enable                 ;
+; Verilog Version                                                            ; Verilog_2001           ; Verilog_2001           ;
+; VHDL Version                                                               ; VHDL_1993              ; VHDL_1993              ;
+; State Machine Processing                                                   ; Auto                   ; Auto                   ;
+; Safe State Machine                                                         ; Off                    ; Off                    ;
+; Extract Verilog State Machines                                             ; On                     ; On                     ;
+; Extract VHDL State Machines                                                ; On                     ; On                     ;
+; Ignore Verilog initial constructs                                          ; Off                    ; Off                    ;
+; Iteration limit for constant Verilog loops                                 ; 5000                   ; 5000                   ;
+; Iteration limit for non-constant Verilog loops                             ; 250                    ; 250                    ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                     ; On                     ;
+; Infer RAMs from Raw Logic                                                  ; On                     ; On                     ;
+; Parallel Synthesis                                                         ; On                     ; On                     ;
+; DSP Block Balancing                                                        ; Auto                   ; Auto                   ;
+; NOT Gate Push-Back                                                         ; On                     ; On                     ;
+; Power-Up Don't Care                                                        ; On                     ; On                     ;
+; Remove Redundant Logic Cells                                               ; Off                    ; Off                    ;
+; Remove Duplicate Registers                                                 ; On                     ; On                     ;
+; Ignore CARRY Buffers                                                       ; Off                    ; Off                    ;
+; Ignore CASCADE Buffers                                                     ; Off                    ; Off                    ;
+; Ignore GLOBAL Buffers                                                      ; Off                    ; Off                    ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                    ; Off                    ;
+; Ignore LCELL Buffers                                                       ; Off                    ; Off                    ;
+; Ignore SOFT Buffers                                                        ; On                     ; On                     ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                    ; Off                    ;
+; Optimization Technique                                                     ; Balanced               ; Balanced               ;
+; Carry Chain Length                                                         ; 70                     ; 70                     ;
+; Auto Carry Chains                                                          ; On                     ; On                     ;
+; Auto Open-Drain Pins                                                       ; On                     ; On                     ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                    ; Off                    ;
+; Auto ROM Replacement                                                       ; On                     ; On                     ;
+; Auto RAM Replacement                                                       ; On                     ; On                     ;
+; Auto DSP Block Replacement                                                 ; On                     ; On                     ;
+; Auto Shift Register Replacement                                            ; Auto                   ; Auto                   ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                   ; Auto                   ;
+; Auto Clock Enable Replacement                                              ; On                     ; On                     ;
+; Strict RAM Replacement                                                     ; Off                    ; Off                    ;
+; Allow Synchronous Control Signals                                          ; On                     ; On                     ;
+; Force Use of Synchronous Clear Signals                                     ; Off                    ; Off                    ;
+; Auto RAM Block Balancing                                                   ; On                     ; On                     ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                    ; Off                    ;
+; Auto Resource Sharing                                                      ; Off                    ; Off                    ;
+; Allow Any RAM Size For Recognition                                         ; Off                    ; Off                    ;
+; Allow Any ROM Size For Recognition                                         ; Off                    ; Off                    ;
+; Allow Any Shift Register Size For Recognition                              ; Off                    ; Off                    ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                     ; On                     ;
+; Ignore translate_off and synthesis_off directives                          ; Off                    ; Off                    ;
+; Timing-Driven Synthesis                                                    ; On                     ; On                     ;
+; Report Parameter Settings                                                  ; On                     ; On                     ;
+; Report Source Assignments                                                  ; On                     ; On                     ;
+; Report Connectivity Checks                                                 ; On                     ; On                     ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                    ; Off                    ;
+; Synchronization Register Chain Length                                      ; 2                      ; 2                      ;
+; Power Optimization During Synthesis                                        ; Normal compilation     ; Normal compilation     ;
+; HDL message level                                                          ; Level2                 ; Level2                 ;
+; Suppress Register Optimization Related Messages                            ; Off                    ; Off                    ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                   ; 5000                   ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                   ; 5000                   ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                    ; 100                    ;
+; Clock MUX Protection                                                       ; On                     ; On                     ;
+; Auto Gated Clock Conversion                                                ; Off                    ; Off                    ;
+; Block Design Naming                                                        ; Auto                   ; Auto                   ;
+; SDC constraint protection                                                  ; Off                    ; Off                    ;
+; Synthesis Effort                                                           ; Auto                   ; Auto                   ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                     ; On                     ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                    ; Off                    ;
+; Analysis & Synthesis Message Level                                         ; Medium                 ; Medium                 ;
+; Disable Register Merging Across Hierarchies                                ; Auto                   ; Auto                   ;
+; Resource Aware Inference For Block RAM                                     ; On                     ; On                     ;
++----------------------------------------------------------------------------+------------------------+------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Lite Edition
+    Info: Processing started: Sat Mar 05 18:36:07 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_115_Media_Computer -c DE2_115_Media_Computer
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12248): Elaborating Platform Designer system entity "nios_system.qsys"
+Info (12250): 2022.03.05.18:36:19 Progress: Loading DE2_115_Media_Computer/nios_system.qsys
+Info (12250): 2022.03.05.18:36:20 Progress: Reading input file
+Info (12250): 2022.03.05.18:36:20 Progress: Adding HEX3_HEX0 [altera_up_avalon_parallel_port 17.1]
+Warning (12251): HEX3_HEX0: Component type altera_up_avalon_parallel_port is not in the library
+Info (12250): 2022.03.05.18:36:20 Progress: Parameterizing module HEX3_HEX0
+Info (12250): 2022.03.05.18:36:20 Progress: Adding HEX7_HEX4 [altera_up_avalon_parallel_port 17.1]
+Warning (12251): HEX7_HEX4: Component type altera_up_avalon_parallel_port is not in the library
+Info (12250): 2022.03.05.18:36:20 Progress: Parameterizing module HEX7_HEX4
+Info (12250): 2022.03.05.18:36:20 Progress: Adding SD_Card [Altera_UP_SD_Card_Avalon_Interface 17.1]
+Warning (12251): SD_Card: Component type Altera_UP_SD_Card_Avalon_Interface is not in the library
+Info (12250): 2022.03.05.18:36:20 Progress: Parameterizing module SD_Card
+Info (12250): 2022.03.05.18:36:20 Progress: Adding alpha_blending [altera_up_avalon_video_alpha_blender 17.1]
+Warning (12251): Alpha_blending: Component type altera_up_avalon_video_alpha_blender is not in the library
+Info (12250): 2022.03.05.18:36:20 Progress: Parameterizing module alpha_blending
+Info (12250): 2022.03.05.18:36:20 Progress: Adding audio [altera_up_avalon_audio 17.1]
+Warning (12251): Audio: Component type altera_up_avalon_audio is not in the library
+Info (12250): 2022.03.05.18:36:20 Progress: Parameterizing module audio
+Info (12250): 2022.03.05.18:36:20 Progress: Adding audio_clk [altera_clock_bridge 17.1]
+Warning (12251): Audio_clk: Component type altera_clock_bridge is not in the library
+Info (12250): 2022.03.05.18:36:20 Progress: Parameterizing module audio_clk
+Info (12250): 2022.03.05.18:36:20 Progress: Adding audio_config [altera_up_avalon_audio_and_video_config 17.1]
+Warning (12251): Audio_config: Component type altera_up_avalon_audio_and_video_config is not in the library
+Info (12250): 2022.03.05.18:36:20 Progress: Parameterizing module audio_config
+Info (12250): 2022.03.05.18:36:20 Progress: Adding audio_pll [altera_up_avalon_audio_pll 17.1]
+Warning (12251): Audio_pll: Component type altera_up_avalon_audio_pll is not in the library
+Info (12250): 2022.03.05.18:36:20 Progress: Parameterizing module audio_pll
+Info (12250): 2022.03.05.18:36:20 Progress: Adding char_lcd [altera_up_avalon_character_lcd 17.1]
+Warning (12251): Char_lcd: Component type altera_up_avalon_character_lcd is not in the library
+Info (12250): 2022.03.05.18:36:20 Progress: Parameterizing module char_lcd
+Info (12250): 2022.03.05.18:36:20 Progress: Adding clk_50 [clock_source 17.1]
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module clk_50
+Info (12250): 2022.03.05.18:36:21 Progress: Adding clk_50_2 [clock_source 17.1]
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module clk_50_2
+Info (12250): 2022.03.05.18:36:21 Progress: Adding clk_50_3 [clock_source 17.1]
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module clk_50_3
+Info (12250): 2022.03.05.18:36:21 Progress: Adding cpu [altera_nios2_gen2 17.1]
+Warning (12251): Cpu: Component type altera_nios2_gen2 is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module cpu
+Info (12250): 2022.03.05.18:36:21 Progress: Adding flash_bridge [altera_tristate_conduit_bridge 17.1]
+Warning (12251): Flash_bridge: Component type altera_tristate_conduit_bridge is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module flash_bridge
+Info (12250): 2022.03.05.18:36:21 Progress: Adding flash_controller [altera_generic_tristate_controller 17.1]
+Warning (12251): Flash_controller: Component type altera_generic_tristate_controller is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module flash_controller
+Info (12250): 2022.03.05.18:36:21 Progress: Adding green_leds [altera_up_avalon_parallel_port 17.1]
+Warning (12251): Green_leds: Component type altera_up_avalon_parallel_port is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module green_leds
+Info (12250): 2022.03.05.18:36:21 Progress: Adding jtag_uart [altera_avalon_jtag_uart 17.1]
+Warning (12251): Jtag_uart: Component type altera_avalon_jtag_uart is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module jtag_uart
+Info (12250): 2022.03.05.18:36:21 Progress: Adding mtl_char_buffer [altera_up_avalon_video_character_buffer_with_dma 17.1]
+Warning (12251): Mtl_char_buffer: Component type altera_up_avalon_video_character_buffer_with_dma is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module mtl_char_buffer
+Info (12250): 2022.03.05.18:36:21 Progress: Adding mtl_clk [altera_clock_bridge 17.1]
+Warning (12251): Mtl_clk: Component type altera_clock_bridge is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module mtl_clk
+Info (12250): 2022.03.05.18:36:21 Progress: Adding mtl_controller [altera_up_avalon_video_vga_controller 17.1]
+Warning (12251): Mtl_controller: Component type altera_up_avalon_video_vga_controller is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module mtl_controller
+Info (12250): 2022.03.05.18:36:21 Progress: Adding mtl_dual_clock_buffer [altera_up_avalon_video_dual_clock_buffer 17.1]
+Warning (12251): Mtl_dual_clock_buffer: Component type altera_up_avalon_video_dual_clock_buffer is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module mtl_dual_clock_buffer
+Info (12250): 2022.03.05.18:36:21 Progress: Adding mtl_pixel_buffer_dma [altera_up_avalon_video_pixel_buffer_dma 17.1]
+Warning (12251): Mtl_pixel_buffer_dma: Component type altera_up_avalon_video_pixel_buffer_dma is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module mtl_pixel_buffer_dma
+Info (12250): 2022.03.05.18:36:21 Progress: Adding mtl_rgb_resampler [altera_up_avalon_video_rgb_resampler 17.1]
+Warning (12251): Mtl_rgb_resampler: Component type altera_up_avalon_video_rgb_resampler is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module mtl_rgb_resampler
+Info (12250): 2022.03.05.18:36:21 Progress: Adding mtl_scaler [altera_up_avalon_video_scaler 17.1]
+Warning (12251): Mtl_scaler: Component type altera_up_avalon_video_scaler is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module mtl_scaler
+Info (12250): 2022.03.05.18:36:21 Progress: Adding onchip_memory [altera_avalon_onchip_memory2 17.1]
+Warning (12251): Onchip_memory: Component type altera_avalon_onchip_memory2 is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module onchip_memory
+Info (12250): 2022.03.05.18:36:21 Progress: Adding performance_counter [altera_avalon_performance_counter 17.1]
+Warning (12251): Performance_counter: Component type altera_avalon_performance_counter is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module performance_counter
+Info (12250): 2022.03.05.18:36:21 Progress: Adding ps2_key [altera_up_avalon_ps2 17.1]
+Warning (12251): Ps2_key: Component type altera_up_avalon_ps2 is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module ps2_key
+Info (12250): 2022.03.05.18:36:21 Progress: Adding ps2_mouse [altera_up_avalon_ps2 17.1]
+Warning (12251): Ps2_mouse: Component type altera_up_avalon_ps2 is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module ps2_mouse
+Info (12250): 2022.03.05.18:36:21 Progress: Adding pushbuttons [altera_up_avalon_parallel_port 17.1]
+Warning (12251): Pushbuttons: Component type altera_up_avalon_parallel_port is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module pushbuttons
+Info (12250): 2022.03.05.18:36:21 Progress: Adding red_leds [altera_up_avalon_parallel_port 17.1]
+Warning (12251): Red_leds: Component type altera_up_avalon_parallel_port is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module red_leds
+Info (12250): 2022.03.05.18:36:21 Progress: Adding reset_bridge [altera_reset_bridge 17.1]
+Warning (12251): Reset_bridge: Component type altera_reset_bridge is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module reset_bridge
+Info (12250): 2022.03.05.18:36:21 Progress: Adding sdram [altera_avalon_new_sdram_controller 17.1]
+Warning (12251): Sdram: Component type altera_avalon_new_sdram_controller is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module sdram
+Info (12250): 2022.03.05.18:36:21 Progress: Adding sdram_clk [altera_clock_bridge 17.1]
+Warning (12251): Sdram_clk: Component type altera_clock_bridge is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module sdram_clk
+Info (12250): 2022.03.05.18:36:21 Progress: Adding serial_port [altera_up_avalon_rs232 17.1]
+Warning (12251): Serial_port: Component type altera_up_avalon_rs232 is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module serial_port
+Info (12250): 2022.03.05.18:36:21 Progress: Adding sram [altera_up_avalon_sram 17.1]
+Warning (12251): Sram: Component type altera_up_avalon_sram is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module sram
+Info (12250): 2022.03.05.18:36:21 Progress: Adding switches [altera_up_avalon_parallel_port 17.1]
+Warning (12251): Switches: Component type altera_up_avalon_parallel_port is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module switches
+Info (12250): 2022.03.05.18:36:21 Progress: Adding sys_clk [altera_clock_bridge 17.1]
+Warning (12251): Sys_clk: Component type altera_clock_bridge is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module sys_clk
+Info (12250): 2022.03.05.18:36:21 Progress: Adding sys_sdram_pll [altera_up_avalon_sys_sdram_pll 17.1]
+Warning (12251): Sys_sdram_pll: Component type altera_up_avalon_sys_sdram_pll is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module sys_sdram_pll
+Info (12250): 2022.03.05.18:36:21 Progress: Adding sysid [altera_avalon_sysid_qsys 17.1]
+Warning (12251): Sysid: Component type altera_avalon_sysid_qsys is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module sysid
+Info (12250): 2022.03.05.18:36:21 Progress: Adding timer [altera_avalon_timer 17.1]
+Warning (12251): Timer: Component type altera_avalon_timer is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module timer
+Info (12250): 2022.03.05.18:36:21 Progress: Adding vga_clk [altera_clock_bridge 17.1]
+Warning (12251): Vga_clk: Component type altera_clock_bridge is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module vga_clk
+Info (12250): 2022.03.05.18:36:21 Progress: Adding video_pll [altera_up_avalon_video_pll 17.1]
+Warning (12251): Video_pll: Component type altera_up_avalon_video_pll is not in the library
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing module video_pll
+Info (12250): 2022.03.05.18:36:21 Progress: Building connections
+Info (12250): 2022.03.05.18:36:21 Progress: Parameterizing connections
+Info (12250): 2022.03.05.18:36:21 Progress: Validating
+Info (12250): 2022.03.05.18:36:21 Progress: Done reading input file
+Error (12252): Nios_system.HEX3_HEX0: Component altera_up_avalon_parallel_port 17.1 not found or could not be instantiated
+Error (12252): Nios_system.HEX7_HEX4: Component altera_up_avalon_parallel_port 17.1 not found or could not be instantiated
+Error (12252): Nios_system.SD_Card: Component Altera_UP_SD_Card_Avalon_Interface 17.1 not found or could not be instantiated
+Error (12252): Nios_system.alpha_blending: Component altera_up_avalon_video_alpha_blender 17.1 not found or could not be instantiated
+Error (12252): Nios_system.audio: Component altera_up_avalon_audio 17.1 not found or could not be instantiated
+Error (12252): Nios_system.audio_clk: Component altera_clock_bridge 17.1 not found or could not be instantiated
+Error (12252): Nios_system.audio_config: Component altera_up_avalon_audio_and_video_config 17.1 not found or could not be instantiated
+Error (12252): Nios_system.audio_pll: Component altera_up_avalon_audio_pll 17.1 not found or could not be instantiated
+Error (12252): Nios_system.char_lcd: Component altera_up_avalon_character_lcd 17.1 not found or could not be instantiated
+Error (12252): Nios_system.cpu: Component altera_nios2_gen2 17.1 not found or could not be instantiated
+Error (12252): Nios_system.flash_bridge: Component altera_tristate_conduit_bridge 17.1 not found or could not be instantiated
+Error (12252): Nios_system.flash_controller: Component altera_generic_tristate_controller 17.1 not found or could not be instantiated
+Error (12252): Nios_system.green_leds: Component altera_up_avalon_parallel_port 17.1 not found or could not be instantiated
+Error (12252): Nios_system.jtag_uart: Component altera_avalon_jtag_uart 17.1 not found or could not be instantiated
+Error (12252): Nios_system.mtl_char_buffer: Component altera_up_avalon_video_character_buffer_with_dma 17.1 not found or could not be instantiated
+Error (12252): Nios_system.mtl_clk: Component altera_clock_bridge 17.1 not found or could not be instantiated
+Error (12252): Nios_system.mtl_controller: Component altera_up_avalon_video_vga_controller 17.1 not found or could not be instantiated
+Error (12252): Nios_system.mtl_dual_clock_buffer: Component altera_up_avalon_video_dual_clock_buffer 17.1 not found or could not be instantiated
+Error (12252): Nios_system.mtl_pixel_buffer_dma: Component altera_up_avalon_video_pixel_buffer_dma 17.1 not found or could not be instantiated
+Error (12252): Nios_system.mtl_rgb_resampler: Component altera_up_avalon_video_rgb_resampler 17.1 not found or could not be instantiated
+Error (12252): Nios_system.mtl_scaler: Component altera_up_avalon_video_scaler 17.1 not found or could not be instantiated
+Error (12252): Nios_system.onchip_memory: Component altera_avalon_onchip_memory2 17.1 not found or could not be instantiated
+Error (12252): Nios_system.performance_counter: Component altera_avalon_performance_counter 17.1 not found or could not be instantiated
+Error (12252): Nios_system.ps2_key: Component altera_up_avalon_ps2 17.1 not found or could not be instantiated
+Error (12252): Nios_system.ps2_mouse: Component altera_up_avalon_ps2 17.1 not found or could not be instantiated
+Error (12252): Nios_system.pushbuttons: Component altera_up_avalon_parallel_port 17.1 not found or could not be instantiated
+Error (12252): Nios_system.red_leds: Component altera_up_avalon_parallel_port 17.1 not found or could not be instantiated
+Error (12252): Nios_system.reset_bridge: Component altera_reset_bridge 17.1 not found or could not be instantiated
+Error (12252): Nios_system.sdram: Component altera_avalon_new_sdram_controller 17.1 not found or could not be instantiated
+Error (12252): Nios_system.sdram_clk: Component altera_clock_bridge 17.1 not found or could not be instantiated
+Error (12252): Nios_system.serial_port: Component altera_up_avalon_rs232 17.1 not found or could not be instantiated
+Error (12252): Nios_system.sram: Component altera_up_avalon_sram 17.1 not found or could not be instantiated
+Error (12252): Nios_system.switches: Component altera_up_avalon_parallel_port 17.1 not found or could not be instantiated
+Error (12252): Nios_system.sys_clk: Component altera_clock_bridge 17.1 not found or could not be instantiated
+Error (12252): Nios_system.sys_sdram_pll: Component altera_up_avalon_sys_sdram_pll 17.1 not found or could not be instantiated
+Error (12252): Nios_system.sysid: Component altera_avalon_sysid_qsys 17.1 not found or could not be instantiated
+Error (12252): Nios_system.timer: Component altera_avalon_timer 17.1 not found or could not be instantiated
+Error (12252): Nios_system.vga_clk: Component altera_clock_bridge 17.1 not found or could not be instantiated
+Error (12252): Nios_system.video_pll: Component altera_up_avalon_video_pll 17.1 not found or could not be instantiated
+Error (12252): Nios_system.cpu.debug_mem_slave: Data width must be of power of two and between 8 and 4096  
+Error (12252): Nios_system.cpu.instruction_master: Data width must be of power of two and between 8 and 4096  
+Error (12252): Nios_system.cpu.data_master: Data width must be of power of two and between 8 and 4096  
+Error (12252): Nios_system.flash_controller.uas: Data width must be of power of two and between 8 and 4096  
+Error (12252): Nios_system.onchip_memory.s1: Data width must be of power of two and between 8 and 4096  
+Error (12252): Nios_system.sdram.s1: Data width must be of power of two and between 8 and 4096  
+Error (12252): Nios_system.sram.avalon_sram_slave: Data width must be of power of two and between 8 and 4096  
+Info (12250): Nios_system: Generating nios_system "nios_system" for QUARTUS_SYNTH
+Info (12250): Exception in thread "main" java.lang.NullPointerException
+Info (12250):     at com.altera.sopcmodel.transforms.avalon.DomainUtils.getSymmetryCheckerForPoint(DomainUtils.java:193)
+Info (12250):     at com.altera.sopcmodel.transforms.avalon.DomainUtils.isSymmetric(DomainUtils.java:176)
+Info (12250):     at com.altera.sopcmodel.transforms.avalon.InitialInterconnectTransform.checkValidDomain(InitialInterconnectTransform.java:126)
+Info (12250):     at com.altera.sopcmodel.transforms.avalon.InitialInterconnectTransform.doExecute(InitialInterconnectTransform.java:92)
+Info (12250):     at com.altera.sopcmodel.transforms.SopcTransformStep.execute(SopcTransformStep.java:66)
+Info (12250):     at com.altera.sopcmodel.transforms.SopcTransformList.doExecute(SopcTransformList.java:112)
+Info (12250):     at com.altera.sopcmodel.transforms.SopcTransformStep.execute(SopcTransformStep.java:66)
+Info (12250):     at com.altera.sopcmodel.transforms.mm.MMTransform.doExecute(MMTransform.java:106)
+Info (12250):     at com.altera.sopcmodel.transforms.SopcTransformStep.execute(SopcTransformStep.java:66)
+Info (12250):     at com.altera.sopcmodel.transforms.SopcTransformList.doExecute(SopcTransformList.java:112)
+Info (12250):     at com.altera.sopcmodel.transforms.SopcTransformStep.execute(SopcTransformStep.java:66)
+Info (12250):     at com.altera.sopcmodel.transforms.avalon.AvalonTransform.doExecute(AvalonTransform.java:45)
+Info (12250):     at com.altera.sopcmodel.transforms.SopcTransformStep.execute(SopcTransformStep.java:66)
+Info (12250):     at com.altera.sopcmodel.ensemble.EnsembleUtils.doTransform(EnsembleUtils.java:1357)
+Info (12250):     at com.altera.sopc.generator.EnsembleGenerationFileSet2.attemptTransform(EnsembleGenerationFileSet2.java:90)
+Info (12250):     at com.altera.sopc.generator.EnsembleGenerationFileSet2.generate(EnsembleGenerationFileSet2.java:51)
+Info (12250):     at com.altera.sopc.generator.FileSet2.generate(FileSet2.java:150)
+Info (12250):     at com.altera.sopc.generator.Sellafield.generate(Sellafield.java:366)
+Info (12250):     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.performGeneration(SbGenerate.java:521)
+Info (12250):     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.act(SbGenerate.java:467)
+Info (12250):     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:718)
+Info (12250):     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.main(SbGenerate.java:981)
+Info (12249): Finished elaborating Platform Designer system entity "nios_system.qsys"
+Warning (10275): Verilog HDL Module Instantiation warning at DE2_115_Media_Computer.v(436): ignored dangling comma in List of Port Connections File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 436
+Info (12021): Found 1 design units, including 1 entities, in source file de2_115_media_computer.v
+    Info (12023): Found entity 1: DE2_115_Media_Computer File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 5
+Info (12127): Elaborating entity "DE2_115_Media_Computer" for the top level hierarchy
+Warning (10034): Output port "VGA_R" at DE2_115_Media_Computer.v(268) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 268
+Warning (10034): Output port "VGA_G" at DE2_115_Media_Computer.v(269) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 269
+Warning (10034): Output port "VGA_B" at DE2_115_Media_Computer.v(270) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 270
+Warning (10034): Output port "VGA_CLK" at DE2_115_Media_Computer.v(263) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 263
+Warning (10034): Output port "VGA_HS" at DE2_115_Media_Computer.v(264) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 264
+Warning (10034): Output port "VGA_VS" at DE2_115_Media_Computer.v(265) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 265
+Warning (10034): Output port "VGA_BLANK_N" at DE2_115_Media_Computer.v(266) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 266
+Warning (10034): Output port "VGA_SYNC_N" at DE2_115_Media_Computer.v(267) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 267
+Warning (10034): Output port "DCLK" at DE2_115_Media_Computer.v(283) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 283
+Warning (10034): Output port "DATA1" at DE2_115_Media_Computer.v(284) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 284
+Warning (10034): Output port "FLASH_nCE" at DE2_115_Media_Computer.v(285) has no driver File: C:/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/DE2_115_Media_Computer.v Line: 285
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 47 errors, 52 warnings
+    Error: Peak virtual memory: 4694 megabytes
+    Error: Processing ended: Sat Mar 05 18:36:25 2022
+    Error: Elapsed time: 00:00:18
+    Error: Total CPU time (on all processors): 00:00:42
+
+

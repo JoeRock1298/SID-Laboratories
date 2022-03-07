@@ -1,0 +1,1 @@
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) //tsclient/C/Users/jose_/OneDrive/Documentos/UPV/2021-2022/SID-Laboratories/Ejercicio2/DE2_115_Media_Computer/db/ip/nios_system/nios_system.qip]
