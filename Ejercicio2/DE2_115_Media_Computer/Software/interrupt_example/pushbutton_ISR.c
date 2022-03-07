@@ -4,6 +4,7 @@
 
 extern volatile int key_pressed;
 extern volatile int pattern;
+extern volatile int Change_count_flag;
 
 void pushbutton_ISR( )
 {
@@ -18,8 +19,14 @@ void pushbutton_ISR( )
 		key_pressed = KEY1;
 	else if (press & 0x4)					// KEY2
 		key_pressed = KEY2;
-	else 									// press & 0x8, lo que significa KEY3
-		pattern = *(slider_switch_ptr); 	//Lee los interruptores
-
+	else if (press & 0x1)
+	{
+		Change_count_flag = 1;
+	}
+	else									// press & 0x8, lo que significa KEY3
+	{
+			Change_count_flag = 1;
+			pattern = *(slider_switch_ptr); 	//Lee los interruptores
+	}
 	return;
 }

@@ -9,7 +9,7 @@ void interval_timer_isr( )
 {
 	volatile int * interval_timer_ptr = (int *) TIMER_BASE;
 
-	*(interval_timer_ptr) = 0; 				// Borra la interrución
+	*(interval_timer_ptr) = 0; 				// Borra la interrupción
 
 	/* Gira el patrón mostrado en los displays HEX  */
 	if (key_pressed == KEY2)					// si KEY2 gira a la izquierda

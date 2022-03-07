@@ -1,9 +1,9 @@
-14:09:33 **** Incremental Build of configuration Nios II for project interrupt_example ****
+18:34:09 **** Incremental Build of configuration Nios II for project interrupt_example ****
 make all 
 Info: Building ../interrupt_example_bsp/
 C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../interrupt_example_bsp/
 [BSP build complete]
 [interrupt_example build complete]
 
-14:09:34 Build Finished (took 1s.114ms)
+18:34:10 Build Finished (took 1s.114ms)
 

@@ -1,2 +1,4 @@
+activeuserprofiles=Team;labpro01;labpro15
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=jororoc
+useridperkey=labpro01.Local\=jororoc;
