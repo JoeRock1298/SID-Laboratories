@@ -1,0 +1,57 @@
+/*
+ * Real_Time_Clock.c
+ *
+ *  Created on: 10 de mar. de 2022
+ *      Author: Rocabado Rocha, Jose Luis
+ */
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Universitat Politècnica de València
+// Escuela Técnica Superior de Ingenieros de Telecomunicación
+// -------------------------------------------------------------------------------------------------------------------------
+// Sistemas Integrados Digitales
+// Curso 2021 - 2022
+// -------------------------------------------------------------------------------------------------------------------------
+// Nombre del archivo: Real_Time_Clock.c
+//
+// Descripción:
+// El siguiente codigo implementa la visualización de un reloj utilizando interruociones y el timer del sistema. Sus
+// especificaciones son:
+//      - Horas, minutos y segundos se observan en los displays 7-seg
+//      - El timer se configura para generar una interrupción cada 100ms con un reloj del sistema de 50MHz
+//      - Pulsador KEY3 incrementa las horas en una unidad
+//      - Pulsador KEY2 incrementa los minutos en una unidad
+//      - El reloj se visualiza ademas en el LCD y en la otra fila se mostrara el nombre
+//
+// -------------------------------------------------------------------------------------------------------------------------
+//      Versión: V1.0                   | Fecha Modificación: 10/03/2022
+//
+//      Autor: Jose Luis Rocabado Rocha
+//
+// -------------------------------------------------------------------------------------------------------------------------
+
+#include "key_codes.h"	// define los valores para KEY1, KEY2, KEY3
+#include "system.h"
+#include "sys/alt_irq.h"
+#include <stdio.h> //Necesario para el NULL
+
+void interval_timer_isr( );
+void pushbutton_ISR( );
+
+volatile int Increment_time_flag = 0;
+
+int main(void)
+{
+	///*Variable definition*///
+	// 6 bits para 60, 5 bits para 24. 11
+	int time = 0; //[5:0]s, [11:6]min, [16:12] hours.
+
+	/* Peripheral address definitions */
+	volatile int * interval_timer_ptr = (int *) TIMER_BASE;	    // Dirección Temporizador
+	volatile int * KEY_ptr = (int *) PUSHBUTTONS_BASE;			// Dirección pulsadores KEY
+	volatile int * HEX3_HEX0_ptr	= (int *) HEX3_HEX0_BASE;	// Dirección HEX3_HEX0
+	volatile int * HEX7_HEX4_ptr	= (int *) HEX7_HEX4_BASE;	// Dirección HEX7_HEX4
+
+
+
+}
