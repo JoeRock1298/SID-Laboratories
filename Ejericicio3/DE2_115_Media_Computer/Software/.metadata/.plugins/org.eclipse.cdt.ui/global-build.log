@@ -1,4 +1,175 @@
-20:26:59 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+13:40:14 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:40:16 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
+Info: Linking Real_Time_Clock.elf
+nios2-elf-g++  -T'../Real_Time_Clock_bsp//linker.x' -msys-crt0='../Real_Time_Clock_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Real_Time_Clock_bsp/   -Wl,-Map=Real_Time_Clock.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Real_Time_Clock.elf obj/default/Real_Time_Clock.o -lm -msys-lib=m
+nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1647261006 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
+Info: (Real_Time_Clock.elf) 86 KBytes program size (code + initialized data).
+Info:                       130977 KBytes free for stack + heap.
+Info: Creating Real_Time_Clock.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Real_Time_Clock.elf >Real_Time_Clock.objdump
+[Real_Time_Clock build complete]
+13:40:19 **** Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+13:40:21 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:40:22 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+13:45:48 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:45:49 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
+Info: Linking Real_Time_Clock.elf
+nios2-elf-g++  -T'../Real_Time_Clock_bsp//linker.x' -msys-crt0='../Real_Time_Clock_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Real_Time_Clock_bsp/   -Wl,-Map=Real_Time_Clock.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Real_Time_Clock.elf obj/default/Real_Time_Clock.o -lm -msys-lib=m
+nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1647261006 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
+Info: (Real_Time_Clock.elf) 86 KBytes program size (code + initialized data).
+Info:                       130977 KBytes free for stack + heap.
+Info: Creating Real_Time_Clock.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Real_Time_Clock.elf >Real_Time_Clock.objdump
+[Real_Time_Clock build complete]
+13:45:53 **** Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+13:45:55 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:45:56 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+13:46:59 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:47:00 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+13:47:08 **** Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+13:47:16 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:47:17 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
+Info: Linking Real_Time_Clock.elf
+nios2-elf-g++  -T'../Real_Time_Clock_bsp//linker.x' -msys-crt0='../Real_Time_Clock_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Real_Time_Clock_bsp/   -Wl,-Map=Real_Time_Clock.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Real_Time_Clock.elf obj/default/Real_Time_Clock.o -lm -msys-lib=m
+nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1647261006 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
+Info: (Real_Time_Clock.elf) 86 KBytes program size (code + initialized data).
+Info:                       130977 KBytes free for stack + heap.
+Info: Creating Real_Time_Clock.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Real_Time_Clock.elf >Real_Time_Clock.objdump
+[Real_Time_Clock build complete]
+13:47:20 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:47:21 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+13:48:31 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:48:32 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
+Info: Linking Real_Time_Clock.elf
+nios2-elf-g++  -T'../Real_Time_Clock_bsp//linker.x' -msys-crt0='../Real_Time_Clock_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Real_Time_Clock_bsp/   -Wl,-Map=Real_Time_Clock.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Real_Time_Clock.elf obj/default/Real_Time_Clock.o -lm -msys-lib=m
+nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1647261006 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
+Info: (Real_Time_Clock.elf) 86 KBytes program size (code + initialized data).
+Info:                       130978 KBytes free for stack + heap.
+Info: Creating Real_Time_Clock.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Real_Time_Clock.elf >Real_Time_Clock.objdump
+[Real_Time_Clock build complete]
+13:48:35 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:48:36 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+13:49:06 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:49:07 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
+Info: Linking Real_Time_Clock.elf
+nios2-elf-g++  -T'../Real_Time_Clock_bsp//linker.x' -msys-crt0='../Real_Time_Clock_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Real_Time_Clock_bsp/   -Wl,-Map=Real_Time_Clock.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Real_Time_Clock.elf obj/default/Real_Time_Clock.o -lm -msys-lib=m
+nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1647261006 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
+Info: (Real_Time_Clock.elf) 86 KBytes program size (code + initialized data).
+Info:                       130978 KBytes free for stack + heap.
+Info: Creating Real_Time_Clock.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Real_Time_Clock.elf >Real_Time_Clock.objdump
+[Real_Time_Clock build complete]
+13:49:15 **** Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+13:49:17 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+13:49:18 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+14:01:00 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+14:01:01 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
 make all 
 Info: Building ../Real_Time_Clock_bsp/
 C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
@@ -6,24 +177,105 @@ C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-director
 Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
 nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
 Real_Time_Clock.c: In function 'main':
-Real_Time_Clock.c:90:3: warning: 'return' with no value, in function returning non-void
-   return;
-   ^
+Real_Time_Clock.c:101:4: error: 'time' undeclared (first use in this function)
+    time++;
+    ^
+Real_Time_Clock.c:101:4: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/Real_Time_Clock.o] Error 1
+14:02:13 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+14:02:14 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
 Info: Linking Real_Time_Clock.elf
 nios2-elf-g++  -T'../Real_Time_Clock_bsp//linker.x' -msys-crt0='../Real_Time_Clock_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Real_Time_Clock_bsp/   -Wl,-Map=Real_Time_Clock.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Real_Time_Clock.elf obj/default/Real_Time_Clock.o -lm -msys-lib=m
-nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1646932264 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
-Info: (Real_Time_Clock.elf) 85 KBytes program size (code + initialized data).
+nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1647261006 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
+Info: (Real_Time_Clock.elf) 86 KBytes program size (code + initialized data).
 Info:                       130978 KBytes free for stack + heap.
 Info: Creating Real_Time_Clock.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source Real_Time_Clock.elf >Real_Time_Clock.objdump
 [Real_Time_Clock build complete]
-20:27:11 **** Build of configuration Nios II for project Real_Time_Clock ****
+14:04:32 **** Build of configuration Nios II for project Real_Time_Clock ****
 make all 
 Info: Building ../Real_Time_Clock_bsp/
 C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
 [BSP build complete]
 [Real_Time_Clock build complete]
-20:27:13 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+14:04:33 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+14:04:34 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+14:05:20 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+14:05:21 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
+Info: Linking Real_Time_Clock.elf
+nios2-elf-g++  -T'../Real_Time_Clock_bsp//linker.x' -msys-crt0='../Real_Time_Clock_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Real_Time_Clock_bsp/   -Wl,-Map=Real_Time_Clock.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Real_Time_Clock.elf obj/default/Real_Time_Clock.o -lm -msys-lib=m
+nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1647261006 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
+Info: (Real_Time_Clock.elf) 86 KBytes program size (code + initialized data).
+Info:                       130978 KBytes free for stack + heap.
+Info: Creating Real_Time_Clock.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Real_Time_Clock.elf >Real_Time_Clock.objdump
+[Real_Time_Clock build complete]
+14:05:24 **** Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+14:05:25 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+14:05:26 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+14:07:11 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+14:07:13 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
+Info: Linking Real_Time_Clock.elf
+nios2-elf-g++  -T'../Real_Time_Clock_bsp//linker.x' -msys-crt0='../Real_Time_Clock_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Real_Time_Clock_bsp/   -Wl,-Map=Real_Time_Clock.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Real_Time_Clock.elf obj/default/Real_Time_Clock.o -lm -msys-lib=m
+nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1647261006 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
+Info: (Real_Time_Clock.elf) 86 KBytes program size (code + initialized data).
+Info:                       130978 KBytes free for stack + heap.
+Info: Creating Real_Time_Clock.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Real_Time_Clock.elf >Real_Time_Clock.objdump
+[Real_Time_Clock build complete]
+14:07:15 **** Build of configuration Nios II for project Real_Time_Clock ****
+make all 
+Info: Building ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+[BSP build complete]
+[Real_Time_Clock build complete]
+14:07:16 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+make all 
+[BSP build complete]
+14:07:18 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
 make all 
 Info: Building ../Real_Time_Clock_bsp/
 C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/

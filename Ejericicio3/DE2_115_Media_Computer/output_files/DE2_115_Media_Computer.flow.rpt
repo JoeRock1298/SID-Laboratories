@@ -1,5 +1,5 @@
 Flow report for DE2_115_Media_Computer
-Thu Mar 10 18:14:50 2022
+Mon Mar 14 13:33:28 2022
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------+
 ; Flow Summary                                                                                  ;
 +------------------------------------+----------------------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 10 18:14:42 2022                    ;
+; Flow Status                        ; Successful - Mon Mar 14 13:33:21 2022                    ;
 ; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                      ; DE2_115_Media_Computer                                   ;
 ; Top-level Entity Name              ; DE2_115_Media_Computer                                   ;
 ; Family                             ; Cyclone IV E                                             ;
 ; Device                             ; EP4CE115F29C7                                            ;
 ; Timing Models                      ; Final                                                    ;
-; Total logic elements               ; 11,146 / 114,480 ( 10 % )                                ;
-;     Total combinational functions  ; 9,943 / 114,480 ( 9 % )                                  ;
+; Total logic elements               ; 11,192 / 114,480 ( 10 % )                                ;
+;     Total combinational functions  ; 9,948 / 114,480 ( 9 % )                                  ;
 ;     Dedicated logic registers      ; 6,949 / 114,480 ( 6 % )                                  ;
 ; Total registers                    ; 7068                                                     ;
 ; Total pins                         ; 348 / 529 ( 66 % )                                       ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 03/10/2022 18:10:38    ;
+; Start date & time ; 03/14/2022 13:29:44    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; DE2_115_Media_Computer ;
 +-------------------+------------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 242211430917942.164693223820728        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 242211430917466.164726098315788        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -93,11 +93,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:02:45     ; 1.0                     ; 5178 MB             ; 00:03:49                           ;
-; Fitter                    ; 00:00:57     ; 1.1                     ; 6006 MB             ; 00:01:19                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 4743 MB             ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.2                     ; 4974 MB             ; 00:00:08                           ;
-; Total                     ; 00:03:55     ; --                      ; --                  ; 00:05:21                           ;
+; Analysis & Synthesis      ; 00:02:28     ; 1.0                     ; 5181 MB             ; 00:03:35                           ;
+; Fitter                    ; 00:00:49     ; 1.1                     ; 6007 MB             ; 00:01:10                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 4744 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 4974 MB             ; 00:00:07                           ;
+; Total                     ; 00:03:28     ; --                      ; --                  ; 00:04:56                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,10 +106,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; labpro04         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; labpro04         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; labpro04         ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; labpro04         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

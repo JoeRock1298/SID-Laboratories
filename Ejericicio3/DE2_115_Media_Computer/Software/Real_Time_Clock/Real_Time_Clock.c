@@ -36,8 +36,8 @@
 #include <stdio.h> //Necesario para el NULL
 
 // Definition of the auxiliar functions
-void interval_timer_isr( );
-void pushbutton_ISR( );
+//void interval_timer_isr( );
+//void pushbutton_ISR( );
 int hex_to_seven (int hex);
 int two_hex_to_seven (int two_hex);
 
@@ -47,7 +47,7 @@ int main(void)
 {
 	///*Variable definition*///
 	// 6 bits para 60, 5 bits para 24. 11
-	int time = 0; //[5:0]s, [11:6]min, [16:12] hours.
+	int hour, min, seg = 0; //hacer una variable para cada parte, y no una global
 	int h_7seg, m_7seg, s_7seg;
 
 	/* Peripheral address definitions */
@@ -76,23 +76,29 @@ int main(void)
 	// Minute mask -> 0xFC0 >> 6
 	// Second mask -> 0x3F
 
-	// test C1E1E
-	time = 0xC1E1E;
+	//12H,30min,30seg
+	hour = 60;
+	min = 60;
+	seg = 60;
 	while(1)
 	{
-		h_7seg = two_hex_to_seven(time >> 12 & 0xFF);
-		m_7seg = two_hex_to_seven(time >> 6 & 0xFF);
-		s_7seg = two_hex_to_seven(time & 0xFF);
-		printf("%x, ", time);
-		printf("%x, ", time >> 12 & 0xFF);
-		printf("%x, ", time >> 6 & 0xFF);
-		printf("%x",time & 0xFF);
-		return;
-		*(HEX3_HEX0_ptr) = s_7seg << 14;				// Visualiza el patrón en HEX3 ... HEX0
-	    *(HEX7_HEX4_ptr) = h_7seg << 7 | m_7seg;
+		h_7seg = two_hex_to_seven(hour);
+		m_7seg = two_hex_to_seven(min);
+		s_7seg = two_hex_to_seven(seg);
+		printf("\n %x, ", h_7seg);
+		printf("%x, ", m_7seg);
+		printf("%x \n", s_7seg);
+		printf("%x, ", s_7seg << 16);
+		printf("%x \n", h_7seg << 16 | m_7seg);
+
+		*(HEX3_HEX0_ptr) = s_7seg << 16;				// Visualiza el patrón en HEX3 ... HEX0
+	    *(HEX7_HEX4_ptr) = h_7seg << 16 | m_7seg;
+	    printf("%x, ", *(HEX3_HEX0_ptr));
+	    printf("%x \n", *(HEX7_HEX4_ptr));
+	    return 0;
 		if(Update_time_flag)
 		{
-			time++;
+
 		}
 	}
 
@@ -105,39 +111,71 @@ int hex_to_seven (int hex)
 {
 	switch(hex)
 	{
-		case 0x0: return 0b0111111;
+		case 0x0:
+				  printf("0");
+				  return 0b0111111;
 				  break;
-		case 0x1: return 0b0000110;
+		case 0x1:
+				  printf("1");
+				  return 0b0000110;
 				  break;
-		case 0x2: return 0b1011011;
+		case 0x2:
+				  printf("2");
+				  return 0b1011011;
 		  	  	  break;
-		case 0x3: return 0b1001111;
+		case 0x3:
+				  printf("3");
+				  return 0b1001111;
 		  	  	  break;
-		case 0x4: return 0b1100110;
+		case 0x4:
+				  printf("4");
+				  return 0b1100110;
 		  	  	  break;
-		case 0x5: return 0b1101101;
+		case 0x5:
+				  printf("5");
+				  return 0b1101101;
 		  	  	  break;
 		case 0x6: return 0b1111101;
+				  printf("6");
 		  	  	  break;
-		case 0x7: return 0b0100111;
+		case 0x7:
+				  printf("7");
+				  return 0b0100111;
 		  	  	  break;
 		case 0x8: return 0b1111111;
+				  printf("8");
 		  	  	  break;
-		case 0x9: return 0b1100111;
+		case 0x9:
+				  printf("9");
+				  return 0b1100111;
 		  	  	  break;
-		case 0xa: return 0b1110111;
+		case 0xa:
+				  printf("a");
+				  return 0b1110111;
 		  	  	  break;
-		case 0xb: return 0b1111100;
+		case 0xb:
+				  printf("b");
+				  return 0b1111100;
 		  	  	  break;
-		case 0xc: return 0b0111011;
+		case 0xc:
+				  printf("c");
+				  return 0b0111011;
 		  	  	  break;
-		case 0xd: return 0b1011110;
+		case 0xd:
+				  printf("d");
+				  return 0b1011110;
 		  	  	  break;
-		case 0xe: return 0b1111001;
+		case 0xe:
+				  printf("e");
+				  return 0b1111001;
 		  	  	  break;
-		case 0xf: return 0b1110001;
+		case 0xf:
+				  printf("f");
+				  return 0b1110001;
 		  	  	  break;
-		default: return 0b1000000;
+		default:
+				  printf("def");
+				  return 0b1000000;
 		  	  	  break;
 	}
 }
@@ -147,9 +185,9 @@ int hex_to_seven (int hex)
 ****************************************************************************************/
 int two_hex_to_seven (int two_hex)
 {
-	int Lresult = hex_to_seven(two_hex & 0xF);
-	int Hresult = hex_to_seven(two_hex >> 4);
-	return (Hresult <<7) + Lresult;
+	int Lresult = hex_to_seven((two_hex % 10) & 0xFF) & 0x7F;
+	int Hresult = hex_to_seven((two_hex / 10) & 0xFF) & 0x7F;
+	return (Hresult <<8) | Lresult;
 }
 
 

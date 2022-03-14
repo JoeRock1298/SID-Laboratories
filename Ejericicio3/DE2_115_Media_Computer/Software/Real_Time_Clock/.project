@@ -3,6 +3,8 @@
 	<name>Real_Time_Clock</name>
 	<comment></comment>
 	<projects>
+		<project>Real_Time_Clock_bsp</project>
+		<project>RemoteSystemsTempFiles</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
