@@ -6,25 +6,25 @@
  */
 
 // -------------------------------------------------------------------------------------------------------------------------
-// Universitat Politècnica de València
-// Escuela Técnica Superior de Ingenieros de Telecomunicación
+// Universitat Politï¿½cnica de Valï¿½ncia
+// Escuela Tï¿½cnica Superior de Ingenieros de Telecomunicaciï¿½n
 // -------------------------------------------------------------------------------------------------------------------------
 // Sistemas Integrados Digitales
 // Curso 2021 - 2022
 // -------------------------------------------------------------------------------------------------------------------------
 // Nombre del archivo: Real_Time_Clock.c
 //
-// Descripción:
-// El siguiente codigo implementa la visualización de un reloj utilizando interruociones y el timer del sistema. Sus
+// Descripciï¿½n:
+// El siguiente codigo implementa la visualizaciï¿½n de un reloj utilizando interruociones y el timer del sistema. Sus
 // especificaciones son:
 //      - Horas, minutos y segundos se observan en los displays 7-seg
-//      - El timer se configura para generar una interrupción cada 100ms con un reloj del sistema de 50MHz
+//      - El timer se configura para generar una interrupciï¿½n cada 100ms con un reloj del sistema de 50MHz
 //      - Pulsador KEY3 incrementa las horas en una unidad
 //      - Pulsador KEY2 incrementa los minutos en una unidad
 //      - El reloj se visualiza ademas en el LCD y en la otra fila se mostrara el nombre
 //
 // -------------------------------------------------------------------------------------------------------------------------
-//      Versión: V1.0                   | Fecha Modificación: 10/03/2022
+//      Versiï¿½n: V1.0                   | Fecha Modificaciï¿½n: 10/03/2022
 //
 //      Autor: Jose Luis Rocabado Rocha
 //
@@ -36,147 +36,161 @@
 #include <stdio.h> //Necesario para el NULL
 
 // Definition of the auxiliar functions
-//void interval_timer_isr( );
-//void pushbutton_ISR( );
-int hex_to_seven (int hex);
+void interval_timer_isr( );
+void pushbutton_ISR( );
+int hex_to_seven (int hex); // To delete
 int two_hex_to_seven (int two_hex);
+void print_7_seg_time (int h, int m, int s);
+void LCD_cursor( int, int );
+void LCD_text( char * );
+void LCD_cursor_off( void );
 
-volatile int Update_time_flag = 0;
+volatile int msec_counter = 0;
+volatile int key_pressed = -1;
 
 int main(void)
 {
 	///*Variable definition*///
-	// 6 bits para 60, 5 bits para 24. 11
-	int hour, min, seg = 0; //hacer una variable para cada parte, y no una global
-	int h_7seg, m_7seg, s_7seg;
+	int hour, min, sec = 0; //hacer una variable para cada parte, y no una global
 
 	/* Peripheral address definitions */
-	volatile int * interval_timer_ptr = (int *) TIMER_BASE;	    // Dirección Temporizador
-	volatile int * KEY_ptr = (int *) PUSHBUTTONS_BASE;			// Dirección pulsadores KEY
-	volatile int * HEX3_HEX0_ptr	= (int *) HEX3_HEX0_BASE;	// Dirección HEX3_HEX0
-	volatile int * HEX7_HEX4_ptr	= (int *) HEX7_HEX4_BASE;	// Dirección HEX7_HEX4
+	volatile int * interval_timer_ptr = (int *) TIMER_BASE;	    // Direcciï¿½n Temporizador
+	volatile int * KEY_ptr = (int *) PUSHBUTTONS_BASE;			// Direcciï¿½n pulsadores KEY
+	volatile int * HEX3_HEX0_ptr	= (int *) HEX3_HEX0_BASE;	// Direcciï¿½n HEX3_HEX0
+	volatile int * HEX7_HEX4_ptr	= (int *) HEX7_HEX4_BASE;	// Direcciï¿½n HEX7_HEX4
 
 	/* Configuring timer */
-	// 0x4C4B40 -> 5000000 counts
+	// 0x4C4B40 -> 5000000 counts -> 100ms counter
 	*(interval_timer_ptr + 0x2) = ( 0x4C4B40 & 0xFFFF); // LCounter
 	*(interval_timer_ptr + 0x3) = ( 0x4C4B40 >> 16) & 0xFFFF; // HCounter
 
 	/* Enabling timer and Interrupt Requests */
 	*(interval_timer_ptr + 1) = 0x7;	// STOP = 0, START = 1, CONT = 1, ITO = 1
-	//alt_irq_register(TIMER_IRQ, NULL, interval_timer_isr);
+	alt_irq_register(TIMER_IRQ, NULL, interval_timer_isr);
 
 	/* Configuring pushbuttons */
 	*(KEY_ptr + 2) = 0xC; 		/* Enabling interrupts for KEY2 y KEY3*/
 	*(KEY_ptr + 3) = 0; /* Edge detect reset */
-	//alt_irq_register(PUSHBUTTONS_IRQ, NULL, pushbutton_ISR);
+	alt_irq_register(PUSHBUTTONS_IRQ, NULL, pushbutton_ISR);
 
 	/* Initialazing 7-segment and LCD*/
+	//12H,0min,0seg
+	hour = 12;
+	min = 0;
+	sec = 0;
+	print_7_seg_time (hour, min, sec);
 
-	// Hour mask -> 0x1F000 >> 12
-	// Minute mask -> 0xFC0 >> 6
-	// Second mask -> 0x3F
-
-	//12H,30min,30seg
-	hour = 60;
-	min = 60;
-	seg = 60;
 	while(1)
 	{
-		h_7seg = two_hex_to_seven(hour);
-		m_7seg = two_hex_to_seven(min);
-		s_7seg = two_hex_to_seven(seg);
-		printf("\n %x, ", h_7seg);
-		printf("%x, ", m_7seg);
-		printf("%x \n", s_7seg);
-		printf("%x, ", s_7seg << 16);
-		printf("%x \n", h_7seg << 16 | m_7seg);
-
-		*(HEX3_HEX0_ptr) = s_7seg << 16;				// Visualiza el patrón en HEX3 ... HEX0
-	    *(HEX7_HEX4_ptr) = h_7seg << 16 | m_7seg;
-	    printf("%x, ", *(HEX3_HEX0_ptr));
-	    printf("%x \n", *(HEX7_HEX4_ptr));
-	    return 0;
-		if(Update_time_flag)
+		if(msec_counter == 10;)
 		{
-
+			msec_counter = 0;
+			sec ++;
 		}
+		if (key_pressed == KEY2)
+		{
+			key_pressed = -1;
+			min ++;
+		}
+		if (key_pressed == KEY3)
+		{
+			key_pressed = -1;
+			hour ++;
+		}
+		if (sec == 60)
+		{
+			sec = 0;
+			min ++;
+		}
+		if (min == 60)
+		{
+			min = 0;
+			hour ++;
+		}
+		if (hour == 24)
+		{
+			hour = 0;
+		}	
+		print_7_seg_time (hour, min, sec)
 	}
 
 }
 
 /****************************************************************************************
- * Hexadecimal to 7-segment decoder
+ * Hexadecimal to 7-segment decoder // TO DELETE
 ****************************************************************************************/
 int hex_to_seven (int hex)
 {
 	switch(hex)
 	{
 		case 0x0:
-				  printf("0");
-				  return 0b0111111;
-				  break;
+				//printf("0");
+				return 0b0111111;
+				break;
 		case 0x1:
-				  printf("1");
-				  return 0b0000110;
-				  break;
+				//printf("1");
+				return 0b0000110;
+				break;
 		case 0x2:
-				  printf("2");
-				  return 0b1011011;
-		  	  	  break;
+				//printf("2");
+				return 0b1011011;
+		  	  	break;
 		case 0x3:
-				  printf("3");
-				  return 0b1001111;
-		  	  	  break;
+				//printf("3");
+				return 0b1001111;
+		  	  	break;
 		case 0x4:
-				  printf("4");
-				  return 0b1100110;
-		  	  	  break;
+				//printf("4");
+				return 0b1100110;
+		  	  	break;
 		case 0x5:
-				  printf("5");
-				  return 0b1101101;
-		  	  	  break;
-		case 0x6: return 0b1111101;
-				  printf("6");
-		  	  	  break;
+				//printf("5");
+				return 0b1101101;
+		  	  	break;
+		case 0x6: 
+				//printf("6");
+				return 0b1111101;
+		  		break;
 		case 0x7:
-				  printf("7");
-				  return 0b0100111;
-		  	  	  break;
-		case 0x8: return 0b1111111;
-				  printf("8");
-		  	  	  break;
+				//printf("7");
+				return 0b0100111;
+		  	  	break;
+		case 0x8:
+				//printf("8");
+				return 0b1111111;
+		  	  	break;
 		case 0x9:
-				  printf("9");
-				  return 0b1100111;
-		  	  	  break;
+				//printf("9");
+				return 0b1100111;
+		  	  	break;
 		case 0xa:
-				  printf("a");
-				  return 0b1110111;
-		  	  	  break;
+				//printf("a");
+				return 0b1110111;
+		  	  	break;
 		case 0xb:
-				  printf("b");
-				  return 0b1111100;
-		  	  	  break;
+				//printf("b");
+				return 0b1111100;
+		  	  	break;
 		case 0xc:
-				  printf("c");
-				  return 0b0111011;
-		  	  	  break;
+				//printf("c");
+				return 0b0111011;
+		  	  	break;
 		case 0xd:
-				  printf("d");
-				  return 0b1011110;
-		  	  	  break;
+				//printf("d");
+				return 0b1011110;
+		  	  	break;
 		case 0xe:
-				  printf("e");
-				  return 0b1111001;
-		  	  	  break;
+				//printf("e");
+				return 0b1111001;
+		  	  	break;
 		case 0xf:
-				  printf("f");
-				  return 0b1110001;
-		  	  	  break;
+				//printf("f");
+				return 0b1110001;
+		  	  	break;
 		default:
-				  printf("def");
-				  return 0b1000000;
-		  	  	  break;
+				//printf("def");
+				return 0b1000000;
+		  	  	break;
 	}
 }
 
@@ -185,12 +199,69 @@ int hex_to_seven (int hex)
 ****************************************************************************************/
 int two_hex_to_seven (int two_hex)
 {
-	int Lresult = hex_to_seven((two_hex % 10) & 0xFF) & 0x7F;
-	int Hresult = hex_to_seven((two_hex / 10) & 0xFF) & 0x7F;
+	unsigned char	seven_seg_decode_table[] = 
+	{	0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x27,
+		0x7F, 0x67, 0x77, 0x7C, 0x3B, 0x5E, 0x79, 0x71 };
+	int Lresult = seven_seg_decode_table[(two_hex % 10) & 0xF];
+	int Hresult = seven_seg_decode_table[(two_hex / 10) & 0xF];
+	//int Lresult = hex_to_seven((two_hex % 10) & 0xF) & 0x7F;
+	//int Hresult = hex_to_seven((two_hex / 10) & 0xF) & 0x7F;
 	return (Hresult <<8) | Lresult;
 }
 
+/****************************************************************************************
+ * show time on 7 segment display
+****************************************************************************************/
+void print_7_seg_time (int h, int m, int s)
+{
+	// 7 segment addresses	
+	volatile int * HEX3_HEX0_ptr	= (int *) HEX3_HEX0_BASE;	// Direcciï¿½n HEX3_HEX0
+	volatile int * HEX7_HEX4_ptr	= (int *) HEX7_HEX4_BASE;	// Direcciï¿½n HEX7_HEX4
 
+	// Auxiliar variables
+	int h_7seg, m_7seg, s_7seg;
 
+	h_7seg = two_hex_to_seven(h);
+	m_7seg = two_hex_to_seven(m);
+	s_7seg = two_hex_to_seven(s);
+	// Visualiza el patrÃ³n en HEX3 ... HEX0
+	*(HEX3_HEX0_ptr) = s_7seg << 16;				
+    *(HEX7_HEX4_ptr) = h_7seg << 16 | m_7seg;
+}
 
+/****************************************************************************************
+ * Subroutine to move the LCD cursor
+****************************************************************************************/
+void LCD_cursor(int x, int y)
+{
+  	volatile char * LCD_display_ptr = (char *) CHAR_LCD_BASE;	// 16x2 character display
+	char instruction;
 
+	instruction = x;
+	if (y != 0) instruction |= 0x40;				// set bit 6 for bottom row
+	instruction |= 0x80;								// need to set bit 7 to set the cursor location
+	*(LCD_display_ptr) = instruction;			// write to the LCD instruction register
+}
+
+/****************************************************************************************
+ * Subroutine to send a string of text to the LCD
+****************************************************************************************/
+void LCD_text(char * text_ptr)
+{
+  	volatile char * LCD_display_ptr = (char *) CHAR_LCD_BASE;	// 16x2 character display
+
+	while ( *(text_ptr) )
+	{
+		*(LCD_display_ptr + 1) = *(text_ptr);	// write to the LCD data register
+		++text_ptr;
+	}
+}
+
+/****************************************************************************************
+ * Subroutine to turn off the LCD cursor
+****************************************************************************************/
+void LCD_cursor_off(void)
+{
+  	volatile char * LCD_display_ptr = (char *) CHAR_LCD_BASE;	// 16x2 character display
+	*(LCD_display_ptr) = 0x0C;											// turn off the LCD cursor
+}
