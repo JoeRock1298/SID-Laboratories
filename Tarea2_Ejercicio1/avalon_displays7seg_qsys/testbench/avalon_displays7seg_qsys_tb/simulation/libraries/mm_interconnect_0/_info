@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jororoc/Documents/QDesign/Tarea2_Ejercicio1/avalon_displays7seg_qsys/testbench/avalon_displays7seg_qsys_tb/simulation
+vavalon_displays7seg_qsys_mm_interconnect_0
+!s110 1647865899
+!i10b 1
+!s100 W2P3SjSV73mig`GJj=gnk1
+IU>^2Q6STnY2Di_ToIZ]7_3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1647865869
+8../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_displays7seg_qsys_mm_interconnect_0.v
+F../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_displays7seg_qsys_mm_interconnect_0.v
+L0 9
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1647865899.000000
+!s107 ../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_displays7seg_qsys_mm_interconnect_0.v|
+!s90 -reportprogress|300|../../avalon_displays7seg_qsys_tb/simulation/submodules/avalon_displays7seg_qsys_mm_interconnect_0.v|-work|mm_interconnect_0|
+!i113 1
+o-work mm_interconnect_0
+tCvgOpt 0

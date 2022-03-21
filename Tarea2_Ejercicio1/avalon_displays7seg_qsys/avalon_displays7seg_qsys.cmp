@@ -1,0 +1,15 @@
+	component avalon_displays7seg_qsys is
+		port (
+			clk_clk                                  : in  std_logic                    := 'X'; -- clk
+			reset_reset_n                            : in  std_logic                    := 'X'; -- reset_n
+			displays7seg_external_interface_conduit0 : out std_logic_vector(6 downto 0);        -- conduit0
+			displays7seg_external_interface_conduit1 : out std_logic_vector(6 downto 0);        -- conduit1
+			displays7seg_external_interface_conduit2 : out std_logic_vector(6 downto 0);        -- conduit2
+			displays7seg_external_interface_conduit3 : out std_logic_vector(6 downto 0);        -- conduit3
+			displays7seg_external_interface_conduit4 : out std_logic_vector(6 downto 0);        -- conduit4
+			displays7seg_external_interface_conduit5 : out std_logic_vector(6 downto 0);        -- conduit5
+			displays7seg_external_interface_conduit6 : out std_logic_vector(6 downto 0);        -- conduit6
+			displays7seg_external_interface_conduit7 : out std_logic_vector(6 downto 0)         -- conduit7
+		);
+	end component avalon_displays7seg_qsys;
+

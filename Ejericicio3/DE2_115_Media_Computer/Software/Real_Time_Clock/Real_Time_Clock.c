@@ -82,7 +82,7 @@ int main(void)
 
 	while(1)
 	{
-		if(msec_counter == 10;)
+		if(msec_counter == 10)
 		{
 			msec_counter = 0;
 			sec ++;
@@ -111,7 +111,7 @@ int main(void)
 		{
 			hour = 0;
 		}	
-		print_7_seg_time (hour, min, sec)
+		print_7_seg_time (hour, min, sec);
 	}
 
 }

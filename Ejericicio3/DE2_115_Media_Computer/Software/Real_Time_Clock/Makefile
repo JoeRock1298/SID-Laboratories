@@ -142,7 +142,9 @@ ACDS_VERSION := 17.1
 ELF := Real_Time_Clock.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := Real_Time_Clock.c
+C_SRCS += Real_Time_Clock.c
+C_SRCS += interval_timer_ISR.c
+C_SRCS += pushbutton_ISR.c
 CXX_SRCS :=
 ASM_SRCS :=
 

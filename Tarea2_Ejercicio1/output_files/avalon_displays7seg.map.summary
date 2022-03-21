@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Mar 21 12:16:33 2022
+Quartus Prime Version : 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+Revision Name : avalon_displays7seg
+Top-level Entity Name : avalon_displays7seg
+Family : Cyclone IV E
+Total logic elements : 160
+    Total combinational functions : 128
+    Dedicated logic registers : 97
+Total registers : 97
+Total pins : 128
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
