@@ -44,6 +44,7 @@ void print_7_seg_time (int h, int m, int s);
 void LCD_cursor( int, int );
 void LCD_text( char * );
 void LCD_cursor_off( void );
+void print_LCD_text (int h, int m, int s)
 
 volatile int msec_counter = 0;
 volatile int key_pressed = -1;
@@ -51,7 +52,7 @@ volatile int key_pressed = -1;
 int main(void)
 {
 	///*Variable definition*///
-	int hour, min, sec = 0; //hacer una variable para cada parte, y no una global
+	int hour, min, sec = 0; //hacer una variable para cada parte, y no una global 
 
 	/* Peripheral address definitions */
 	volatile int * interval_timer_ptr = (int *) TIMER_BASE;	    // Direcci�n Temporizador
@@ -79,6 +80,8 @@ int main(void)
 	min = 0;
 	sec = 0;
 	print_7_seg_time (hour, min, sec);
+	LCD_cursor_off(); 
+	print_LCD_text (hour, min, sec);
 
 	while(1)
 	{
@@ -112,6 +115,7 @@ int main(void)
 			hour = 0;
 		}	
 		print_7_seg_time (hour, min, sec);
+		print_LCD_text (hour, min, sec);
 	}
 
 }
@@ -264,4 +268,19 @@ void LCD_cursor_off(void)
 {
   	volatile char * LCD_display_ptr = (char *) CHAR_LCD_BASE;	// 16x2 character display
 	*(LCD_display_ptr) = 0x0C;											// turn off the LCD cursor
+}
+
+/****************************************************************************************
+ * show text on first row and time on second row of the LCD display
+****************************************************************************************/
+void print_LCD_text (int h, int m, int s)
+{
+	char top_text[2][16] =  {{"  EJERCICIO 3\0"}, // dos espacios para centrar texto
+							 {"  JL ROCABADO\0"}};
+	char bot_text[16];
+	sprintf(bot_text, "    %0.2d:%0.2d:%0.2d", h, m, s);
+	LCD_cursor(0, 0);
+	LCD_text(top_text[((i/15) & 0x1)]) // changing text every 15s
+	LCD_cursor(0, 1);
+	LCD_text(bot_text);
 }
