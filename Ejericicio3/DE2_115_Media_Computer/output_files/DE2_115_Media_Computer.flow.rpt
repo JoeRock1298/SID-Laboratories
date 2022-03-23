@@ -1,5 +1,5 @@
 Flow report for DE2_115_Media_Computer
-Mon Mar 14 13:33:28 2022
+Wed Mar 23 10:16:34 2022
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------+
 ; Flow Summary                                                                                  ;
 +------------------------------------+----------------------------------------------------------+
-; Flow Status                        ; Successful - Mon Mar 14 13:33:21 2022                    ;
+; Flow Status                        ; Successful - Wed Mar 23 10:16:25 2022                    ;
 ; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                      ; DE2_115_Media_Computer                                   ;
 ; Top-level Entity Name              ; DE2_115_Media_Computer                                   ;
 ; Family                             ; Cyclone IV E                                             ;
 ; Device                             ; EP4CE115F29C7                                            ;
 ; Timing Models                      ; Final                                                    ;
-; Total logic elements               ; 11,192 / 114,480 ( 10 % )                                ;
-;     Total combinational functions  ; 9,948 / 114,480 ( 9 % )                                  ;
+; Total logic elements               ; 11,155 / 114,480 ( 10 % )                                ;
+;     Total combinational functions  ; 9,938 / 114,480 ( 9 % )                                  ;
 ;     Dedicated logic registers      ; 6,949 / 114,480 ( 6 % )                                  ;
 ; Total registers                    ; 7068                                                     ;
 ; Total pins                         ; 348 / 529 ( 66 % )                                       ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 03/14/2022 13:29:44    ;
+; Start date & time ; 03/23/2022 10:12:18    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; DE2_115_Media_Computer ;
 +-------------------+------------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 242211430917466.164726098315788        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 242211430917466.164802673707252        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -93,11 +93,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:02:28     ; 1.0                     ; 5181 MB             ; 00:03:35                           ;
-; Fitter                    ; 00:00:49     ; 1.1                     ; 6007 MB             ; 00:01:10                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 4744 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.2                     ; 4974 MB             ; 00:00:07                           ;
-; Total                     ; 00:03:28     ; --                      ; --                  ; 00:04:56                           ;
+; Analysis & Synthesis      ; 00:02:52     ; 1.0                     ; 5145 MB             ; 00:03:54                           ;
+; Fitter                    ; 00:00:56     ; 1.1                     ; 6000 MB             ; 00:01:18                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4740 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.2                     ; 4972 MB             ; 00:00:08                           ;
+; Total                     ; 00:04:00     ; --                      ; --                  ; 00:05:25                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

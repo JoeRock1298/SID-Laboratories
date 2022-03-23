@@ -44,7 +44,7 @@ void print_7_seg_time (int h, int m, int s);
 void LCD_cursor( int, int );
 void LCD_text( char * );
 void LCD_cursor_off( void );
-void print_LCD_text (int h, int m, int s)
+void print_LCD_text (int h, int m, int s);
 
 volatile int msec_counter = 0;
 volatile int key_pressed = -1;
@@ -57,8 +57,8 @@ int main(void)
 	/* Peripheral address definitions */
 	volatile int * interval_timer_ptr = (int *) TIMER_BASE;	    // Direcci�n Temporizador
 	volatile int * KEY_ptr = (int *) PUSHBUTTONS_BASE;			// Direcci�n pulsadores KEY
-	volatile int * HEX3_HEX0_ptr	= (int *) HEX3_HEX0_BASE;	// Direcci�n HEX3_HEX0
-	volatile int * HEX7_HEX4_ptr	= (int *) HEX7_HEX4_BASE;	// Direcci�n HEX7_HEX4
+	//volatile int * HEX3_HEX0_ptr	= (int *) HEX3_HEX0_BASE;	// Direcci�n HEX3_HEX0
+	//volatile int * HEX7_HEX4_ptr	= (int *) HEX7_HEX4_BASE;	// Direcci�n HEX7_HEX4
 
 	/* Configuring timer */
 	// 0x4C4B40 -> 5000000 counts -> 100ms counter
@@ -278,9 +278,9 @@ void print_LCD_text (int h, int m, int s)
 	char top_text[2][16] =  {{"  EJERCICIO 3\0"}, // dos espacios para centrar texto
 							 {"  JL ROCABADO\0"}};
 	char bot_text[16];
-	sprintf(bot_text, "    %0.2d:%0.2d:%0.2d", h, m, s);
+	sprintf(bot_text, "    %.2d:%.2d:%.2d", h, m, s);
 	LCD_cursor(0, 0);
-	LCD_text(top_text[((i/15) & 0x1)]) // changing text every 15s
+	LCD_text(top_text[((s/5) & 0x1)]); // changing text every 15s
 	LCD_cursor(0, 1);
 	LCD_text(bot_text);
 }
