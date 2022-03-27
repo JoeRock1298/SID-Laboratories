@@ -145,6 +145,7 @@ ELF := Real_Time_Clock.elf
 C_SRCS += Real_Time_Clock.c
 C_SRCS += interval_timer_ISR.c
 C_SRCS += pushbutton_ISR.c
+C_SRCS += switch_ISR.c
 CXX_SRCS :=
 ASM_SRCS :=
 

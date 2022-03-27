@@ -1,0 +1,23 @@
+#include "system.h"
+#include "sys/alt_irq.h"
+
+volatile int VGA_enable = 1;
+
+void switch_ISR( )
+{
+	volatile int * SWITCH_ptr = (int *) SWITCHES_BASE; // dirección SW
+	int slide;
+
+	slide = *(KEY_ptr);					// lee el registro de los pulsadores
+	*(KEY_ptr + 3) = 0; 					// borra la interrupciï¿½n
+
+	if (press & 0x2)						// KEY1
+		key_pressed = KEY1;
+	else if (press & 0x4)					// KEY2
+		key_pressed = KEY2;
+	else if (press & 0x1)					// KEY0
+		key_pressed = KEY0;
+	else									// press & 0x8, means KEY3
+		key_pressed = KEY3;
+	return;
+}

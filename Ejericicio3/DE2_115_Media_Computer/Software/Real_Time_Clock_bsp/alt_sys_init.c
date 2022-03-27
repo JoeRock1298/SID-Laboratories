@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Mon Mar 14 11:58:32 CET 2022
+ * Generated: Sun Mar 27 19:21:28 CEST 2022
  */
 
 /*
@@ -65,6 +65,7 @@
 #include "altera_avalon_performance_counter.h"
 #include "altera_avalon_sysid_qsys.h"
 #include "altera_avalon_timer.h"
+#include "altera_ro_zipfs.h"
 #include "altera_up_avalon_audio.h"
 #include "altera_up_avalon_audio_and_video_config.h"
 #include "altera_up_avalon_character_lcd.h"
@@ -84,6 +85,7 @@ ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, jtag_uart);
 ALTERA_AVALON_PERFORMANCE_COUNTER_INSTANCE ( PERFORMANCE_COUNTER, performance_counter);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER, timer);
+ALTERA_RO_ZIPFS_INSTANCE ( ALTERA_RO_ZIPFS, altera_ro_zipfs);
 ALTERA_UP_AVALON_AUDIO_AND_VIDEO_CONFIG_INSTANCE ( AUDIO_CONFIG, audio_config);
 ALTERA_UP_AVALON_AUDIO_INSTANCE ( AUDIO, audio);
 ALTERA_UP_AVALON_CHARACTER_LCD_INSTANCE ( CHAR_LCD, char_lcd);
@@ -126,6 +128,7 @@ void alt_sys_init( void )
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
     ALTERA_AVALON_PERFORMANCE_COUNTER_INIT ( PERFORMANCE_COUNTER, performance_counter);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
+    ALTERA_RO_ZIPFS_INIT ( ALTERA_RO_ZIPFS, altera_ro_zipfs);
     ALTERA_UP_AVALON_AUDIO_AND_VIDEO_CONFIG_INIT ( AUDIO_CONFIG, audio_config);
     ALTERA_UP_AVALON_AUDIO_INIT ( AUDIO, audio);
     ALTERA_UP_AVALON_CHARACTER_LCD_INIT ( CHAR_LCD, char_lcd);

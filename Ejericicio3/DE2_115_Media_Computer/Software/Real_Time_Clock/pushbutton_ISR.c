@@ -10,7 +10,7 @@ void pushbutton_ISR( )
 	int press;
 
 	press = *(KEY_ptr + 3);					// lee el registro de los pulsadores
-	*(KEY_ptr + 3) = 0; 					// borra la interrupci�n
+	*(KEY_ptr + 3) = 0; 					// borra la interrupcion
 
 	if (press & 0x2)						// KEY1
 		key_pressed = KEY1;

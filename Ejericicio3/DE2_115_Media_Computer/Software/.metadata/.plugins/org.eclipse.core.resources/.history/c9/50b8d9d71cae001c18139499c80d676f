@@ -1,0 +1,14 @@
+#include "system.h"
+#include "sys/alt_irq.h"
+
+volatile int VGA_enable = 1;
+
+void switch_ISR( )
+{
+	volatile int * SWITCH_ptr = (int *) SWITCHES_BASE; // dirección SW
+	int slide;
+
+	slide = *(SWITCH_ptr);					// lee el registro de los pulsadores
+	*(SWITCH_ptr + 3) = 0; 					// borra la interrupcio
+	return;
+}

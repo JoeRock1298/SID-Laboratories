@@ -22,13 +22,13 @@
 <td width="20%" bgcolor="#77BBFF">BSP Version:</td><td>default</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated On:</td><td>23-mar-2022 10:21:38</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated On:</td><td>27-mar-2022 23:15:01</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated Timestamp:</td><td>1648027299000</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated Timestamp:</td><td>1648415701221</td>
 </tr>
 <tr mode="wrap">
-<td width="20%" bgcolor="#77BBFF">BSP Generated Location:</td><td>C:\Users\jororoc\Documents\QDesign\Ejericicio3\DE2_115_Media_Computer\Software\Real_Time_Clock_bsp</td>
+<td width="20%" bgcolor="#77BBFF">BSP Generated Location:</td><td>C:\Users\jose_\Documents\UPV\MUISE_21_22\SID-Laboratories\Ejericicio3\DE2_115_Media_Computer\Software\Real_Time_Clock_bsp</td>
 </tr>
 </table>
 <br>
@@ -144,6 +144,19 @@
 <td>.stack</td><td>sdram</td>
 </tr>
 </table>
+<br>
+<br>
+<h3>Software Packages</h3>
+<table border="1" bgcolor="#FFFFCC" width="50%">
+<tr bgcolor="#77BBFF" mode="wrap">
+<th align="left" width="15%">Software Package</th><th align="left" width="15%">Version</th>
+</tr>
+<tr mode="wrap" STYLE="display: 'block'; font-family: 'courier'; color: '#000000'; font-weight: '500'; font-size: '14'; margin-top: '10pt'; text-align: 'left'">
+<td>altera_ro_zipfs</td><td>default</td>
+</tr>
+</table>
+<br>
+<br>
 <h3>Settings</h3>
 <table border="1" bgcolor="#FFFFCC" width="60%">
 <tr bgcolor="#77BBFF">
@@ -193,6 +206,87 @@
 </tr>
 <tr mode="wrap">
 <td width="20%">Description:</td><td>Small-footprint (polled mode) driver</td>
+</tr>
+<tr mode="wrap">
+<td width="20%">Restrictions:</td><td>none</td>
+</tr>
+</table>
+<br>
+<table border="1" bgcolor="#FFFFCC" width="60%">
+<tr bgcolor="#77BBFF">
+<td align="left" width="15%">Setting Name:</td><td align="left">altera_ro_zipfs.ro_zipfs_base</td>
+</tr>
+<tr>
+<td width="20%">Identifier:</td><td>ALTERA_RO_ZIPFS_BASE</td>
+</tr>
+<tr>
+<td width="20%">Default Value:</td><td>0x0</td>
+</tr>
+<tr>
+<td width="20%">Value:</td><td>0x8000000</td>
+</tr>
+<tr>
+<td width="20%">Type:</td><td>HexNumber</td>
+</tr>
+<tr mode="wrap">
+<td width="20%">Destination:</td><td>system_h_define</td>
+</tr>
+<tr mode="wrap">
+<td width="20%">Description:</td><td>Base address of flash memory device</td>
+</tr>
+<tr mode="wrap">
+<td width="20%">Restrictions:</td><td>none</td>
+</tr>
+</table>
+<br>
+<table border="1" bgcolor="#FFFFCC" width="60%">
+<tr bgcolor="#77BBFF">
+<td align="left" width="15%">Setting Name:</td><td align="left">altera_ro_zipfs.ro_zipfs_name</td>
+</tr>
+<tr>
+<td width="20%">Identifier:</td><td>ALTERA_RO_ZIPFS_NAME</td>
+</tr>
+<tr>
+<td width="20%">Default Value:</td><td>/mnt/rozipfs</td>
+</tr>
+<tr>
+<td width="20%">Value:</td><td>/mnt/rozipfs</td>
+</tr>
+<tr>
+<td width="20%">Type:</td><td>QuotedString</td>
+</tr>
+<tr mode="wrap">
+<td width="20%">Destination:</td><td>system_h_define</td>
+</tr>
+<tr mode="wrap">
+<td width="20%">Description:</td><td>Mount point</td>
+</tr>
+<tr mode="wrap">
+<td width="20%">Restrictions:</td><td>none</td>
+</tr>
+</table>
+<br>
+<table border="1" bgcolor="#FFFFCC" width="60%">
+<tr bgcolor="#77BBFF">
+<td align="left" width="15%">Setting Name:</td><td align="left">altera_ro_zipfs.ro_zipfs_offset</td>
+</tr>
+<tr>
+<td width="20%">Identifier:</td><td>ALTERA_RO_ZIPFS_OFFSET</td>
+</tr>
+<tr>
+<td width="20%">Default Value:</td><td>0x100000</td>
+</tr>
+<tr>
+<td width="20%">Value:</td><td>0x100000</td>
+</tr>
+<tr>
+<td width="20%">Type:</td><td>HexNumber</td>
+</tr>
+<tr mode="wrap">
+<td width="20%">Destination:</td><td>system_h_define</td>
+</tr>
+<tr mode="wrap">
+<td width="20%">Description:</td><td>Offset of file system from base of flash</td>
 </tr>
 <tr mode="wrap">
 <td width="20%">Restrictions:</td><td>none</td>

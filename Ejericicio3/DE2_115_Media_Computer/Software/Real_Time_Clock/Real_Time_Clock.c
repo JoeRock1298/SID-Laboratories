@@ -24,41 +24,63 @@
 //      - El reloj se visualiza ademas en el LCD y en la otra fila se mostrara el nombre
 //
 // -------------------------------------------------------------------------------------------------------------------------
-//      Versiï¿½n: V1.0                   | Fecha Modificaciï¿½n: 10/03/2022
+//      Version: V1.0                   | Fecha Modificaciï¿½n: 10/03/2022
 //
 //      Autor: Jose Luis Rocabado Rocha
 //
 // -------------------------------------------------------------------------------------------------------------------------
 
+#include "altera_up_avalon_video_pixel_buffer_dma.h"
+#include "altera_up_avalon_video_character_buffer_with_dma.h"
+#include "sys/alt_stdio.h"
 #include "key_codes.h"	// define los valores para KEY1, KEY2, KEY3
 #include "system.h"
 #include "sys/alt_irq.h"
 #include <stdio.h> //Necesario para el NULL
 
+//Auxiliar defines
+#define MARGIN_OFFSET 1
+#define TEXT_X_RES (50 - (2 * MARGIN_OFFSET)) //we will leave a margin on the MTL screen
+#define TEXT_Y_RES (50 - (2 * MARGIN_OFFSET))
+
 // Definition of the auxiliar functions
 void interval_timer_isr( );
 void pushbutton_ISR( );
-int hex_to_seven (int hex); // To delete
+void switch_ISR( );
 int two_hex_to_seven (int two_hex);
 void print_7_seg_time (int h, int m, int s);
 void LCD_cursor( int, int );
 void LCD_text( char * );
 void LCD_cursor_off( void );
 void print_LCD_text (int h, int m, int s);
+int read_VGA_line (FILE *filePointer, char* line);
+void data_update(alt_up_char_buffer_dev* char_buffer_dev_MTL, char data[TEXT_Y_RES][TEXT_X_RES], char* newdata);
 
 volatile int msec_counter = 0;
+volatile int frame_refresh = 0;
 volatile int key_pressed = -1;
+volatile int VGA_enable = 1; //Enable active when H level
 
 int main(void)
 {
 	///*Variable definition*///
-	int hour, min, sec = 0; //hacer una variable para cada parte, y no una global 
+	int hour, min, sec = 0; //hacer una variable para cada parte, y no una global
+	int txt_id = 0;
+	int file_status = 0;
+	char txt_files [4][22] = {{"/mnt/rozips/new00.txt"},
+							 {"/mnt/rozips/new01.txt"},
+							 {"/mnt/rozips/new02.txt"},
+							 {"/mnt/rozips/new03.txt"}};
+	char newline [TEXT_X_RES];
+	char separator [TEXT_X_RES] = "*";
+	char text_data [TEXT_Y_RES][TEXT_X_RES];
 
-	/* Peripheral address definitions */
-	volatile int * interval_timer_ptr = (int *) TIMER_BASE;	    // Direcciï¿½n Temporizador
-	volatile int * KEY_ptr = (int *) PUSHBUTTONS_BASE;			// Direcciï¿½n pulsadores KEY
-	//volatile int * HEX3_HEX0_ptr	= (int *) HEX3_HEX0_BASE;	// Direcciï¿½n HEX3_HEX0
-	//volatile int * HEX7_HEX4_ptr	= (int *) HEX7_HEX4_BASE;	// Direcciï¿½n HEX7_HEX4
+	/* Peripheral handler definitions */
+	volatile int * interval_timer_ptr = (int *) TIMER_BASE;	    // Direccion Temporizador
+	volatile int * KEY_ptr = (int *) PUSHBUTTONS_BASE;			// Direccion pulsadores KEY
+	volatile int * SWITCH_ptr = (int *) SWITCHES_BASE; 	        // dirección SW
+	alt_up_pixel_buffer_dma_dev *pixel_buffer_dev_MTL;
+	alt_up_char_buffer_dev *char_buffer_dev_MTL;
 
 	/* Configuring timer */
 	// 0x4C4B40 -> 5000000 counts -> 100ms counter
@@ -69,10 +91,15 @@ int main(void)
 	*(interval_timer_ptr + 1) = 0x7;	// STOP = 0, START = 1, CONT = 1, ITO = 1
 	alt_irq_register(TIMER_IRQ, NULL, interval_timer_isr);
 
-	/* Configuring pushbuttons */
+	/* Enabling pushbutton IRQs */
 	*(KEY_ptr + 2) = 0xC; 		/* Enabling interrupts for KEY2 y KEY3*/
 	*(KEY_ptr + 3) = 0; /* Edge detect reset */
 	alt_irq_register(PUSHBUTTONS_IRQ, NULL, pushbutton_ISR);
+
+	/* Enabling switch IRQs */
+	*(KEY_ptr + 2) = 0x1; 		/* Enabling interrupts for SW0*/
+	*(SWITCH_ptr + 3) = 0; 		// borra la interrupcion// We don't need edge detect since the switch won't change when released
+	alt_irq_register(SWITCHES_IRQ, NULL, switch_ISR);
 
 	/* Initialazing 7-segment and LCD*/
 	//12H,0min,0seg
@@ -82,6 +109,28 @@ int main(void)
 	print_7_seg_time (hour, min, sec);
 	LCD_cursor_off(); 
 	print_LCD_text (hour, min, sec);
+
+	/* File Handling definition and screen init*/
+	pixel_buffer_dev_MTL = alt_up_pixel_buffer_dma_open_dev ("/dev/mtl_pixel_buffer_dma");
+	if ( pixel_buffer_dev_MTL == NULL)
+		alt_printf ("Error: could not open MTL pixel buffer device\n");
+	else
+		alt_printf ("Opened MTL pixel buffer device\n");
+	/* clear the graphics screen */
+	alt_up_pixel_buffer_dma_clear_screen(pixel_buffer_dev_MTL, 0);
+
+	/* output text message in the middle of the MTL monitor */
+	char_buffer_dev_MTL = alt_up_char_buffer_open_dev ("/dev/mtl_char_buffer");
+	if (char_buffer_dev_MTL == NULL)
+	{
+		alt_printf ("Error: could not open MTL character buffer device\n");
+		return -1;
+	}
+	else
+		alt_printf ("Opened MTL character buffer device\n");
+
+	FILE *fh;
+	fh = fopen(txt_files[txt_id & 0x3],"r");
 
 	while(1)
 	{
@@ -116,85 +165,34 @@ int main(void)
 		}	
 		print_7_seg_time (hour, min, sec);
 		print_LCD_text (hour, min, sec);
-	}
+		if (VGA_enable)
+		{
+			if (frame_refresh == 25)
+			{
+				frame_refresh = 0;
+				if (file_status == 0) //proceed normally
+				{
+					file_status = read_VGA_line (fh, newline);
+					if(file_status == 1)
+					{
+						data_update(char_buffer_dev_MTL, text_data, separator);
+						fclose(fh);
+						file_status = 0;
+						txt_id ++;
+						fh = fopen(txt_files[txt_id & 0x3],"r");
+					}
+					else // status 0 or 2 (test the status 2 uncomment lower else)
+					{
+						data_update(char_buffer_dev_MTL, text_data, newline);
+					}
+				}
+				/*
+				else //print a separator line when EOF in case EOF is an the end of the line
+				{
 
-}
-
-/****************************************************************************************
- * Hexadecimal to 7-segment decoder // TO DELETE
-****************************************************************************************/
-int hex_to_seven (int hex)
-{
-	switch(hex)
-	{
-		case 0x0:
-				//printf("0");
-				return 0b0111111;
-				break;
-		case 0x1:
-				//printf("1");
-				return 0b0000110;
-				break;
-		case 0x2:
-				//printf("2");
-				return 0b1011011;
-		  	  	break;
-		case 0x3:
-				//printf("3");
-				return 0b1001111;
-		  	  	break;
-		case 0x4:
-				//printf("4");
-				return 0b1100110;
-		  	  	break;
-		case 0x5:
-				//printf("5");
-				return 0b1101101;
-		  	  	break;
-		case 0x6: 
-				//printf("6");
-				return 0b1111101;
-		  		break;
-		case 0x7:
-				//printf("7");
-				return 0b0100111;
-		  	  	break;
-		case 0x8:
-				//printf("8");
-				return 0b1111111;
-		  	  	break;
-		case 0x9:
-				//printf("9");
-				return 0b1100111;
-		  	  	break;
-		case 0xa:
-				//printf("a");
-				return 0b1110111;
-		  	  	break;
-		case 0xb:
-				//printf("b");
-				return 0b1111100;
-		  	  	break;
-		case 0xc:
-				//printf("c");
-				return 0b0111011;
-		  	  	break;
-		case 0xd:
-				//printf("d");
-				return 0b1011110;
-		  	  	break;
-		case 0xe:
-				//printf("e");
-				return 0b1111001;
-		  	  	break;
-		case 0xf:
-				//printf("f");
-				return 0b1110001;
-		  	  	break;
-		default:
-				//printf("def");
-				return 0b1000000;
-		  	  	break;
+				}*/
+			}
+		}
 	}
 }
 
@@ -208,8 +206,6 @@ int two_hex_to_seven (int two_hex)
 		0x7F, 0x67, 0x77, 0x7C, 0x3B, 0x5E, 0x79, 0x71 };
 	int Lresult = seven_seg_decode_table[(two_hex % 10) & 0xF];
 	int Hresult = seven_seg_decode_table[(two_hex / 10) & 0xF];
-	//int Lresult = hex_to_seven((two_hex % 10) & 0xF) & 0x7F;
-	//int Hresult = hex_to_seven((two_hex / 10) & 0xF) & 0x7F;
 	return (Hresult <<8) | Lresult;
 }
 
@@ -280,7 +276,97 @@ void print_LCD_text (int h, int m, int s)
 	char bot_text[16];
 	sprintf(bot_text, "    %.2d:%.2d:%.2d", h, m, s);
 	LCD_cursor(0, 0);
-	LCD_text(top_text[((s/5) & 0x1)]); // changing text every 15s
+	LCD_text(top_text[((s/5) & 0x1)]); // changing text every 5s
 	LCD_cursor(0, 1);
 	LCD_text(bot_text);
 }
+
+/****************************************************************************************
+ * Reads a printable line from the file passed
+ * returns a 0 if everything went properly
+ * returns a 1 if eof (use this to add a file separation line)
+ * returns a 2 if eof is in same line (print current line and then separation line)
+ * migth be better tu use a struct
+****************************************************************************************/
+
+int read_VGA_line (FILE *filePointer, char* line)
+{
+	char read_char;
+	int last_ws_pos = 0;
+	int status = 0;
+	int clear_flag = 0;
+	// check if the text needs to be really
+	for (int i = 0; i < TEXT_X_RES; i++)
+	{
+		read_char = getc(filePointer);
+		if(read_char == EOF)
+		{
+			if(i != 0 && line[i-1] != '\n') // EOF in same line of last line
+			{
+				clear_flag = 1;
+				status = 2;
+			}
+			else //EOF in begining of last line
+			{
+				status = 1;
+				return status;
+			}
+		}
+		else if(read_char == '\n')
+		{
+			clear_flag = 1;
+		}
+		else if(read_char == ' ')
+		{
+			last_ws_pos = i;
+		}
+		if (clear_flag)
+		{
+			line[i] = ' ';
+		}
+		else
+		{
+			line[i] = read_char;
+		}
+	}
+	//Checking if last word fits completely in the screen
+	if(status == 0)
+	{
+		read_char = getc(filePointer);
+		if((read_char == '\n') || (read_char == ' ') || (read_char == EOF))
+		{
+			fseek( filePointer, -1, SEEK_CUR );
+		}
+		else // the word doesn't fit
+		{
+			for (int i = last_ws_pos + 1; i < TEXT_X_RES; i++)
+			{
+				line[1] = ' ';
+			}
+			fseek( filePointer, -last_ws_pos, SEEK_CUR );
+		}
+	}
+	return status;
+}
+
+/****************************************************************************************
+ * Displays the news including the new line
+****************************************************************************************/
+void data_update(alt_up_char_buffer_dev* char_buffer_dev_MTL, char data[TEXT_Y_RES][TEXT_X_RES], char* newdata)
+{
+	for (int i = 0; i < TEXT_Y_RES - 1; i++) // La última línea se asigna la nueva linea
+	{
+		for(int j = 0; j < TEXT_X_RES; j++)
+		{
+			data[i][j] = data[i+1][j];
+		}
+		//remember to initialize the MTL window in order to use this function properly
+		alt_up_char_buffer_string (char_buffer_dev_MTL, data[i], MARGIN_OFFSET, i + MARGIN_OFFSET);
+	}
+	for(int j = 0; j < TEXT_X_RES; j++)
+	{
+		data[TEXT_Y_RES - 1][j] = newdata[j];
+	}
+	alt_up_char_buffer_string (char_buffer_dev_MTL, data[TEXT_Y_RES - 1], MARGIN_OFFSET, TEXT_Y_RES - 1 + MARGIN_OFFSET);
+}
+

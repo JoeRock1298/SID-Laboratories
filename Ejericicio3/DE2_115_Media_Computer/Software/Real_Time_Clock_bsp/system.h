@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Wed Mar 23 10:21:39 CET 2022
+ * Generated: Sun Mar 27 19:21:28 CEST 2022
  */
 
 /*
@@ -243,6 +243,16 @@
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "nios_system"
+
+
+/*
+ * altera_ro_zipfs configuration
+ *
+ */
+
+#define ALTERA_RO_ZIPFS_BASE 0x8000000
+#define ALTERA_RO_ZIPFS_NAME "/mnt/rozipfs"
+#define ALTERA_RO_ZIPFS_OFFSET 0x100000
 
 
 /*
