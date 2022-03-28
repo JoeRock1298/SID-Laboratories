@@ -19,6 +19,5 @@ void switch_ISR( )
 	{
 		VGA_enable = 1;
 	}
-	printf("%x \n",VGA_enable);
 	return;
 }

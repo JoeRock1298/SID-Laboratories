@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>28-mar-2022 10:15:06</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1648455306041</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>28-mar-2022 11:38:21</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1648460301960</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\jororoc\Documents\QDesign\Ejericicio3\DE2_115_Media_Computer\Software\Real_Time_Clock_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios_system.sopcinfo</SopcDesignFile>

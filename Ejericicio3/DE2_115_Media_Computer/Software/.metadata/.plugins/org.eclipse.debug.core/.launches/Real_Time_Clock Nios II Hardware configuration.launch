@@ -3,7 +3,7 @@
 <stringAttribute key="byteStreamDeviceCableName" value="USB-Blaster on localhost [USB-0]"/>
 <stringAttribute key="byteStreamDeviceDeviceID" value="1"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
-<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="57859"/>
+<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="53087"/>
 <booleanAttribute key="downloadProgram" value="true"/>
 <stringAttribute key="elfFile" value="C:\Users\jororoc\Documents\QDesign\Ejericicio3\DE2_115_Media_Computer\Software\Real_Time_Clock\Real_Time_Clock.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>

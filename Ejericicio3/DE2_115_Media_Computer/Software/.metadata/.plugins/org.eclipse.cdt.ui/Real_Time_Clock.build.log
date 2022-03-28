@@ -1,9 +1,9 @@
-10:52:14 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+14:20:23 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
 make all 
 Info: Building ../Real_Time_Clock_bsp/
 C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
 [BSP build complete]
 [Real_Time_Clock build complete]
 
-10:52:15 Build Finished (took 957ms)
+14:20:24 Build Finished (took 1s.15ms)
 
