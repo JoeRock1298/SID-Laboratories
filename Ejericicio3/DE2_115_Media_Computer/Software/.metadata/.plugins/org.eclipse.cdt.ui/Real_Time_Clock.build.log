@@ -1,18 +1,9 @@
-15:38:35 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
+18:08:41 **** Incremental Build of configuration Nios II for project Real_Time_Clock ****
 make all 
 Info: Building ../Real_Time_Clock_bsp/
-C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Real_Time_Clock_bsp/
 [BSP build complete]
-Info: Compiling Real_Time_Clock.c to obj/default/Real_Time_Clock.o
-nios2-elf-gcc -xc -MP -MMD -c -I../Real_Time_Clock_bsp//HAL/inc -I../Real_Time_Clock_bsp/ -I../Real_Time_Clock_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED -DRO_ZIPFS    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Real_Time_Clock.o Real_Time_Clock.c
-Info: Linking Real_Time_Clock.elf
-nios2-elf-g++  -T'../Real_Time_Clock_bsp//linker.x' -msys-crt0='../Real_Time_Clock_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Real_Time_Clock_bsp/   -Wl,-Map=Real_Time_Clock.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Real_Time_Clock.elf obj/default/Real_Time_Clock.o obj/default/interval_timer_ISR.o obj/default/pushbutton_ISR.o obj/default/switch_ISR.o -lm -msys-lib=m
-nios2-elf-insert Real_Time_Clock.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x10001040 --timestamp 1648455047 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system --quartus_project_dir "C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer" --jdi ../..//output_files/DE2_115_Media_Computer.jdi --sopcinfo C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock_bsp/../../nios_system.sopcinfo
-Info: (Real_Time_Clock.elf) 108 KBytes program size (code + initialized data).
-Info:                       130955 KBytes free for stack + heap.
-Info: Creating Real_Time_Clock.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source Real_Time_Clock.elf >Real_Time_Clock.objdump
 [Real_Time_Clock build complete]
 
-15:38:38 Build Finished (took 3s.849ms)
+18:08:42 Build Finished (took 1s.58ms)
 

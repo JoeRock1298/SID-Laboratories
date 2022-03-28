@@ -1676,3 +1676,229 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
 	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
 	at java.lang.Thread.run(Unknown Source)
+!SESSION 2022-03-28 17:32:26.237 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2022-03-28 17:33:12.098
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Received fatal alert: handshake_failure. ; version: 1.100.0.v20160217-0435
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:37:52.803
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:37:55.221
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:39:12.044
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:39:12.587
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:39:14.853
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:40:33.243
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:40:33.771
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:40:35.746
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:41:59.397
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:41:59.892
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:42:03.541
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --tcpport=auto --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:43:51.164
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:43:53.193
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:46:09.819
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:46:10.279
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:46:12.291
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:47:09.799
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:47:10.320
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:47:12.216
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:48:00.239
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:48:00.786
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:48:02.746
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+!SESSION 2022-03-28 17:53:18.849 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2022-03-28 17:53:29.145
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Received fatal alert: handshake_failure. ; version: 1.100.0.v20160217-0435
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:54:11.375
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:54:13.364
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:56:24.309
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:56:24.875
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:56:26.904
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:56:52.958
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:56:53.535
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:56:55.450
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:58:20.268
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:58:20.810
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:58:22.714
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:59:22.507
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:59:23.099
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 17:59:25.033
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:00:52.121
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:00:52.689
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:00:56.222
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --tcpport=auto --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:03:46.942
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:03:47.688
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:03:51.210
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --tcpport=auto --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:06:51.130
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:06:53.129
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:07:40.871
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:07:41.493
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:07:43.493
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:08:42.878
+!MESSAGE Terminated Launch with connection: 10
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:08:43.422
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648481597]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 18:08:45.432
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648481597 /cygdrive/c/Users/jororoc/Documents/QDesign/SID-Laboratories/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]

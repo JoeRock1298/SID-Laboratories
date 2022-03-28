@@ -1,6 +1,6 @@
-15:38:33 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
+18:08:40 **** Incremental Build of configuration Nios II for project Real_Time_Clock_bsp ****
 make all 
 [BSP build complete]
 
-15:38:35 Build Finished (took 1s.491ms)
+18:08:41 Build Finished (took 907ms)
 

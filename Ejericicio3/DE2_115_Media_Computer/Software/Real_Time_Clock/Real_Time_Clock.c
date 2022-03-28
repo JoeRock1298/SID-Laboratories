@@ -30,7 +30,7 @@
 //
 // -------------------------------------------------------------------------------------------------------------------------
 
-//#include "altera_up_avalon_video_pixel_buffer_dma.h"
+#include "altera_up_avalon_video_pixel_buffer_dma.h"
 #include "altera_up_avalon_video_character_buffer_with_dma.h"
 #include "sys/alt_stdio.h"
 #include "key_codes.h"	// define los valores para KEY1, KEY2, KEY3
@@ -72,14 +72,14 @@ int main(void)
 							 {"/mnt/rozipfs/new02.txt"},
 							 {"/mnt/rozipfs/new03.txt"}};
 	char newline [TEXT_X_RES] = "\0";
-	char separator [TEXT_X_RES] = "*";
+	char separator [TEXT_X_RES] = {"   ------------------------------------------   \0"};
 	char text_data [TEXT_Y_RES][TEXT_X_RES + 1] = {"\0"};
 
 	/* Peripheral handler definitions */
 	volatile int * interval_timer_ptr = (int *) TIMER_BASE;	    // Direccion Temporizador
 	volatile int * KEY_ptr = (int *) PUSHBUTTONS_BASE;			// Direccion pulsadores KEY
 	volatile int * SWITCH_ptr = (int *) SWITCHES_BASE; 	        // dirección SW
-	//alt_up_pixel_buffer_dma_dev *pixel_buffer_dev_MTL;
+	alt_up_pixel_buffer_dma_dev *pixel_buffer_dev_MTL;
 	alt_up_char_buffer_dev *char_buffer_dev_MTL;
 
 	/* Configuring timer */
@@ -111,13 +111,13 @@ int main(void)
 	print_LCD_text (hour, min, sec);
 
 	/* File Handling definition and screen init*/
-	//pixel_buffer_dev_MTL = alt_up_pixel_buffer_dma_open_dev ("/dev/mtl_pixel_buffer_dma");
-	//if ( pixel_buffer_dev_MTL == NULL)
-		//alt_printf ("Error: could not open MTL pixel buffer device\n");
-	//else
-		//alt_printf ("Opened MTL pixel buffer device\n");
+	pixel_buffer_dev_MTL = alt_up_pixel_buffer_dma_open_dev ("/dev/mtl_pixel_buffer_dma");
+	if ( pixel_buffer_dev_MTL == NULL)
+		alt_printf ("Error: could not open MTL pixel buffer device\n");
+	else
+		alt_printf ("Opened MTL pixel buffer device\n");
 	/* clear the graphics screen */
-	//alt_up_pixel_buffer_dma_clear_screen(pixel_buffer_dev_MTL, 0);
+	alt_up_pixel_buffer_dma_clear_screen(pixel_buffer_dev_MTL, 0);
 
 
 	/* output text message in the middle of the MTL monitor */
@@ -139,7 +139,7 @@ int main(void)
 		return 1;
 	}
 	//test EOF
-	fseek( fh, -2*TEXT_X_RES , SEEK_END );
+	fseek( fh, -TEXT_X_RES , SEEK_END );
 
 	while(1)
 	{
@@ -189,6 +189,7 @@ int main(void)
 						file_status = 0;
 						txt_id ++;
 						fh = fopen(txt_files[txt_id & 0x3],"r");
+						printf("status 1 %s", separator);
 						if (fh == NULL)
 							{
 								printf("Error loading file");
@@ -200,11 +201,20 @@ int main(void)
 						data_update(char_buffer_dev_MTL, text_data, newline);
 					}
 				}
-				/*
 				else //print a separator line when EOF in case EOF is at the end of the line
 				{
-
-				}*/
+					data_update(char_buffer_dev_MTL, text_data, separator);
+					fclose(fh);
+					file_status = 0;
+					txt_id ++;
+					fh = fopen(txt_files[txt_id & 0x3],"r");
+					printf("%d, estatus 2",txt_id &0x3);
+					if (fh == NULL)
+					{
+						printf("Error loading file");
+						return 1;
+					}
+				}
 			}
 		}
 	}
@@ -362,28 +372,19 @@ int read_VGA_line (FILE *filePointer, char* line)
 void data_update(alt_up_char_buffer_dev* char_buffer_dev_MTL, char data[TEXT_Y_RES][TEXT_X_RES+1], char* newdata)
 {
 	alt_up_char_buffer_clear (char_buffer_dev_MTL);
-	//int clear_flag = 0;
 	for (int i = 0; i < TEXT_Y_RES - 1; i++) // La última línea se asigna la nueva linea
 	{
 		for(int j = 0; j < TEXT_X_RES ; j++)
 		{
-			/*if(data[i+1][j] == '\0')
-				clear_flag = 1;
-			if(clear_flag)
-				data[i][j] = '\0';
-			else*/
 				data[i][j] = data[i+1][j];
 		}
 		//remember to initialize the MTL window in order to use this function properly
 		alt_up_char_buffer_string (char_buffer_dev_MTL, data[i], MARGIN_OFFSET, i + MARGIN_OFFSET);
-		//clear_flag = 0;
 	}
-	alt_up_char_buffer_string (char_buffer_dev_MTL, data[TEXT_Y_RES - 1], MARGIN_OFFSET, TEXT_Y_RES - 1 + MARGIN_OFFSET);
 	for(int j = 0; j < TEXT_X_RES; j++)
 	{
 		data[TEXT_Y_RES - 1][j] = newdata[j];
 	}
 	alt_up_char_buffer_string (char_buffer_dev_MTL, data[TEXT_Y_RES - 1], MARGIN_OFFSET, TEXT_Y_RES - 1 + MARGIN_OFFSET);
-	//clear_flag = 0;
 }
 
