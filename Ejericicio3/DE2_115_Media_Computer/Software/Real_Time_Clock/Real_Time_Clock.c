@@ -97,8 +97,8 @@ int main(void)
 	alt_irq_register(PUSHBUTTONS_IRQ, NULL, pushbutton_ISR);
 
 	/* Enabling switch IRQs */
-	*(KEY_ptr + 2) = 0x1; 		/* Enabling interrupts for SW0*/
-	*(SWITCH_ptr + 3) = 0; 		// borra la interrupcion// We don't need edge detect since the switch won't change when released
+	*(SWITCH_ptr + 2) = 0x1; 		/* Enabling interrupts for SW0*/
+	//*(SWITCH_ptr + 3) = 0; 		// borra la interrupcion
 	alt_irq_register(SWITCHES_IRQ, NULL, switch_ISR);
 
 	/* Initialazing 7-segment and LCD*/
@@ -165,14 +165,18 @@ int main(void)
 		}	
 		print_7_seg_time (hour, min, sec);
 		print_LCD_text (hour, min, sec);
+		printf("%d\n", VGA_enable);
 		if (VGA_enable)
 		{
 			if (frame_refresh == 25)
 			{
 				frame_refresh = 0;
+				printf("%d", VGA_enable);
 				if (file_status == 0) //proceed normally
 				{
+					printf("%d  test\n", newline);
 					file_status = read_VGA_line (fh, newline);
+					printf("%d\n", newline);
 					if(file_status == 1)
 					{
 						data_update(char_buffer_dev_MTL, text_data, separator);

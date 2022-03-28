@@ -808,3 +808,275 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
 	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
 	at java.lang.Thread.run(Unknown Source)
+!SESSION 2022-03-28 10:11:27.837 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2022-03-28 10:11:53.921
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Received fatal alert: handshake_failure. ; version: 1.100.0.v20160217-0435
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:15:55.243
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:15:57.478
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:18:19.506
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:18:21.692
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:20:03.866
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:20:04.444
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:20:06.573
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:21:51.511
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:21:52.100
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:21:54.294
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:22:32.058
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:22:38.723
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:22:45.452
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:24:14.818
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:24:21.193
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:24:27.918
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:25:02.567
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:25:10.211
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:25:16.940
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:26:22.902
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:26:23.512
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:26:25.721
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:27:21.064
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:27:21.636
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:27:23.823
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:28:23.226
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:28:23.806
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:28:26.015
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:29:31.857
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:29:32.477
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:29:34.694
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:30:26.188
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:30:26.767
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:30:28.935
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:31:50.891
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:31:51.481
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:31:53.666
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:33:50.253
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:33:50.845
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:33:53.016
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:35:12.237
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:35:12.809
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:35:15.058
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:36:17.097
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:36:17.703
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:36:19.905
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:37:18.551
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:37:19.072
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:37:21.336
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:38:30.599
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:38:31.190
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:38:33.390
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:39:44.810
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:39:45.372
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:39:47.518
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:40:56.590
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:40:57.157
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:40:59.389
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:43:12.450
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:43:13.027
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:43:15.215
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:44:20.921
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:44:21.501
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:44:23.775
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:46:28.388
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:46:28.969
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:46:31.269
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:47:22.364
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:47:22.956
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:47:25.144
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:47:46.668
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:47:54.367
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:48:01.101
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:48:55.556
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:48:56.137
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:49:00.403
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10001040 --id=0x0 --timestamp=1648455047]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:52:16.345
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10001040 --id=0x0 --timestamp=1648455047 /cygdrive/c/Users/jororoc/Documents/QDesign/Ejericicio3/DE2_115_Media_Computer/Software/Real_Time_Clock/Real_Time_Clock.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-28 10:52:24.944
+!MESSAGE Executing: [C:/intelfpga/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10001040 --id=0x0 --timestamp=1648455047]

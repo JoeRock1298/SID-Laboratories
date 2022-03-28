@@ -1,0 +1,15 @@
+#include "system.h"
+#include "sys/alt_irq.h"
+
+//H level enable
+extern volatile int VGA_enable;
+
+void switch_ISR( )
+{
+	volatile int * SWITCH_ptr = (int *) SWITCHES_BASE; // dirección SW
+	VGA_enable = *(SWITCH_ptr) & 0x1;
+	//*(SWITCH_ptr + 3) = 0; 					// borra la interrupcion
+	//since we are only using SW0 to generate interrupts we don't need if statement
+	//printf("%x \n",VGA_enable & 0x1);
+	return;
+}
