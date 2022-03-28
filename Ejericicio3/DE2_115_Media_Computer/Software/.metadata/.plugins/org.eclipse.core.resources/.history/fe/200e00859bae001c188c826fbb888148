@@ -41,7 +41,7 @@
 //Auxiliar defines
 #define MARGIN_OFFSET 1
 #define TEXT_X_RES (50 - (2 * MARGIN_OFFSET)) //we will leave a margin on the MTL screen
-#define TEXT_Y_RES (50 - (2 * MARGIN_OFFSET))
+#define TEXT_Y_RES (30 - (2 * MARGIN_OFFSET))
 
 // Definition of the auxiliar functions
 void interval_timer_isr( );
@@ -54,7 +54,7 @@ void LCD_text( char * );
 void LCD_cursor_off( void );
 void print_LCD_text (int h, int m, int s);
 int read_VGA_line (FILE *filePointer, char* line);
-void data_update(alt_up_char_buffer_dev* char_buffer_dev_MTL, char data[TEXT_Y_RES][TEXT_X_RES], char* newdata);
+void data_update(alt_up_char_buffer_dev* char_buffer_dev_MTL, char data[TEXT_Y_RES][TEXT_X_RES+1], char* newdata);
 
 volatile int msec_counter = 0;
 volatile int frame_refresh = 0;
@@ -67,13 +67,13 @@ int main(void)
 	int hour, min, sec = 0; //hacer una variable para cada parte, y no una global
 	int txt_id = 0;
 	int file_status = 0;
-	char txt_files [4][22] = {{"/mnt/rozips/new00.txt"},
-							 {"/mnt/rozips/new01.txt"},
-							 {"/mnt/rozips/new02.txt"},
-							 {"/mnt/rozips/new03.txt"}};
-	char newline [TEXT_X_RES];
+	char txt_files [4][23] = {{"/mnt/rozipfs/new00.txt"},
+							 {"/mnt/rozipfs/new01.txt"},
+							 {"/mnt/rozipfs/new02.txt"},
+							 {"/mnt/rozipfs/new03.txt"}};
+	char newline [TEXT_X_RES] = "\0";
 	char separator [TEXT_X_RES] = "*";
-	char text_data [TEXT_Y_RES][TEXT_X_RES];
+	char text_data [TEXT_Y_RES][TEXT_X_RES + 1] = {"\0"};
 
 	/* Peripheral handler definitions */
 	volatile int * interval_timer_ptr = (int *) TIMER_BASE;	    // Direccion Temporizador
@@ -119,6 +119,7 @@ int main(void)
 	/* clear the graphics screen */
 	alt_up_pixel_buffer_dma_clear_screen(pixel_buffer_dev_MTL, 0);
 
+
 	/* output text message in the middle of the MTL monitor */
 	char_buffer_dev_MTL = alt_up_char_buffer_open_dev ("/dev/mtl_char_buffer");
 	if (char_buffer_dev_MTL == NULL)
@@ -128,11 +129,10 @@ int main(void)
 	}
 	else
 		alt_printf ("Opened MTL character buffer device\n");
+	alt_up_char_buffer_clear (char_buffer_dev_MTL);
 
 	FILE *fh;
-	printf("%s \n",txt_files[(txt_id & 0x3)]);
-	//fh = fopen(txt_files[txt_id & 0x3], "r");
-	fh = fopen("/mnt/rozips/new00.txt","r");
+	fh = fopen(txt_files[txt_id & 0x3], "r");
 	if (fh == NULL)
 	{
 		printf("Error loading file");
@@ -171,18 +171,14 @@ int main(void)
 		}	
 		print_7_seg_time (hour, min, sec);
 		print_LCD_text (hour, min, sec);
-		printf("%d\n", VGA_enable);
-		if (VGA_enable)
+		if (frame_refresh == 25)
 		{
-			if (frame_refresh == 25)
+			frame_refresh = 0;
+			if (VGA_enable)
 			{
-				frame_refresh = 0;
-				printf("%d", VGA_enable);
 				if (file_status == 0) //proceed normally
 				{
-					printf("%s  test\n", newline);
 					file_status = read_VGA_line (fh, newline);
-					printf("%s\n", newline);
 					if(file_status == 1)
 					{
 						data_update(char_buffer_dev_MTL, text_data, separator);
@@ -309,7 +305,7 @@ int read_VGA_line (FILE *filePointer, char* line)
 	char read_char;
 	int last_ws_pos = 0;
 	int status = 0;
-	int clear_flag = 0;
+	//int clear_flag = 0;
 	// check if the text needs to be really
 	for (int i = 0; i < TEXT_X_RES; i++)
 	{
@@ -318,48 +314,41 @@ int read_VGA_line (FILE *filePointer, char* line)
 		{
 			if(i != 0 && line[i-1] != '\n') // EOF in same line of last line
 			{
-				clear_flag = 1;
+				line[i] = '\0';
 				status = 2;
+				return status;
 			}
 			else //EOF in begining of last line
 			{
+				line[i] = '\0';
 				status = 1;
 				return status;
 			}
 		}
 		else if(read_char == '\n')
 		{
-			clear_flag = 1;
+			line[i] = '\0';
+			return status;
 		}
 		else if(read_char == ' ')
 		{
 			last_ws_pos = i;
 		}
-		if (clear_flag)
-		{
-			line[i] = ' ';
-		}
-		else
-		{
-			line[i] = read_char;
-		}
+		line[i] = read_char;
 	}
 	//Checking if last word fits completely in the screen
 	if(status == 0)
 	{
 		read_char = getc(filePointer);
-		if((read_char == '\n') || (read_char == ' ') || (read_char == EOF))
-		{
-			fseek( filePointer, -1, SEEK_CUR );
-		}
-		else // the word doesn't fit
+		if((read_char != '\n') || (read_char != ' ') || (read_char != EOF)) // the word doesn't fit
 		{
 			for (int i = last_ws_pos + 1; i < TEXT_X_RES; i++)
 			{
-				line[1] = ' ';
+				line[i] = ' ';
 			}
-			fseek( filePointer, -last_ws_pos, SEEK_CUR );
+			fseek( filePointer, -(TEXT_X_RES - last_ws_pos), SEEK_CUR );
 		}
+		line[TEXT_X_RES] = '\0';
 	}
 	return status;
 }
@@ -367,21 +356,45 @@ int read_VGA_line (FILE *filePointer, char* line)
 /****************************************************************************************
  * Displays the news including the new line
 ****************************************************************************************/
-void data_update(alt_up_char_buffer_dev* char_buffer_dev_MTL, char data[TEXT_Y_RES][TEXT_X_RES], char* newdata)
+void data_update(alt_up_char_buffer_dev* char_buffer_dev_MTL, char data[TEXT_Y_RES][TEXT_X_RES+1], char* newdata)
 {
+	int clear_flag = 0;
 	for (int i = 0; i < TEXT_Y_RES - 1; i++) // La última línea se asigna la nueva linea
 	{
-		for(int j = 0; j < TEXT_X_RES; j++)
+		for(int j = 0; j < TEXT_X_RES ; j++)
 		{
-			data[i][j] = data[i+1][j];
+			/*if(data[i+1][j] == '\0')
+				clear_flag = 1;
+			if(clear_flag)
+				data[i][j] = '\0';
+			else*/
+				data[i][j] = data[i+1][j];
 		}
 		//remember to initialize the MTL window in order to use this function properly
 		alt_up_char_buffer_string (char_buffer_dev_MTL, data[i], MARGIN_OFFSET, i + MARGIN_OFFSET);
+		clear_flag = 0;
+		printf("%d\n", i);
 	}
 	for(int j = 0; j < TEXT_X_RES; j++)
+		{
+			/*if(newdata[j] == '\n')
+				clear_flag = 1;
+			if(clear_flag)
+				data[TEXT_Y_RES - 1][j] = ' ';
+			else*/
+			data[TEXT_Y_RES - 1][j] = ' ';
+		}
+	alt_up_char_buffer_string (char_buffer_dev_MTL, data[TEXT_Y_RES - 1], MARGIN_OFFSET, TEXT_Y_RES - 1 + MARGIN_OFFSET);
+	for(int j = 0; j < TEXT_X_RES; j++)
 	{
+		/*if(newdata[j] == '\n')
+			clear_flag = 1;
+		if(clear_flag)
+			data[TEXT_Y_RES - 1][j] = ' ';
+		else*/
 		data[TEXT_Y_RES - 1][j] = newdata[j];
 	}
 	alt_up_char_buffer_string (char_buffer_dev_MTL, data[TEXT_Y_RES - 1], MARGIN_OFFSET, TEXT_Y_RES - 1 + MARGIN_OFFSET);
+	clear_flag = 0;
 }
 
