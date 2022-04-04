@@ -1,0 +1,20 @@
+Fitter Status : Successful - Mon Apr 04 13:00:33 2022
+Quartus Prime Version : 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+Revision Name : tecnica0
+Top-level Entity Name : tecnica0
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 2,724 / 32,070 ( 8 % )
+Total registers : 4352
+Total pins : 235 / 457 ( 51 % )
+Total virtual pins : 0
+Total block memory bits : 67,248 / 4,065,280 ( 2 % )
+Total RAM Blocks : 18 / 397 ( 5 % )
+Total DSP Blocks : 3 / 87 ( 3 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )
