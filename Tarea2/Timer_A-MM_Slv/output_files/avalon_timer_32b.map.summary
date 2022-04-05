@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Failed - Sat Apr 02 18:59:52 2022
+Analysis & Synthesis Status : Successful - Tue Apr 05 17:35:35 2022
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : avalon_timer_32b
 Top-level Entity Name : avalon_timer_32b
 Family : Cyclone IV E
-Total logic elements : N/A until Partition Merge
-    Total combinational functions : N/A until Partition Merge
-    Dedicated logic registers : N/A until Partition Merge
-Total registers : N/A until Partition Merge
-Total pins : N/A until Partition Merge
-Total virtual pins : N/A until Partition Merge
-Total memory bits : N/A until Partition Merge
-Embedded Multiplier 9-bit elements : N/A until Partition Merge
-Total PLLs : N/A until Partition Merge
+Total logic elements : 350
+    Total combinational functions : 286
+    Dedicated logic registers : 194
+Total registers : 194
+Total pins : 74
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
