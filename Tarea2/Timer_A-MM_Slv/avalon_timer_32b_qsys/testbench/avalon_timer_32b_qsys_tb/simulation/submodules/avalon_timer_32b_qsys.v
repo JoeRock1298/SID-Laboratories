@@ -9,34 +9,34 @@ module avalon_timer_32b_qsys (
 		input  wire  reset_reset_n                                 //                               reset.reset_n
 	);
 
-	wire  [31:0] mm_master_bfm_0_m0_readdata;                                  // mm_interconnect_0:mm_master_bfm_0_m0_readdata -> mm_master_bfm_0:avm_readdata
-	wire         mm_master_bfm_0_m0_waitrequest;                               // mm_interconnect_0:mm_master_bfm_0_m0_waitrequest -> mm_master_bfm_0:avm_waitrequest
-	wire   [2:0] mm_master_bfm_0_m0_address;                                   // mm_master_bfm_0:avm_address -> mm_interconnect_0:mm_master_bfm_0_m0_address
-	wire         mm_master_bfm_0_m0_read;                                      // mm_master_bfm_0:avm_read -> mm_interconnect_0:mm_master_bfm_0_m0_read
-	wire  [31:0] mm_master_bfm_0_m0_writedata;                                 // mm_master_bfm_0:avm_writedata -> mm_interconnect_0:mm_master_bfm_0_m0_writedata
-	wire         mm_master_bfm_0_m0_write;                                     // mm_master_bfm_0:avm_write -> mm_interconnect_0:mm_master_bfm_0_m0_write
-	wire         mm_interconnect_0_avalon_timer_32b_0_avalon_slave_chipselect; // mm_interconnect_0:avalon_timer_32b_0_avalon_slave_chipselect -> avalon_timer_32b_0:chipselect
-	wire  [31:0] mm_interconnect_0_avalon_timer_32b_0_avalon_slave_readdata;   // avalon_timer_32b_0:readdata -> mm_interconnect_0:avalon_timer_32b_0_avalon_slave_readdata
-	wire   [2:0] mm_interconnect_0_avalon_timer_32b_0_avalon_slave_address;    // mm_interconnect_0:avalon_timer_32b_0_avalon_slave_address -> avalon_timer_32b_0:address
-	wire         mm_interconnect_0_avalon_timer_32b_0_avalon_slave_read;       // mm_interconnect_0:avalon_timer_32b_0_avalon_slave_read -> avalon_timer_32b_0:read
-	wire         mm_interconnect_0_avalon_timer_32b_0_avalon_slave_write;      // mm_interconnect_0:avalon_timer_32b_0_avalon_slave_write -> avalon_timer_32b_0:write
-	wire  [31:0] mm_interconnect_0_avalon_timer_32b_0_avalon_slave_writedata;  // mm_interconnect_0:avalon_timer_32b_0_avalon_slave_writedata -> avalon_timer_32b_0:writedata
-	wire         irq_mapper_receiver0_irq;                                     // avalon_timer_32b_0:o_IRQ -> irq_mapper:receiver0_irq
-	wire   [0:0] interrupt_sink_0_irq_irq;                                     // irq_mapper:sender_irq -> interrupt_sink_0:irq
-	wire         rst_controller_reset_out_reset;                               // rst_controller:reset_out -> avalon_timer_32b_0:reset
-	wire         rst_controller_001_reset_out_reset;                           // rst_controller_001:reset_out -> [interrupt_sink_0:reset, irq_mapper:reset, mm_interconnect_0:avalon_timer_32b_0_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_0:mm_master_bfm_0_clk_reset_reset_bridge_in_reset_reset, mm_master_bfm_0:reset]
+	wire  [31:0] mm_master_bfm_0_m0_readdata;                                // mm_interconnect_0:mm_master_bfm_0_m0_readdata -> mm_master_bfm_0:avm_readdata
+	wire         mm_master_bfm_0_m0_waitrequest;                             // mm_interconnect_0:mm_master_bfm_0_m0_waitrequest -> mm_master_bfm_0:avm_waitrequest
+	wire   [2:0] mm_master_bfm_0_m0_address;                                 // mm_master_bfm_0:avm_address -> mm_interconnect_0:mm_master_bfm_0_m0_address
+	wire         mm_master_bfm_0_m0_read;                                    // mm_master_bfm_0:avm_read -> mm_interconnect_0:mm_master_bfm_0_m0_read
+	wire  [31:0] mm_master_bfm_0_m0_writedata;                               // mm_master_bfm_0:avm_writedata -> mm_interconnect_0:mm_master_bfm_0_m0_writedata
+	wire         mm_master_bfm_0_m0_write;                                   // mm_master_bfm_0:avm_write -> mm_interconnect_0:mm_master_bfm_0_m0_write
+	wire         mm_interconnect_0_avalon_timer_32b_avalon_slave_chipselect; // mm_interconnect_0:avalon_timer_32b_avalon_slave_chipselect -> avalon_timer_32b:chipselect
+	wire  [31:0] mm_interconnect_0_avalon_timer_32b_avalon_slave_readdata;   // avalon_timer_32b:readdata -> mm_interconnect_0:avalon_timer_32b_avalon_slave_readdata
+	wire   [2:0] mm_interconnect_0_avalon_timer_32b_avalon_slave_address;    // mm_interconnect_0:avalon_timer_32b_avalon_slave_address -> avalon_timer_32b:address
+	wire         mm_interconnect_0_avalon_timer_32b_avalon_slave_read;       // mm_interconnect_0:avalon_timer_32b_avalon_slave_read -> avalon_timer_32b:read
+	wire         mm_interconnect_0_avalon_timer_32b_avalon_slave_write;      // mm_interconnect_0:avalon_timer_32b_avalon_slave_write -> avalon_timer_32b:write
+	wire  [31:0] mm_interconnect_0_avalon_timer_32b_avalon_slave_writedata;  // mm_interconnect_0:avalon_timer_32b_avalon_slave_writedata -> avalon_timer_32b:writedata
+	wire         irq_mapper_receiver0_irq;                                   // avalon_timer_32b:o_IRQ -> irq_mapper:receiver0_irq
+	wire   [0:0] interrupt_sink_0_irq_irq;                                   // irq_mapper:sender_irq -> interrupt_sink_0:irq
+	wire         rst_controller_reset_out_reset;                             // rst_controller:reset_out -> avalon_timer_32b:reset
+	wire         rst_controller_001_reset_out_reset;                         // rst_controller_001:reset_out -> [interrupt_sink_0:reset, irq_mapper:reset, mm_interconnect_0:avalon_timer_32b_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_0:mm_master_bfm_0_clk_reset_reset_bridge_in_reset_reset, mm_master_bfm_0:reset]
 
-	avalon_timer_32b avalon_timer_32b_0 (
-		.clock      (clk_clk),                                                      //         clock_sink.clk
-		.reset      (rst_controller_reset_out_reset),                               //         reset_sink.reset
-		.chipselect (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_chipselect), //       avalon_slave.chipselect
-		.address    (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_address),    //                   .address
-		.write      (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_write),      //                   .write
-		.writedata  (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_writedata),  //                   .writedata
-		.read       (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_read),       //                   .read
-		.readdata   (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_readdata),   //                   .readdata
-		.o_THR      (avalon_timer_32b_external_interface_conduit0),                 // external_interface.conduit0
-		.o_IRQ      (irq_mapper_receiver0_irq)                                      //   interrupt_sender.irq
+	avalon_timer_32b avalon_timer_32b (
+		.clock      (clk_clk),                                                    //         clock_sink.clk
+		.reset      (rst_controller_reset_out_reset),                             //         reset_sink.reset
+		.address    (mm_interconnect_0_avalon_timer_32b_avalon_slave_address),    //       avalon_slave.address
+		.write      (mm_interconnect_0_avalon_timer_32b_avalon_slave_write),      //                   .write
+		.writedata  (mm_interconnect_0_avalon_timer_32b_avalon_slave_writedata),  //                   .writedata
+		.read       (mm_interconnect_0_avalon_timer_32b_avalon_slave_read),       //                   .read
+		.readdata   (mm_interconnect_0_avalon_timer_32b_avalon_slave_readdata),   //                   .readdata
+		.chipselect (mm_interconnect_0_avalon_timer_32b_avalon_slave_chipselect), //                   .chipselect
+		.o_THR      (avalon_timer_32b_external_interface_conduit0),               // external_interface.conduit0
+		.o_IRQ      (irq_mapper_receiver0_irq)                                    //   interrupt_sender.irq
 	);
 
 	altera_avalon_interrupt_sink #(
@@ -111,21 +111,21 @@ module avalon_timer_32b_qsys (
 	);
 
 	avalon_timer_32b_qsys_mm_interconnect_0 mm_interconnect_0 (
-		.clk_50_clk_clk                                            (clk_clk),                                                      //                                          clk_50_clk.clk
-		.avalon_timer_32b_0_reset_sink_reset_bridge_in_reset_reset (rst_controller_001_reset_out_reset),                           // avalon_timer_32b_0_reset_sink_reset_bridge_in_reset.reset
-		.mm_master_bfm_0_clk_reset_reset_bridge_in_reset_reset     (rst_controller_001_reset_out_reset),                           //     mm_master_bfm_0_clk_reset_reset_bridge_in_reset.reset
-		.mm_master_bfm_0_m0_address                                (mm_master_bfm_0_m0_address),                                   //                                  mm_master_bfm_0_m0.address
-		.mm_master_bfm_0_m0_waitrequest                            (mm_master_bfm_0_m0_waitrequest),                               //                                                    .waitrequest
-		.mm_master_bfm_0_m0_read                                   (mm_master_bfm_0_m0_read),                                      //                                                    .read
-		.mm_master_bfm_0_m0_readdata                               (mm_master_bfm_0_m0_readdata),                                  //                                                    .readdata
-		.mm_master_bfm_0_m0_write                                  (mm_master_bfm_0_m0_write),                                     //                                                    .write
-		.mm_master_bfm_0_m0_writedata                              (mm_master_bfm_0_m0_writedata),                                 //                                                    .writedata
-		.avalon_timer_32b_0_avalon_slave_address                   (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_address),    //                     avalon_timer_32b_0_avalon_slave.address
-		.avalon_timer_32b_0_avalon_slave_write                     (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_write),      //                                                    .write
-		.avalon_timer_32b_0_avalon_slave_read                      (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_read),       //                                                    .read
-		.avalon_timer_32b_0_avalon_slave_readdata                  (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_readdata),   //                                                    .readdata
-		.avalon_timer_32b_0_avalon_slave_writedata                 (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_writedata),  //                                                    .writedata
-		.avalon_timer_32b_0_avalon_slave_chipselect                (mm_interconnect_0_avalon_timer_32b_0_avalon_slave_chipselect)  //                                                    .chipselect
+		.clk_50_clk_clk                                          (clk_clk),                                                    //                                        clk_50_clk.clk
+		.avalon_timer_32b_reset_sink_reset_bridge_in_reset_reset (rst_controller_001_reset_out_reset),                         // avalon_timer_32b_reset_sink_reset_bridge_in_reset.reset
+		.mm_master_bfm_0_clk_reset_reset_bridge_in_reset_reset   (rst_controller_001_reset_out_reset),                         //   mm_master_bfm_0_clk_reset_reset_bridge_in_reset.reset
+		.mm_master_bfm_0_m0_address                              (mm_master_bfm_0_m0_address),                                 //                                mm_master_bfm_0_m0.address
+		.mm_master_bfm_0_m0_waitrequest                          (mm_master_bfm_0_m0_waitrequest),                             //                                                  .waitrequest
+		.mm_master_bfm_0_m0_read                                 (mm_master_bfm_0_m0_read),                                    //                                                  .read
+		.mm_master_bfm_0_m0_readdata                             (mm_master_bfm_0_m0_readdata),                                //                                                  .readdata
+		.mm_master_bfm_0_m0_write                                (mm_master_bfm_0_m0_write),                                   //                                                  .write
+		.mm_master_bfm_0_m0_writedata                            (mm_master_bfm_0_m0_writedata),                               //                                                  .writedata
+		.avalon_timer_32b_avalon_slave_address                   (mm_interconnect_0_avalon_timer_32b_avalon_slave_address),    //                     avalon_timer_32b_avalon_slave.address
+		.avalon_timer_32b_avalon_slave_write                     (mm_interconnect_0_avalon_timer_32b_avalon_slave_write),      //                                                  .write
+		.avalon_timer_32b_avalon_slave_read                      (mm_interconnect_0_avalon_timer_32b_avalon_slave_read),       //                                                  .read
+		.avalon_timer_32b_avalon_slave_readdata                  (mm_interconnect_0_avalon_timer_32b_avalon_slave_readdata),   //                                                  .readdata
+		.avalon_timer_32b_avalon_slave_writedata                 (mm_interconnect_0_avalon_timer_32b_avalon_slave_writedata),  //                                                  .writedata
+		.avalon_timer_32b_avalon_slave_chipselect                (mm_interconnect_0_avalon_timer_32b_avalon_slave_chipselect)  //                                                  .chipselect
 	);
 
 	avalon_timer_32b_qsys_irq_mapper irq_mapper (

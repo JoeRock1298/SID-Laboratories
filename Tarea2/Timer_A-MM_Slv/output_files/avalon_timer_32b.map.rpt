@@ -1,5 +1,5 @@
 Analysis & Synthesis report for avalon_timer_32b
-Tue Apr 05 17:35:35 2022
+Wed Apr 06 23:26:50 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -44,15 +44,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 05 17:35:35 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 06 23:26:50 2022       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; avalon_timer_32b                            ;
 ; Top-level Entity Name              ; avalon_timer_32b                            ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 350                                         ;
-;     Total combinational functions  ; 286                                         ;
-;     Dedicated logic registers      ; 194                                         ;
-; Total registers                    ; 194                                         ;
+; Total logic elements               ; 352                                         ;
+;     Total combinational functions  ; 288                                         ;
+;     Dedicated logic registers      ; 195                                         ;
+; Total registers                    ; 195                                         ;
 ; Total pins                         ; 74                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -160,7 +160,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -180,20 +180,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 350         ;
+; Estimated Total logic elements              ; 352         ;
 ;                                             ;             ;
-; Total combinational functions               ; 286         ;
+; Total combinational functions               ; 288         ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 90          ;
 ;     -- 3 input functions                    ; 65          ;
-;     -- <=2 input functions                  ; 131         ;
+;     -- <=2 input functions                  ; 133         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 193         ;
+;     -- normal mode                          ; 195         ;
 ;     -- arithmetic mode                      ; 93          ;
 ;                                             ;             ;
-; Total registers                             ; 194         ;
-;     -- Dedicated logic registers            ; 194         ;
+; Total registers                             ; 195         ;
+;     -- Dedicated logic registers            ; 195         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 74          ;
@@ -201,9 +201,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 194         ;
-; Total fan-out                               ; 1505        ;
-; Average fan-out                             ; 2.40        ;
+; Maximum fan-out                             ; 195         ;
+; Total fan-out                               ; 1543        ;
+; Average fan-out                             ; 2.45        ;
 +---------------------------------------------+-------------+
 
 
@@ -212,9 +212,9 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name               ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+---------------------------+--------------+
-; |avalon_timer_32b                          ; 286 (0)             ; 194 (0)                   ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |avalon_timer_32b                                       ; avalon_timer_32b          ; work         ;
-;    |avalon_slave_MM_interface:u1_av_sl_MM| ; 165 (165)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM ; avalon_slave_MM_interface ; work         ;
-;    |timer_32b:u2_timer|                    ; 121 (121)           ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_timer_32b|timer_32b:u2_timer                    ; timer_32b                 ; work         ;
+; |avalon_timer_32b                          ; 288 (0)             ; 195 (0)                   ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |avalon_timer_32b                                       ; avalon_timer_32b          ; work         ;
+;    |avalon_slave_MM_interface:u1_av_sl_MM| ; 166 (166)           ; 160 (160)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM ; avalon_slave_MM_interface ; work         ;
+;    |timer_32b:u2_timer|                    ; 122 (122)           ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_timer_32b|timer_32b:u2_timer                    ; timer_32b                 ; work         ;
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -224,12 +224,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 194   ;
+; Total registers                              ; 195   ;
 ; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 160   ;
+; Number of registers using Clock Enable       ; 192   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -239,11 +239,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM|reg0[8]     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM|reg1[5]     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM|reg2[23]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |avalon_timer_32b|timer_32b:u2_timer|count[24]                      ;
-; 10:1               ; 32 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; Yes        ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM|readdata[1] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM|reg0[28]    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM|reg1[26]    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM|reg2[1]     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM|reg3[16]    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |avalon_timer_32b|timer_32b:u2_timer|count[16]                      ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; Yes        ; |avalon_timer_32b|avalon_slave_MM_interface:u1_av_sl_MM|readdata[8] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
@@ -253,7 +254,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; reg2[31..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; we          ; Input  ; Info     ; Stuck at VCC                                                                        ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -263,23 +263,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 74                          ;
-; cycloneiii_ff         ; 194                         ;
-;     ENA               ; 128                         ;
+; cycloneiii_ff         ; 195                         ;
+;     ENA               ; 160                         ;
 ;     ENA SCLR          ; 32                          ;
 ;     SCLR              ; 2                           ;
-;     plain             ; 32                          ;
-; cycloneiii_lcell_comb ; 286                         ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 288                         ;
 ;     arith             ; 93                          ;
 ;         2 data inputs ; 62                          ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 193                         ;
+;     normal            ; 195                         ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 67                          ;
+;         2 data inputs ; 69                          ;
 ;         3 data inputs ; 34                          ;
 ;         4 data inputs ; 90                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.10                        ;
-; Average LUT depth     ; 3.22                        ;
+; Average LUT depth     ; 3.21                        ;
 +-----------------------+-----------------------------+
 
 
@@ -298,7 +298,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 05 17:35:13 2022
+    Info: Processing started: Wed Apr 06 23:26:26 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off avalon_timer_32b -c avalon_timer_32b
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -309,19 +309,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file avalon_
 Info (12021): Found 1 design units, including 1 entities, in source file timer_32b.v
     Info (12023): Found entity 1: timer_32b File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea2/Timer_A-MM_Slv/timer_32b.v Line: 2
 Info (12127): Elaborating entity "avalon_timer_32b" for the top level hierarchy
-Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "avalon_slave_MM_interface:u1_av_sl_MM" File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea2/Timer_A-MM_Slv/avalon_timer_32b.v Line: 38
-Info (12128): Elaborating entity "timer_32b" for hierarchy "timer_32b:u2_timer" File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea2/Timer_A-MM_Slv/avalon_timer_32b.v Line: 49
+Info (12128): Elaborating entity "avalon_slave_MM_interface" for hierarchy "avalon_slave_MM_interface:u1_av_sl_MM" File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea2/Timer_A-MM_Slv/avalon_timer_32b.v Line: 39
+Info (12128): Elaborating entity "timer_32b" for hierarchy "timer_32b:u2_timer" File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea2/Timer_A-MM_Slv/avalon_timer_32b.v Line: 50
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 456 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 458 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 40 input pins
     Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 382 logic cells
+    Info (21061): Implemented 384 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4753 megabytes
-    Info: Processing ended: Tue Apr 05 17:35:35 2022
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:39
+    Info: Peak virtual memory: 4739 megabytes
+    Info: Processing ended: Wed Apr 06 23:26:50 2022
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:37
 
 

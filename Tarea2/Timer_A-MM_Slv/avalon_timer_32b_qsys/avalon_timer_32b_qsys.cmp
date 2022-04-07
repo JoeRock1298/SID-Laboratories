@@ -1,8 +1,8 @@
 	component avalon_timer_32b_qsys is
 		port (
+			avalon_timer_32b_external_interface_conduit0 : out std_logic;        -- conduit0
 			clk_clk                                      : in  std_logic := 'X'; -- clk
-			reset_reset_n                                : in  std_logic := 'X'; -- reset_n
-			avalon_timer_32b_external_interface_conduit0 : out std_logic         -- conduit0
+			reset_reset_n                                : in  std_logic := 'X'  -- reset_n
 		);
 	end component avalon_timer_32b_qsys;
 

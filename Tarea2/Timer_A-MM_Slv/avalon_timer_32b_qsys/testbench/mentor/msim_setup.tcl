@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2022.04.05.19:10:56
+# ACDS 17.1 590 win32 2022.04.07.02:03:35
 
 # ----------------------------------------
 # Initialize variables
@@ -166,8 +166,8 @@ if ![ string match "*ModelSim ALTERA*" [ vsim -version ] ] {
 }
 ensure_lib                                                                    ./libraries/altera_common_sv_packages/                                         
 vmap       altera_common_sv_packages                                          ./libraries/altera_common_sv_packages/                                         
-ensure_lib                                                                    ./libraries/avalon_timer_32b_0_avalon_slave_translator/                        
-vmap       avalon_timer_32b_0_avalon_slave_translator                         ./libraries/avalon_timer_32b_0_avalon_slave_translator/                        
+ensure_lib                                                                    ./libraries/avalon_timer_32b_avalon_slave_translator/                          
+vmap       avalon_timer_32b_avalon_slave_translator                           ./libraries/avalon_timer_32b_avalon_slave_translator/                          
 ensure_lib                                                                    ./libraries/mm_master_bfm_0_m0_translator/                                     
 vmap       mm_master_bfm_0_m0_translator                                      ./libraries/mm_master_bfm_0_m0_translator/                                     
 ensure_lib                                                                    ./libraries/rst_controller/                                                    
@@ -180,8 +180,8 @@ ensure_lib                                                                    ./
 vmap       mm_master_bfm_0                                                    ./libraries/mm_master_bfm_0/                                                   
 ensure_lib                                                                    ./libraries/interrupt_sink_0/                                                  
 vmap       interrupt_sink_0                                                   ./libraries/interrupt_sink_0/                                                  
-ensure_lib                                                                    ./libraries/avalon_timer_32b_0/                                                
-vmap       avalon_timer_32b_0                                                 ./libraries/avalon_timer_32b_0/                                                
+ensure_lib                                                                    ./libraries/avalon_timer_32b/                                                  
+vmap       avalon_timer_32b                                                   ./libraries/avalon_timer_32b/                                                  
 ensure_lib                                                                    ./libraries/avalon_timer_32b_qsys_inst_reset_bfm/                              
 vmap       avalon_timer_32b_qsys_inst_reset_bfm                               ./libraries/avalon_timer_32b_qsys_inst_reset_bfm/                              
 ensure_lib                                                                    ./libraries/avalon_timer_32b_qsys_inst_clk_bfm/                                
@@ -212,7 +212,7 @@ alias com {
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/verbosity_pkg.sv"                                                       -work altera_common_sv_packages                                         
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_mm_pkg.sv"                                                       -work altera_common_sv_packages                                         
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_utilities_pkg.sv"                                                -work altera_common_sv_packages                                         
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_merlin_slave_translator.sv"         -L altera_common_sv_packages -work avalon_timer_32b_0_avalon_slave_translator                        
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_merlin_slave_translator.sv"         -L altera_common_sv_packages -work avalon_timer_32b_avalon_slave_translator                          
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_merlin_master_translator.sv"        -L altera_common_sv_packages -work mm_master_bfm_0_m0_translator                                     
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_reset_controller.v"                                              -work rst_controller                                                    
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_reset_synchronizer.v"                                            -work rst_controller                                                    
@@ -220,9 +220,9 @@ alias com {
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b_qsys_mm_interconnect_0.v"                              -work mm_interconnect_0                                                 
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_avalon_mm_master_bfm.sv"            -L altera_common_sv_packages -work mm_master_bfm_0                                                   
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_avalon_interrupt_sink.sv"           -L altera_common_sv_packages -work interrupt_sink_0                                                  
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v"                                            -work avalon_timer_32b_0                                                
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b.v"                                                     -work avalon_timer_32b_0                                                
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/timer_32b.v"                                                            -work avalon_timer_32b_0                                                
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_slave_MM_interface_timer.v"                                      -work avalon_timer_32b                                                  
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b.v"                                                     -work avalon_timer_32b                                                  
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/timer_32b.v"                                                            -work avalon_timer_32b                                                  
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_avalon_reset_source.sv"             -L altera_common_sv_packages -work avalon_timer_32b_qsys_inst_reset_bfm                              
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_avalon_clock_source.sv"             -L altera_common_sv_packages -work avalon_timer_32b_qsys_inst_clk_bfm                                
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_conduit_bfm.sv"                     -L altera_common_sv_packages -work avalon_timer_32b_qsys_inst_avalon_timer_32b_external_interface_bfm
@@ -234,14 +234,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L avalon_timer_32b_0_avalon_slave_translator -L mm_master_bfm_0_m0_translator -L rst_controller -L irq_mapper -L mm_interconnect_0 -L mm_master_bfm_0 -L interrupt_sink_0 -L avalon_timer_32b_0 -L avalon_timer_32b_qsys_inst_reset_bfm -L avalon_timer_32b_qsys_inst_clk_bfm -L avalon_timer_32b_qsys_inst_avalon_timer_32b_external_interface_bfm -L avalon_timer_32b_qsys_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
+  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L avalon_timer_32b_avalon_slave_translator -L mm_master_bfm_0_m0_translator -L rst_controller -L irq_mapper -L mm_interconnect_0 -L mm_master_bfm_0 -L interrupt_sink_0 -L avalon_timer_32b -L avalon_timer_32b_qsys_inst_reset_bfm -L avalon_timer_32b_qsys_inst_clk_bfm -L avalon_timer_32b_qsys_inst_avalon_timer_32b_external_interface_bfm -L avalon_timer_32b_qsys_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with novopt option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -novopt -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L avalon_timer_32b_0_avalon_slave_translator -L mm_master_bfm_0_m0_translator -L rst_controller -L irq_mapper -L mm_interconnect_0 -L mm_master_bfm_0 -L interrupt_sink_0 -L avalon_timer_32b_0 -L avalon_timer_32b_qsys_inst_reset_bfm -L avalon_timer_32b_qsys_inst_clk_bfm -L avalon_timer_32b_qsys_inst_avalon_timer_32b_external_interface_bfm -L avalon_timer_32b_qsys_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
+  eval vsim -novopt -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L avalon_timer_32b_avalon_slave_translator -L mm_master_bfm_0_m0_translator -L rst_controller -L irq_mapper -L mm_interconnect_0 -L mm_master_bfm_0 -L interrupt_sink_0 -L avalon_timer_32b -L avalon_timer_32b_qsys_inst_reset_bfm -L avalon_timer_32b_qsys_inst_clk_bfm -L avalon_timer_32b_qsys_inst_avalon_timer_32b_external_interface_bfm -L avalon_timer_32b_qsys_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

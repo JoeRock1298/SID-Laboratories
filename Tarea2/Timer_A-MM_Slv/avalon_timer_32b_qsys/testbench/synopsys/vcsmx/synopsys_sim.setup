@@ -3,14 +3,14 @@ WORK > DEFAULT
 DEFAULT:                                                            ./libraries/work/                                                              
 work:                                                               ./libraries/work/                                                              
 altera_common_sv_packages:                                          ./libraries/altera_common_sv_packages/                                         
-avalon_timer_32b_0_avalon_slave_translator:                         ./libraries/avalon_timer_32b_0_avalon_slave_translator/                        
+avalon_timer_32b_avalon_slave_translator:                           ./libraries/avalon_timer_32b_avalon_slave_translator/                          
 mm_master_bfm_0_m0_translator:                                      ./libraries/mm_master_bfm_0_m0_translator/                                     
 rst_controller:                                                     ./libraries/rst_controller/                                                    
 irq_mapper:                                                         ./libraries/irq_mapper/                                                        
 mm_interconnect_0:                                                  ./libraries/mm_interconnect_0/                                                 
 mm_master_bfm_0:                                                    ./libraries/mm_master_bfm_0/                                                   
 interrupt_sink_0:                                                   ./libraries/interrupt_sink_0/                                                  
-avalon_timer_32b_0:                                                 ./libraries/avalon_timer_32b_0/                                                
+avalon_timer_32b:                                                   ./libraries/avalon_timer_32b/                                                  
 avalon_timer_32b_qsys_inst_reset_bfm:                               ./libraries/avalon_timer_32b_qsys_inst_reset_bfm/                              
 avalon_timer_32b_qsys_inst_clk_bfm:                                 ./libraries/avalon_timer_32b_qsys_inst_clk_bfm/                                
 avalon_timer_32b_qsys_inst_avalon_timer_32b_external_interface_bfm: ./libraries/avalon_timer_32b_qsys_inst_avalon_timer_32b_external_interface_bfm/

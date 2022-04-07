@@ -1042,6 +1042,7 @@ we => reg3.OUTPUTSELECT
 
 
 |avalon_timer_32b|timer_32b:u2_timer
+i_clk => we.CLK
 i_clk => THR.CLK
 i_clk => IRQ.CLK
 i_clk => count[0].CLK
@@ -1110,6 +1111,7 @@ i_reset => count.OUTPUTSELECT
 i_reset => count.OUTPUTSELECT
 i_reset => IRQ.OUTPUTSELECT
 i_reset => THR.OUTPUTSELECT
+i_reset => we.OUTPUTSELECT
 i_start => count.OUTPUTSELECT
 i_start => count.OUTPUTSELECT
 i_start => count.OUTPUTSELECT
@@ -1143,6 +1145,7 @@ i_start => count.OUTPUTSELECT
 i_start => count.OUTPUTSELECT
 i_start => count.OUTPUTSELECT
 i_start => IRQ.OUTPUTSELECT
+i_start => we.DATAA
 i_clearIRQ => IRQ.OUTPUTSELECT
 i_configTC[0] => Add1.IN64
 i_configTC[1] => Add1.IN63
@@ -1210,6 +1213,7 @@ i_configTHR[30] => LessThan0.IN2
 i_configTHR[31] => LessThan0.IN1
 o_IRQ <= IRQ.DB_MAX_OUTPUT_PORT_TYPE
 o_THR <= THR.DB_MAX_OUTPUT_PORT_TYPE
+o_we <= we.DB_MAX_OUTPUT_PORT_TYPE
 o_count[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
 o_count[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
 o_count[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE

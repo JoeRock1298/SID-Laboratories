@@ -1,8 +1,16 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)unsaved.reset) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace inst avalon_timer_32b_qsys.interrupt_sink_0 -pg 1 -lvl 2 -y 30
+preplace inst avalon_timer_32b_qsys.avalon_timer_32b -pg 1 -lvl 3 -y 150
+preplace inst avalon_timer_32b_qsys.clk_50 -pg 1 -lvl 1 -y 30
+preplace inst avalon_timer_32b_qsys -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst avalon_timer_32b_qsys.mm_master_bfm_0 -pg 1 -lvl 2 -y 90
+preplace netloc POINT_TO_POINT<net_container>avalon_timer_32b_qsys</net_container>(MASTER)mm_master_bfm_0.m0,(SLAVE)avalon_timer_32b.avalon_slave) 1 2 1 680
+preplace netloc EXPORT<net_container>avalon_timer_32b_qsys</net_container>(SLAVE)clk_50.clk_in,(SLAVE)avalon_timer_32b_qsys.clk) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>avalon_timer_32b_qsys</net_container>(SLAVE)avalon_timer_32b.interrupt_sender,(MASTER)interrupt_sink_0.irq) 1 2 1 660
+preplace netloc EXPORT<net_container>avalon_timer_32b_qsys</net_container>(SLAVE)avalon_timer_32b_qsys.avalon_timer_32b_external_interface,(SLAVE)avalon_timer_32b.external_interface) 1 0 3 NJ 200 NJ 200 NJ
+preplace netloc FAN_OUT<net_container>avalon_timer_32b_qsys</net_container>(SLAVE)avalon_timer_32b.reset_sink,(MASTER)clk_50.clk_reset,(SLAVE)interrupt_sink_0.clock_reset_reset,(SLAVE)mm_master_bfm_0.clk_reset) 1 1 2 410 180 620
+preplace netloc EXPORT<net_container>avalon_timer_32b_qsys</net_container>(SLAVE)clk_50.clk_in_reset,(SLAVE)avalon_timer_32b_qsys.reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>avalon_timer_32b_qsys</net_container>(SLAVE)interrupt_sink_0.clock_reset,(SLAVE)avalon_timer_32b.clock_sink,(MASTER)clk_50.clk,(SLAVE)mm_master_bfm_0.clk) 1 1 2 430 160 640
+levelinfo -pg 1 0 200 870
+levelinfo -hier avalon_timer_32b_qsys 210 240 470 710 860

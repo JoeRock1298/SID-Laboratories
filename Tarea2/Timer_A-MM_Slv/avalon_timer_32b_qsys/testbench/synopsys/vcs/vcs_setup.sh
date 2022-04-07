@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2022.04.05.19:10:56
+# ACDS 17.1 590 win32 2022.04.07.02:03:35
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2022.04.05.19:10:56
+# ACDS 17.1 590 win32 2022.04.07.02:03:35
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="avalon_timer_32b_qsys_tb"
@@ -148,7 +148,7 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b_qsys_mm_interconnect_0.v \
   $QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_avalon_mm_master_bfm.sv \
   $QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_avalon_interrupt_sink.sv \
-  $QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_slave_MM_interface.v \
+  $QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_slave_MM_interface_timer.v \
   $QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b.v \
   $QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/timer_32b.v \
   $QSYS_SIMDIR/avalon_timer_32b_qsys_tb/simulation/submodules/altera_avalon_reset_source.sv \

@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 17.1 590 (Future versions may contain additional information.) -->
- <!-- 2022.04.05.19:10:36 -->
+ <!-- 2022.04.07.02:03:24 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1649178636</value>
+  <value>1649289804</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -100,10 +100,10 @@
   <valid>true</valid>
  </parameter>
  <module
-   name="avalon_timer_32b_0"
+   name="avalon_timer_32b"
    kind="avalon_timer_32b"
    version="1.0"
-   path="avalon_timer_32b_0">
+   path="avalon_timer_32b">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="deviceFamily">
@@ -547,12 +547,6 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon</type>
    <isStart>false</isStart>
    <port>
-    <name>chipselect</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>chipselect</role>
-   </port>
-   <port>
     <name>address</name>
     <direction>Input</direction>
     <width>3</width>
@@ -581,6 +575,12 @@ parameters are a RESULT of the module parameters. -->
     <direction>Output</direction>
     <width>32</width>
     <role>readdata</role>
+   </port>
+   <port>
+    <name>chipselect</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>chipselect</role>
    </port>
   </interface>
   <interface name="external_interface" kind="conduit_end" version="17.1">
@@ -955,9 +955,9 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>avalon_timer_32b_0</moduleName>
+    <moduleName>avalon_timer_32b</moduleName>
     <slaveName>clock_sink</slaveName>
-    <name>avalon_timer_32b_0.clock_sink</name>
+    <name>avalon_timer_32b.clock_sink</name>
    </clockDomainMember>
   </interface>
   <interface name="clk_reset" kind="reset_source" version="17.1">
@@ -1237,9 +1237,9 @@ parameters are a RESULT of the module parameters. -->
    </port>
    <interrupt>
     <isBridge>false</isBridge>
-    <moduleName>avalon_timer_32b_0</moduleName>
+    <moduleName>avalon_timer_32b</moduleName>
     <slaveName>interrupt_sender</slaveName>
-    <name>avalon_timer_32b_0.interrupt_sender</name>
+    <name>avalon_timer_32b.interrupt_sender</name>
     <interruptNumber>0</interruptNumber>
    </interrupt>
   </interface>
@@ -2017,20 +2017,20 @@ parameters are a RESULT of the module parameters. -->
    </port>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>avalon_timer_32b_0</moduleName>
+    <moduleName>avalon_timer_32b</moduleName>
     <slaveName>avalon_slave</slaveName>
-    <name>avalon_timer_32b_0.avalon_slave</name>
+    <name>avalon_timer_32b.avalon_slave</name>
     <baseAddress>0</baseAddress>
     <span>32</span>
    </memoryBlock>
   </interface>
  </module>
  <connection
-   name="mm_master_bfm_0.m0/avalon_timer_32b_0.avalon_slave"
+   name="mm_master_bfm_0.m0/avalon_timer_32b.avalon_slave"
    kind="avalon"
    version="17.1"
    start="mm_master_bfm_0.m0"
-   end="avalon_timer_32b_0.avalon_slave">
+   end="avalon_timer_32b.avalon_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -2073,7 +2073,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>mm_master_bfm_0</startModule>
   <startConnectionPoint>m0</startConnectionPoint>
-  <endModule>avalon_timer_32b_0</endModule>
+  <endModule>avalon_timer_32b</endModule>
   <endConnectionPoint>avalon_slave</endConnectionPoint>
  </connection>
  <connection
@@ -2131,11 +2131,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clock_reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk_50.clk/avalon_timer_32b_0.clock_sink"
+   name="clk_50.clk/avalon_timer_32b.clock_sink"
    kind="clock"
    version="17.1"
    start="clk_50.clk"
-   end="avalon_timer_32b_0.clock_sink">
+   end="avalon_timer_32b.clock_sink">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -2154,15 +2154,15 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_50</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>avalon_timer_32b_0</endModule>
+  <endModule>avalon_timer_32b</endModule>
   <endConnectionPoint>clock_sink</endConnectionPoint>
  </connection>
  <connection
-   name="interrupt_sink_0.irq/avalon_timer_32b_0.interrupt_sender"
+   name="interrupt_sink_0.irq/avalon_timer_32b.interrupt_sender"
    kind="interrupt"
    version="17.1"
    start="interrupt_sink_0.irq"
-   end="avalon_timer_32b_0.interrupt_sender">
+   end="avalon_timer_32b.interrupt_sender">
   <parameter name="irqNumber">
    <type>int</type>
    <value>0</value>
@@ -2189,7 +2189,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>interrupt_sink_0</startModule>
   <startConnectionPoint>irq</startConnectionPoint>
-  <endModule>avalon_timer_32b_0</endModule>
+  <endModule>avalon_timer_32b</endModule>
   <endConnectionPoint>interrupt_sender</endConnectionPoint>
  </connection>
  <connection
@@ -2247,11 +2247,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clock_reset_reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk_50.clk_reset/avalon_timer_32b_0.reset_sink"
+   name="clk_50.clk_reset/avalon_timer_32b.reset_sink"
    kind="reset"
    version="17.1"
    start="clk_50.clk_reset"
-   end="avalon_timer_32b_0.reset_sink">
+   end="avalon_timer_32b.reset_sink">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -2270,7 +2270,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_50</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
-  <endModule>avalon_timer_32b_0</endModule>
+  <endModule>avalon_timer_32b</endModule>
   <endConnectionPoint>reset_sink</endConnectionPoint>
  </connection>
  <plugin>

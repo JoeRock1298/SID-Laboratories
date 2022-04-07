@@ -6,15 +6,124 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
-   element avalon_timer_32b_0
+   element avalon_timer_32b
    {
       datum _sortIndex
       {
          value = "1";
          type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
+   }
+   element avalon_timer_32b_qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
       }
    }
    element clk_50
@@ -55,7 +164,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName">avalon_timer_32b.qpf</parameter>
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -64,13 +173,13 @@
  <instanceScript></instanceScript>
  <interface
    name="avalon_timer_32b_external_interface"
-   internal="avalon_timer_32b_0.external_interface"
+   internal="avalon_timer_32b.external_interface"
    type="conduit"
    dir="end" />
  <interface name="clk" internal="clk_50.clk_in" type="clock" dir="end" />
  <interface name="reset" internal="clk_50.clk_in_reset" type="reset" dir="end" />
  <module
-   name="avalon_timer_32b_0"
+   name="avalon_timer_32b"
    kind="avalon_timer_32b"
    version="1.0"
    enabled="1" />
@@ -145,7 +254,7 @@
    kind="avalon"
    version="17.1"
    start="mm_master_bfm_0.m0"
-   end="avalon_timer_32b_0.avalon_slave">
+   end="avalon_timer_32b.avalon_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
@@ -164,12 +273,12 @@
    kind="clock"
    version="17.1"
    start="clk_50.clk"
-   end="avalon_timer_32b_0.clock_sink" />
+   end="avalon_timer_32b.clock_sink" />
  <connection
    kind="interrupt"
    version="17.1"
    start="interrupt_sink_0.irq"
-   end="avalon_timer_32b_0.interrupt_sender">
+   end="avalon_timer_32b.interrupt_sender">
   <parameter name="irqNumber" value="0" />
  </connection>
  <connection
@@ -186,7 +295,7 @@
    kind="reset"
    version="17.1"
    start="clk_50.clk_reset"
-   end="avalon_timer_32b_0.reset_sink" />
+   end="avalon_timer_32b.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

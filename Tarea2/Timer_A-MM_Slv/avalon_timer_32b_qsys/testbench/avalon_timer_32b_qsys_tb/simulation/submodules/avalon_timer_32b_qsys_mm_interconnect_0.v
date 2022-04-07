@@ -7,34 +7,34 @@
 
 `timescale 1 ps / 1 ps
 module avalon_timer_32b_qsys_mm_interconnect_0 (
-		input  wire        clk_50_clk_clk,                                            //                                          clk_50_clk.clk
-		input  wire        avalon_timer_32b_0_reset_sink_reset_bridge_in_reset_reset, // avalon_timer_32b_0_reset_sink_reset_bridge_in_reset.reset
-		input  wire        mm_master_bfm_0_clk_reset_reset_bridge_in_reset_reset,     //     mm_master_bfm_0_clk_reset_reset_bridge_in_reset.reset
-		input  wire [2:0]  mm_master_bfm_0_m0_address,                                //                                  mm_master_bfm_0_m0.address
-		output wire        mm_master_bfm_0_m0_waitrequest,                            //                                                    .waitrequest
-		input  wire        mm_master_bfm_0_m0_read,                                   //                                                    .read
-		output wire [31:0] mm_master_bfm_0_m0_readdata,                               //                                                    .readdata
-		input  wire        mm_master_bfm_0_m0_write,                                  //                                                    .write
-		input  wire [31:0] mm_master_bfm_0_m0_writedata,                              //                                                    .writedata
-		output wire [2:0]  avalon_timer_32b_0_avalon_slave_address,                   //                     avalon_timer_32b_0_avalon_slave.address
-		output wire        avalon_timer_32b_0_avalon_slave_write,                     //                                                    .write
-		output wire        avalon_timer_32b_0_avalon_slave_read,                      //                                                    .read
-		input  wire [31:0] avalon_timer_32b_0_avalon_slave_readdata,                  //                                                    .readdata
-		output wire [31:0] avalon_timer_32b_0_avalon_slave_writedata,                 //                                                    .writedata
-		output wire        avalon_timer_32b_0_avalon_slave_chipselect                 //                                                    .chipselect
+		input  wire        clk_50_clk_clk,                                          //                                        clk_50_clk.clk
+		input  wire        avalon_timer_32b_reset_sink_reset_bridge_in_reset_reset, // avalon_timer_32b_reset_sink_reset_bridge_in_reset.reset
+		input  wire        mm_master_bfm_0_clk_reset_reset_bridge_in_reset_reset,   //   mm_master_bfm_0_clk_reset_reset_bridge_in_reset.reset
+		input  wire [2:0]  mm_master_bfm_0_m0_address,                              //                                mm_master_bfm_0_m0.address
+		output wire        mm_master_bfm_0_m0_waitrequest,                          //                                                  .waitrequest
+		input  wire        mm_master_bfm_0_m0_read,                                 //                                                  .read
+		output wire [31:0] mm_master_bfm_0_m0_readdata,                             //                                                  .readdata
+		input  wire        mm_master_bfm_0_m0_write,                                //                                                  .write
+		input  wire [31:0] mm_master_bfm_0_m0_writedata,                            //                                                  .writedata
+		output wire [2:0]  avalon_timer_32b_avalon_slave_address,                   //                     avalon_timer_32b_avalon_slave.address
+		output wire        avalon_timer_32b_avalon_slave_write,                     //                                                  .write
+		output wire        avalon_timer_32b_avalon_slave_read,                      //                                                  .read
+		input  wire [31:0] avalon_timer_32b_avalon_slave_readdata,                  //                                                  .readdata
+		output wire [31:0] avalon_timer_32b_avalon_slave_writedata,                 //                                                  .writedata
+		output wire        avalon_timer_32b_avalon_slave_chipselect                 //                                                  .chipselect
 	);
 
-	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_waitrequest;   // avalon_timer_32b_0_avalon_slave_translator:uav_waitrequest -> mm_master_bfm_0_m0_translator:uav_waitrequest
-	wire  [31:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_readdata;      // avalon_timer_32b_0_avalon_slave_translator:uav_readdata -> mm_master_bfm_0_m0_translator:uav_readdata
-	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_debugaccess;   // mm_master_bfm_0_m0_translator:uav_debugaccess -> avalon_timer_32b_0_avalon_slave_translator:uav_debugaccess
-	wire   [4:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_address;       // mm_master_bfm_0_m0_translator:uav_address -> avalon_timer_32b_0_avalon_slave_translator:uav_address
-	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_read;          // mm_master_bfm_0_m0_translator:uav_read -> avalon_timer_32b_0_avalon_slave_translator:uav_read
-	wire   [3:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_byteenable;    // mm_master_bfm_0_m0_translator:uav_byteenable -> avalon_timer_32b_0_avalon_slave_translator:uav_byteenable
-	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_readdatavalid; // avalon_timer_32b_0_avalon_slave_translator:uav_readdatavalid -> mm_master_bfm_0_m0_translator:uav_readdatavalid
-	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_lock;          // mm_master_bfm_0_m0_translator:uav_lock -> avalon_timer_32b_0_avalon_slave_translator:uav_lock
-	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_write;         // mm_master_bfm_0_m0_translator:uav_write -> avalon_timer_32b_0_avalon_slave_translator:uav_write
-	wire  [31:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_writedata;     // mm_master_bfm_0_m0_translator:uav_writedata -> avalon_timer_32b_0_avalon_slave_translator:uav_writedata
-	wire   [2:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_burstcount;    // mm_master_bfm_0_m0_translator:uav_burstcount -> avalon_timer_32b_0_avalon_slave_translator:uav_burstcount
+	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_waitrequest;   // avalon_timer_32b_avalon_slave_translator:uav_waitrequest -> mm_master_bfm_0_m0_translator:uav_waitrequest
+	wire  [31:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_readdata;      // avalon_timer_32b_avalon_slave_translator:uav_readdata -> mm_master_bfm_0_m0_translator:uav_readdata
+	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_debugaccess;   // mm_master_bfm_0_m0_translator:uav_debugaccess -> avalon_timer_32b_avalon_slave_translator:uav_debugaccess
+	wire   [4:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_address;       // mm_master_bfm_0_m0_translator:uav_address -> avalon_timer_32b_avalon_slave_translator:uav_address
+	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_read;          // mm_master_bfm_0_m0_translator:uav_read -> avalon_timer_32b_avalon_slave_translator:uav_read
+	wire   [3:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_byteenable;    // mm_master_bfm_0_m0_translator:uav_byteenable -> avalon_timer_32b_avalon_slave_translator:uav_byteenable
+	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_readdatavalid; // avalon_timer_32b_avalon_slave_translator:uav_readdatavalid -> mm_master_bfm_0_m0_translator:uav_readdatavalid
+	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_lock;          // mm_master_bfm_0_m0_translator:uav_lock -> avalon_timer_32b_avalon_slave_translator:uav_lock
+	wire         mm_master_bfm_0_m0_translator_avalon_universal_master_0_write;         // mm_master_bfm_0_m0_translator:uav_write -> avalon_timer_32b_avalon_slave_translator:uav_write
+	wire  [31:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_writedata;     // mm_master_bfm_0_m0_translator:uav_writedata -> avalon_timer_32b_avalon_slave_translator:uav_writedata
+	wire   [2:0] mm_master_bfm_0_m0_translator_avalon_universal_master_0_burstcount;    // mm_master_bfm_0_m0_translator:uav_burstcount -> avalon_timer_32b_avalon_slave_translator:uav_burstcount
 
 	altera_merlin_master_translator #(
 		.AV_ADDRESS_W                (3),
@@ -122,7 +122,7 @@ module avalon_timer_32b_qsys_mm_interconnect_0 (
 		.AV_WRITE_WAIT_CYCLES           (0),
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
-	) avalon_timer_32b_0_avalon_slave_translator (
+	) avalon_timer_32b_avalon_slave_translator (
 		.clk                    (clk_50_clk_clk),                                                        //                      clk.clk
 		.reset                  (mm_master_bfm_0_clk_reset_reset_bridge_in_reset_reset),                 //                    reset.reset
 		.uav_address            (mm_master_bfm_0_m0_translator_avalon_universal_master_0_address),       // avalon_universal_slave_0.address
@@ -136,12 +136,12 @@ module avalon_timer_32b_qsys_mm_interconnect_0 (
 		.uav_writedata          (mm_master_bfm_0_m0_translator_avalon_universal_master_0_writedata),     //                         .writedata
 		.uav_lock               (mm_master_bfm_0_m0_translator_avalon_universal_master_0_lock),          //                         .lock
 		.uav_debugaccess        (mm_master_bfm_0_m0_translator_avalon_universal_master_0_debugaccess),   //                         .debugaccess
-		.av_address             (avalon_timer_32b_0_avalon_slave_address),                               //      avalon_anti_slave_0.address
-		.av_write               (avalon_timer_32b_0_avalon_slave_write),                                 //                         .write
-		.av_read                (avalon_timer_32b_0_avalon_slave_read),                                  //                         .read
-		.av_readdata            (avalon_timer_32b_0_avalon_slave_readdata),                              //                         .readdata
-		.av_writedata           (avalon_timer_32b_0_avalon_slave_writedata),                             //                         .writedata
-		.av_chipselect          (avalon_timer_32b_0_avalon_slave_chipselect),                            //                         .chipselect
+		.av_address             (avalon_timer_32b_avalon_slave_address),                                 //      avalon_anti_slave_0.address
+		.av_write               (avalon_timer_32b_avalon_slave_write),                                   //                         .write
+		.av_read                (avalon_timer_32b_avalon_slave_read),                                    //                         .read
+		.av_readdata            (avalon_timer_32b_avalon_slave_readdata),                                //                         .readdata
+		.av_writedata           (avalon_timer_32b_avalon_slave_writedata),                               //                         .writedata
+		.av_chipselect          (avalon_timer_32b_avalon_slave_chipselect),                              //                         .chipselect
 		.av_begintransfer       (),                                                                      //              (terminated)
 		.av_beginbursttransfer  (),                                                                      //              (terminated)
 		.av_burstcount          (),                                                                      //              (terminated)

@@ -40,41 +40,40 @@ initial
     repeat (5) @(posedge `CLK);
     // Iniciando el reloj y activando las interrupciones (a nivel bajo) -> cambiar posteriormente
     //bit 0 = 1, bit 1 = 0
-    avalon_write (3'h2,32'h00000001);
+    avalon_write (3'h2, 32'h00000001);
     $display("Timer configurado y iniciado");
     repeat (60) @(posedge `CLK);
     //Comprobando el start stop del reloj y el estado de la interrupción
     //bit 0 = 0, bit 1 = 0
-    avalon_write (3'h2,32'h00000000);
+    avalon_write (3'h2, 32'h00000000);
     $display("Timer stop");
     //Leyendo el stado de la irq
     IRQ_status = `BFMirq.get_irq();
     $display("Estado del IRQ: %d",IRQ_status);
     repeat (5) @(posedge `CLK);
-    avalon_write (3'h2,32'h00000001);
+    avalon_write (3'h2, 32'h00000001);
     $display("Timer start");
     repeat (50) @(posedge `CLK);
     //Comprobando si el IRQ ha sido enviado y limpiando el IRQ y activandolo de nuevo
     IRQ_status = `BFMirq.get_irq();
     $display("Estado del IRQ: %d",IRQ_status);
     //bit 0 = 1, bit 1 = 1
-    avalon_write (3'h2,32'h00000003);
-    avalon_write (3'h2,32'h00000001);
-    //
-
-
-    
+    avalon_write (3'h2, 32'h00000003);
+    avalon_write (3'h2, 32'h00000001);
+    //Leyendo el contador actual.
+    avalon_read (3'h3, datos_out);
+    $display("Datos leidos del IP: %d",datos_out);
     repeat (5) @(posedge `CLK);
-     
-    // Lee dato del esclavo y comprueba si es correcto
-    avalon_read (3'h2,datos_out);
-    
-    $display("Datos leidos del IP: %h",datos_out);
+    // Parando el reloj y leyendo el último dato guardado
+    avalon_write (3'h2, 32'h00000000);
+    avalon_read (3'h3,datos_out);
+    $display("Datos leidos del IP: %d",datos_out);
     
     j++;
     
-    $display("//////// ITERACION %d ////////", j)
+    $display("//////// ITERACION %d ////////", j);
     
+    repeat (2) @(posedge `CLK);
     $stop();
     
   end

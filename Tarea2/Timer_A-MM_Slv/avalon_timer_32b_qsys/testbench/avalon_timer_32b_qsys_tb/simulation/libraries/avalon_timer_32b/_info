@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea2/Timer_A-MM_Slv/avalon_timer_32b_qsys/testbench/avalon_timer_32b_qsys_tb/simulation
+vavalon_slave_MM_interface
+!s110 1649289390
+!i10b 1
+!s100 CMTRLlk8OD<Nn1l30UcOY3
+IX[iiMRT17nfe7n?=F9^Wd2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1649289087
+Z2 8../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_slave_MM_interface_timer.v
+Z3 F../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_slave_MM_interface_timer.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1649289390.000000
+Z5 !s107 ../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_slave_MM_interface_timer.v|
+Z6 !s90 -reportprogress|300|../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_slave_MM_interface_timer.v|-work|avalon_timer_32b|
+!i113 1
+Z7 o-work avalon_timer_32b
+Z8 tCvgOpt 0
+navalon_slave_@m@m_interface
+vavalon_slave_MM_interface_timer
+Z9 !s110 1649289856
+!i10b 1
+!s100 H^WB>SBFIkm_@eo4L^I]a1
+Ig06K1V^CO_=i?feoPe8WN1
+R1
+R0
+Z10 w1649289812
+R2
+R3
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1649289855.000000
+R5
+R6
+!i113 1
+R7
+R8
+navalon_slave_@m@m_interface_timer
+vavalon_timer_32b
+R9
+!i10b 1
+!s100 lXi_UgoLYI@13Y<ILAEOC3
+I6BOMUQ_f3G?D=<IL60o>X2
+R1
+R0
+R10
+8../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b.v
+F../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z11 !s108 1649289856.000000
+!s107 ../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b.v|
+!s90 -reportprogress|300|../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b.v|-work|avalon_timer_32b|
+!i113 1
+R7
+R8
+vtimer_32b
+R9
+!i10b 1
+!s100 bz1WlEHKcneXR?DbQ6O;k2
+I[]l1=o;R6>gl^TWK[44Zg2
+R1
+R0
+R10
+8../../avalon_timer_32b_qsys_tb/simulation/submodules/timer_32b.v
+F../../avalon_timer_32b_qsys_tb/simulation/submodules/timer_32b.v
+L0 2
+R4
+r1
+!s85 0
+31
+R11
+!s107 ../../avalon_timer_32b_qsys_tb/simulation/submodules/timer_32b.v|
+!s90 -reportprogress|300|../../avalon_timer_32b_qsys_tb/simulation/submodules/timer_32b.v|-work|avalon_timer_32b|
+!i113 1
+R7
+R8
