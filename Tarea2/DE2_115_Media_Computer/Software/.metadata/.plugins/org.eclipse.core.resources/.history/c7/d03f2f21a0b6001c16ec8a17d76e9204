@@ -1,0 +1,204 @@
+/*
+ * Real_Time_Clock.c
+ *
+ *  Created on: 10 de mar. de 2022
+ *      Author: Rocabado Rocha, Jose Luis
+ */
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Universitat Politï¿½cnica de Valï¿½ncia
+// Escuela Tï¿½cnica Superior de Ingenieros de Telecomunicaciï¿½n
+// -------------------------------------------------------------------------------------------------------------------------
+// Sistemas Integrados Digitales
+// Curso 2021 - 2022
+// -------------------------------------------------------------------------------------------------------------------------
+// Nombre del archivo: Real_Time_Clock.c
+//
+// Descripciï¿½n:
+// El siguiente codigo implementa la visualizaciï¿½n de un reloj utilizando interruociones y el timer del sistema. Sus
+// especificaciones son:
+//      - Horas, minutos y segundos se observan en los displays 7-seg
+//      - El timer se configura para generar una interrupciï¿½n cada 100ms con un reloj del sistema de 50MHz
+//      - Pulsador KEY3 incrementa las horas en una unidad
+//      - Pulsador KEY2 incrementa los minutos en una unidad
+//      - El reloj se visualiza ademas en el LCD y en la otra fila se mostrara el nombre
+//
+// -------------------------------------------------------------------------------------------------------------------------
+//      Version: V1.0                   | Fecha Modificaciï¿½n: 10/03/2022
+//
+//      Autor: Jose Luis Rocabado Rocha
+//
+// -------------------------------------------------------------------------------------------------------------------------
+
+#include "sys/alt_stdio.h"
+#include "key_codes.h"	// define los valores para KEY1, KEY2, KEY3
+#include "system.h"
+#include "sys/alt_irq.h"
+#include <stdio.h> //Necesario para el NULL
+
+//Auxiliar defines
+#define MARGIN_OFFSET 1
+#define TEXT_X_RES (50 - (2 * MARGIN_OFFSET)) //we will leave a margin on the MTL screen
+#define TEXT_Y_RES (30 - (2 * MARGIN_OFFSET))
+
+// Definition of the auxiliar functions
+void interval_timer_isr( );
+void pushbutton_ISR( );
+void print_7_seg_time (int h, int m, int s);
+void LCD_cursor( int, int );
+void LCD_text( char * );
+void LCD_cursor_off( void );
+void print_LCD_text (int h, int m, int s);
+
+
+volatile int msec_counter = 0;
+volatile int key_pressed = -1;
+
+int main(void)
+{
+	///*Variable definition*///
+	int hour, min, sec = 0; //hacer una variable para cada parte, y no una global
+	int on_flag = 1;
+
+	/* Peripheral handler definitions */
+	volatile int * interval_timer_ptr = (int *) AVALON_TIMER_32B_0_BASE;	    // Direccion Temporizador
+	volatile int * KEY_ptr = (int *) PUSHBUTTONS_BASE;			// Direccion pulsadores KEY
+
+	/* Configuring timer */
+	// 0x2FAF080 -> 50000000 counts -> 1s counter
+	*(interval_timer_ptr + 0x0) = ( 0x2FAF080 & 0xFFFFFFFF); // Counter set to 1s
+	*(interval_timer_ptr + 0x1) = ( 0x17D7840 & 0xFFFFFFFF); // THR set to 500ms
+
+
+	/* Enabling timer and Interrupt Requests */
+	*(interval_timer_ptr + 0x2) = 0x1;	// CLEAR_IRQ = 0, START = 1;
+	alt_irq_register(AVALON_TIMER_32B_0_IRQ, NULL, interval_timer_isr);
+
+	/* Enabling pushbutton IRQs */
+	*(KEY_ptr + 2) = 0xE; 		/* Enabling interrupts for KEY1, KEY2 y KEY3*/
+	*(KEY_ptr + 3) = 0; /* Edge detect reset */
+	alt_irq_register(PUSHBUTTONS_IRQ, NULL, pushbutton_ISR);
+
+	/* Initialazing 7-segment and LCD*/
+	//12H,0min,0seg
+	hour = 12;
+	min = 0;
+	sec = 0;
+	print_7_seg_time (hour, min, sec);
+	LCD_cursor_off(); 
+	print_LCD_text (hour, min, sec);
+
+	while(1)
+	{
+		printf("%d", msec_counter);
+		if(msec_counter == 1)
+		{
+			msec_counter = 0;
+			sec ++;
+		}
+		if (key_pressed == KEY2)
+		{
+			key_pressed = -1;
+			min ++;
+		}
+		if (key_pressed == KEY3)
+		{
+			key_pressed = -1;
+			hour ++;
+		}
+		if (sec == 60)
+		{
+			sec = 0;
+			min ++;
+		}
+		if (min == 60)
+		{
+			min = 0;
+			hour ++;
+		}
+		if (hour == 24)
+		{
+			hour = 0;
+		}	
+		print_7_seg_time (hour, min, sec);
+		print_LCD_text (hour, min, sec);
+		if(key_pressed == KEY1)
+		{
+			on_flag = ~(on_flag & 0x1);
+			*(interval_timer_ptr + 0x2) = (on_flag & 0x1);	// CLEAR_IRQ = 1, START = 1;
+		}
+	}
+}
+
+/****************************************************************************************
+ * show time on 7 segment display
+****************************************************************************************/
+void print_7_seg_time (int h, int m, int s)
+{
+	// 7 segment addresses	
+	volatile int * HEX_ptr	= (int *) AVALON_DISPLAYS7SEG_0_BASE;	// Direcciï¿½n HEX3_HEX0
+
+	//reg 0 -> hex3_hex0
+	//reg 1 -> hex7_hex4
+	// Auxiliar variables
+	int h_hex, m_hex, s_hex;
+	s_hex = (((s / 10) & 0xF)<<4) | ((s%10) & 0xF);
+	m_hex = (((m / 10) & 0xF)<<4) | ((m%10) & 0xF);
+	h_hex = (((h / 10) & 0xF)<<4) | ((h%10) & 0xF);
+
+	// Visualiza el patrón en los displays
+	*(HEX_ptr + 0) = (s_hex & 0xFF) << 8;
+	*(HEX_ptr + 1) = ((h_hex & 0xFF) << 8) | (m_hex & 0xFF);
+}
+
+/****************************************************************************************
+ * Subroutine to move the LCD cursor
+****************************************************************************************/
+void LCD_cursor(int x, int y)
+{
+  	volatile char * LCD_display_ptr = (char *) CHAR_LCD_BASE;	// 16x2 character display
+	char instruction;
+
+	instruction = x;
+	if (y != 0) instruction |= 0x40;				// set bit 6 for bottom row
+	instruction |= 0x80;								// need to set bit 7 to set the cursor location
+	*(LCD_display_ptr) = instruction;			// write to the LCD instruction register
+}
+
+/****************************************************************************************
+ * Subroutine to send a string of text to the LCD
+****************************************************************************************/
+void LCD_text(char * text_ptr)
+{
+  	volatile char * LCD_display_ptr = (char *) CHAR_LCD_BASE;	// 16x2 character display
+
+	while ( *(text_ptr) )
+	{
+		*(LCD_display_ptr + 1) = *(text_ptr);	// write to the LCD data register
+		++text_ptr;
+	}
+}
+
+/****************************************************************************************
+ * Subroutine to turn off the LCD cursor
+****************************************************************************************/
+void LCD_cursor_off(void)
+{
+  	volatile char * LCD_display_ptr = (char *) CHAR_LCD_BASE;	// 16x2 character display
+	*(LCD_display_ptr) = 0x0C;											// turn off the LCD cursor
+}
+
+/****************************************************************************************
+ * show text on first row and time on second row of the LCD display
+****************************************************************************************/
+void print_LCD_text (int h, int m, int s)
+{
+	char top_text[2][16] =  {{"  EJERCICIO 3\0"}, // dos espacios para centrar texto
+							 {"  JL ROCABADO\0"}};
+	char bot_text[16];
+	sprintf(bot_text, "    %.2d:%.2d:%.2d", h, m, s);
+	LCD_cursor(0, 0);
+	LCD_text(top_text[((s/5) & 0x1)]); // changing text every 5s
+	LCD_cursor(0, 1);
+	LCD_text(bot_text);
+}

@@ -360,7 +360,7 @@ assign 	GPIO[35]		= 1'bZ;
  *****************************************************************************/
  
 
-    nios_system u0 (
+    nios_system_myIP u0(
         .clk_50_in_clk                             (CLOCK_50),                             //                         clk_50_in.clk		
         .clk_50_2_in_clk                           (CLOCK2_50),                           //                       clk_50_2_in.clk
         .clk_50_3_in_clk                           (CLOCK3_50),                           //                       clk_50_3_in.clk

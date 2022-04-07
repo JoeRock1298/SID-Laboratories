@@ -1,5 +1,5 @@
 --a_gray2bin carry_chain="MANUAL" carry_chain_length=48 device_family="Cyclone IV E" ignore_carry_buffers="OFF" WIDTH=8 bin gray
---VERSION_BEGIN 17.1 cbx_a_gray2bin 2017:10:25:18:06:52:SJ cbx_mgl 2017:10:25:18:08:29:SJ  VERSION_END
+--VERSION_BEGIN 17.1 cbx_a_gray2bin 2017:12:11:18:05:02:SJ cbx_mgl 2017:12:11:18:07:53:SJ  VERSION_END
 
 
 -- Copyright (C) 2017  Intel Corporation. All rights reserved.

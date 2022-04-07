@@ -1,10 +1,10 @@
 /*
  * linker.x - Linker script
  *
- * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_system'
- * SOPC Builder design path: ../../nios_system.sopcinfo
+ * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_system_myIP'
+ * SOPC Builder design path: ../../nios_system_myIP.sopcinfo
  *
- * Generated: Thu Apr 07 03:18:02 CEST 2022
+ * Generated: Thu Apr 07 19:11:32 CEST 2022
  */
 
 /*

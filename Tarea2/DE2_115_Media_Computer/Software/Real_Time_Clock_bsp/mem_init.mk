@@ -155,7 +155,7 @@ ACDS_VERSION := 17.1
 
 # This following BUILD_NUMBER comment indicates the build number of the tool 
 # used to generate this makefile. 
-# BUILD_NUMBER: 590
+# BUILD_NUMBER: 593
 
 # Optimize for simulation
 SIM_OPTIMIZE ?= 0
@@ -193,7 +193,7 @@ $(MEM_0)_CFI_FLAGS := --base=$($(MEM_0)_START) --end=$($(MEM_0)_END) --reset=$(R
 flash_controller: check_elf_exists $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym $(MEM_0).flash
 
 # Memory: onchip_memory
-MEM_1 := nios_system_onchip_memory
+MEM_1 := nios_system_myIP_onchip_memory
 $(MEM_1)_NAME := onchip_memory
 $(MEM_1)_MEM_INIT_FILE_PARAM_NAME := INIT_FILE
 HEX_FILES += $(MEM_INIT_DIR)/$(MEM_1).hex

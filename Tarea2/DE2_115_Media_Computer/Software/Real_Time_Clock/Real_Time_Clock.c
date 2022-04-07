@@ -66,8 +66,8 @@ int main(void)
 
 	/* Configuring timer */
 	// 0x2FAF080 -> 50000000 counts -> 1s counter
-	*(interval_timer_ptr + 0x0) = ( 0x2FAF080 && 0xFFFFFFFF); // Counter set to 1s
-	*(interval_timer_ptr + 0x1) = ( 0x17D7840 && 0xFFFFFFFF); // THR set to 500ms
+	*(interval_timer_ptr + 0x0) = ( 0x2FAF080 & 0xFFFFFFFF); // Counter set to 1s
+	*(interval_timer_ptr + 0x1) = ( 0x17D7840 & 0xFFFFFFFF); // THR set to 500ms
 
 
 	/* Enabling timer and Interrupt Requests */
@@ -123,6 +123,7 @@ int main(void)
 		print_LCD_text (hour, min, sec);
 		if(key_pressed == KEY1)
 		{
+			key_pressed = -1;
 			on_flag = ~(on_flag & 0x1);
 			*(interval_timer_ptr + 0x2) = (on_flag & 0x1);	// CLEAR_IRQ = 1, START = 1;
 		}
@@ -146,8 +147,8 @@ void print_7_seg_time (int h, int m, int s)
 	h_hex = (((h / 10) & 0xF)<<4) | ((h%10) & 0xF);
 
 	// Visualiza el patrón en los displays
-	*(HEX_ptr + 0) = s_hex << 8;
-	*(HEX_ptr + 1) = (h_hex << 8) || m_hex;
+	*(HEX_ptr + 0) = (s_hex & 0xFF) << 8;
+	*(HEX_ptr + 1) = ((h_hex & 0xFF) << 8) | (m_hex & 0xFF);
 }
 
 /****************************************************************************************

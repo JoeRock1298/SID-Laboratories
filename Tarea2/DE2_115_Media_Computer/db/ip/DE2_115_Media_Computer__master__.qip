@@ -1,1 +1,1 @@
-set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) nios_system/nios_system.qip]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) nios_system_myIP/nios_system_myIP.qip]

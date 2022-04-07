@@ -1,10 +1,10 @@
 /*
  * system.h - SOPC Builder system and BSP software package information
  *
- * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_system'
- * SOPC Builder design path: ../../nios_system.sopcinfo
+ * Machine generated for CPU 'cpu' in SOPC Builder design 'nios_system_myIP'
+ * SOPC Builder design path: ../../nios_system_myIP.sopcinfo
  *
- * Generated: Thu Apr 07 03:18:02 CEST 2022
+ * Generated: Thu Apr 07 20:24:43 CEST 2022
  */
 
 /*
@@ -215,7 +215,7 @@
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
-#define ALT_SYSTEM_NAME "nios_system"
+#define ALT_SYSTEM_NAME "nios_system_myIP"
 
 
 /*
@@ -267,8 +267,8 @@
 
 #define ALT_MODULE_CLASS_avalon_timer_32b_0 avalon_timer_32b
 #define AVALON_TIMER_32B_0_BASE 0x10001020
-#define AVALON_TIMER_32B_0_IRQ -1
-#define AVALON_TIMER_32B_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define AVALON_TIMER_32B_0_IRQ 0
+#define AVALON_TIMER_32B_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define AVALON_TIMER_32B_0_NAME "/dev/avalon_timer_32b_0"
 #define AVALON_TIMER_32B_0_SPAN 32
 #define AVALON_TIMER_32B_0_TYPE "avalon_timer_32b"
@@ -404,7 +404,7 @@
 #define ONCHIP_MEMORY_CONTENTS_INFO ""
 #define ONCHIP_MEMORY_DUAL_PORT 0
 #define ONCHIP_MEMORY_GUI_RAM_BLOCK_TYPE "AUTO"
-#define ONCHIP_MEMORY_INIT_CONTENTS_FILE "nios_system_onchip_memory"
+#define ONCHIP_MEMORY_INIT_CONTENTS_FILE "nios_system_myIP_onchip_memory"
 #define ONCHIP_MEMORY_INIT_MEM_CONTENT 1
 #define ONCHIP_MEMORY_INSTANCE_ID "NONE"
 #define ONCHIP_MEMORY_IRQ -1
@@ -585,7 +585,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1649292760
+#define SYSID_TIMESTAMP 1649355643
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */
