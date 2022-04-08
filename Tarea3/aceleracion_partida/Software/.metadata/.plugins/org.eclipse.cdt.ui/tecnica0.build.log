@@ -1,9 +1,9 @@
-13:57:38 **** Incremental Build of configuration Nios II for project tecnica0 ****
+12:40:37 **** Incremental Build of configuration Nios II for project tecnica0 ****
 make all 
 Info: Building ../tecnica0_bsp/
 C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../tecnica0_bsp/
 [BSP build complete]
 [tecnica0 build complete]
 
-13:57:39 Build Finished (took 966ms)
+12:40:38 Build Finished (took 1s.221ms)
 

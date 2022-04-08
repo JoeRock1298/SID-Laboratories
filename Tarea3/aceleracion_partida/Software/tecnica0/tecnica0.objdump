@@ -35,49 +35,49 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   8 .debug_aranges 00001210  00000000  00000000  00016430  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   00029e3d  00000000  00000000  00017640  2**0
+  9 .debug_info   00029e70  00000000  00000000  00017640  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 0000b002  00000000  00000000  0004147d  2**0
+ 10 .debug_abbrev 0000b002  00000000  00000000  000414b0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   0000dcc1  00000000  00000000  0004c47f  2**0
+ 11 .debug_line   0000dcc1  00000000  00000000  0004c4b2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  00002910  00000000  00000000  0005a140  2**2
+ 12 .debug_frame  00002910  00000000  00000000  0005a174  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00004441  00000000  00000000  0005ca50  2**0
+ 13 .debug_str    00004463  00000000  00000000  0005ca84  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    0001b9e8  00000000  00000000  00060e91  2**0
+ 14 .debug_loc    0001b9e8  00000000  00000000  00060ee7  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000030  00000000  00000000  0007c87c  2**2
+ 15 .debug_alt_sim_info 00000030  00000000  00000000  0007c8d0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 00001ef8  00000000  00000000  0007c8b0  2**3
+ 16 .debug_ranges 00001ef8  00000000  00000000  0007c900  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  0008234e  2**0
+ 17 .thread_model 00000003  00000000  00000000  0008239e  2**0
                   CONTENTS, READONLY
- 18 .cpu          00000003  00000000  00000000  00082351  2**0
+ 18 .cpu          00000003  00000000  00000000  000823a1  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  00082354  2**0
+ 19 .qsys         00000001  00000000  00000000  000823a4  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  00082355  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  000823a5  2**0
                   CONTENTS, READONLY
- 21 .sysid_hash   00000004  00000000  00000000  00082356  2**0
+ 21 .sysid_hash   00000004  00000000  00000000  000823a6  2**0
                   CONTENTS, READONLY
- 22 .sysid_base   00000004  00000000  00000000  0008235a  2**0
+ 22 .sysid_base   00000004  00000000  00000000  000823aa  2**0
                   CONTENTS, READONLY
- 23 .sysid_time   00000004  00000000  00000000  0008235e  2**0
+ 23 .sysid_time   00000004  00000000  00000000  000823ae  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   00000009  00000000  00000000  00082362  2**0
+ 24 .stderr_dev   00000009  00000000  00000000  000823b2  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    00000009  00000000  00000000  0008236b  2**0
+ 25 .stdin_dev    00000009  00000000  00000000  000823bb  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   00000009  00000000  00000000  00082374  2**0
+ 26 .stdout_dev   00000009  00000000  00000000  000823c4  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 00000010  00000000  00000000  0008237d  2**0
+ 27 .sopc_system_name 00000010  00000000  00000000  000823cd  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 0000003d  00000000  00000000  0008238d  2**0
+ 28 .quartus_project_dir 0000004e  00000000  00000000  000823dd  2**0
                   CONTENTS, READONLY
- 29 .jdi          00003dae  00000000  00000000  000823ca  2**0
+ 29 .jdi          00003dae  00000000  00000000  0008242b  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     000709ea  00000000  00000000  00086178  2**0
+ 30 .sopcinfo     00074a89  00000000  00000000  000861d9  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 04000000 l    d  .entry	00000000 .entry
@@ -596,7 +596,7 @@ Disassembly of section .entry:
  4000014:	08409114 	ori	at,at,580
     jmp r1
  4000018:	0800683a 	jmp	at
- 400001c:	00000000 	call	0 <__alt_mem_sdram-0x4000000>
+ 400001c:	00000000 	call	0 <__reset-0x4000000>
 
 Disassembly of section .exceptions:
 
@@ -4169,12 +4169,12 @@ int main(void)
  40029d8:	04002ba8 	cmpgeui	r16,zero,174
  40029dc:	04002a24 	muli	r16,zero,168
  40029e0:	04002ba8 	cmpgeui	r16,zero,174
- 40029e4:	04002b80 	call	4002b8 <__alt_mem_sdram-0x3bffd48>
+ 40029e4:	04002b80 	call	4002b8 <__reset-0x3bffd48>
  40029e8:	04002ba8 	cmpgeui	r16,zero,174
  40029ec:	04002a24 	muli	r16,zero,168
  40029f0:	04002a38 	rdprs	r16,zero,168
  40029f4:	04002a38 	rdprs	r16,zero,168
- 40029f8:	04002b80 	call	4002b8 <__alt_mem_sdram-0x3bffd48>
+ 40029f8:	04002b80 	call	4002b8 <__reset-0x3bffd48>
  40029fc:	04002a24 	muli	r16,zero,168
  4002a00:	04002c94 	movui	r16,178
  4002a04:	04002c94 	movui	r16,178
@@ -4237,12 +4237,12 @@ int main(void)
  4002ae8:	04002c84 	movi	r16,178
  4002aec:	04002a20 	cmpeqi	r16,zero,168
  4002af0:	04002c84 	movi	r16,178
- 4002af4:	04002b80 	call	4002b8 <__alt_mem_sdram-0x3bffd48>
+ 4002af4:	04002b80 	call	4002b8 <__reset-0x3bffd48>
  4002af8:	04002c84 	movi	r16,178
  4002afc:	04002a20 	cmpeqi	r16,zero,168
  4002b00:	04002a38 	rdprs	r16,zero,168
  4002b04:	04002a38 	rdprs	r16,zero,168
- 4002b08:	04002b80 	call	4002b8 <__alt_mem_sdram-0x3bffd48>
+ 4002b08:	04002b80 	call	4002b8 <__reset-0x3bffd48>
  4002b0c:	04002a20 	cmpeqi	r16,zero,168
  4002b10:	04002c94 	movui	r16,178
  4002b14:	04002c94 	movui	r16,178
@@ -5654,11 +5654,11 @@ int main(void)
  40040e4:	1000683a 	jmp	r2
  40040e8:	04004310 	cmplti	r16,zero,268
  40040ec:	04004160 	cmpeqi	r16,zero,261
- 40040f0:	04004300 	call	400430 <__alt_mem_sdram-0x3bffbd0>
+ 40040f0:	04004300 	call	400430 <__reset-0x3bffbd0>
  40040f4:	04004154 	movui	r16,261
- 40040f8:	04004300 	call	400430 <__alt_mem_sdram-0x3bffbd0>
+ 40040f8:	04004300 	call	400430 <__reset-0x3bffbd0>
  40040fc:	040042d4 	movui	r16,267
- 4004100:	04004300 	call	400430 <__alt_mem_sdram-0x3bffbd0>
+ 4004100:	04004300 	call	400430 <__reset-0x3bffbd0>
  4004104:	04004154 	movui	r16,261
  4004108:	04004160 	cmpeqi	r16,zero,261
  400410c:	04004160 	cmpeqi	r16,zero,261
@@ -6345,8 +6345,8 @@ int main(void)
  4004b98:	20c00017 	ldw	r3,0(r4)
  4004b9c:	1800683a 	jmp	r3
  4004ba0:	04004dec 	andhi	r16,zero,311
- 4004ba4:	04004c00 	call	4004c0 <__alt_mem_sdram-0x3bffb40>
- 4004ba8:	04004c00 	call	4004c0 <__alt_mem_sdram-0x3bffb40>
+ 4004ba4:	04004c00 	call	4004c0 <__reset-0x3bffb40>
+ 4004ba8:	04004c00 	call	4004c0 <__reset-0x3bffb40>
  4004bac:	04004bfc 	xorhi	r16,zero,303
  4004bb0:	04004dc8 	cmpgei	r16,zero,311
  4004bb4:	04004dc8 	cmpgei	r16,zero,311
@@ -8067,21 +8067,21 @@ int main(void)
  40065c0:	10800017 	ldw	r2,0(r2)
  40065c4:	1000683a 	jmp	r2
  40065c8:	040070e0 	cmpeqi	r16,zero,451
- 40065cc:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40065d0:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40065d4:	04007100 	call	400710 <__alt_mem_sdram-0x3bff8f0>
- 40065d8:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40065dc:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40065e0:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40065e4:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40065e8:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40065ec:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 40065cc:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40065d0:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40065d4:	04007100 	call	400710 <__reset-0x3bff8f0>
+ 40065d8:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40065dc:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40065e0:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40065e4:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40065e8:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40065ec:	040071c0 	call	40071c <__reset-0x3bff8e4>
  40065f0:	04006874 	movhi	r16,417
  40065f4:	0400701c 	xori	r16,zero,448
- 40065f8:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 40065f8:	040071c0 	call	40071c <__reset-0x3bff8e4>
  40065fc:	0400673c 	xorhi	r16,zero,412
  4006600:	0400689c 	xori	r16,zero,418
- 4006604:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 4006604:	040071c0 	call	40071c <__reset-0x3bff8e4>
  4006608:	040068dc 	xori	r16,zero,419
  400660c:	040068e8 	cmpgeui	r16,zero,419
  4006610:	040068e8 	cmpgeui	r16,zero,419
@@ -8092,47 +8092,47 @@ int main(void)
  4006624:	040068e8 	cmpgeui	r16,zero,419
  4006628:	040068e8 	cmpgeui	r16,zero,419
  400662c:	040068e8 	cmpgeui	r16,zero,419
- 4006630:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006634:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006638:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 400663c:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006640:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006644:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006648:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 400664c:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006650:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006654:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 4006630:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006634:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006638:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 400663c:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006640:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006644:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006648:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 400664c:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006650:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006654:	040071c0 	call	40071c <__reset-0x3bff8e4>
  4006658:	0400691c 	xori	r16,zero,420
  400665c:	040069d8 	cmpnei	r16,zero,423
- 4006660:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 4006660:	040071c0 	call	40071c <__reset-0x3bff8e4>
  4006664:	040069d8 	cmpnei	r16,zero,423
- 4006668:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 400666c:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006670:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006674:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 4006668:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 400666c:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006670:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006674:	040071c0 	call	40071c <__reset-0x3bff8e4>
  4006678:	04006a78 	rdprs	r16,zero,425
- 400667c:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006680:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 400667c:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006680:	040071c0 	call	40071c <__reset-0x3bff8e4>
  4006684:	04006a84 	movi	r16,426
- 4006688:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 400668c:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006690:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006694:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006698:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 4006688:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 400668c:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006690:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006694:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006698:	040071c0 	call	40071c <__reset-0x3bff8e4>
  400669c:	04006efc 	xorhi	r16,zero,443
- 40066a0:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066a4:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 40066a0:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066a4:	040071c0 	call	40071c <__reset-0x3bff8e4>
  40066a8:	04006f5c 	xori	r16,zero,445
- 40066ac:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066b0:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066b4:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066b8:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066bc:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066c0:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066c4:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066c8:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066cc:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066d0:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 40066ac:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066b0:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066b4:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066b8:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066bc:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066c0:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066c4:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066c8:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066cc:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066d0:	040071c0 	call	40071c <__reset-0x3bff8e4>
  40066d4:	0400716c 	andhi	r16,zero,453
  40066d8:	0400710c 	andi	r16,zero,452
  40066dc:	040069d8 	cmpnei	r16,zero,423
@@ -8140,20 +8140,20 @@ int main(void)
  40066e4:	040069d8 	cmpnei	r16,zero,423
  40066e8:	0400711c 	xori	r16,zero,452
  40066ec:	0400710c 	andi	r16,zero,452
- 40066f0:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 40066f4:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 40066f0:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 40066f4:	040071c0 	call	40071c <__reset-0x3bff8e4>
  40066f8:	04007128 	cmpgeui	r16,zero,452
- 40066fc:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 40066fc:	040071c0 	call	40071c <__reset-0x3bff8e4>
  4006700:	04007138 	rdprs	r16,zero,452
  4006704:	0400700c 	andi	r16,zero,448
  4006708:	04006748 	cmpgei	r16,zero,413
  400670c:	0400702c 	andhi	r16,zero,448
- 4006710:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 4006710:	040071c0 	call	40071c <__reset-0x3bff8e4>
  4006714:	04007038 	rdprs	r16,zero,448
- 4006718:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 4006718:	040071c0 	call	40071c <__reset-0x3bff8e4>
  400671c:	04007094 	movui	r16,450
- 4006720:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
- 4006724:	040071c0 	call	40071c <__alt_mem_sdram-0x3bff8e4>
+ 4006720:	040071c0 	call	40071c <__reset-0x3bff8e4>
+ 4006724:	040071c0 	call	40071c <__reset-0x3bff8e4>
  4006728:	040070a4 	muli	r16,zero,450
  400672c:	d9003117 	ldw	r4,196(sp)
  4006730:	d8802d15 	stw	r2,180(sp)
@@ -15867,7 +15867,7 @@ int main(void)
  400dd50:	0400e630 	cmpltui	r16,zero,920
  400dd54:	0400e6d8 	cmpnei	r16,zero,923
  400dd58:	0400df18 	cmpnei	r16,zero,892
- 400dd5c:	0400e640 	call	400e64 <__alt_mem_sdram-0x3bff19c>
+ 400dd5c:	0400e640 	call	400e64 <__reset-0x3bff19c>
  400dd60:	0400e6d8 	cmpnei	r16,zero,923
  400dd64:	0400e438 	rdprs	r16,zero,912
  400dd68:	0400e444 	movi	r16,913
@@ -15906,7 +15906,7 @@ int main(void)
  400ddec:	0400e6d8 	cmpnei	r16,zero,923
  400ddf0:	0400e6d8 	cmpnei	r16,zero,923
  400ddf4:	0400e6d8 	cmpnei	r16,zero,923
- 400ddf8:	0400e500 	call	400e50 <__alt_mem_sdram-0x3bff1b0>
+ 400ddf8:	0400e500 	call	400e50 <__reset-0x3bff1b0>
  400ddfc:	0400e6d8 	cmpnei	r16,zero,923
  400de00:	0400e6d8 	cmpnei	r16,zero,923
  400de04:	0400e570 	cmpltui	r16,zero,917
@@ -15925,7 +15925,7 @@ int main(void)
  400de38:	0400e6d8 	cmpnei	r16,zero,923
  400de3c:	0400e6d8 	cmpnei	r16,zero,923
  400de40:	0400e6d8 	cmpnei	r16,zero,923
- 400de44:	0400e680 	call	400e68 <__alt_mem_sdram-0x3bff198>
+ 400de44:	0400e680 	call	400e68 <__reset-0x3bff198>
  400de48:	0400e348 	cmpgei	r16,zero,909
  400de4c:	0400e6d8 	cmpnei	r16,zero,923
  400de50:	0400e6d8 	cmpnei	r16,zero,923
@@ -23629,7 +23629,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
  4013194:	d9400015 	stw	r5,0(sp)
  4013198:	d9800115 	stw	r6,4(sp)
  401319c:	d9c00215 	stw	r7,8(sp)
- 40131a0:	00000000 	call	0 <__alt_mem_sdram-0x4000000>
+ 40131a0:	00000000 	call	0 <__reset-0x4000000>
  40131a4:	d9400017 	ldw	r5,0(sp)
  40131a8:	d9800117 	ldw	r6,4(sp)
  40131ac:	d9c00217 	ldw	r7,8(sp)
@@ -23713,7 +23713,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
  40132dc:	10003226 	beq	r2,zero,40133a8 <__call_exitprocs+0x178>
  40132e0:	a009883a 	mov	r4,r20
  40132e4:	98800015 	stw	r2,0(r19)
- 40132e8:	00000000 	call	0 <__alt_mem_sdram-0x4000000>
+ 40132e8:	00000000 	call	0 <__reset-0x4000000>
  40132ec:	9d000017 	ldw	r20,0(r19)
  40132f0:	a03fe41e 	bne	r20,zero,4013284 <__alt_data_end+0xfc013284>
  40132f4:	dfc00a17 	ldw	ra,40(sp)

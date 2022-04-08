@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/output_files/") File("tecnica0.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/jororoc/Documents/QDesign/SID-Laboratories/Tarea3/aceleracion_partida/output_files/") File("tecnica0.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
