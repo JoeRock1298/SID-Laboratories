@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea2/Timer_A-MM_Slv/avalon_timer_32b_qsys/testbench/avalon_timer_32b_qsys_tb/simulation
 vavalon_timer_32b_qsys_tb
-Z1 !s110 1649289857
+Z1 !s110 1649525042
 !i10b 1
 !s100 cnJCk=CfTNL@g3D5lj3N=1
 IkZ^GM8358hf2Wz3U3XBgN3
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1649289857.000000
+Z4 !s108 1649525042.000000
 !s107 ../../avalon_timer_32b_qsys_tb/simulation/avalon_timer_32b_qsys_tb.v|
 !s90 -reportprogress|300|../../avalon_timer_32b_qsys_tb/simulation/avalon_timer_32b_qsys_tb.v|
 !i113 1

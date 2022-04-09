@@ -31,7 +31,7 @@ Z7 o-work avalon_timer_32b
 Z8 tCvgOpt 0
 navalon_slave_@m@m_interface
 vavalon_slave_MM_interface_timer
-Z9 !s110 1649289856
+Z9 !s110 1649525041
 !i10b 1
 !s100 H^WB>SBFIkm_@eo4L^I]a1
 Ig06K1V^CO_=i?feoPe8WN1
@@ -45,7 +45,7 @@ R4
 r1
 !s85 0
 31
-!s108 1649289855.000000
+Z11 !s108 1649525041.000000
 R5
 R6
 !i113 1
@@ -67,7 +67,7 @@ R4
 r1
 !s85 0
 31
-Z11 !s108 1649289856.000000
+R11
 !s107 ../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b.v|
 !s90 -reportprogress|300|../../avalon_timer_32b_qsys_tb/simulation/submodules/avalon_timer_32b.v|-work|avalon_timer_32b|
 !i113 1

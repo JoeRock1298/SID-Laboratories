@@ -1,29 +1,24 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/clk_clk
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/chipselect
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/address
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/write
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/writedata
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/read
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/readdata
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/reg0
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/reg1
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/reg2
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/data
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/we
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u1_av_sl_MM/reg3
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u2_timer/o_IRQ
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u2_timer/o_THR
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b_0/u2_timer/o_count
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/reset_reset_n
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/mm_master_bfm_0_m0_readdata
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/mm_master_bfm_0_m0_address
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/mm_master_bfm_0_m0_read
-add wave -noupdate -radix unsigned /top/tb/avalon_timer_32b_qsys_inst/mm_master_bfm_0_m0_writedata
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/mm_master_bfm_0_m0_write
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/irq_mapper_receiver0_irq
-add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/interrupt_sink_0_irq_irq
+add wave -noupdate -divider System
+add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/reset
+add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/clock
+add wave -noupdate -divider {Avalon MM signals}
+add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/chipselect
+add wave -noupdate -radix decimal /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/address
+add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/write
+add wave -noupdate -radix decimal /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/writedata
+add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/read
+add wave -noupdate -radix decimal /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/readdata
+add wave -noupdate -divider {IRQ & Conduit}
+add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/o_THR
+add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/o_IRQ
+add wave -noupdate -divider {Timer registers}
+add wave -noupdate -radix decimal /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/reg0
+add wave -noupdate -radix decimal /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/reg1
+add wave -noupdate -radix decimal /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/reg2
+add wave -noupdate -radix decimal /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/count_read
+add wave -noupdate /top/tb/avalon_timer_32b_qsys_inst/avalon_timer_32b/we
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {3833807 ps} 0}
 quietly wave cursor active 1
@@ -41,4 +36,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {3796583 ps} {3864999 ps}
+WaveRestoreZoom {0 ps} {4378500 ps}

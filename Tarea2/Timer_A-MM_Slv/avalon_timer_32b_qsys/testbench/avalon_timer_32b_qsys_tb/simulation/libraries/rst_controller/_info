@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea2/Timer_A-MM_Slv/avalon_timer_32b_qsys/testbench/avalon_timer_32b_qsys_tb/simulation
 valtera_reset_controller
-Z1 !s110 1649289855
+Z1 !s110 1649525040
 !i10b 1
 !s100 z[H_hRO9gO=:^2E3_jWH03
 If=Ko5[K8E6L1[T09z==Be3
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1649289855.000000
+Z5 !s108 1649525040.000000
 !s107 ../../avalon_timer_32b_qsys_tb/simulation/submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|../../avalon_timer_32b_qsys_tb/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
 !i113 1
