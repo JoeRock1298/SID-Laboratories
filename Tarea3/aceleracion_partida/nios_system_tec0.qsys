@@ -89,6 +89,14 @@
          type = "String";
       }
    }
+   element nios_system_tec0
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
    element performance_counter_0
    {
       datum _sortIndex

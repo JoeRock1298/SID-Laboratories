@@ -236,7 +236,7 @@ wire [7:0]	video_b;
 
 
 
-nios_system_tec1 u0(
+nios_system_tec2 u0(
 		.reset_n(KEY[0]),                                  //               clk_50_clk_in_reset.reset_n
 		.clk_50(CLOCK_50),                                   //                     clk_50_clk_in.clk
 		.pll_sdram_clk(DRAM_CLK),                             //                         pll_sdram.clk
