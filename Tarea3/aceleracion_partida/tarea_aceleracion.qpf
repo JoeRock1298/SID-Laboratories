@@ -18,15 +18,15 @@
 #
 # Quartus Prime
 # Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-# Date created = 09:17:15  April 11, 2022
+# Date created = 10:28:38  April 11, 2022
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "17.1"
-DATE = "09:17:15  April 11, 2022"
+DATE = "10:28:38  April 11, 2022"
 
 # Revisions
 
 PROJECT_REVISION = "tecnica2"
-PROJECT_REVISION = "tecnica1"
 PROJECT_REVISION = "tecnica0"
+PROJECT_REVISION = "tecnica1"
