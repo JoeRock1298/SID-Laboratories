@@ -1,5 +1,5 @@
 --lpm_clshift CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" LPM_SHIFTTYPE="LOGICAL" LPM_WIDTH=47 LPM_WIDTHDIST=6 data distance result
---VERSION_BEGIN 17.1 cbx_lpm_clshift 2017:12:11:18:05:02:SJ cbx_mgl 2017:12:11:18:07:53:SJ  VERSION_END
+--VERSION_BEGIN 17.1 cbx_lpm_clshift 2017:10:25:18:06:53:SJ cbx_mgl 2017:10:25:18:08:29:SJ  VERSION_END
 
 
 -- Copyright (C) 2017  Intel Corporation. All rights reserved.

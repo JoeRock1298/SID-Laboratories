@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for tecnica2
-Mon Apr 11 13:26:00 2022
-Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+Mon Apr 11 19:39:58 2022
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -80,18 +80,18 @@ refer to the applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                                        ;
-+-----------------------+------------------------------------------------------------------+
-; Quartus Prime Version ; Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
-; Timing Analyzer       ; TimeQuest                                                        ;
-; Revision Name         ; tecnica2                                                         ;
-; Device Family         ; Cyclone V                                                        ;
-; Device Name           ; 5CSEMA5F31C6                                                     ;
-; Timing Models         ; Final                                                            ;
-; Delay Model           ; Combined                                                         ;
-; Rise/Fall Delays      ; Enabled                                                          ;
-+-----------------------+------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; tecnica2                                            ;
+; Device Family         ; Cyclone V                                           ;
+; Device Name           ; 5CSEMA5F31C6                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
 
 
 +------------------------------------------+
@@ -99,17 +99,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.90        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.43        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  30.2%      ;
-;     Processor 3            ;  29.9%      ;
-;     Processor 4            ;  29.7%      ;
+;     Processor 2            ;  43.2%      ;
 +----------------------------+-------------+
 
 
@@ -118,10 +116,10 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                      ; Status ; Read at                  ;
 +--------------------------------------------------------------------+--------+--------------------------+
-; nios_system_tec2/synthesis/submodules/altera_reset_controller.sdc  ; OK     ; Mon Apr 11 13:25:39 2022 ;
-; nios_system_tec2/synthesis/submodules/nios_system_tec2_cpu_cpu.sdc ; OK     ; Mon Apr 11 13:25:39 2022 ;
-; nios_system_tec2/synthesis/submodules/altera_avalon_dc_fifo.sdc    ; OK     ; Mon Apr 11 13:25:39 2022 ;
-; tecnica0.out.sdc                                                   ; OK     ; Mon Apr 11 13:25:39 2022 ;
+; nios_system_tec2/synthesis/submodules/altera_reset_controller.sdc  ; OK     ; Mon Apr 11 19:39:23 2022 ;
+; nios_system_tec2/synthesis/submodules/nios_system_tec2_cpu_cpu.sdc ; OK     ; Mon Apr 11 19:39:23 2022 ;
+; nios_system_tec2/synthesis/submodules/altera_avalon_dc_fifo.sdc    ; OK     ; Mon Apr 11 19:39:23 2022 ;
+; tecnica0.out.sdc                                                   ; OK     ; Mon Apr 11 19:39:23 2022 ;
 +--------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -144,9 +142,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                    ; Note ;
 +------------+-----------------+---------------------------------------------------------------+------+
-; 112.06 MHz ; 112.06 MHz      ; altera_reserved_tck                                           ;      ;
-; 120.47 MHz ; 120.47 MHz      ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 125.85 MHz ; 125.85 MHz      ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 123.61 MHz ; 123.61 MHz      ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 123.82 MHz ; 123.82 MHz      ; altera_reserved_tck                                           ;      ;
+; 131.03 MHz ; 131.03 MHz      ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
 +------------+-----------------+---------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -162,9 +160,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -3.962 ; -396.920      ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -1.635 ; -249.133      ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12.054 ; 0.000         ;
+; altera_reserved_tck                                           ; -3.538 ; -487.355      ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -1.424 ; -426.995      ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12.368 ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
 
@@ -173,9 +171,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------+-------+---------------+
 ; Clock                                                         ; Slack ; End Point TNS ;
 +---------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                           ; 0.125 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.255 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.309 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.081 ; 0.000         ;
+; altera_reserved_tck                                           ; 0.200 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.284 ; 0.000         ;
 +---------------------------------------------------------------+-------+---------------+
 
 
@@ -184,9 +182,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -2.245 ; -92.079       ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -0.421 ; -13.920       ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 17.844 ; 0.000         ;
+; altera_reserved_tck                                           ; -2.746 ; -144.136      ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.197  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 17.753 ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
 
@@ -195,9 +193,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------+-------+---------------+
 ; Clock                                                         ; Slack ; End Point TNS ;
 +---------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                           ; 0.554 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.564 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1.014 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.414 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.871 ; 0.000         ;
+; altera_reserved_tck                                           ; 0.890 ; 0.000         ;
 +---------------------------------------------------------------+-------+---------------+
 
 
@@ -206,10 +204,10 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -0.583 ; -165.829      ;
+; altera_reserved_tck                                           ; -0.642 ; -202.836      ;
 ; u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.097  ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 8.771  ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.095  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 8.769  ; 0.000         ;
 ; CLOCK_50                                                      ; 9.670  ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
@@ -226,9 +224,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+---------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                    ; Note ;
 +------------+-----------------+---------------------------------------------------------------+------+
-; 115.45 MHz ; 115.45 MHz      ; altera_reserved_tck                                           ;      ;
-; 120.48 MHz ; 120.48 MHz      ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 125.79 MHz ; 125.79 MHz      ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 127.81 MHz ; 127.81 MHz      ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 130.19 MHz ; 130.19 MHz      ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 130.31 MHz ; 130.31 MHz      ; altera_reserved_tck                                           ;      ;
 +------------+-----------------+---------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -238,9 +236,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -3.831 ; -389.482      ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -1.634 ; -166.518      ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12.050 ; 0.000         ;
+; altera_reserved_tck                                           ; -3.337 ; -479.291      ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -1.158 ; -275.968      ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12.319 ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
 
@@ -249,9 +247,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------+-------+---------------+
 ; Clock                                                         ; Slack ; End Point TNS ;
 +---------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                           ; 0.115 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.207 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.234 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.004 ; 0.000         ;
+; altera_reserved_tck                                           ; 0.177 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.271 ; 0.000         ;
 +---------------------------------------------------------------+-------+---------------+
 
 
@@ -260,9 +258,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -2.120 ; -87.916       ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -0.336 ; -10.242       ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 17.944 ; 0.000         ;
+; altera_reserved_tck                                           ; -2.559 ; -134.104      ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.404  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 17.825 ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
 
@@ -271,9 +269,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------+-------+---------------+
 ; Clock                                                         ; Slack ; End Point TNS ;
 +---------------------------------------------------------------+-------+---------------+
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.513 ; 0.000         ;
-; altera_reserved_tck                                           ; 0.521 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.963 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.336 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.813 ; 0.000         ;
+; altera_reserved_tck                                           ; 0.822 ; 0.000         ;
 +---------------------------------------------------------------+-------+---------------+
 
 
@@ -282,10 +280,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -0.605 ; -168.714      ;
+; altera_reserved_tck                                           ; -0.657 ; -206.803      ;
 ; u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.072  ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 8.750  ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.078  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 8.760  ; 0.000         ;
 ; CLOCK_50                                                      ; 9.673  ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
@@ -302,9 +300,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -1.885 ; -187.504      ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1.704  ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 15.250 ; 0.000         ;
+; altera_reserved_tck                                           ; -1.746 ; -231.213      ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1.611  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 15.418 ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
 
@@ -313,9 +311,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+-------+---------------+
 ; Clock                                                         ; Slack ; End Point TNS ;
 +---------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                           ; 0.024 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.152 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.178 ; 0.000         ;
+; altera_reserved_tck                                           ; 0.065 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.084 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.165 ; 0.000         ;
 +---------------------------------------------------------------+-------+---------------+
 
 
@@ -324,9 +322,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -0.965 ; -38.060       ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.816  ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.588 ; 0.000         ;
+; altera_reserved_tck                                           ; -1.518 ; -62.129       ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 3.762  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.593 ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
 
@@ -335,9 +333,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+-------+---------------+
 ; Clock                                                         ; Slack ; End Point TNS ;
 +---------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                           ; 0.209 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.299 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.569 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.366 ; 0.000         ;
+; altera_reserved_tck                                           ; 0.410 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.503 ; 0.000         ;
 +---------------------------------------------------------------+-------+---------------+
 
 
@@ -346,10 +344,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -0.676 ; -171.165      ;
+; altera_reserved_tck                                           ; -0.749 ; -210.535      ;
 ; u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.217  ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 8.892  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 8.888  ; 0.000         ;
 ; CLOCK_50                                                      ; 9.336  ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
@@ -366,9 +364,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -1.550 ; -163.206      ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.130  ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 15.636 ; 0.000         ;
+; altera_reserved_tck                                           ; -1.512 ; -201.184      ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.114  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 15.843 ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
 
@@ -377,9 +375,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+-------+---------------+
 ; Clock                                                         ; Slack ; End Point TNS ;
 +---------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                           ; 0.011 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.124 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.139 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.023 ; 0.000         ;
+; altera_reserved_tck                                           ; 0.046 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.151 ; 0.000         ;
 +---------------------------------------------------------------+-------+---------------+
 
 
@@ -388,9 +386,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -0.691 ; -28.523       ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.874  ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.753 ; 0.000         ;
+; altera_reserved_tck                                           ; -1.255 ; -47.835       ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 4.049  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.748 ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
 
@@ -399,9 +397,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+-------+---------------+
 ; Clock                                                         ; Slack ; End Point TNS ;
 +---------------------------------------------------------------+-------+---------------+
-; altera_reserved_tck                                           ; 0.183 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.268 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.525 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.283 ; 0.000         ;
+; altera_reserved_tck                                           ; 0.325 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.453 ; 0.000         ;
 +---------------------------------------------------------------+-------+---------------+
 
 
@@ -410,10 +408,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+--------+---------------+
 ; Clock                                                         ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------+--------+---------------+
-; altera_reserved_tck                                           ; -0.702 ; -185.618      ;
+; altera_reserved_tck                                           ; -0.761 ; -224.932      ;
 ; u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 2.216  ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 8.889  ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 8.887  ; 0.000         ;
 ; CLOCK_50                                                      ; 9.286  ; 0.000         ;
 +---------------------------------------------------------------+--------+---------------+
 
@@ -430,17 +428,17 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                                                          ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                               ; -3.962   ; 0.011 ; -2.245   ; 0.183   ; -0.702              ;
+; Worst-case Slack                                               ; -3.538   ; 0.004 ; -2.746   ; 0.283   ; -0.761              ;
 ;  CLOCK_50                                                      ; N/A      ; N/A   ; N/A      ; N/A     ; 9.286               ;
-;  altera_reserved_tck                                           ; -3.962   ; 0.011 ; -2.245   ; 0.183   ; -0.702              ;
+;  altera_reserved_tck                                           ; -3.538   ; 0.046 ; -2.746   ; 0.325   ; -0.761              ;
 ;  u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A      ; N/A   ; N/A      ; N/A     ; 1.666               ;
-;  u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -1.635   ; 0.124 ; -0.421   ; 0.525   ; 2.072               ;
-;  u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12.050   ; 0.139 ; 17.844   ; 0.268   ; 8.750               ;
-; Design-wide TNS                                                ; -646.053 ; 0.0   ; -105.999 ; 0.0     ; -185.618            ;
+;  u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -1.424   ; 0.004 ; 2.197    ; 0.283   ; 2.078               ;
+;  u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12.319   ; 0.151 ; 17.753   ; 0.453   ; 8.760               ;
+; Design-wide TNS                                                ; -914.35  ; 0.0   ; -144.136 ; 0.0     ; -224.932            ;
 ;  CLOCK_50                                                      ; N/A      ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  altera_reserved_tck                                           ; -396.920 ; 0.000 ; -92.079  ; 0.000   ; -185.618            ;
+;  altera_reserved_tck                                           ; -487.355 ; 0.000 ; -144.136 ; 0.000   ; -224.932            ;
 ;  u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A      ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -249.133 ; 0.000 ; -13.920  ; 0.000   ; 0.000               ;
+;  u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -426.995 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 ;  u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.000    ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 +----------------------------------------------------------------+----------+-------+----------+---------+---------------------+
 
@@ -1611,13 +1609,13 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------------------------------+---------------------------------------------------------------+------------+------------+----------+----------+
 ; From Clock                                                    ; To Clock                                                      ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------+---------------------------------------------------------------+------------+------------+----------+----------+
-; altera_reserved_tck                                           ; altera_reserved_tck                                           ; 1565       ; 0          ; 42       ; 4        ;
+; altera_reserved_tck                                           ; altera_reserved_tck                                           ; 1888       ; 0          ; 67       ; 4        ;
 ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; altera_reserved_tck                                           ; false path ; 0          ; 0        ; 0        ;
 ; altera_reserved_tck                                           ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; false path ; false path ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 645369     ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 611361     ; 0          ; 0        ; 0        ;
 ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 14         ; 0          ; 0        ; 0        ;
 ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12         ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 11479      ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12693      ; 0          ; 0        ; 0        ;
 +---------------------------------------------------------------+---------------------------------------------------------------+------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1627,13 +1625,13 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------+---------------------------------------------------------------+------------+------------+----------+----------+
 ; From Clock                                                    ; To Clock                                                      ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------+---------------------------------------------------------------+------------+------------+----------+----------+
-; altera_reserved_tck                                           ; altera_reserved_tck                                           ; 1565       ; 0          ; 42       ; 4        ;
+; altera_reserved_tck                                           ; altera_reserved_tck                                           ; 1888       ; 0          ; 67       ; 4        ;
 ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; altera_reserved_tck                                           ; false path ; 0          ; 0        ; 0        ;
 ; altera_reserved_tck                                           ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; false path ; false path ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 645369     ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 611361     ; 0          ; 0        ; 0        ;
 ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 14         ; 0          ; 0        ; 0        ;
 ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12         ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 11479      ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 12693      ; 0          ; 0        ; 0        ;
 +---------------------------------------------------------------+---------------------------------------------------------------+------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1643,10 +1641,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------+---------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                    ; To Clock                                                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------+---------------------------------------------------------------+----------+----------+----------+----------+
-; altera_reserved_tck                                           ; altera_reserved_tck                                           ; 74       ; 0        ; 3        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 4999     ; 0        ; 0        ; 0        ;
+; altera_reserved_tck                                           ; altera_reserved_tck                                           ; 113      ; 0        ; 3        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 5197     ; 0        ; 0        ; 0        ;
 ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 3        ; 0        ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 336      ; 0        ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 341      ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------+---------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1656,10 +1654,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------+---------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                    ; To Clock                                                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------+---------------------------------------------------------------+----------+----------+----------+----------+
-; altera_reserved_tck                                           ; altera_reserved_tck                                           ; 74       ; 0        ; 3        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 4999     ; 0        ; 0        ; 0        ;
+; altera_reserved_tck                                           ; altera_reserved_tck                                           ; 113      ; 0        ; 3        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 5197     ; 0        ; 0        ; 0        ;
 ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 3        ; 0        ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 336      ; 0        ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk ; 341      ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------+---------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1684,7 +1682,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 19    ; 19   ;
-; Unconstrained Input Port Paths  ; 75    ; 75   ;
+; Unconstrained Input Port Paths  ; 79    ; 79   ;
 ; Unconstrained Output Ports      ; 39    ; 39   ;
 ; Unconstrained Output Port Paths ; 59    ; 59   ;
 +---------------------------------+-------+------+
@@ -1726,7 +1724,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; DRAM_DQ[14]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DRAM_DQ[15]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[0]              ; Partially constrained                                                                ;
-; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; altera_reserved_tdi ; Partially constrained                                                                ;
 ; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------------+--------------------------------------------------------------------------------------+
 
@@ -1800,7 +1798,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; DRAM_DQ[14]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; DRAM_DQ[15]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[0]              ; Partially constrained                                                                ;
-; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; altera_reserved_tdi ; Partially constrained                                                                ;
 ; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------------+--------------------------------------------------------------------------------------+
 
@@ -1857,8 +1855,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
-    Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Mon Apr 11 13:25:33 2022
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Apr 11 19:39:16 2022
 Info: Command: quartus_sta tarea_aceleracion -c tecnica2
 Info: qsta_default_script.tcl version: #3
 Warning (20013): Ignored 404 assignments for entity "DE1_SoC_MTL2_PAINTER" -- entity does not exist in design
@@ -2267,10 +2265,21 @@ Warning (20013): Ignored 404 assignments for entity "DE1_SoC_MTL2_PAINTER" -- en
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE1_SoC_MTL2_PAINTER -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE1_SoC_MTL2_PAINTER -section_id Top was ignored
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity GHVD5181
+        Info (332166): set_disable_timing [get_cells -hierarchical QXXQ6833_0]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_0]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_1]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_2]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_3]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_4]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_5]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_6]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_7]
+        Info (332166): set_disable_timing [get_cells -hierarchical BITP7563_0]
     Info (332165): Entity alt_jtag_atlantic
         Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|jupdate}] -to [get_registers {*|alt_jtag_atlantic:*|jupdate1*}] 
         Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
@@ -2300,6 +2309,8 @@ Info (332164): Evaluating HDL-embedded SDC commands
         Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write_valid}]
     Info (332165): Entity altera_std_synchronizer
         Info (332166): set_false_path -to [get_keepers {*altera_std_synchronizer:*|din_s1}]
+    Info (332165): Entity pzdyqx_impl
+        Info (332166): set_false_path -from [get_keepers {altera_reserved_tdi}] -to [get_keepers {pzdyqx*}]
     Info (332165): Entity sld_hub
         Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 30MHz   
         Info (332166): if { [string equal quartus_fit $::TimeQuestInfo(nameofexecutable)] } { set_max_delay -to [get_ports { altera_reserved_tdo } ] 0 }
@@ -2309,40 +2320,40 @@ Info (332104): Reading SDC File: 'nios_system_tec2/synthesis/submodules/nios_sys
 Info (332104): Reading SDC File: 'nios_system_tec2/synthesis/submodules/altera_avalon_dc_fifo.sdc'
 Info (332104): Reading SDC File: 'tecnica0.out.sdc'
 Warning (332043): Overwriting existing clock: altera_reserved_tck
-Warning (332174): Ignored filter at tecnica0.out.sdc(144): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_break:the_nios_system_tec0_cpu_cpu_nios2_oci_break|break_readreg* could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
-Warning (332174): Ignored filter at tecnica0.out.sdc(144): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr* could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(144): Argument <from> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
-    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_break:the_nios_system_tec0_cpu_cpu_nios2_oci_break|break_readreg*}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr*}] File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(144): Argument <to> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
-Warning (332174): Ignored filter at tecnica0.out.sdc(145): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|*resetlatch could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
-Warning (332174): Ignored filter at tecnica0.out.sdc(145): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[33] could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(145): Argument <from> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
-    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|*resetlatch}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[33]}] File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(145): Argument <to> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
-Warning (332174): Ignored filter at tecnica0.out.sdc(146): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_ready could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
-Warning (332174): Ignored filter at tecnica0.out.sdc(146): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[0] could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(146): Argument <from> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
-    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_ready}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[0]}] File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(146): Argument <to> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
-Warning (332174): Ignored filter at tecnica0.out.sdc(147): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_error could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
-Warning (332174): Ignored filter at tecnica0.out.sdc(147): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[34] could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(147): Argument <from> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
-    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_error}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[34]}] File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(147): Argument <to> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
-Warning (332174): Ignored filter at tecnica0.out.sdc(148): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_ocimem:the_nios_system_tec0_cpu_cpu_nios2_ocimem|*MonDReg* could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 148
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(148): Argument <from> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 148
-    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_ocimem:the_nios_system_tec0_cpu_cpu_nios2_ocimem|*MonDReg*}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr*}] File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 148
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(148): Argument <to> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 148
-Warning (332174): Ignored filter at tecnica0.out.sdc(149): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_sysclk:the_nios_system_tec0_cpu_cpu_debug_slave_sysclk|*jdo* could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 149
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(149): Argument <from> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 149
-    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr*}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_sysclk:the_nios_system_tec0_cpu_cpu_debug_slave_sysclk|*jdo*}] File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 149
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(149): Argument <to> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 149
-Warning (332174): Ignored filter at tecnica0.out.sdc(150): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_sysclk:the_nios_system_tec0_cpu_cpu_debug_slave_sysclk|ir* could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 150
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(150): Argument <to> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 150
-    Info (332050): set_false_path -from [get_keepers {sld_hub:*|irf_reg*}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_sysclk:the_nios_system_tec0_cpu_cpu_debug_slave_sysclk|ir*}] File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 150
-Warning (332174): Ignored filter at tecnica0.out.sdc(151): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_go could not be matched with a keeper File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 151
-Warning (332049): Ignored set_false_path at tecnica0.out.sdc(151): Argument <to> is an empty collection File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 151
-    Info (332050): set_false_path -from [get_keepers {sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1]}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_go}] File: C:/Users/jororoc/Documents/QDesign/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 151
+Warning (332174): Ignored filter at tecnica0.out.sdc(144): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_break:the_nios_system_tec0_cpu_cpu_nios2_oci_break|break_readreg* could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
+Warning (332174): Ignored filter at tecnica0.out.sdc(144): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr* could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(144): Argument <from> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
+    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_break:the_nios_system_tec0_cpu_cpu_nios2_oci_break|break_readreg*}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr*}] File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(144): Argument <to> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 144
+Warning (332174): Ignored filter at tecnica0.out.sdc(145): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|*resetlatch could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
+Warning (332174): Ignored filter at tecnica0.out.sdc(145): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[33] could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(145): Argument <from> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
+    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|*resetlatch}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[33]}] File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(145): Argument <to> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 145
+Warning (332174): Ignored filter at tecnica0.out.sdc(146): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_ready could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
+Warning (332174): Ignored filter at tecnica0.out.sdc(146): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[0] could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(146): Argument <from> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
+    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_ready}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[0]}] File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(146): Argument <to> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 146
+Warning (332174): Ignored filter at tecnica0.out.sdc(147): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_error could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
+Warning (332174): Ignored filter at tecnica0.out.sdc(147): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[34] could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(147): Argument <from> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
+    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_error}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr[34]}] File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(147): Argument <to> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 147
+Warning (332174): Ignored filter at tecnica0.out.sdc(148): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_ocimem:the_nios_system_tec0_cpu_cpu_nios2_ocimem|*MonDReg* could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 148
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(148): Argument <from> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 148
+    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_ocimem:the_nios_system_tec0_cpu_cpu_nios2_ocimem|*MonDReg*}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr*}] File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 148
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(148): Argument <to> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 148
+Warning (332174): Ignored filter at tecnica0.out.sdc(149): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_sysclk:the_nios_system_tec0_cpu_cpu_debug_slave_sysclk|*jdo* could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 149
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(149): Argument <from> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 149
+    Info (332050): set_false_path -from [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_tck:the_nios_system_tec0_cpu_cpu_debug_slave_tck|*sr*}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_sysclk:the_nios_system_tec0_cpu_cpu_debug_slave_sysclk|*jdo*}] File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 149
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(149): Argument <to> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 149
+Warning (332174): Ignored filter at tecnica0.out.sdc(150): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_sysclk:the_nios_system_tec0_cpu_cpu_debug_slave_sysclk|ir* could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 150
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(150): Argument <to> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 150
+    Info (332050): set_false_path -from [get_keepers {sld_hub:*|irf_reg*}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_debug_slave_wrapper:the_nios_system_tec0_cpu_cpu_debug_slave_wrapper|nios_system_tec0_cpu_cpu_debug_slave_sysclk:the_nios_system_tec0_cpu_cpu_debug_slave_sysclk|ir*}] File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 150
+Warning (332174): Ignored filter at tecnica0.out.sdc(151): *nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_go could not be matched with a keeper File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 151
+Warning (332049): Ignored set_false_path at tecnica0.out.sdc(151): Argument <to> is an empty collection File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 151
+    Info (332050): set_false_path -from [get_keepers {sld_hub:*|sld_shadow_jsm:shadow_jsm|state[1]}] -to [get_keepers {*nios_system_tec0_cpu_cpu:*|nios_system_tec0_cpu_cpu_nios2_oci:the_nios_system_tec0_cpu_cpu_nios2_oci|nios_system_tec0_cpu_cpu_nios2_oci_debug:the_nios_system_tec0_cpu_cpu_nios2_oci_debug|monitor_go}] File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/tecnica0.out.sdc Line: 151
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
     Info (332098): From: u0|cpu|cpu|the_nios_system_tec2_cpu_cpu_nios2_oci|the_nios_system_tec2_cpu_cpu_nios2_ocimem|nios_system_tec2_cpu_cpu_ociram_sp_ram|the_altsyncram|auto_generated|ram_block1a8|clk0  to: nios_system_tec2:u0|nios_system_tec2_cpu:cpu|nios_system_tec2_cpu_cpu:cpu|nios_system_tec2_cpu_cpu_nios2_oci:the_nios_system_tec2_cpu_cpu_nios2_oci|nios_system_tec2_cpu_cpu_nios2_ocimem:the_nios_system_tec2_cpu_cpu_nios2_ocimem|nios_system_tec2_cpu_cpu_ociram_sp_ram_module:nios_system_tec2_cpu_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_qid1:auto_generated|ram_block1a8~CLOCK1_ENABLE1_0
     Info (332098): Cell: u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
@@ -2355,37 +2366,37 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.962
+Info (332146): Worst-case setup slack is -3.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.962            -396.920 altera_reserved_tck 
-    Info (332119):    -1.635            -249.133 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    12.054               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.125
+    Info (332119):    -3.538            -487.355 altera_reserved_tck 
+    Info (332119):    -1.424            -426.995 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    12.368               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.081
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.125               0.000 altera_reserved_tck 
-    Info (332119):     0.255               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.309               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is -2.245
+    Info (332119):     0.081               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.200               0.000 altera_reserved_tck 
+    Info (332119):     0.284               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case recovery slack is -2.746
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.245             -92.079 altera_reserved_tck 
-    Info (332119):    -0.421             -13.920 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    17.844               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case removal slack is 0.554
+    Info (332119):    -2.746            -144.136 altera_reserved_tck 
+    Info (332119):     2.197               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    17.753               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case removal slack is 0.414
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.554               0.000 altera_reserved_tck 
-    Info (332119):     0.564               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     1.014               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case minimum pulse width slack is -0.583
+    Info (332119):     0.414               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.871               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.890               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is -0.642
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.583            -165.829 altera_reserved_tck 
+    Info (332119):    -0.642            -202.836 altera_reserved_tck 
     Info (332119):     1.666               0.000 u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     2.097               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     8.771               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     2.095               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.769               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
     Info (332119):     9.670               0.000 CLOCK_50 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 39 synchronizer chains.
@@ -2403,37 +2414,37 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.831
+Info (332146): Worst-case setup slack is -3.337
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.831            -389.482 altera_reserved_tck 
-    Info (332119):    -1.634            -166.518 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    12.050               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.115
+    Info (332119):    -3.337            -479.291 altera_reserved_tck 
+    Info (332119):    -1.158            -275.968 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    12.319               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.004
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.115               0.000 altera_reserved_tck 
-    Info (332119):     0.207               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.234               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is -2.120
+    Info (332119):     0.004               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.177               0.000 altera_reserved_tck 
+    Info (332119):     0.271               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case recovery slack is -2.559
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.120             -87.916 altera_reserved_tck 
-    Info (332119):    -0.336             -10.242 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    17.944               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case removal slack is 0.513
+    Info (332119):    -2.559            -134.104 altera_reserved_tck 
+    Info (332119):     2.404               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    17.825               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case removal slack is 0.336
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.513               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.521               0.000 altera_reserved_tck 
-    Info (332119):     0.963               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case minimum pulse width slack is -0.605
+    Info (332119):     0.336               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.813               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.822               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is -0.657
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.605            -168.714 altera_reserved_tck 
+    Info (332119):    -0.657            -206.803 altera_reserved_tck 
     Info (332119):     1.666               0.000 u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     2.072               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     8.750               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     2.078               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.760               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
     Info (332119):     9.673               0.000 CLOCK_50 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 39 synchronizer chains.
@@ -2451,37 +2462,37 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.885
+Info (332146): Worst-case setup slack is -1.746
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.885            -187.504 altera_reserved_tck 
-    Info (332119):     1.704               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    15.250               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.024
+    Info (332119):    -1.746            -231.213 altera_reserved_tck 
+    Info (332119):     1.611               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    15.418               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.065
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.024               0.000 altera_reserved_tck 
-    Info (332119):     0.152               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.178               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is -0.965
+    Info (332119):     0.065               0.000 altera_reserved_tck 
+    Info (332119):     0.084               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.165               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case recovery slack is -1.518
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.965             -38.060 altera_reserved_tck 
-    Info (332119):     2.816               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    18.588               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case removal slack is 0.209
+    Info (332119):    -1.518             -62.129 altera_reserved_tck 
+    Info (332119):     3.762               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.593               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case removal slack is 0.366
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.209               0.000 altera_reserved_tck 
-    Info (332119):     0.299               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.569               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case minimum pulse width slack is -0.676
+    Info (332119):     0.366               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.410               0.000 altera_reserved_tck 
+    Info (332119):     0.503               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case minimum pulse width slack is -0.749
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.676            -171.165 altera_reserved_tck 
+    Info (332119):    -0.749            -210.535 altera_reserved_tck 
     Info (332119):     1.666               0.000 u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     2.217               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     8.892               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.888               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
     Info (332119):     9.336               0.000 CLOCK_50 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 39 synchronizer chains.
@@ -2497,37 +2508,37 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.550
+Info (332146): Worst-case setup slack is -1.512
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.550            -163.206 altera_reserved_tck 
-    Info (332119):     2.130               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    15.636               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.011
+    Info (332119):    -1.512            -201.184 altera_reserved_tck 
+    Info (332119):     2.114               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    15.843               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.023
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.011               0.000 altera_reserved_tck 
-    Info (332119):     0.124               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.139               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is -0.691
+    Info (332119):     0.023               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.046               0.000 altera_reserved_tck 
+    Info (332119):     0.151               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case recovery slack is -1.255
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.691             -28.523 altera_reserved_tck 
-    Info (332119):     2.874               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    18.753               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case removal slack is 0.183
+    Info (332119):    -1.255             -47.835 altera_reserved_tck 
+    Info (332119):     4.049               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.748               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case removal slack is 0.283
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.183               0.000 altera_reserved_tck 
-    Info (332119):     0.268               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.525               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case minimum pulse width slack is -0.702
+    Info (332119):     0.283               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.325               0.000 altera_reserved_tck 
+    Info (332119):     0.453               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case minimum pulse width slack is -0.761
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.702            -185.618 altera_reserved_tck 
+    Info (332119):    -0.761            -224.932 altera_reserved_tck 
     Info (332119):     1.666               0.000 u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     2.216               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     8.889               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.887               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
     Info (332119):     9.286               0.000 CLOCK_50 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 39 synchronizer chains.
@@ -2535,9 +2546,9 @@ Info (332114): Report Metastability: Found 39 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 441 warnings
-    Info: Peak virtual memory: 5462 megabytes
-    Info: Processing ended: Mon Apr 11 13:26:00 2022
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:46
+    Info: Peak virtual memory: 5437 megabytes
+    Info: Processing ended: Mon Apr 11 19:39:58 2022
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:55
 
 

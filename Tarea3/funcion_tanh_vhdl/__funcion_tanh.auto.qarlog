@@ -1,0 +1,26 @@
+Quartus Prime Archive log --	C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/__funcion_tanh.auto.qarlog
+
+Archive:	C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/__funcion_tanh.auto.qar
+Date:		Mon Apr 11 20:41:17 2022
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/db/funcion_tanh.qpf
+C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/output_files/funcion_tanh.flow.rpt
+C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/output_files/funcion_tanh.map.rpt
+C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/output_files/funcion_tanh.map.summary
+ROM_sincrona_tanh.vhd
+arc_file_list_temp.tmp.txt
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+fixed_pkg.vhd
+float_pkg.vhd
+funcion_senoide.qws
+funcion_senoide_assignment_defaults.qdf
+funcion_tanh.qsf
+funcion_tanh_assignment_defaults.qdf
+funcion_tanh_description.txt
+math_utility.vhd
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
