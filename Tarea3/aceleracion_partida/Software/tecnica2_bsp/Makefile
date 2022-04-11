@@ -284,6 +284,10 @@ altera_nios2_gen2_hal_driver_ASM_LIB_SRCS := \
 	$(altera_nios2_gen2_hal_driver_SRCS_ROOT)/src/alt_log_macro.S \
 	$(altera_nios2_gen2_hal_driver_SRCS_ROOT)/src/crt0.S
 
+# fpoint2_driver sources root 
+fpoint2_driver_SRCS_ROOT := drivers
+
+# fpoint2_driver sources 
 # hal sources root 
 hal_SRCS_ROOT := HAL
 

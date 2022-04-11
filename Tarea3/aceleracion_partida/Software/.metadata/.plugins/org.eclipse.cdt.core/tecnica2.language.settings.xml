@@ -1379,6 +1379,9 @@
 			<provider id="altera.tool.Nios2GCCBuildCommandParser">
 				<language id="org.eclipse.cdt.core.gcc">
 					<resource project-relative-path="backpropagation_best2019_superdef_ver2_alumnos-1.c">
+						<entry kind="includePath" name="/tecnica2_bsp/newlib/nios2-elf/include">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/tecnica2_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>

@@ -1,5 +1,5 @@
 Fitter report for sigmoides
-Wed Mar 27 09:08:31 2019
+Mon Apr 11 12:44:04 2022
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                                ;
 +------------------------------------+----------------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Mar 27 09:08:31 2019                    ;
+; Fitter Status                      ; Successful - Mon Apr 11 12:44:04 2022                    ;
 ; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                      ; sigmoides                                                ;
 ; Top-level Entity Name              ; top_tanh                                                 ;
@@ -191,7 +191,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/rgadea/Documents/tangente_hiperbolica_restored/sigmoides.pin.
+The pin-out file can be found in C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/sigmoides.pin.
 
 
 +-------------------------------------------------------------------+
@@ -1557,12 +1557,12 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN E1 (CLK1, DIFFCLK_0n)) File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/top_tanh.vhd Line: 11
+Info (176353): Automatically promoted node clk~input (placed in PIN E1 (CLK1, DIFFCLK_0n)) File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/top_tanh.vhd Line: 11
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node reset_n~input (placed in PIN M2 (CLK2, DIFFCLK_1p)) File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/top_tanh.vhd Line: 12
+Info (176353): Automatically promoted node reset_n~input (placed in PIN M2 (CLK2, DIFFCLK_1p)) File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/top_tanh.vhd Line: 12
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node readdata[0]~1 File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/top_tanh.vhd Line: 85
+        Info (176357): Destination node readdata[0]~1 File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/top_tanh.vhd Line: 85
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1579,7 +1579,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  13 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  26 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  26 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1591,24 +1591,24 @@ Info (170195): Router estimated average interconnect usage is 1% of the availabl
     Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X0_Y12 to location X10_Y24
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.15 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/Users/rgadea/Documents/tangente_hiperbolica_restored/sigmoides.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/sigmoides.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5169 megabytes
-    Info: Processing ended: Wed Mar 27 09:08:31 2019
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 5148 megabytes
+    Info: Processing ended: Mon Apr 11 12:44:05 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/rgadea/Documents/tangente_hiperbolica_restored/sigmoides.fit.smsg.
+The suppressed messages can be found in C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/sigmoides.fit.smsg.
 
 

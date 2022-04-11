@@ -249,18 +249,7 @@ nios_system_tec2 u0(
 		.zs_dqm_from_the_sdram({DRAM_UDQM,DRAM_LDQM}),                    //                                  .dqm
 		.zs_ras_n_from_the_sdram(DRAM_RAS_N),                  //                                  .ras_n
 		.zs_we_n_from_the_sdram(DRAM_WE_N)                   //                                  .we_n
-
-		
-		
 	);
 	
-	
-	
-
-
-
-
-
-
 
 endmodule

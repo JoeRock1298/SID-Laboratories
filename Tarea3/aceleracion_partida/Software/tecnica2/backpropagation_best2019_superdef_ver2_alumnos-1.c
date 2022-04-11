@@ -37,7 +37,6 @@ const float LR_H1H2 =0.1;
 
 
 //// functions ////
-float tanh_hard(float x);
 void initWeights();
 void initData();
 void calcNet();
@@ -52,6 +51,7 @@ void displayResults();
 void pingpong(int patron);
 float getRand();
 void print_array(float data[], int n);
+float tanh_hard(float x);
 
 
 
@@ -107,7 +107,7 @@ float weightsH2O_old[numHidden2+1];
  * erasing call linking.
  */
 inline float tanh_hard(float x){
-	float *tanh_ip_pointer = (float *)TOP_TANH_0_BASE;
+	float *tanh_ip_pointer = TOP_TANH_0_BASE;
 	*(tanh_ip_pointer + 0x3) = x;
 	return *(tanh_ip_pointer);
 }

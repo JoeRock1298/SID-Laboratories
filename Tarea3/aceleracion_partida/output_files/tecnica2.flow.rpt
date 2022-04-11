@@ -1,5 +1,5 @@
 Flow report for tecnica2
-Mon Apr 11 09:45:23 2022
+Mon Apr 11 13:26:00 2022
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -40,19 +40,19 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+
 ; Flow Summary                                                                               ;
 +---------------------------------+----------------------------------------------------------+
-; Flow Status                     ; Successful - Mon Apr 11 09:44:59 2022                    ;
+; Flow Status                     ; Successful - Mon Apr 11 13:25:32 2022                    ;
 ; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                   ; tecnica2                                                 ;
 ; Top-level Entity Name           ; tecnica2                                                 ;
 ; Family                          ; Cyclone V                                                ;
 ; Device                          ; 5CSEMA5F31C6                                             ;
 ; Timing Models                   ; Final                                                    ;
-; Logic utilization (in ALMs)     ; 2,978 / 32,070 ( 9 % )                                   ;
-; Total registers                 ; 4665                                                     ;
+; Logic utilization (in ALMs)     ; 3,945 / 32,070 ( 12 % )                                  ;
+; Total registers                 ; 5629                                                     ;
 ; Total pins                      ; 235 / 457 ( 51 % )                                       ;
 ; Total virtual pins              ; 0                                                        ;
-; Total block memory bits         ; 67,440 / 4,065,280 ( 2 % )                               ;
-; Total DSP Blocks                ; 3 / 87 ( 3 % )                                           ;
+; Total block memory bits         ; 83,280 / 4,065,280 ( 2 % )                               ;
+; Total DSP Blocks                ; 7 / 87 ( 8 % )                                           ;
 ; Total HSSI RX PCSs              ; 0                                                        ;
 ; Total HSSI PMA RX Deserializers ; 0                                                        ;
 ; Total HSSI TX PCSs              ; 0                                                        ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/11/2022 09:40:33 ;
+; Start date & time ; 04/11/2022 13:20:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tecnica2            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------+--------------------------------------------------------------------+---------------+----------------------+------------+
 ; Assignment Name                                   ; Value                                                              ; Default Value ; Entity Name          ; Section Id ;
 +---------------------------------------------------+--------------------------------------------------------------------+---------------+----------------------+------------+
-; COMPILER_SIGNATURE_ID                             ; 242211430917466.164966283212968                                    ; --            ; --                   ; --         ;
+; COMPILER_SIGNATURE_ID                             ; 242211430917466.164967600918804                                    ; --            ; --                   ; --         ;
 ; FITTER_EFFORT                                     ; Standard Fit                                                       ; Auto Fit      ; --                   ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                            ; 85                                                                 ; --            ; --                   ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                            ; 0                                                                  ; --            ; --                   ; --         ;
@@ -106,7 +106,7 @@ refer to the applicable agreement for further details.
 ; ROUTER_TIMING_OPTIMIZATION_LEVEL                  ; MAXIMUM                                                            ; Normal        ; --                   ; --         ;
 ; SLD_FILE                                          ; nios_system_tec2/synthesis/nios_system_tec2.regmap                 ; --            ; --                   ; --         ;
 ; SLD_FILE                                          ; nios_system_tec2/synthesis/nios_system_tec2.debuginfo              ; --            ; --                   ; --         ;
-; SLD_INFO                                          ; QSYS_NAME nios_system_tec2 HAS_SOPCINFO 1 GENERATION_ID 1649629486 ; --            ; nios_system_tec2     ; --         ;
+; SLD_INFO                                          ; QSYS_NAME nios_system_tec2 HAS_SOPCINFO 1 GENERATION_ID 1649675919 ; --            ; nios_system_tec2     ; --         ;
 ; SOPCINFO_FILE                                     ; nios_system_tec2/synthesis/../../nios_system_tec2.sopcinfo         ; --            ; --                   ; --         ;
 ; SYNTHESIS_ONLY_QIP                                ; On                                                                 ; --            ; --                   ; --         ;
 +---------------------------------------------------+--------------------------------------------------------------------+---------------+----------------------+------------+
@@ -117,11 +117,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:00     ; 1.0                     ; 5130 MB             ; 00:01:25                           ;
-; Fitter                    ; 00:03:03     ; 1.2                     ; 7176 MB             ; 00:07:20                           ;
-; Assembler                 ; 00:00:16     ; 1.0                     ; 4899 MB             ; 00:00:15                           ;
-; TimeQuest Timing Analyzer ; 00:00:23     ; 1.8                     ; 5427 MB             ; 00:00:38                           ;
-; Total                     ; 00:04:42     ; --                      ; --                  ; 00:09:38                           ;
+; Analysis & Synthesis      ; 00:01:10     ; 1.0                     ; 5154 MB             ; 00:01:34                           ;
+; Fitter                    ; 00:03:35     ; 1.2                     ; 7219 MB             ; 00:08:22                           ;
+; Assembler                 ; 00:00:27     ; 1.0                     ; 4922 MB             ; 00:00:16                           ;
+; TimeQuest Timing Analyzer ; 00:00:27     ; 1.9                     ; 5462 MB             ; 00:00:46                           ;
+; Total                     ; 00:05:39     ; --                      ; --                  ; 00:10:58                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

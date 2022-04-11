@@ -7,6 +7,7 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library,Project/myAvalonIPs" />
+ <library expandedCategories="Project/myAvalonIPs,Project,Library" />
  <window width="974" height="728" x="0" y="0" />
+ <hdlexample language="VERILOG" />
 </preferences>

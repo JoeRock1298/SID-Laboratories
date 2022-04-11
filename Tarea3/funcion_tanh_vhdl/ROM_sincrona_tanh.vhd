@@ -28,7 +28,7 @@ begin
   for I in 0 TO 511 loop
     
 	 
-	 x:= TANH(to_real(to_ufixed(CONV_STD_LOGIC_VECTOR(i,9),-1,-9))*MATH_PI); -- addres of 9 bits
+	 x:= TANH(to_real(to_ufixed(CONV_STD_LOGIC_VECTOR(i,9),1,-7))); -- addres of 9 bits
 
 	 
     
@@ -50,7 +50,7 @@ signal signo : std_logic;
 --attribute romstyle of memoria : signal is "M9K";
 begin
 
-valor<=to_float('0'&dataa(30 downto 0))/MATH_PI;
+valor<=to_float('0'&dataa(30 downto 0)); -- getting module values
 valor1<=to_ufixed(valor,21,-10); -- ask for this part
 valor2<=to_slv(valor1);
 signo<=dataa(31) xor valor2(10);  
@@ -65,6 +65,8 @@ end process;
 
 
 mod_result<=to_slv(to_float(to_ufixed(result1,-1,-20)));
+
+-- Add asintotic value and finally add the sign
 
 result<=signo&mod_result(30 downto 0); --getting result we need to add the post-processing
 

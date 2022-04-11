@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sigmoides
-Wed Mar 27 09:08:21 2019
+Mon Apr 11 12:43:53 2022
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                  ;
 +------------------------------------+----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 27 09:08:21 2019                    ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 11 12:43:53 2022                    ;
 ; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name                      ; sigmoides                                                ;
 ; Top-level Entity Name              ; top_tanh                                                 ;
@@ -165,19 +165,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
-+------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
-+------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
-; tangente_float_optima.vhd          ; yes             ; User VHDL File               ; C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd          ;         ;
-; derivada_tangente_float_optima.vhd ; yes             ; User VHDL File               ; C:/Users/rgadea/Documents/tangente_hiperbolica_restored/derivada_tangente_float_optima.vhd ;         ;
-; top_tanh.vhd                       ; yes             ; User VHDL File               ; C:/Users/rgadea/Documents/tangente_hiperbolica_restored/top_tanh.vhd                       ;         ;
-; lpm_clshift.tdf                    ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_clshift.tdf                          ;         ;
-; db/lpm_clshift_5lb.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/rgadea/Documents/tangente_hiperbolica_restored/db/lpm_clshift_5lb.tdf             ;         ;
-; lpm_or.tdf                         ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_or.tdf                               ;         ;
-; aglobal171.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/aglobal171.inc                           ;         ;
-+------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                    ; Library ;
++------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
+; tangente_float_optima.vhd          ; yes             ; User VHDL File               ; C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd          ;         ;
+; derivada_tangente_float_optima.vhd ; yes             ; User VHDL File               ; C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/derivada_tangente_float_optima.vhd ;         ;
+; top_tanh.vhd                       ; yes             ; User VHDL File               ; C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/top_tanh.vhd                       ;         ;
+; lpm_clshift.tdf                    ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_clshift.tdf                               ;         ;
+; db/lpm_clshift_5lb.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/db/lpm_clshift_5lb.tdf             ;         ;
+; lpm_or.tdf                         ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_or.tdf                                    ;         ;
+; aglobal171.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/aglobal171.inc                                ;         ;
++------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -396,7 +396,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -406,45 +406,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Wed Mar 27 09:08:08 2019
+    Info: Processing started: Mon Apr 11 12:43:39 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sigmoides -c sigmoides
 Warning (12473): User specified to use only one processors but 4 processors were detected which could be used to decrease run time.
 Info (12021): Found 2 design units, including 1 entities, in source file tangente_float_optima.vhd
-    Info (12022): Found design unit 1: tangente_hiperbolica-MONOCICLO File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 75
-    Info (12023): Found entity 1: tangente_hiperbolica File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 57
+    Info (12022): Found design unit 1: tangente_hiperbolica-MONOCICLO File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 75
+    Info (12023): Found entity 1: tangente_hiperbolica File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 57
 Info (12021): Found 2 design units, including 1 entities, in source file derivada_tangente_float_optima.vhd
-    Info (12022): Found design unit 1: derivada_tangente_hiperbolica-MONOCICLO File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/derivada_tangente_float_optima.vhd Line: 73
-    Info (12023): Found entity 1: derivada_tangente_hiperbolica File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/derivada_tangente_float_optima.vhd Line: 56
+    Info (12022): Found design unit 1: derivada_tangente_hiperbolica-MONOCICLO File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/derivada_tangente_float_optima.vhd Line: 73
+    Info (12023): Found entity 1: derivada_tangente_hiperbolica File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/derivada_tangente_float_optima.vhd Line: 56
 Info (12021): Found 2 design units, including 1 entities, in source file top_tanh.vhd
-    Info (12022): Found design unit 1: top_tanh-rtl File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/top_tanh.vhd Line: 25
-    Info (12023): Found entity 1: top_tanh File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/top_tanh.vhd Line: 6
+    Info (12022): Found design unit 1: top_tanh-rtl File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/top_tanh.vhd Line: 25
+    Info (12023): Found entity 1: top_tanh File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/top_tanh.vhd Line: 6
 Info (12127): Elaborating entity "top_tanh" for the top level hierarchy
-Info (12128): Elaborating entity "tangente_hiperbolica" for hierarchy "tangente_hiperbolica:U1" File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/top_tanh.vhd Line: 65
-Warning (10445): VHDL Subtype or Type Declaration warning at tangente_float_optima.vhd(286): subtype or type has null range File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 286
-Warning (10296): VHDL warning at tangente_float_optima.vhd(286): ignored assignment of value to null range File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 286
-Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "tangente_hiperbolica:U1|LPM_CLSHIFT:lpm_clshift_component" File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 178
-Info (12130): Elaborated megafunction instantiation "tangente_hiperbolica:U1|LPM_CLSHIFT:lpm_clshift_component" File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 178
-Info (12133): Instantiated megafunction "tangente_hiperbolica:U1|LPM_CLSHIFT:lpm_clshift_component" with the following parameter: File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 178
+Info (12128): Elaborating entity "tangente_hiperbolica" for hierarchy "tangente_hiperbolica:U1" File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/top_tanh.vhd Line: 65
+Warning (10445): VHDL Subtype or Type Declaration warning at tangente_float_optima.vhd(286): subtype or type has null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 286
+Warning (10296): VHDL warning at tangente_float_optima.vhd(286): ignored assignment of value to null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 286
+Info (12128): Elaborating entity "LPM_CLSHIFT" for hierarchy "tangente_hiperbolica:U1|LPM_CLSHIFT:lpm_clshift_component" File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 178
+Info (12130): Elaborated megafunction instantiation "tangente_hiperbolica:U1|LPM_CLSHIFT:lpm_clshift_component" File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 178
+Info (12133): Instantiated megafunction "tangente_hiperbolica:U1|LPM_CLSHIFT:lpm_clshift_component" with the following parameter: File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 178
     Info (12134): Parameter "LPM_WIDTH" = "47"
     Info (12134): Parameter "LPM_WIDTHDIST" = "6"
     Info (12134): Parameter "LPM_SHIFTTYPE" = "LOGICAL"
     Info (12134): Parameter "LPM_TYPE" = "LPM_CLSHIFT"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_clshift_5lb.tdf
-    Info (12023): Found entity 1: lpm_clshift_5lb File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/db/lpm_clshift_5lb.tdf Line: 22
+    Info (12023): Found entity 1: lpm_clshift_5lb File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/db/lpm_clshift_5lb.tdf Line: 22
 Info (12128): Elaborating entity "lpm_clshift_5lb" for hierarchy "tangente_hiperbolica:U1|LPM_CLSHIFT:lpm_clshift_component|lpm_clshift_5lb:auto_generated" File: c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_clshift.tdf Line: 53
-Info (12128): Elaborating entity "LPM_OR" for hierarchy "tangente_hiperbolica:U1|LPM_OR:lpm_or_component" File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 198
-Info (12130): Elaborated megafunction instantiation "tangente_hiperbolica:U1|LPM_OR:lpm_or_component" File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 198
-Info (12133): Instantiated megafunction "tangente_hiperbolica:U1|LPM_OR:lpm_or_component" with the following parameter: File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/tangente_float_optima.vhd Line: 198
+Info (12128): Elaborating entity "LPM_OR" for hierarchy "tangente_hiperbolica:U1|LPM_OR:lpm_or_component" File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 198
+Info (12130): Elaborated megafunction instantiation "tangente_hiperbolica:U1|LPM_OR:lpm_or_component" File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 198
+Info (12133): Instantiated megafunction "tangente_hiperbolica:U1|LPM_OR:lpm_or_component" with the following parameter: File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/tangente_float_optima.vhd Line: 198
     Info (12134): Parameter "LPM_WIDTH" = "1"
     Info (12134): Parameter "LPM_SIZE" = "31"
     Info (12134): Parameter "LPM_TYPE" = "LPM_OR"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12128): Elaborating entity "derivada_tangente_hiperbolica" for hierarchy "derivada_tangente_hiperbolica:U2" File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/top_tanh.vhd Line: 74
-Warning (10036): Verilog HDL or VHDL warning at derivada_tangente_float_optima.vhd(123): object "s" assigned a value but never read File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/derivada_tangente_float_optima.vhd Line: 123
-Warning (10036): Verilog HDL or VHDL warning at derivada_tangente_float_optima.vhd(145): object "e_div_1" assigned a value but never read File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/derivada_tangente_float_optima.vhd Line: 145
-Warning (10445): VHDL Subtype or Type Declaration warning at derivada_tangente_float_optima.vhd(303): subtype or type has null range File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/derivada_tangente_float_optima.vhd Line: 303
-Warning (10296): VHDL warning at derivada_tangente_float_optima.vhd(303): ignored assignment of value to null range File: C:/Users/rgadea/Documents/tangente_hiperbolica_restored/derivada_tangente_float_optima.vhd Line: 303
+Info (12128): Elaborating entity "derivada_tangente_hiperbolica" for hierarchy "derivada_tangente_hiperbolica:U2" File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/top_tanh.vhd Line: 74
+Warning (10036): Verilog HDL or VHDL warning at derivada_tangente_float_optima.vhd(123): object "s" assigned a value but never read File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/derivada_tangente_float_optima.vhd Line: 123
+Warning (10036): Verilog HDL or VHDL warning at derivada_tangente_float_optima.vhd(145): object "e_div_1" assigned a value but never read File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/derivada_tangente_float_optima.vhd Line: 145
+Warning (10445): VHDL Subtype or Type Declaration warning at derivada_tangente_float_optima.vhd(303): subtype or type has null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/derivada_tangente_float_optima.vhd Line: 303
+Warning (10296): VHDL warning at derivada_tangente_float_optima.vhd(303): ignored assignment of value to null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/tangente_PWL_vhd-1/derivada_tangente_float_optima.vhd Line: 303
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 3 assignments for entity "top_sigmoides" -- entity does not exist in design
     Warning (20014): Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity top_sigmoides -section_id "Root Region" was ignored
@@ -457,9 +457,9 @@ Info (21057): Implemented 549 device resources after synthesis - the final resou
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 478 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Wed Mar 27 09:08:21 2019
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Mon Apr 11 12:43:53 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
 
 
