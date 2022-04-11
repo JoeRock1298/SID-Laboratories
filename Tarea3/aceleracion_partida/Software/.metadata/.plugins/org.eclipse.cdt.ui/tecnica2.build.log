@@ -1,18 +1,9 @@
-01:09:07 **** Incremental Build of configuration Nios II for project tecnica2 ****
+09:52:23 **** Incremental Build of configuration Nios II for project tecnica2 ****
 make all 
 Info: Building ../tecnica2_bsp/
-C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../tecnica2_bsp/
+C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../tecnica2_bsp/
 [BSP build complete]
-Info: Compiling backpropagation_best2019_superdef_ver2_alumnos-1.c to obj/default/backpropagation_best2019_superdef_ver2_alumnos-1.o
-nios2-elf-gcc -xc -MP -MMD -c -I../tecnica2_bsp//HAL/inc -I../tecnica2_bsp/ -I../tecnica2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/backpropagation_best2019_superdef_ver2_alumnos-1.o backpropagation_best2019_superdef_ver2_alumnos-1.c
-Info: Linking tecnica2.elf
-nios2-elf-g++  -T'../tecnica2_bsp//linker.x' -msys-crt0='../tecnica2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../tecnica2_bsp/   -Wl,-Map=tecnica2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o tecnica2.elf obj/default/backpropagation_best2019_superdef_ver2_alumnos-1.o -lm -msys-lib=m
-nios2-elf-insert tecnica2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x8000050 --timestamp 1649629486 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios_system_tec2 --quartus_project_dir "C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida" --jdi ../..//output_files/tecnica0.jdi --sopcinfo C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/aceleracion_partida/Software/tecnica2_bsp/../../nios_system_tec2.sopcinfo
-Info: (tecnica2.elf) 92 KBytes program size (code + initialized data).
-Info:                65436 KBytes free for stack + heap.
-Info: Creating tecnica2.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source tecnica2.elf >tecnica2.objdump
 [tecnica2 build complete]
 
-01:09:11 Build Finished (took 4s.426ms)
+09:52:24 Build Finished (took 1s.12ms)
 

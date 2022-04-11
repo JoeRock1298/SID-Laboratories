@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>08-abr-2022 13:23:13</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1649416993376</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\jororoc\Documents\QDesign\SID-Laboratories\Tarea3\aceleracion_partida\Software\tecnica1_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>11-abr-2022 9:26:38</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1649661998363</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\jororoc\Documents\QDesign\Tarea3\aceleracion_partida\Software\tecnica1_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios_system_tec1.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>

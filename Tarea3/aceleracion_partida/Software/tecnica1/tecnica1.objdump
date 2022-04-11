@@ -35,49 +35,49 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   8 .debug_aranges 00001170  00000000  00000000  00015dd0  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   0002926b  00000000  00000000  00016f40  2**0
+  9 .debug_info   00029238  00000000  00000000  00016f40  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 0000aa07  00000000  00000000  000401ab  2**0
+ 10 .debug_abbrev 0000aa07  00000000  00000000  00040178  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   0000d3c9  00000000  00000000  0004abb2  2**0
+ 11 .debug_line   0000d1f7  00000000  00000000  0004ab7f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  000027d4  00000000  00000000  00057f7c  2**2
+ 12 .debug_frame  000027d4  00000000  00000000  00057d78  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    0000453c  00000000  00000000  0005a750  2**0
+ 13 .debug_str    0000457f  00000000  00000000  0005a54c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    000183dc  00000000  00000000  0005ec8c  2**0
+ 14 .debug_loc    000183dc  00000000  00000000  0005eacb  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000030  00000000  00000000  00077068  2**2
+ 15 .debug_alt_sim_info 00000030  00000000  00000000  00076ea8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 00001a98  00000000  00000000  00077098  2**3
+ 16 .debug_ranges 00001a98  00000000  00000000  00076ed8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  0007c722  2**0
+ 17 .thread_model 00000003  00000000  00000000  0007c562  2**0
                   CONTENTS, READONLY
- 18 .cpu          00000003  00000000  00000000  0007c725  2**0
+ 18 .cpu          00000003  00000000  00000000  0007c565  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  0007c728  2**0
+ 19 .qsys         00000001  00000000  00000000  0007c568  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  0007c729  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  0007c569  2**0
                   CONTENTS, READONLY
- 21 .sysid_hash   00000004  00000000  00000000  0007c72a  2**0
+ 21 .sysid_hash   00000004  00000000  00000000  0007c56a  2**0
                   CONTENTS, READONLY
- 22 .sysid_base   00000004  00000000  00000000  0007c72e  2**0
+ 22 .sysid_base   00000004  00000000  00000000  0007c56e  2**0
                   CONTENTS, READONLY
- 23 .sysid_time   00000004  00000000  00000000  0007c732  2**0
+ 23 .sysid_time   00000004  00000000  00000000  0007c572  2**0
                   CONTENTS, READONLY
- 24 .stderr_dev   00000009  00000000  00000000  0007c736  2**0
+ 24 .stderr_dev   00000009  00000000  00000000  0007c576  2**0
                   CONTENTS, READONLY
- 25 .stdin_dev    00000009  00000000  00000000  0007c73f  2**0
+ 25 .stdin_dev    00000009  00000000  00000000  0007c57f  2**0
                   CONTENTS, READONLY
- 26 .stdout_dev   00000009  00000000  00000000  0007c748  2**0
+ 26 .stdout_dev   00000009  00000000  00000000  0007c588  2**0
                   CONTENTS, READONLY
- 27 .sopc_system_name 00000010  00000000  00000000  0007c751  2**0
+ 27 .sopc_system_name 00000010  00000000  00000000  0007c591  2**0
                   CONTENTS, READONLY
- 28 .quartus_project_dir 0000004e  00000000  00000000  0007c761  2**0
+ 28 .quartus_project_dir 0000003d  00000000  00000000  0007c5a1  2**0
                   CONTENTS, READONLY
- 29 .jdi          00003dae  00000000  00000000  0007c7af  2**0
+ 29 .jdi          00003dae  00000000  00000000  0007c5de  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     00075c10  00000000  00000000  0008055d  2**0
+ 30 .sopcinfo     00079fb4  00000000  00000000  0008038c  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 04000000 l    d  .entry	00000000 .entry
@@ -18672,12 +18672,6 @@ int ALT_FSTAT (int file, struct stat *st)
  4010164:	f800283a 	ret
 
 04010168 <gettimeofday>:
- */
- 
-
-#if defined (__GNUC__) && (__GNUC__ >= 4)
-int ALT_GETTIMEOFDAY (struct timeval  *ptimeval, void *ptimezone_vptr)
-{
  4010168:	defff404 	addi	sp,sp,-48
  401016c:	dfc00b15 	stw	ra,44(sp)
  4010170:	df000a15 	stw	fp,40(sp)
@@ -18689,42 +18683,14 @@ int ALT_GETTIMEOFDAY (struct timeval  *ptimeval, void *ptimezone_vptr)
  4010188:	df000a04 	addi	fp,sp,40
  401018c:	e13ff915 	stw	r4,-28(fp)
  4010190:	e17ffa15 	stw	r5,-24(fp)
-  struct timezone *ptimezone = (struct timezone*)ptimezone_vptr;
  4010194:	e0bffa17 	ldw	r2,-24(fp)
  4010198:	e0bff615 	stw	r2,-40(fp)
- * alt_nticks() returns the elapsed number of system clock ticks since reset.
- */
-
-static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_nticks (void)
-{
-  return _alt_nticks;
  401019c:	d0a72f17 	ldw	r2,-25412(gp)
-#else
-int ALT_GETTIMEOFDAY (struct timeval  *ptimeval, struct timezone *ptimezone)
-{
-#endif
-  
-  alt_u32 nticks = alt_nticks (); 
  40101a0:	e0bff715 	stw	r2,-36(fp)
- * Obtain the system clock rate in ticks/s. 
- */
-
-static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_ticks_per_second (void)
-{
-  return _alt_tick_rate;
  40101a4:	d0a72e17 	ldw	r2,-25416(gp)
-  alt_u32 tick_rate = alt_ticks_per_second ();
  40101a8:	e0bff815 	stw	r2,-32(fp)
-   * non-zero system clock rate. If the system clock is not running, an error
-   * is generated and the contents of "ptimeval" and "ptimezone" are not
-   * updated.
-   */
-
-  if (tick_rate)
  40101ac:	e0bff817 	ldw	r2,-32(fp)
  40101b0:	10005f26 	beq	r2,zero,4010330 <gettimeofday+0x1c8>
-  {
-    ptimeval->tv_sec  = alt_resettime.tv_sec  + nticks/tick_rate;
  40101b4:	d0a72917 	ldw	r2,-25436(gp)
  40101b8:	1029883a 	mov	r20,r2
  40101bc:	e17ff817 	ldw	r5,-32(fp)
@@ -18734,10 +18700,8 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_ticks_per_second (void)
  40101cc:	1007883a 	mov	r3,r2
  40101d0:	e0bff917 	ldw	r2,-28(fp)
  40101d4:	10c00015 	stw	r3,0(r2)
-    ptimeval->tv_usec = alt_resettime.tv_usec +
  40101d8:	d0a72a17 	ldw	r2,-25432(gp)
  40101dc:	1029883a 	mov	r20,r2
-     (alt_u32)(((alt_u64)nticks*(ALT_US/tick_rate))%ALT_US);
  40101e0:	e0bff717 	ldw	r2,-36(fp)
  40101e4:	1021883a 	mov	r16,r2
  40101e8:	0023883a 	mov	r17,zero
@@ -18766,43 +18730,24 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_ticks_per_second (void)
  4010244:	180b883a 	mov	r5,r3
  4010248:	2005883a 	mov	r2,r4
  401024c:	2807883a 	mov	r3,r5
-   */
-
-  if (tick_rate)
-  {
-    ptimeval->tv_sec  = alt_resettime.tv_sec  + nticks/tick_rate;
-    ptimeval->tv_usec = alt_resettime.tv_usec +
  4010250:	a085883a 	add	r2,r20,r2
  4010254:	1007883a 	mov	r3,r2
  4010258:	e0bff917 	ldw	r2,-28(fp)
  401025c:	10c00115 	stw	r3,4(r2)
-     (alt_u32)(((alt_u64)nticks*(ALT_US/tick_rate))%ALT_US);
-      
-    while(ptimeval->tv_usec < 0) {
  4010260:	00001406 	br	40102b4 <gettimeofday+0x14c>
-      if (ptimeval->tv_sec <= 0)
  4010264:	e0bff917 	ldw	r2,-28(fp)
  4010268:	10800017 	ldw	r2,0(r2)
  401026c:	00800516 	blt	zero,r2,4010284 <gettimeofday+0x11c>
-      {
-          ptimeval->tv_sec = 0;
  4010270:	e0bff917 	ldw	r2,-28(fp)
  4010274:	10000015 	stw	zero,0(r2)
-          ptimeval->tv_usec = 0;
  4010278:	e0bff917 	ldw	r2,-28(fp)
  401027c:	10000115 	stw	zero,4(r2)
-          break;
  4010280:	00000f06 	br	40102c0 <gettimeofday+0x158>
-      }
-      else
-      {
-          ptimeval->tv_sec--;
  4010284:	e0bff917 	ldw	r2,-28(fp)
  4010288:	10800017 	ldw	r2,0(r2)
  401028c:	10ffffc4 	addi	r3,r2,-1
  4010290:	e0bff917 	ldw	r2,-28(fp)
  4010294:	10c00015 	stw	r3,0(r2)
-          ptimeval->tv_usec += ALT_US;
  4010298:	e0bff917 	ldw	r2,-28(fp)
  401029c:	10c00117 	ldw	r3,4(r2)
  40102a0:	008003f4 	movhi	r2,15
@@ -18810,29 +18755,15 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_ticks_per_second (void)
  40102a8:	1887883a 	add	r3,r3,r2
  40102ac:	e0bff917 	ldw	r2,-28(fp)
  40102b0:	10c00115 	stw	r3,4(r2)
-  {
-    ptimeval->tv_sec  = alt_resettime.tv_sec  + nticks/tick_rate;
-    ptimeval->tv_usec = alt_resettime.tv_usec +
-     (alt_u32)(((alt_u64)nticks*(ALT_US/tick_rate))%ALT_US);
-      
-    while(ptimeval->tv_usec < 0) {
  40102b4:	e0bff917 	ldw	r2,-28(fp)
  40102b8:	10800117 	ldw	r2,4(r2)
  40102bc:	103fe916 	blt	r2,zero,4010264 <__alt_data_end+0xfc010264>
-          ptimeval->tv_sec--;
-          ptimeval->tv_usec += ALT_US;
-      }
-    }
-    
-    while(ptimeval->tv_usec >= ALT_US) {
  40102c0:	00000c06 	br	40102f4 <gettimeofday+0x18c>
-      ptimeval->tv_sec++;
  40102c4:	e0bff917 	ldw	r2,-28(fp)
  40102c8:	10800017 	ldw	r2,0(r2)
  40102cc:	10c00044 	addi	r3,r2,1
  40102d0:	e0bff917 	ldw	r2,-28(fp)
  40102d4:	10c00015 	stw	r3,0(r2)
-      ptimeval->tv_usec -= ALT_US;
  40102d8:	e0bff917 	ldw	r2,-28(fp)
  40102dc:	10c00117 	ldw	r3,4(r2)
  40102e0:	00bffc74 	movhi	r2,65521
@@ -18840,43 +18771,22 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_ticks_per_second (void)
  40102e8:	1887883a 	add	r3,r3,r2
  40102ec:	e0bff917 	ldw	r2,-28(fp)
  40102f0:	10c00115 	stw	r3,4(r2)
-          ptimeval->tv_sec--;
-          ptimeval->tv_usec += ALT_US;
-      }
-    }
-    
-    while(ptimeval->tv_usec >= ALT_US) {
  40102f4:	e0bff917 	ldw	r2,-28(fp)
  40102f8:	10c00117 	ldw	r3,4(r2)
  40102fc:	008003f4 	movhi	r2,15
  4010300:	10908fc4 	addi	r2,r2,16959
  4010304:	10ffef16 	blt	r2,r3,40102c4 <__alt_data_end+0xfc0102c4>
-      ptimeval->tv_sec++;
-      ptimeval->tv_usec -= ALT_US;
-    }
-      
-    if (ptimezone)
  4010308:	e0bff617 	ldw	r2,-40(fp)
  401030c:	10000626 	beq	r2,zero,4010328 <gettimeofday+0x1c0>
-    { 
-      ptimezone->tz_minuteswest = alt_timezone.tz_minuteswest;
  4010310:	d0e72717 	ldw	r3,-25444(gp)
  4010314:	e0bff617 	ldw	r2,-40(fp)
  4010318:	10c00015 	stw	r3,0(r2)
-      ptimezone->tz_dsttime     = alt_timezone.tz_dsttime;
  401031c:	d0e72817 	ldw	r3,-25440(gp)
  4010320:	e0bff617 	ldw	r2,-40(fp)
  4010324:	10c00115 	stw	r3,4(r2)
-    }
-
-    return 0;
  4010328:	0005883a 	mov	r2,zero
  401032c:	00000106 	br	4010334 <gettimeofday+0x1cc>
-  }
-
-  return -ENOTSUP;
  4010330:	00bfde84 	movi	r2,-134
-}
  4010334:	e6fffb04 	addi	sp,fp,-20
  4010338:	dfc00617 	ldw	ra,24(sp)
  401033c:	df000517 	ldw	fp,20(sp)
@@ -18994,27 +18904,16 @@ int ALT_ISATTY (int file)
  4010438:	f800283a 	ret
 
 0401043c <alt_load_section>:
- */
-
-static void ALT_INLINE alt_load_section (alt_u32* from, 
-                                         alt_u32* to, 
-                                         alt_u32* end)
-{
  401043c:	defffc04 	addi	sp,sp,-16
  4010440:	df000315 	stw	fp,12(sp)
  4010444:	df000304 	addi	fp,sp,12
  4010448:	e13ffd15 	stw	r4,-12(fp)
  401044c:	e17ffe15 	stw	r5,-8(fp)
  4010450:	e1bfff15 	stw	r6,-4(fp)
-  if (to != from)
  4010454:	e0fffe17 	ldw	r3,-8(fp)
  4010458:	e0bffd17 	ldw	r2,-12(fp)
  401045c:	18800c26 	beq	r3,r2,4010490 <alt_load_section+0x54>
-  {
-    while( to != end )
  4010460:	00000806 	br	4010484 <alt_load_section+0x48>
-    {
-      *to++ = *from++;
  4010464:	e0bffe17 	ldw	r2,-8(fp)
  4010468:	10c00104 	addi	r3,r2,4
  401046c:	e0fffe15 	stw	r3,-8(fp)
@@ -19023,20 +18922,9 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
  4010478:	e13ffd15 	stw	r4,-12(fp)
  401047c:	18c00017 	ldw	r3,0(r3)
  4010480:	10c00015 	stw	r3,0(r2)
-                                         alt_u32* to, 
-                                         alt_u32* end)
-{
-  if (to != from)
-  {
-    while( to != end )
  4010484:	e0fffe17 	ldw	r3,-8(fp)
  4010488:	e0bfff17 	ldw	r2,-4(fp)
  401048c:	18bff51e 	bne	r3,r2,4010464 <__alt_data_end+0xfc010464>
-    {
-      *to++ = *from++;
-    }
-  }
-}
  4010490:	0001883a 	nop
  4010494:	e037883a 	mov	sp,fp
  4010498:	df000017 	ldw	fp,0(sp)
@@ -19044,21 +18932,10 @@ static void ALT_INLINE alt_load_section (alt_u32* from,
  40104a0:	f800283a 	ret
 
 040104a4 <alt_load>:
- * there is no bootloader, so this application is responsible for loading to
- * RAM any sections that are required.
- */  
-
-void alt_load (void)
-{
  40104a4:	defffe04 	addi	sp,sp,-8
  40104a8:	dfc00115 	stw	ra,4(sp)
  40104ac:	df000015 	stw	fp,0(sp)
  40104b0:	d839883a 	mov	fp,sp
-  /* 
-   * Copy the .rwdata section. 
-   */
-
-  alt_load_section (&__flash_rwdata_start, 
  40104b4:	01810074 	movhi	r6,1025
  40104b8:	31936b04 	addi	r6,r6,19884
  40104bc:	01410074 	movhi	r5,1025
@@ -19066,12 +18943,6 @@ void alt_load (void)
  40104c4:	01010074 	movhi	r4,1025
  40104c8:	21136b04 	addi	r4,r4,19884
  40104cc:	401043c0 	call	401043c <alt_load_section>
-
-  /*
-   * Copy the exception handler.
-   */
-
-  alt_load_section (&__flash_exceptions_start, 
  40104d0:	01810034 	movhi	r6,1024
  40104d4:	31809104 	addi	r6,r6,580
  40104d8:	01410034 	movhi	r5,1024
@@ -19079,12 +18950,6 @@ void alt_load (void)
  40104e0:	01010034 	movhi	r4,1024
  40104e4:	21000804 	addi	r4,r4,32
  40104e8:	401043c0 	call	401043c <alt_load_section>
-
-  /*
-   * Copy the .rodata section.
-   */
-
-  alt_load_section (&__flash_rodata_start, 
  40104ec:	01810074 	movhi	r6,1025
  40104f0:	318c8904 	addi	r6,r6,12836
  40104f4:	01410074 	movhi	r5,1025
@@ -19092,16 +18957,8 @@ void alt_load (void)
  40104fc:	01010074 	movhi	r4,1025
  4010500:	210b5b04 	addi	r4,r4,11628
  4010504:	401043c0 	call	401043c <alt_load_section>
-  
-  /*
-   * Now ensure that the caches are in synch.
-   */
-  
-  alt_dcache_flush_all();
  4010508:	4011c000 	call	4011c00 <alt_dcache_flush_all>
-  alt_icache_flush_all();
  401050c:	4011de80 	call	4011de8 <alt_icache_flush_all>
-}
  4010510:	0001883a 	nop
  4010514:	e037883a 	mov	sp,fp
  4010518:	dfc00117 	ldw	ra,4(sp)
@@ -19316,17 +19173,10 @@ void alt_main (void)
  40106b0:	401297c0 	call	401297c <exit>
 
 040106b4 <__malloc_lock>:
- * configuration is single threaded, so there is nothing to do here. Note that 
- * this requires that malloc is never called by an interrupt service routine.
- */
-
-void __malloc_lock ( struct _reent *_r )
-{
  40106b4:	defffe04 	addi	sp,sp,-8
  40106b8:	df000115 	stw	fp,4(sp)
  40106bc:	df000104 	addi	fp,sp,4
  40106c0:	e13fff15 	stw	r4,-4(fp)
-}
  40106c4:	0001883a 	nop
  40106c8:	e037883a 	mov	sp,fp
  40106cc:	df000017 	ldw	fp,0(sp)
@@ -19334,17 +19184,10 @@ void __malloc_lock ( struct _reent *_r )
  40106d4:	f800283a 	ret
 
 040106d8 <__malloc_unlock>:
-/*
- *
- */
-
-void __malloc_unlock ( struct _reent *_r )
-{
  40106d8:	defffe04 	addi	sp,sp,-8
  40106dc:	df000115 	stw	fp,4(sp)
  40106e0:	df000104 	addi	fp,sp,4
  40106e4:	e13fff15 	stw	r4,-4(fp)
-}
  40106e8:	0001883a 	nop
  40106ec:	e037883a 	mov	sp,fp
  40106f0:	df000017 	ldw	fp,0(sp)
@@ -20262,6 +20105,12 @@ void altera_avalon_jtag_uart_init(altera_avalon_jtag_uart_state* sp,
   if (alt_alarm_start(&sp->alarm, alt_ticks_per_second(), 
  4010ecc:	e0bffd17 	ldw	r2,-12(fp)
  4010ed0:	10800204 	addi	r2,r2,8
+ * Obtain the system clock rate in ticks/s. 
+ */
+
+static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_ticks_per_second (void)
+{
+  return _alt_tick_rate;
  4010ed4:	d0e72e17 	ldw	r3,-25416(gp)
  4010ed8:	e1fffd17 	ldw	r7,-12(fp)
  4010edc:	01810074 	movhi	r6,1025
@@ -21453,12 +21302,6 @@ static ALT_INLINE int ALT_ALWAYS_INLINE alt_sysclk_init (alt_u32 nticks)
  4011850:	f800283a 	ret
 
 04011854 <perf_print_formatted_report>:
-
-#ifndef SMALL_C_LIB 
-int perf_print_formatted_report (void* perf_base, 
-                                 alt_u32 clock_freq_hertz,
-                                 int num_sections, ...)
-{
  4011854:	deffe504 	addi	sp,sp,-108
  4011858:	dfc01915 	stw	ra,100(sp)
  401185c:	df001815 	stw	fp,96(sp)
@@ -21471,41 +21314,23 @@ int perf_print_formatted_report (void* perf_base,
  4011878:	e17ffa15 	stw	r5,-24(fp)
  401187c:	e1bffb15 	stw	r6,-20(fp)
  4011880:	e1c00215 	stw	r7,8(fp)
-  va_list name_args;
-  double total_sec;
-  alt_u64 total_clocks;
-  alt_u64 section_clocks;
-  char* section_name;
-  int section_num = 1;
  4011884:	00800044 	movi	r2,1
  4011888:	e0bfef15 	stw	r2,-68(fp)
-
-  const char* separator = 
  401188c:	00810074 	movhi	r2,1025
  4011890:	108c4904 	addi	r2,r2,12580
  4011894:	e0bff015 	stw	r2,-64(fp)
-    "+---------------+-----+-----------+---------------+-----------+\n";
-  const char* column_header = 
  4011898:	00810074 	movhi	r2,1025
  401189c:	108c5a04 	addi	r2,r2,12648
  40118a0:	e0bff115 	stw	r2,-60(fp)
-    "| Section       |  %  | Time (sec)|  Time (clocks)|Occurrences|\n";
-
-  PERF_STOP_MEASURING (perf_base);
  40118a4:	0007883a 	mov	r3,zero
  40118a8:	e0bff917 	ldw	r2,-28(fp)
  40118ac:	10c00035 	stwio	r3,0(r2)
-
-  va_start (name_args, num_sections);
  40118b0:	e0800204 	addi	r2,fp,8
  40118b4:	e0bff815 	stw	r2,-32(fp)
-
-  total_clocks = perf_get_total_time (perf_base);
  40118b8:	e13ff917 	ldw	r4,-28(fp)
  40118bc:	40125300 	call	4012530 <perf_get_total_time>
  40118c0:	e0bff215 	stw	r2,-56(fp)
  40118c4:	e0fff315 	stw	r3,-52(fp)
-  total_sec    = ((double)total_clocks) / clock_freq_hertz;
  40118c8:	e13ff217 	ldw	r4,-56(fp)
  40118cc:	e17ff317 	ldw	r5,-52(fp)
  40118d0:	4012cc80 	call	4012cc8 <__floatundidf>
@@ -21524,9 +21349,6 @@ int perf_print_formatted_report (void* perf_base,
  4011904:	180b883a 	mov	r5,r3
  4011908:	e13ff415 	stw	r4,-48(fp)
  401190c:	e17ff515 	stw	r5,-44(fp)
-
-  // Print the total at the top:
-  printf ("--Performance Counter Report--\nTotal Time: %3G seconds  (%lld clock-cycles)\n%s%s%s",
  4011910:	e0bff017 	ldw	r2,-64(fp)
  4011914:	d8800315 	stw	r2,12(sp)
  4011918:	e0bff117 	ldw	r2,-60(fp)
@@ -21541,30 +21363,19 @@ int perf_print_formatted_report (void* perf_base,
  401193c:	01010074 	movhi	r4,1025
  4011940:	210c6b04 	addi	r4,r4,12716
  4011944:	4005acc0 	call	4005acc <printf>
-          total_sec, total_clocks, separator, column_header, separator);
-
-  section_name = va_arg(name_args, char*);
  4011948:	e0bff817 	ldw	r2,-32(fp)
  401194c:	10c00104 	addi	r3,r2,4
  4011950:	e0fff815 	stw	r3,-32(fp)
  4011954:	10800017 	ldw	r2,0(r2)
  4011958:	e0bfee15 	stw	r2,-72(fp)
-
-  for (section_num = 1; section_num <= num_sections; section_num++)
  401195c:	00800044 	movi	r2,1
  4011960:	e0bfef15 	stw	r2,-68(fp)
  4011964:	00004e06 	br	4011aa0 <perf_print_formatted_report+0x24c>
-    {
-      section_clocks = perf_get_section_time (perf_base, section_num);
  4011968:	e17fef17 	ldw	r5,-68(fp)
  401196c:	e13ff917 	ldw	r4,-28(fp)
  4011970:	40124740 	call	4012474 <perf_get_section_time>
  4011974:	e0bff615 	stw	r2,-40(fp)
  4011978:	e0fff715 	stw	r3,-36(fp)
-
-      printf ("|%-15s|%5.3g|%11.5f|%15lld|%11u|\n%s",
-              section_name,
-              ((((double) section_clocks)) * 100) / total_clocks,
  401197c:	e13ff617 	ldw	r4,-40(fp)
  4011980:	e17ff717 	ldw	r5,-36(fp)
  4011984:	4012cc80 	call	4012cc8 <__floatundidf>
@@ -21579,12 +21390,6 @@ int perf_print_formatted_report (void* perf_base,
  40119a8:	180b883a 	mov	r5,r3
  40119ac:	2021883a 	mov	r16,r4
  40119b0:	2823883a 	mov	r17,r5
-
-  for (section_num = 1; section_num <= num_sections; section_num++)
-    {
-      section_clocks = perf_get_section_time (perf_base, section_num);
-
-      printf ("|%-15s|%5.3g|%11.5f|%15lld|%11u|\n%s",
  40119b4:	e13ff217 	ldw	r4,-56(fp)
  40119b8:	e17ff317 	ldw	r5,-52(fp)
  40119bc:	4012cc80 	call	4012cc8 <__floatundidf>
@@ -21599,20 +21404,11 @@ int perf_print_formatted_report (void* perf_base,
  40119e0:	180b883a 	mov	r5,r3
  40119e4:	2025883a 	mov	r18,r4
  40119e8:	2827883a 	mov	r19,r5
-              section_name,
-              ((((double) section_clocks)) * 100) / total_clocks,
-              (((double) section_clocks)) / clock_freq_hertz,
  40119ec:	e13ff617 	ldw	r4,-40(fp)
  40119f0:	e17ff717 	ldw	r5,-36(fp)
  40119f4:	4012cc80 	call	4012cc8 <__floatundidf>
  40119f8:	1021883a 	mov	r16,r2
  40119fc:	1823883a 	mov	r17,r3
-
-  for (section_num = 1; section_num <= num_sections; section_num++)
-    {
-      section_clocks = perf_get_section_time (perf_base, section_num);
-
-      printf ("|%-15s|%5.3g|%11.5f|%15lld|%11u|\n%s",
  4011a00:	e13ffa17 	ldw	r4,-24(fp)
  4011a04:	400fe9c0 	call	400fe9c <__floatunsidf>
  4011a08:	1009883a 	mov	r4,r2
@@ -21626,21 +21422,10 @@ int perf_print_formatted_report (void* perf_base,
  4011a28:	180b883a 	mov	r5,r3
  4011a2c:	2021883a 	mov	r16,r4
  4011a30:	2823883a 	mov	r17,r5
-              section_name,
-              ((((double) section_clocks)) * 100) / total_clocks,
-              (((double) section_clocks)) / clock_freq_hertz,
-              section_clocks,
-              (unsigned int) perf_get_num_starts (perf_base, section_num),
  4011a34:	e17fef17 	ldw	r5,-68(fp)
  4011a38:	e13ff917 	ldw	r4,-28(fp)
  4011a3c:	401257c0 	call	401257c <perf_get_num_starts>
  4011a40:	1007883a 	mov	r3,r2
-
-  for (section_num = 1; section_num <= num_sections; section_num++)
-    {
-      section_clocks = perf_get_section_time (perf_base, section_num);
-
-      printf ("|%-15s|%5.3g|%11.5f|%15lld|%11u|\n%s",
  4011a44:	e0bff017 	ldw	r2,-64(fp)
  4011a48:	d8800515 	stw	r2,20(sp)
  4011a4c:	d8c00415 	stw	r3,16(sp)
@@ -21656,37 +21441,18 @@ int perf_print_formatted_report (void* perf_base,
  4011a74:	01010074 	movhi	r4,1025
  4011a78:	210c8004 	addi	r4,r4,12800
  4011a7c:	4005acc0 	call	4005acc <printf>
-              section_clocks,
-              (unsigned int) perf_get_num_starts (perf_base, section_num),
-              separator
-              );
-
-      section_name = va_arg(name_args, char*);
  4011a80:	e0bff817 	ldw	r2,-32(fp)
  4011a84:	10c00104 	addi	r3,r2,4
  4011a88:	e0fff815 	stw	r3,-32(fp)
  4011a8c:	10800017 	ldw	r2,0(r2)
  4011a90:	e0bfee15 	stw	r2,-72(fp)
-  printf ("--Performance Counter Report--\nTotal Time: %3G seconds  (%lld clock-cycles)\n%s%s%s",
-          total_sec, total_clocks, separator, column_header, separator);
-
-  section_name = va_arg(name_args, char*);
-
-  for (section_num = 1; section_num <= num_sections; section_num++)
  4011a94:	e0bfef17 	ldw	r2,-68(fp)
  4011a98:	10800044 	addi	r2,r2,1
  4011a9c:	e0bfef15 	stw	r2,-68(fp)
  4011aa0:	e0bfef17 	ldw	r2,-68(fp)
  4011aa4:	e0fffb17 	ldw	r3,-20(fp)
  4011aa8:	18bfaf0e 	bge	r3,r2,4011968 <__alt_data_end+0xfc011968>
-      section_name = va_arg(name_args, char*);
-    }
-
-  va_end (name_args);
-
-  return 0;
  4011aac:	0005883a 	mov	r2,zero
-}
  4011ab0:	e6fffc04 	addi	sp,fp,-16
  4011ab4:	dfc00517 	ldw	ra,20(sp)
  4011ab8:	df000417 	ldw	fp,16(sp)
@@ -21906,24 +21672,16 @@ void alt_dcache_flush_all (void)
  4011c44:	f800283a 	ret
 
 04011c48 <alt_get_errno>:
-#undef errno
-
-extern int errno;
-
-static ALT_INLINE int* alt_get_errno(void)
-{
  4011c48:	defffe04 	addi	sp,sp,-8
  4011c4c:	dfc00115 	stw	ra,4(sp)
  4011c50:	df000015 	stw	fp,0(sp)
  4011c54:	d839883a 	mov	fp,sp
-  return ((alt_errno) ? alt_errno() : &errno);
  4011c58:	d0a03217 	ldw	r2,-32568(gp)
  4011c5c:	10000326 	beq	r2,zero,4011c6c <alt_get_errno+0x24>
  4011c60:	d0a03217 	ldw	r2,-32568(gp)
  4011c64:	103ee83a 	callr	r2
  4011c68:	00000106 	br	4011c70 <alt_get_errno+0x28>
  4011c6c:	d0a72004 	addi	r2,gp,-25472
-}
  4011c70:	e037883a 	mov	sp,fp
  4011c74:	dfc00117 	ldw	ra,4(sp)
  4011c78:	df000017 	ldw	fp,0(sp)
@@ -21931,75 +21689,42 @@ static ALT_INLINE int* alt_get_errno(void)
  4011c80:	f800283a 	ret
 
 04011c84 <alt_dev_llist_insert>:
-/*
- *
- */
-
-int alt_dev_llist_insert (alt_dev_llist* dev, alt_llist* list)
-{
  4011c84:	defffa04 	addi	sp,sp,-24
  4011c88:	dfc00515 	stw	ra,20(sp)
  4011c8c:	df000415 	stw	fp,16(sp)
  4011c90:	df000404 	addi	fp,sp,16
  4011c94:	e13ffe15 	stw	r4,-8(fp)
  4011c98:	e17fff15 	stw	r5,-4(fp)
-  /*
-   * check that the device exists, and that it has a valid name.
-   */
-
-  if (!dev || !dev->name)
  4011c9c:	e0bffe17 	ldw	r2,-8(fp)
  4011ca0:	10000326 	beq	r2,zero,4011cb0 <alt_dev_llist_insert+0x2c>
  4011ca4:	e0bffe17 	ldw	r2,-8(fp)
  4011ca8:	10800217 	ldw	r2,8(r2)
  4011cac:	1000061e 	bne	r2,zero,4011cc8 <alt_dev_llist_insert+0x44>
-  {
-    ALT_ERRNO = EINVAL;
  4011cb0:	4011c480 	call	4011c48 <alt_get_errno>
  4011cb4:	1007883a 	mov	r3,r2
  4011cb8:	00800584 	movi	r2,22
  4011cbc:	18800015 	stw	r2,0(r3)
-    return -EINVAL;
  4011cc0:	00bffa84 	movi	r2,-22
  4011cc4:	00001306 	br	4011d14 <alt_dev_llist_insert+0x90>
-  
-  /*
-   * register the device.
-   */
-  
-  alt_llist_insert(list, &dev->llist);
  4011cc8:	e0bffe17 	ldw	r2,-8(fp)
  4011ccc:	e0ffff17 	ldw	r3,-4(fp)
  4011cd0:	e0fffc15 	stw	r3,-16(fp)
  4011cd4:	e0bffd15 	stw	r2,-12(fp)
- */
-
-static ALT_INLINE void ALT_ALWAYS_INLINE alt_llist_insert(alt_llist* list, 
-                alt_llist* entry)
-{
-  entry->previous = list;
  4011cd8:	e0bffd17 	ldw	r2,-12(fp)
  4011cdc:	e0fffc17 	ldw	r3,-16(fp)
  4011ce0:	10c00115 	stw	r3,4(r2)
-  entry->next     = list->next;
  4011ce4:	e0bffc17 	ldw	r2,-16(fp)
  4011ce8:	10c00017 	ldw	r3,0(r2)
  4011cec:	e0bffd17 	ldw	r2,-12(fp)
  4011cf0:	10c00015 	stw	r3,0(r2)
-
-  list->next->previous = entry;
  4011cf4:	e0bffc17 	ldw	r2,-16(fp)
  4011cf8:	10800017 	ldw	r2,0(r2)
  4011cfc:	e0fffd17 	ldw	r3,-12(fp)
  4011d00:	10c00115 	stw	r3,4(r2)
-  list->next           = entry;
  4011d04:	e0bffc17 	ldw	r2,-16(fp)
  4011d08:	e0fffd17 	ldw	r3,-12(fp)
  4011d0c:	10c00015 	stw	r3,0(r2)
-
-  return 0;  
  4011d10:	0005883a 	mov	r2,zero
-}
  4011d14:	e037883a 	mov	sp,fp
  4011d18:	dfc00117 	ldw	ra,4(sp)
  4011d1c:	df000017 	ldw	fp,0(sp)
@@ -22007,33 +21732,17 @@ static ALT_INLINE void ALT_ALWAYS_INLINE alt_llist_insert(alt_llist* list,
  4011d24:	f800283a 	ret
 
 04011d28 <_do_ctors>:
-/*
- * Run the C++ static constructors.
- */
-
-void _do_ctors(void)
-{
  4011d28:	defffd04 	addi	sp,sp,-12
  4011d2c:	dfc00215 	stw	ra,8(sp)
  4011d30:	df000115 	stw	fp,4(sp)
  4011d34:	df000104 	addi	fp,sp,4
-  constructor* ctor;
-
-  for (ctor = &__CTOR_END__[-1]; ctor >= __CTOR_LIST__; ctor--)
  4011d38:	00810074 	movhi	r2,1025
  4011d3c:	108b5a04 	addi	r2,r2,11624
  4011d40:	e0bfff15 	stw	r2,-4(fp)
  4011d44:	00000606 	br	4011d60 <_do_ctors+0x38>
-        (*ctor) (); 
  4011d48:	e0bfff17 	ldw	r2,-4(fp)
  4011d4c:	10800017 	ldw	r2,0(r2)
  4011d50:	103ee83a 	callr	r2
-
-void _do_ctors(void)
-{
-  constructor* ctor;
-
-  for (ctor = &__CTOR_END__[-1]; ctor >= __CTOR_LIST__; ctor--)
  4011d54:	e0bfff17 	ldw	r2,-4(fp)
  4011d58:	10bfff04 	addi	r2,r2,-4
  4011d5c:	e0bfff15 	stw	r2,-4(fp)
@@ -22041,8 +21750,6 @@ void _do_ctors(void)
  4011d64:	00810074 	movhi	r2,1025
  4011d68:	108b5b04 	addi	r2,r2,11628
  4011d6c:	18bff62e 	bgeu	r3,r2,4011d48 <__alt_data_end+0xfc011d48>
-        (*ctor) (); 
-}
  4011d70:	0001883a 	nop
  4011d74:	e037883a 	mov	sp,fp
  4011d78:	dfc00117 	ldw	ra,4(sp)
@@ -22051,33 +21758,17 @@ void _do_ctors(void)
  4011d84:	f800283a 	ret
 
 04011d88 <_do_dtors>:
-/*
- * Run the C++ static destructors.
- */
-
-void _do_dtors(void)
-{
  4011d88:	defffd04 	addi	sp,sp,-12
  4011d8c:	dfc00215 	stw	ra,8(sp)
  4011d90:	df000115 	stw	fp,4(sp)
  4011d94:	df000104 	addi	fp,sp,4
-  destructor* dtor;
-
-  for (dtor = &__DTOR_END__[-1]; dtor >= __DTOR_LIST__; dtor--)
  4011d98:	00810074 	movhi	r2,1025
  4011d9c:	108b5a04 	addi	r2,r2,11624
  4011da0:	e0bfff15 	stw	r2,-4(fp)
  4011da4:	00000606 	br	4011dc0 <_do_dtors+0x38>
-        (*dtor) (); 
  4011da8:	e0bfff17 	ldw	r2,-4(fp)
  4011dac:	10800017 	ldw	r2,0(r2)
  4011db0:	103ee83a 	callr	r2
-
-void _do_dtors(void)
-{
-  destructor* dtor;
-
-  for (dtor = &__DTOR_END__[-1]; dtor >= __DTOR_LIST__; dtor--)
  4011db4:	e0bfff17 	ldw	r2,-4(fp)
  4011db8:	10bfff04 	addi	r2,r2,-4
  4011dbc:	e0bfff15 	stw	r2,-4(fp)
@@ -22085,8 +21776,6 @@ void _do_dtors(void)
  4011dc4:	00810074 	movhi	r2,1025
  4011dc8:	108b5b04 	addi	r2,r2,11628
  4011dcc:	18bff62e 	bgeu	r3,r2,4011da8 <__alt_data_end+0xfc011da8>
-        (*dtor) (); 
-}
  4011dd0:	0001883a 	nop
  4011dd4:	e037883a 	mov	sp,fp
  4011dd8:	dfc00117 	ldw	ra,4(sp)
