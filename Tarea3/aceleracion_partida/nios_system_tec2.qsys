@@ -941,7 +941,7 @@
    kind="clock"
    version="17.1"
    start="pll.outclk0"
-   end="top_tanh_0.clock_sink" />
+   end="top_tanh_0.clock" />
  <connection
    kind="clock"
    version="17.1"
@@ -1023,7 +1023,7 @@
    kind="reset"
    version="17.1"
    start="clk_50.clk_reset"
-   end="top_tanh_0.reset_sink" />
+   end="top_tanh_0.reset" />
  <connection
    kind="reset"
    version="17.1"
@@ -1053,7 +1053,7 @@
    kind="reset"
    version="17.1"
    start="cpu.debug_reset_request"
-   end="top_tanh_0.reset_sink" />
+   end="top_tanh_0.reset" />
  <connection
    kind="reset"
    version="17.1"

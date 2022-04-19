@@ -4,12 +4,12 @@
  kind="nios_system_tec2"
  version="1.0"
  fabric="QSYS">
- <!-- Format version 17.1 593 (Future versions may contain additional information.) -->
- <!-- 2022.04.11.13:18:39 -->
+ <!-- Format version 17.1 590 (Future versions may contain additional information.) -->
+ <!-- 2022.04.19.21:13:34 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1649675919</value>
+  <value>1650395614</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -12283,8 +12283,8 @@ parameters are a RESULT of the module parameters. -->
    <clockDomainMember>
     <isBridge>false</isBridge>
     <moduleName>top_tanh_0</moduleName>
-    <slaveName>clock_sink</slaveName>
-    <name>top_tanh_0.clock_sink</name>
+    <slaveName>clock</slaveName>
+    <name>top_tanh_0.clock</name>
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
@@ -14172,7 +14172,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1649675919</value>
+   <value>1650395614</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -14192,7 +14192,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1649675919</value>
+   <value>1650395614</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -14208,7 +14208,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1649675919</value>
+   <value>1650395614</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -15480,15 +15480,15 @@ parameters are a RESULT of the module parameters. -->
    </assignment>
    <assignment>
     <name>embeddedsw.configuration.isMemoryDevice</name>
-    <value>false</value>
+    <value>0</value>
    </assignment>
    <assignment>
     <name>embeddedsw.configuration.isNonVolatileStorage</name>
-    <value>false</value>
+    <value>0</value>
    </assignment>
    <assignment>
     <name>embeddedsw.configuration.isPrintableDevice</name>
-    <value>false</value>
+    <value>0</value>
    </assignment>
    <parameter name="addressAlignment">
     <type>com.altera.sopcmodel.avalon.AvalonConnectionPoint$AddressAlignment</type>
@@ -15532,7 +15532,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock_sink</value>
+    <value>clock</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -15540,7 +15540,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="associatedReset">
     <type>java.lang.String</type>
-    <value>reset_sink</value>
+    <value>reset</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -15823,6 +15823,12 @@ parameters are a RESULT of the module parameters. -->
     <role>begintransfer</role>
    </port>
    <port>
+    <name>write_n</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>write_n</role>
+   </port>
+   <port>
     <name>writedata</name>
     <direction>Input</direction>
     <width>32</width>
@@ -15834,14 +15840,8 @@ parameters are a RESULT of the module parameters. -->
     <width>32</width>
     <role>readdata</role>
    </port>
-   <port>
-    <name>write_n</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>write_n</role>
-   </port>
   </interface>
-  <interface name="clock_sink" kind="clock_sink" version="17.1">
+  <interface name="clock" kind="clock_sink" version="17.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -15886,13 +15886,13 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset_sink" kind="reset_sink" version="17.1">
+  <interface name="reset" kind="reset_sink" version="17.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock_sink</value>
+    <value>clock</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -15900,7 +15900,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="synchronousEdges">
     <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>BOTH</value>
+    <value>DEASSERT</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -16731,11 +16731,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="pll.outclk0/top_tanh_0.clock_sink"
+   name="pll.outclk0/top_tanh_0.clock"
    kind="clock"
    version="17.1"
    start="pll.outclk0"
-   end="top_tanh_0.clock_sink">
+   end="top_tanh_0.clock">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -16755,7 +16755,7 @@ parameters are a RESULT of the module parameters. -->
   <startModule>pll</startModule>
   <startConnectionPoint>outclk0</startConnectionPoint>
   <endModule>top_tanh_0</endModule>
-  <endConnectionPoint>clock_sink</endConnectionPoint>
+  <endConnectionPoint>clock</endConnectionPoint>
  </connection>
  <connection
    name="pll.outclk0/clock_crossing_io.s0_clk"
@@ -17483,11 +17483,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk_50.clk_reset/top_tanh_0.reset_sink"
+   name="clk_50.clk_reset/top_tanh_0.reset"
    kind="reset"
    version="17.1"
    start="clk_50.clk_reset"
-   end="top_tanh_0.reset_sink">
+   end="top_tanh_0.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -17507,7 +17507,7 @@ parameters are a RESULT of the module parameters. -->
   <startModule>clk_50</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
   <endModule>top_tanh_0</endModule>
-  <endConnectionPoint>reset_sink</endConnectionPoint>
+  <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
    name="clk_50.clk_reset/clock_crossing_io.s0_reset"
@@ -17645,11 +17645,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="cpu.debug_reset_request/top_tanh_0.reset_sink"
+   name="cpu.debug_reset_request/top_tanh_0.reset"
    kind="reset"
    version="17.1"
    start="cpu.debug_reset_request"
-   end="top_tanh_0.reset_sink">
+   end="top_tanh_0.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -17669,7 +17669,7 @@ parameters are a RESULT of the module parameters. -->
   <startModule>cpu</startModule>
   <startConnectionPoint>debug_reset_request</startConnectionPoint>
   <endModule>top_tanh_0</endModule>
-  <endConnectionPoint>reset_sink</endConnectionPoint>
+  <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
    name="cpu.debug_reset_request/clock_crossing_io.s0_reset"
@@ -17954,6 +17954,6 @@ parameters are a RESULT of the module parameters. -->
   <displayName>Reset Connection</displayName>
   <version>17.1</version>
  </plugin>
- <reportVersion>17.1 593</reportVersion>
+ <reportVersion>17.1 590</reportVersion>
  <uniqueIdentifier></uniqueIdentifier>
 </EnsembleReport>

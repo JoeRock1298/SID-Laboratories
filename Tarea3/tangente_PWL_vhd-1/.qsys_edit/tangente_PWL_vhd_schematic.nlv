@@ -1,8 +1,0 @@
-# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
-# 
-preplace inst tangente_PWL_vhd.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst tangente_PWL_vhd -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>tangente_PWL_vhd</net_container>(SLAVE)tangente_PWL_vhd.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>tangente_PWL_vhd</net_container>(SLAVE)tangente_PWL_vhd.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier tangente_PWL_vhd 60 90 260

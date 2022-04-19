@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon Apr 11 19:38:44 2022
+Fitter Status : Successful - Tue Apr 19 21:24:07 2022
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : tecnica2
 Top-level Entity Name : tecnica2
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 4,032 / 32,070 ( 13 % )
-Total registers : 5933
+Logic utilization (in ALMs) : 4,050 / 32,070 ( 13 % )
+Total registers : 5830
 Total pins : 235 / 457 ( 51 % )
 Total virtual pins : 0
-Total block memory bits : 83,280 / 4,065,280 ( 2 % )
+Total block memory bits : 83,472 / 4,065,280 ( 2 % )
 Total RAM Blocks : 22 / 397 ( 6 % )
 Total DSP Blocks : 7 / 87 ( 8 % )
 Total HSSI RX PCSs : 0

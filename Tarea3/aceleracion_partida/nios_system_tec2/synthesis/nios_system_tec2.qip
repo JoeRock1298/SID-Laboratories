@@ -2,7 +2,7 @@ set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -na
 set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_TOOL_VERSION "17.1"
 set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "nios_system_tec2" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../nios_system_tec2.sopcinfo"]
-set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name SLD_INFO "QSYS_NAME nios_system_tec2 HAS_SOPCINFO 1 GENERATION_ID 1649675919"
+set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name SLD_INFO "QSYS_NAME nios_system_tec2 HAS_SOPCINFO 1 GENERATION_ID 1650395614"
 set_global_assignment -library "nios_system_tec2" -name MISC_FILE [file join $::quartus(qip_path) "../nios_system_tec2.cmp"]
 set_global_assignment -library "nios_system_tec2" -name SLD_FILE [file join $::quartus(qip_path) "nios_system_tec2.regmap"]
 set_global_assignment -library "nios_system_tec2" -name SLD_FILE [file join $::quartus(qip_path) "nios_system_tec2.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -na
 set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY0OTY3NTkxOQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTY1MDM5NTYxNA==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "nios_system_tec2" -library "nios_system_tec2" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="

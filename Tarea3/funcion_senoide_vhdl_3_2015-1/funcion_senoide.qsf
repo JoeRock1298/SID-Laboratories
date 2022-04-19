@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP4CE115F29C8
 set_global_assignment -name TOP_LEVEL_ENTITY sine_mem_9k
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:13:57  DECEMBER 11, 2012"
-set_global_assignment -name LAST_QUARTUS_VERSION "17.1.1 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -62,10 +62,10 @@ set_global_assignment -name EDA_TEST_BENCH_NAME correcto_referencia -section_id 
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id correcto_referencia
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME senoide_tb -section_id correcto_referencia
 set_global_assignment -name EDA_EXTRA_ELAB_OPTION "\"\"" -section_id eda_simulation
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE ROM_sincrona_senoide_2012.vhd
 set_global_assignment -name VHDL_FILE math_utility.vhd -hdl_version VHDL_1993 -library ieee_proposed
 set_global_assignment -name VHDL_FILE float_pkg.vhd -hdl_version VHDL_1993 -library ieee_proposed
 set_global_assignment -name VHDL_FILE fixed_pkg.vhd -hdl_version VHDL_1993 -library ieee_proposed
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/senoide_tb.v -section_id correcto_referencia
 set_global_assignment -name SEARCH_PATH simulation/modelsim/ -tag from_archive
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

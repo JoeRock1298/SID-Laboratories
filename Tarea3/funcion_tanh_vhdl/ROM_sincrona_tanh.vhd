@@ -12,7 +12,7 @@ USE ieee.math_real.all;
 entity tanh_mem_9k is
     port (clk:          in std_logic;
           dataa:        in  std_logic_vector (31 downto 0);
-          result:       out std_logic_vector (31 downto 0);
+          result:       out std_logic_vector (31 downto 0)
           );
 end tanh_mem_9k;
 
@@ -43,17 +43,17 @@ end;
 signal memoria: ROM := INIT_ROM;
 signal result1: std_logic_vector(19 downto 0);--)unresolved_ufixed(-1 downto -8); // 20 bits
 signal valor: float32;
-signal valor1: unresolved_ufixed(1 downto -7);
+signal valor11: unresolved_ufixed(31 downto 0);
 signal valor2,mod_result: std_logic_vector(31 downto 0);
 signal signo : std_logic; 
 
 --attribute romstyle : string;
 --attribute romstyle of memoria : signal is "M9K";
 begin
-
-valor<=to_float('0'&dataa(30 downto 0)); -- getting module values
-valor1<=to_ufixed(valor,1,-7); generating
-valor2<=to_slv(valor1);
+--Float to fix section
+valor<=to_float('0'&dataa(30 downto 0)); -- getting module values // comprobar esto en el TB
+valor11<=to_ufixed(valor,31,0); -- generating ROM addresses // comprobar en el TB si cambia algo pero esta parte no deberia ser necesaria
+valor2<=to_slv(valor11); -- converting it to standard logic vector
 signo<=dataa(31);  
 
 memory:process(clk)
@@ -64,11 +64,18 @@ begin
     end if;
 end process;
 
-
+-- Fix to Float section
 mod_result<=to_slv(to_float(to_ufixed(result1,-1,-20)));
 
--- Add asintotic value and finally add the sign
-
-result<=signo&mod_result(30 downto 0); --getting result we need to add the post-processing
+-- Add asintotic value and finally add the sign use a function or destination <= signal1 when condition else signal2;
+result<=signo & mod_result(30 downto 0); --getting result we need to add the post-processing
 
 end sincrona;
+
+--func definition
+--function ternu(cond : boolean; res_true, res_false : unsigned) return unsigned is
+--  begin
+--     if cond then return res_true;
+--     else      return res_false;
+--     end if;
+--  end function;

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Apr 18 13:32:09 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : funcion_senoide
+Top-level Entity Name : sine_mem_9k
+Family : Cyclone IV E
+Device : EP4CE115F29C8
+Timing Models : Final
+Total logic elements : 2,427 / 114,480 ( 2 % )
+    Total combinational functions : 2,427 / 114,480 ( 2 % )
+    Dedicated logic registers : 0 / 114,480 ( 0 % )
+Total registers : 0
+Total pins : 65 / 529 ( 12 % )
+Total virtual pins : 0
+Total memory bits : 9,216 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

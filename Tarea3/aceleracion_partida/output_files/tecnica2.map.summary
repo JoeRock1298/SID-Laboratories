@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Mon Apr 11 19:32:09 2022
+Analysis & Synthesis Status : Successful - Tue Apr 19 21:17:42 2022
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : tecnica2
 Top-level Entity Name : tecnica2
@@ -7,7 +7,7 @@ Logic utilization (in ALMs) : N/A
 Total registers : 4985
 Total pins : 235
 Total virtual pins : 0
-Total block memory bits : 83,280
+Total block memory bits : 83,472
 Total DSP Blocks : 7
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
