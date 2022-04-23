@@ -1,0 +1,2 @@
+Created on:viernes, abril 22, 2022
+Based on:funcion_tanh

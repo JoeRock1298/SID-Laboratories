@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/math_utility.vhd}
+vcom -93 -work work {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd}
+vcom -93 -work work {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd}
+vcom -93 -work work {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd}
+

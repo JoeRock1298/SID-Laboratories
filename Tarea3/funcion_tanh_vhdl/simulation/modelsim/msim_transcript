@@ -1,0 +1,211 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do funcion_d_tanh_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlib ieee_proposed
+# ** Warning: (vlib-34) Library already exists at "ieee_proposed".
+# vmap ieee_proposed ieee_proposed
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap ieee_proposed ieee_proposed 
+# Modifying modelsim.ini
+# vcom -93 -work ieee_proposed {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/math_utility.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:58:30 on Apr 23,2022
+# vcom -reportprogress 300 -93 -work ieee_proposed C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/math_utility.vhd 
+# -- Loading package STANDARD
+# -- Compiling package math_utility_pkg
+# End time: 17:58:30 on Apr 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work ieee_proposed {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:58:30 on Apr 23,2022
+# vcom -reportprogress 300 -93 -work ieee_proposed C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package math_utility_pkg
+# -- Compiling package fixed_pkg
+# -- Loading package MATH_REAL
+# -- Compiling package body fixed_pkg
+# -- Loading package fixed_pkg
+# ** Warning: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd(1478): (vcom-1246) Range 0 downto 1 is null.
+# ** Warning: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd(1479): (vcom-1246) Range 0 downto 1 is null.
+# ** Warning: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd(1480): (vcom-1246) Range 0 downto 1 is null.
+# ** Warning: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd(6891): (vcom-1246) Range 2 to 1 is null.
+# End time: 17:58:30 on Apr 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# vcom -93 -work ieee_proposed {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:58:30 on Apr 23,2022
+# vcom -reportprogress 300 -93 -work ieee_proposed C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package math_utility_pkg
+# -- Loading package fixed_pkg
+# -- Compiling package float_pkg
+# -- Compiling package body float_pkg
+# -- Loading package float_pkg
+# ** Warning: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd(1016): (vcom-1246) Range 0 downto 1 is null.
+# ** Warning: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd(1017): (vcom-1246) Range 0 downto 1 is null.
+# ** Warning: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd(6191): (vcom-1246) Range 2 to 1 is null.
+# End time: 17:58:31 on Apr 23,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 3
+# vcom -93 -work work {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_d_tanh.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:58:31 on Apr 23,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_d_tanh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package math_utility_pkg
+# -- Loading package NUMERIC_STD
+# -- Loading package fixed_pkg
+# -- Loading package float_pkg
+# -- Loading package MATH_REAL
+# -- Compiling entity d_tanh_mem_9k
+# -- Compiling architecture sincrona of d_tanh_mem_9k
+# End time: 17:58:31 on Apr 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/tanh_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:58:31 on Apr 23,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim" C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/tanh_tb.v 
+# -- Compiling module tanh_tb
+# ** Error: (vlog-13032) C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/tanh_tb.v(10): near ",": Syntax error.
+# ** Error: (vlog-13032) C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/tanh_tb.v(11): near ",": Syntax error.
+# ** Error: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/tanh_tb.v(12): (vlog-13205) Syntax error found in the scope following 'logic'. Is there a missing '::'?
+# End time: 17:58:31 on Apr 23,2022, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./funcion_d_tanh_run_msim_rtl_vhdl.do line 15
+# C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim {C:/Users..."
+# Modified modelsim.ini
+# Modified modelsim.ini
+vlog -reportprogress 300 -work work C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:58:54 on Apr 23,2022
+# vlog -reportprogress 300 -work work C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v 
+# -- Compiling module dtanh_tb
+# 
+# Top level modules:
+# 	dtanh_tb
+# End time: 17:58:54 on Apr 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.dtanh_tb
+# vsim -gui -l msim_transcript work.dtanh_tb 
+# Start time: 17:59:04 on Apr 23,2022
+# Loading sv_std.std
+# Loading work.dtanh_tb
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee_proposed.math_utility_pkg
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading ieee_proposed.fixed_pkg(body)
+# Loading ieee_proposed.float_pkg(body)
+# Loading work.d_tanh_mem_9k(sincrona)
+# ** Warning: Design size of 22810 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+do C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_waves.do
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: jose_  Hostname: DESKTOP-MO21ON1  ProcessID: 14072
+#           Attempting to use alternate WLF file "./wlftmnt36i".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmnt36i
+run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ns  Iteration: 1  Instance: /dtanh_tb/UUT
+# end of simulation
+# ** Note: $stop    : C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v(35)
+#    Time: 500050 ns  Iteration: 1  Instance: /dtanh_tb
+# Break in Module dtanh_tb at C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v line 35
+restart
+restart
+vlog -reportprogress 300 -work work C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:29 on Apr 23,2022
+# vlog -reportprogress 300 -work work C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v 
+# -- Compiling module dtanh_tb
+# 
+# Top level modules:
+# 	dtanh_tb
+# End time: 18:02:29 on Apr 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.dtanh_tb
+run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ns  Iteration: 1  Instance: /dtanh_tb/UUT
+# end of simulation
+# ** Note: $stop    : C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v(36)
+#    Time: 500060 ns  Iteration: 0  Instance: /dtanh_tb
+# Break in Module dtanh_tb at C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v line 36
+add wave -position insertpoint  \
+sim:/dtanh_tb/UUT/result \
+sim:/dtanh_tb/UUT/result_rom \
+sim:/dtanh_tb/UUT/dataa1 \
+sim:/dtanh_tb/UUT/result1
+restart
+run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ns  Iteration: 1  Instance: /dtanh_tb/UUT
+# end of simulation
+# ** Note: $stop    : C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v(36)
+#    Time: 500060 ns  Iteration: 0  Instance: /dtanh_tb
+# Break in Module dtanh_tb at C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v line 36
+add wave -position insertpoint  \
+sim:/dtanh_tb/UUT/overflow_w \
+sim:/dtanh_tb/UUT/overflow_r
+restart
+run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 50 ns  Iteration: 1  Instance: /dtanh_tb/UUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 50 ns  Iteration: 1  Instance: /dtanh_tb/UUT
+# end of simulation
+# ** Note: $stop    : C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v(36)
+#    Time: 500060 ns  Iteration: 0  Instance: /dtanh_tb
+# Break in Module dtanh_tb at C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v line 36
+# End time: 18:09:01 on Apr 23,2022, Elapsed time: 0:09:57
+# Errors: 0, Warnings: 19
