@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sat Apr 23 17:21:12 2022
+Fitter Status : Successful - Sun Apr 24 11:14:47 2022
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : funcion_tanh
 Top-level Entity Name : tanh_mem_9k
 Family : Cyclone IV GX
 Device : EP4CGX22CF19C6
 Timing Models : Final
-Total logic elements : 393 / 21,280 ( 2 % )
-    Total combinational functions : 379 / 21,280 ( 2 % )
-    Dedicated logic registers : 62 / 21,280 ( < 1 % )
-Total registers : 62
+Total logic elements : 381 / 21,280 ( 2 % )
+    Total combinational functions : 377 / 21,280 ( 2 % )
+    Dedicated logic registers : 41 / 21,280 ( < 1 % )
+Total registers : 41
 Total pins : 65 / 167 ( 39 % )
 Total virtual pins : 0
 Total memory bits : 10,240 / 774,144 ( 1 % )

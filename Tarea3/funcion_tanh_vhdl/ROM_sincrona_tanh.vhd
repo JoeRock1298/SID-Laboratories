@@ -44,16 +44,16 @@ signal memoria: ROM := INIT_ROM;
 signal result_rom: std_logic_vector(19 downto 0);--)unresolved_ufixed(-1 downto -8); // 20 bits
 signal valor: float32;
 signal valor1: unresolved_ufixed(31 downto 0);
-signal dataa1, valor2, mod_result : std_logic_vector(31 downto 0);
-signal signo : std_logic;
+signal valor3, valor2, mod_result : std_logic_vector(31 downto 0);
+signal signo, signo1 : std_logic;
  
-signal overflow_w, overflow_r :std_logic;
+signal overflow_w, overflow_r, overflow_r1 :std_logic;
 
 --attribute romstyle : string;
 --attribute romstyle of memoria : signal is "M9K";
 begin
 --Float to fix section
-valor<=to_float('0'&dataa1(30 downto 0)); -- getting module values // comprobar esto en el TB
+valor<=to_float('0'&dataa(30 downto 0)); -- getting module values // comprobar esto en el TB
 valor1<=to_ufixed(valor,24,-7); -- generating ROM addresses // comprobar en el TB si cambia algo pero esta parte no deberia ser necesaria
 valor2<=to_slv(valor1); -- converting it to standard logic vector 
 
@@ -71,18 +71,20 @@ memory:process(clk)
 begin
     if clk'event and clk='1' then
  
-		  dataa1 <= dataa; -- Registering input
-		  result_rom <= memoria(conv_integer(valor2(8 downto 0))); -- accesing ROM
-		  signo <= dataa1(31);
-		  overflow_r <= overflow_w;	  
+		  valor3 <= valor2; -- Registering address
+		  result_rom <= memoria(conv_integer(valor3(8 downto 0))); -- accesing ROM
+		  signo <= dataa(31);
+		  signo1 <= signo; -- adapting latency of the sign
+		  overflow_r <= overflow_w;
+		  overflow_r1 <= overflow_r; -- adapting latency of the overflow
 		  --Registering the output
-		  result <= signo & mod_result(30 downto 0); --getting result
+		  result <= signo1 & mod_result(30 downto 0); --getting result
 		  
     end if;
 end process;
 
 -- Fix to Float section. Adding asintotic value
-mod_result<= to_slv(to_float(to_ufixed(result_rom,-1,-20))) when overflow_r = '0'else 
+mod_result<= to_slv(to_float(to_ufixed(result_rom,-1,-20))) when overflow_r1 = '0'else 
 				 to_slv(to_float(1));
 				 
 end sincrona;

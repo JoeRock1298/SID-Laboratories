@@ -1,12 +1,12 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /dtanh_tb/count_real
-add wave -noupdate -format Analog-Step -height 74 -max 1.0 /dtanh_tb/salida_real
-add wave -noupdate -format Analog-Step -height 74 -max 1.0 /dtanh_tb/salida_deseada
-add wave -noupdate -format Analog-Step -height 74 -max 0.0028600897039532387 -min -0.0032936385323376616 /dtanh_tb/error
 add wave -noupdate /dtanh_tb/clk
+add wave -noupdate -max 25.000000000002213 -min -25.0 /dtanh_tb/count_real
+add wave -noupdate -format Analog-Step -height 74 -max 1.0 /dtanh_tb/salida_deseada2
+add wave -noupdate -format Analog-Step -height 74 -max 1.0 /dtanh_tb/salida_real
+add wave -noupdate -format Analog-Step -height 74 -max 0.0028600897039532387 -min -0.0032936385323376616 /dtanh_tb/error
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {246350000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {250250000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 193
 configure wave -valuecolwidth 100
@@ -22,4 +22,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {525052500 ps}
+WaveRestoreZoom {0 ps} {525063 ns}

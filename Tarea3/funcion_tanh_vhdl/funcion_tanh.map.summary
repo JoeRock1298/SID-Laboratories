@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sat Apr 23 17:20:57 2022
+Analysis & Synthesis Status : Successful - Sun Apr 24 11:14:33 2022
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : funcion_tanh
 Top-level Entity Name : tanh_mem_9k
 Family : Cyclone IV GX
-Total logic elements : 413
-    Total combinational functions : 379
-    Dedicated logic registers : 62
-Total registers : 62
+Total logic elements : 381
+    Total combinational functions : 377
+    Dedicated logic registers : 41
+Total registers : 41
 Total pins : 65
 Total virtual pins : 0
 Total memory bits : 10,240

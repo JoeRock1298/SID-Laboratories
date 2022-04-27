@@ -43,15 +43,15 @@ signal memoria: ROM := INIT_ROM;
 signal result_rom: std_logic_vector(19 downto 0);--)unresolved_ufixed(-1 downto -8); // 20 bits
 signal valor: float32;
 signal valor1: unresolved_ufixed(31 downto 0);
-signal dataa1, valor2, result1: std_logic_vector(31 downto 0);
+signal valor2, valor3, result1: std_logic_vector(31 downto 0);
  
-signal overflow_w, overflow_r :std_logic;
+signal overflow_w, overflow_r, overflow_r1:std_logic;
 
 --attribute romstyle : string;
 --attribute romstyle of memoria : signal is "M9K";
 begin
 --Float to fix section
-valor<=to_float('0'&dataa1(30 downto 0)); -- getting module values // comprobar esto en el TB
+valor<=to_float('0'&dataa(30 downto 0)); -- getting module values // comprobar esto en el TB
 valor1<=to_ufixed(valor,24,-7); -- generating ROM addresses // comprobar en el TB si cambia algo pero esta parte no deberia ser necesaria
 valor2<=to_slv(valor1); -- converting it to standard logic vector 
 
@@ -69,16 +69,17 @@ memory:process(clk)
 begin
     if clk'event and clk='1' then
  
-		dataa1 <= dataa; -- Registering input
-		result_rom <= memoria(conv_integer(valor2(8 downto 0))); -- accesing ROM
+		valor3 <= valor2; -- Registering address
+		result_rom <= memoria(conv_integer(valor3(8 downto 0))); -- accesing ROM
 		overflow_r <= overflow_w;
+		overflow_r1 <= overflow_r; -- adapting latency of the overflow
 		result <= result1; -- Registering output
 
     end if;
 end process;
 
 -- Fix to Float section
-result1<= to_slv(to_float(to_ufixed(result_rom,0,-19))) when overflow_r = '0'else 
+result1<= to_slv(to_float(to_ufixed(result_rom,0,-19))) when overflow_r1 = '0'else 
 			to_slv(to_float(0));
 
 end sincrona;

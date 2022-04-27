@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim
 Ed_tanh_mem_9k
-Z1 w1650729334
+Z1 w1650792471
 Z2 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
 Z3 DPx13 ieee_proposed 9 float_pkg 0 22 I[4d5GXdSB=DHn^Ql:9`l0
 Z4 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
@@ -28,9 +28,9 @@ V7j_[==l;[6YcdkR3GTXT_0
 !s100 8MWI^Y3zE>0bOS;m2e<2j2
 Z13 OV;C;10.5b;63
 31
-Z14 !s110 1650729511
+Z14 !s110 1650792667
 !i10b 1
-Z15 !s108 1650729511.000000
+Z15 !s108 1650792666.000000
 Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_d_tanh.vhd|
 Z17 !s107 C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_d_tanh.vhd|
 !i113 1
@@ -49,8 +49,8 @@ R10
 DEx4 work 13 d_tanh_mem_9k 0 22 7j_[==l;[6YcdkR3GTXT_0
 l52
 L19
-VDTV3b8i1a5YPeOSi?F2TU1
-!s100 5IQXTY32dChRoOPNDClF03
+VUHEnE4UR9Kd<OWi:B2J350
+!s100 kaWBO>NMl:<9bg`ikmT[z2
 R13
 31
 R14
@@ -63,7 +63,7 @@ R18
 R19
 vdtanh_tb
 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1650729749
+!s110 1650792708
 !i10b 1
 !s100 F?llN_4bbcj9go5:9>W9C3
 IDb3Kjbn0eaWHRze2NOSS?0
@@ -79,7 +79,7 @@ OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1650729749.000000
+!s108 1650792708.000000
 !s107 C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v|
 !s90 -##implicit##push_minusfile_path##|C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-work|work|C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v|
 !i113 1

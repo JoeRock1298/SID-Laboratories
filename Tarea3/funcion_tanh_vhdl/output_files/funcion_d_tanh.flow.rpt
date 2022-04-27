@@ -1,5 +1,5 @@
 Flow report for funcion_d_tanh
-Sat Apr 23 17:57:53 2022
+Mon Apr 25 17:50:53 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Apr 23 17:57:53 2022       ;
+; Flow Status                     ; Successful - Mon Apr 25 17:50:53 2022       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; funcion_d_tanh                              ;
 ; Top-level Entity Name           ; d_tanh_mem_9k                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 175 / 32,070 ( < 1 % )                      ;
-; Total registers                 ; 60                                          ;
+; Logic utilization (in ALMs)     ; 173 / 32,070 ( < 1 % )                      ;
+; Total registers                 ; 38                                          ;
 ; Total pins                      ; 65 / 457 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 10,240 / 4,065,280 ( < 1 % )                ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/23/2022 17:55:41 ;
+; Start date & time ; 04/25/2022 17:47:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; funcion_d_tanh      ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------------+----------------+---------------+----------------+
 ; ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION   ; On                                           ; Off            ; --            ; --             ;
 ; ALLOW_ANY_ROM_SIZE_FOR_RECOGNITION   ; On                                           ; Off            ; --            ; --             ;
-; COMPILER_SIGNATURE_ID                ; 53384728545771.165072934011656               ; --             ; --            ; --             ;
+; COMPILER_SIGNATURE_ID                ; 53384728545771.165090162115640               ; --             ; --            ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; tanh_mem_9k                                  ; --             ; --            ; tanh_tb        ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tanh_tb                                      ; --             ; --            ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                            ; --             ; --            ; eda_simulation ;
@@ -110,12 +110,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:22     ; 1.0                     ; 4875 MB             ; 00:00:42                           ;
-; Fitter                    ; 00:01:19     ; 1.0                     ; 6315 MB             ; 00:02:01                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 4828 MB             ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:10     ; 1.1                     ; 5136 MB             ; 00:00:09                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4738 MB             ; 00:00:02                           ;
-; Total                     ; 00:02:05     ; --                      ; --                  ; 00:03:03                           ;
+; Analysis & Synthesis      ; 00:00:31     ; 1.0                     ; 4865 MB             ; 00:00:42                           ;
+; Fitter                    ; 00:02:14     ; 1.0                     ; 6347 MB             ; 00:02:02                           ;
+; Assembler                 ; 00:00:22     ; 1.0                     ; 4831 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:13     ; 1.1                     ; 5141 MB             ; 00:00:09                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4744 MB             ; 00:00:02                           ;
+; Total                     ; 00:03:24     ; --                      ; --                  ; 00:03:04                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
