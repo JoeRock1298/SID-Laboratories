@@ -45,6 +45,6 @@ proc vsimmatlabsysobj {args} {
   lappend args [join $sllibarg]
   uplevel 1 [join $args]
 }
-vsimulink d_tanh_mem_9k -t 1ns -voptargs=+acc -f parameter_d_tanh_mem_9k.cfg -socket 51308;
-add wave d_tanh_mem_9k/*;
+vsimulink d_tanh_top -t 1ns -voptargs=+acc -f parameter_d_tanh_top.cfg -socket 53203;
+add wave d_tanh_top/*;
 

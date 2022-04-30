@@ -1,10 +1,10 @@
 # Create design library
 transcript on
-if {[file exists rtl_work]} {
-	vdel -lib rtl_work -all
+if {[file exists work]} {
+	vdel -lib work -all
 }
-vlib rtl_work
-vmap work rtl_work
+vlib work
+vmap work work
 
 if {[file exists ieee_proposed]} {
 	vdel -lib ieee_proposed -all
@@ -21,6 +21,7 @@ project addfile "$SRC1/math_utility.vhd"
 project addfile "$SRC1/fixed_pkg.vhd"
 project addfile "$SRC1/float_pkg.vhd"
 project addfile "$SRC1/ROM_sincrona_d_tanh.vhd"
+project addfile "$SRC1/d_tanh_top.v"
 
 # Close project
 project close
@@ -30,3 +31,5 @@ vcom -93 -work ieee_proposed {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Labor
 vcom -93 -work ieee_proposed {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd}
 vcom -93 -work ieee_proposed {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd}
 vcom -93 -work work {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_d_tanh.vhd}
+# vlog -work work {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/d_tanh_top.v}
+vlog -vlog01compat -work work {C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/d_tanh_top.v}
