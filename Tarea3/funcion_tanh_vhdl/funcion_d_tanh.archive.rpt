@@ -1,0 +1,118 @@
+Archive Project report for funcion_d_tanh
+Mon May 02 10:51:50 2022
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Mon May 02 10:51:50 2022 ;
+; Revision Name          ; funcion_d_tanh                        ;
+; Top-level Entity Name  ; d_tanh_mem_9k                         ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Custom' contains:
+    Info: Programming output files
+    Info: Automatically detected source files
+    Info: Report files
+    Info: Project source and settings files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_d_tanh.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'funcion_d_tanh.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4879 megabytes
+    Info: Processing ended: Mon May 02 10:51:50 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++--------------------------------------------------------------+
+; Files Archived                                               ;
++--------------------------------------------------------------+
+; File Name                                                    ;
++--------------------------------------------------------------+
+; fixed_pkg.vhd                                                ;
+; float_pkg.vhd                                                ;
+; funcion_d_tanh.qpf                                           ;
+; funcion_d_tanh.qsf                                           ;
+; funcion_d_tanh_assignment_defaults.qdf                       ;
+; math_utility.vhd                                             ;
+; output_files/funcion_d_tanh.asm.rpt                          ;
+; output_files/funcion_d_tanh.eda.rpt                          ;
+; output_files/funcion_d_tanh.fit.rpt                          ;
+; output_files/funcion_d_tanh.fit.smsg                         ;
+; output_files/funcion_d_tanh.fit.summary                      ;
+; output_files/funcion_d_tanh.flow.rpt                         ;
+; output_files/funcion_d_tanh.jdi                              ;
+; output_files/funcion_d_tanh.map.rpt                          ;
+; output_files/funcion_d_tanh.map.summary                      ;
+; output_files/funcion_d_tanh.pin                              ;
+; output_files/funcion_d_tanh.sld                              ;
+; output_files/funcion_d_tanh.sof                              ;
+; output_files/funcion_d_tanh.sta.rpt                          ;
+; output_files/funcion_d_tanh.sta.summary                      ;
+; ROM_sincrona_d_tanh.vhd                                      ;
+; simulation/matlab/compile_and_launch.tcl                     ;
+; simulation/matlab/compile_hdl_design_d_tanh_top.m            ;
+; simulation/matlab/compile_project.cr.mti                     ;
+; simulation/matlab/compile_project.mpf                        ;
+; simulation/matlab/compile_script_example.do                  ;
+; simulation/matlab/d_tanh_test.slx                            ;
+; simulation/matlab/hdlverifier_compile_design.do              ;
+; simulation/matlab/hdlverifier_rstclk_waveform.jpg            ;
+; simulation/matlab/launch_hdl_simulator_d_tanh_top.m          ;
+; simulation/matlab/modelsim.ini                               ;
+; simulation/matlab/parameter_d_tanh_top.cfg                   ;
+; simulation/matlab/tmw_esl_vsim_launch.bat                    ;
+; simulation/matlab/tp5a484ff3_c296_4b71_b48e_b661c39d3d5e.log ;
+; simulation/matlab/transcript                                 ;
+; simulation/matlab/vsim.wlf                                   ;
+; simulation/modelsim/d_tanh_tb.v                              ;
+; simulation/modelsim/d_tanh_waves.do                          ;
+; simulation/modelsim/funcion_d_tanh_run_msim_rtl_vhdl.do      ;
+; simulation/modelsim/tanh_tb.v                                ;
+; tanh_instruct_hw.tcl                                         ;
++--------------------------------------------------------------+
+
+

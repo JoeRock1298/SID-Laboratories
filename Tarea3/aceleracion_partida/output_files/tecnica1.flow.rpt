@@ -1,6 +1,6 @@
 Flow report for tecnica1
-Mon Apr 11 20:38:29 2022
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Mon May 02 10:46:22 2022
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
 ---------------------
@@ -37,24 +37,24 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Flow Summary                                                              ;
-+-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Mon Apr 11 20:38:29 2022       ;
-; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name               ; tecnica1                                    ;
-; Top-level Entity Name       ; tecnica1                                    ;
-; Family                      ; Cyclone V                                   ;
-; Device                      ; 5CSEMA5F31C6                                ;
-; Timing Models               ; Final                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Flow Summary                                                                           ;
++-----------------------------+----------------------------------------------------------+
+; Flow Status                 ; Successful - Mon May 02 10:46:21 2022                    ;
+; Quartus Prime Version       ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name               ; tecnica1                                                 ;
+; Top-level Entity Name       ; tecnica1                                                 ;
+; Family                      ; Cyclone V                                                ;
+; Device                      ; 5CSEMA5F31C6                                             ;
+; Timing Models               ; Final                                                    ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                                ;
+; Total registers             ; N/A until Partition Merge                                ;
+; Total pins                  ; N/A until Partition Merge                                ;
+; Total virtual pins          ; N/A until Partition Merge                                ;
+; Total block memory bits     ; N/A until Partition Merge                                ;
+; Total PLLs                  ; N/A until Partition Merge                                ;
+; Total DLLs                  ; N/A until Partition Merge                                ;
++-----------------------------+----------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/11/2022 20:37:08 ;
+; Start date & time ; 05/02/2022 10:45:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tecnica1            ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------+--------------------------------------------------------------------+---------------+----------------------+------------+
 ; Assignment Name                                   ; Value                                                              ; Default Value ; Entity Name          ; Section Id ;
 +---------------------------------------------------+--------------------------------------------------------------------+---------------+----------------------+------------+
-; COMPILER_SIGNATURE_ID                             ; 53384728545771.164970222806428                                     ; --            ; --                   ; --         ;
+; COMPILER_SIGNATURE_ID                             ; 242211430917466.165148113807420                                    ; --            ; --                   ; --         ;
 ; FITTER_EFFORT                                     ; Standard Fit                                                       ; Auto Fit      ; --                   ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                            ; 85                                                                 ; --            ; --                   ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                            ; 0                                                                  ; --            ; --                   ; --         ;
@@ -112,8 +112,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:01:21     ; 1.0                     ; 5081 MB             ; 00:01:54                           ;
-; Total                  ; 00:01:21     ; --                      ; --                  ; 00:01:54                           ;
+; Analysis & Elaboration ; 00:00:43     ; 1.0                     ; 5093 MB             ; 00:01:07                           ;
+; Total                  ; 00:00:43     ; --                      ; --                  ; 00:01:07                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -122,7 +122,7 @@ refer to the applicable agreement for further details.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-MO21ON1  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Elaboration ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 

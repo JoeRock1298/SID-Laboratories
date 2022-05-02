@@ -1,0 +1,52 @@
+Quartus Prime Archive log --	C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_d_tanh.qarlog
+
+Archive:	C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_d_tanh.qar
+Date:		Mon May 02 10:51:50 2022
+Quartus Prime		17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_d_tanh.vhd
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/float_pkg.vhd
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_d_tanh.qpf
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_d_tanh.qsf
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_d_tanh_assignment_defaults.qdf
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/math_utility.vhd
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.asm.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.eda.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.fit.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.fit.smsg
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.fit.summary
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.flow.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.jdi
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.map.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.map.summary
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.pin
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.sld
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.sof
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.sta.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/output_files/funcion_d_tanh.sta.summary
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/compile_and_launch.tcl
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/compile_hdl_design_d_tanh_top.m
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/compile_project.cr.mti
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/compile_project.mpf
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/compile_script_example.do
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/d_tanh_test.slx
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/hdlverifier_compile_design.do
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/hdlverifier_rstclk_waveform.jpg
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/launch_hdl_simulator_d_tanh_top.m
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/modelsim.ini
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/parameter_d_tanh_top.cfg
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/tmw_esl_vsim_launch.bat
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/tp5a484ff3_c296_4b71_b48e_b661c39d3d5e.log
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/transcript
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/matlab/vsim.wlf
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_tb.v
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/modelsim/d_tanh_waves.do
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/modelsim/funcion_d_tanh_run_msim_rtl_vhdl.do
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/modelsim/tanh_tb.v
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/tanh_instruct_hw.tcl
+	======= Total: 41 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

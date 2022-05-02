@@ -1,0 +1,102 @@
+Archive Project report for funcion_tanh
+Mon May 02 10:50:23 2022
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Mon May 02 10:50:23 2022 ;
+; Revision Name          ; funcion_tanh                          ;
+; Top-level Entity Name  ; tanh_mem_9k                           ;
+; Family                 ; Cyclone IV GX                         ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Custom' contains:
+    Info: Programming output files
+    Info: Automatically detected source files
+    Info: Report files
+    Info: Project source and settings files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'funcion_tanh.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Mon May 02 10:50:23 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-------------------------------------------------------+
+; Files Archived                                        ;
++-------------------------------------------------------+
+; File Name                                             ;
++-------------------------------------------------------+
+; fixed_pkg.vhd                                         ;
+; float_pkg.vhd                                         ;
+; funcion_tanh.asm.rpt                                  ;
+; funcion_tanh.eda.rpt                                  ;
+; funcion_tanh.fit.rpt                                  ;
+; funcion_tanh.fit.smsg                                 ;
+; funcion_tanh.fit.summary                              ;
+; funcion_tanh.flow.rpt                                 ;
+; funcion_tanh.jdi                                      ;
+; funcion_tanh.map.rpt                                  ;
+; funcion_tanh.map.summary                              ;
+; funcion_tanh.pin                                      ;
+; funcion_tanh.qpf                                      ;
+; funcion_tanh.qsf                                      ;
+; funcion_tanh.sld                                      ;
+; funcion_tanh.sof                                      ;
+; funcion_tanh.sta.rpt                                  ;
+; funcion_tanh.sta.summary                              ;
+; funcion_tanh_assignment_defaults.qdf                  ;
+; math_utility.vhd                                      ;
+; ROM_sincrona_tanh.vhd                                 ;
+; simulation/modelsim/funcion_tanh_run_msim_rtl_vhdl.do ;
+; simulation/modelsim/tanh_tb.v                         ;
+; simulation/modelsim/tanh_waves.do                     ;
+; tanh_instruct_hw.tcl                                  ;
++-------------------------------------------------------+
+
+

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for funcion_tanh
-Sun Apr 24 11:14:33 2022
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Mon May 02 10:48:32 2022
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
 ---------------------
@@ -46,28 +46,28 @@ refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 24 11:14:33 2022       ;
-; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                      ; funcion_tanh                                ;
-; Top-level Entity Name              ; tanh_mem_9k                                 ;
-; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; 381                                         ;
-;     Total combinational functions  ; 377                                         ;
-;     Dedicated logic registers      ; 41                                          ;
-; Total registers                    ; 41                                          ;
-; Total pins                         ; 65                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 10,240                                      ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total GXB Receiver Channel PCS     ; 0                                           ;
-; Total GXB Receiver Channel PMA     ; 0                                           ;
-; Total GXB Transmitter Channel PCS  ; 0                                           ;
-; Total GXB Transmitter Channel PMA  ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                  ;
++------------------------------------+----------------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 02 10:48:32 2022                    ;
+; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                      ; funcion_tanh                                             ;
+; Top-level Entity Name              ; tanh_mem_9k                                              ;
+; Family                             ; Cyclone IV GX                                            ;
+; Total logic elements               ; 381                                                      ;
+;     Total combinational functions  ; 377                                                      ;
+;     Dedicated logic registers      ; 41                                                       ;
+; Total registers                    ; 41                                                       ;
+; Total pins                         ; 65                                                       ;
+; Total virtual pins                 ; 0                                                        ;
+; Total memory bits                  ; 10,240                                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                                        ;
+; Total GXB Receiver Channel PCS     ; 0                                                        ;
+; Total GXB Receiver Channel PMA     ; 0                                                        ;
+; Total GXB Transmitter Channel PCS  ; 0                                                        ;
+; Total GXB Transmitter Channel PMA  ; 0                                                        ;
+; Total PLLs                         ; 0                                                        ;
++------------------------------------+----------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -160,39 +160,39 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                     ;
-+--------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                 ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                        ; Library ;
-+--------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; ROM_sincrona_tanh.vhd                            ; yes             ; User VHDL File                                        ; C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd                            ;         ;
-; math_utility.vhd                                 ; yes             ; User VHDL File                                        ; C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/math_utility.vhd                                 ;         ;
-; float_pkg.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd                                    ;         ;
-; fixed_pkg.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd                                    ;         ;
-; altsyncram.tdf                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                                               ;         ;
-; stratix_ram_block.inc                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                        ;         ;
-; lpm_mux.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                  ;         ;
-; lpm_decode.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc                                                               ;         ;
-; aglobal171.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                                                               ;         ;
-; a_rdenreg.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                ;         ;
-; altrom.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                                                   ;         ;
-; altram.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                                                   ;         ;
-; altdpram.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                                                 ;         ;
-; db/altsyncram_6t71.tdf                           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/db/altsyncram_6t71.tdf                           ;         ;
-; db/funcion_tanh.ram0_tanh_mem_9k_83e0ea2.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/db/funcion_tanh.ram0_tanh_mem_9k_83e0ea2.hdl.mif ;         ;
-+--------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                              ;
++--------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                 ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                 ; Library ;
++--------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; ROM_sincrona_tanh.vhd                            ; yes             ; User VHDL File                                        ; C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd                            ;         ;
+; math_utility.vhd                                 ; yes             ; User VHDL File                                        ; C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/math_utility.vhd                                 ;         ;
+; float_pkg.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/float_pkg.vhd                                    ;         ;
+; fixed_pkg.vhd                                    ; yes             ; User VHDL File                                        ; C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd                                    ;         ;
+; altsyncram.tdf                                   ; yes             ; Megafunction                                          ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                             ;         ;
+; stratix_ram_block.inc                            ; yes             ; Megafunction                                          ; c:/intelfpga/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                      ;         ;
+; lpm_mux.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                                ;         ;
+; lpm_decode.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_decode.inc                                             ;         ;
+; aglobal171.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga/17.1/quartus/libraries/megafunctions/aglobal171.inc                                             ;         ;
+; a_rdenreg.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                              ;         ;
+; altrom.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altrom.inc                                                 ;         ;
+; altram.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altram.inc                                                 ;         ;
+; altdpram.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altdpram.inc                                               ;         ;
+; db/altsyncram_6t71.tdf                           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/db/altsyncram_6t71.tdf                           ;         ;
+; db/funcion_tanh.ram0_tanh_mem_9k_83e0ea2.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/db/funcion_tanh.ram0_tanh_mem_9k_83e0ea2.hdl.mif ;         ;
++--------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -423,42 +423,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Apr 24 11:14:09 2022
+    Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+    Info: Processing started: Mon May 02 10:48:16 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off funcion_tanh -c funcion_tanh
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file rom_sincrona_tanh.vhd
-    Info (12022): Found design unit 1: tanh_mem_9k-sincrona File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 19
-    Info (12023): Found entity 1: tanh_mem_9k File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 12
+    Info (12022): Found design unit 1: tanh_mem_9k-sincrona File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 19
+    Info (12023): Found entity 1: tanh_mem_9k File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 12
 Info (12021): Found 1 design units, including 0 entities, in source file math_utility.vhd
-    Info (12022): Found design unit 1: math_utility_pkg File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/math_utility.vhd Line: 42
+    Info (12022): Found design unit 1: math_utility_pkg File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/math_utility.vhd Line: 42
 Info (12021): Found 2 design units, including 0 entities, in source file float_pkg.vhd
-    Info (12022): Found design unit 1: float_pkg File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 28
-    Info (12022): Found design unit 2: float_pkg-body File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 1001
+    Info (12022): Found design unit 1: float_pkg File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 28
+    Info (12022): Found design unit 2: float_pkg-body File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 1001
 Info (12021): Found 2 design units, including 0 entities, in source file fixed_pkg.vhd
-    Info (12022): Found design unit 1: fixed_pkg File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 25
-    Info (12022): Found design unit 2: fixed_pkg-body File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 1474
+    Info (12022): Found design unit 1: fixed_pkg File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 25
+    Info (12022): Found design unit 2: fixed_pkg-body File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 1474
 Info (12127): Elaborating entity "tanh_mem_9k" for the top level hierarchy
-Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg.vhd(1478): subtype or type has null range File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 1478
-Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg.vhd(1479): subtype or type has null range File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 1479
-Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg.vhd(1480): subtype or type has null range File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 1480
-Warning (10445): VHDL Subtype or Type Declaration warning at float_pkg.vhd(1016): subtype or type has null range File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 1016
-Warning (10445): VHDL Subtype or Type Declaration warning at float_pkg.vhd(1017): subtype or type has null range File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 1017
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'U'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'X'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'Z'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'W'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'-'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
-Warning (10542): VHDL Variable Declaration warning at math_real_vhdl1993.vhd(3573): used initial value expression for variable "NEGATIVE" because variable was never assigned a value File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/math_real_vhdl1993.vhd Line: 3573
-Warning (10542): VHDL Variable Declaration warning at math_real_vhdl1993.vhd(3574): used initial value expression for variable "XLOCAL" because variable was never assigned a value File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/math_real_vhdl1993.vhd Line: 3574
-Warning (10542): VHDL Variable Declaration warning at math_real_vhdl1993.vhd(2373): used initial value expression for variable "RECIPROCAL" because variable was never assigned a value File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/math_real_vhdl1993.vhd Line: 2373
-Warning (10445): VHDL Subtype or Type Declaration warning at float_pkg.vhd(3792): subtype or type has null range File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 3792
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'U'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'X'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'Z'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'W'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
-Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'-'" File: c:/intelfpga_lite/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg.vhd(1478): subtype or type has null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 1478
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg.vhd(1479): subtype or type has null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 1479
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg.vhd(1480): subtype or type has null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd Line: 1480
+Warning (10445): VHDL Subtype or Type Declaration warning at float_pkg.vhd(1016): subtype or type has null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 1016
+Warning (10445): VHDL Subtype or Type Declaration warning at float_pkg.vhd(1017): subtype or type has null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 1017
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'U'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'X'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'Z'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'W'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1092): ignored choice containing meta-value "'-'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1092
+Warning (10542): VHDL Variable Declaration warning at math_real_vhdl1993.vhd(3573): used initial value expression for variable "NEGATIVE" because variable was never assigned a value File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/math_real_vhdl1993.vhd Line: 3573
+Warning (10542): VHDL Variable Declaration warning at math_real_vhdl1993.vhd(3574): used initial value expression for variable "XLOCAL" because variable was never assigned a value File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/math_real_vhdl1993.vhd Line: 3574
+Warning (10542): VHDL Variable Declaration warning at math_real_vhdl1993.vhd(2373): used initial value expression for variable "RECIPROCAL" because variable was never assigned a value File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/math_real_vhdl1993.vhd Line: 2373
+Warning (10445): VHDL Subtype or Type Declaration warning at float_pkg.vhd(3792): subtype or type has null range File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/float_pkg.vhd Line: 3792
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'U'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'X'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'Z'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'W'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
+Warning (10325): VHDL Choice warning at std_1164_vhdl1993.vhd(1103): ignored choice containing meta-value "'-'" File: c:/intelfpga/17.1/quartus/libraries/vhdl/ieee/1993/std_1164_vhdl1993.vhd Line: 1103
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "memoria_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -484,12 +484,12 @@ Info (12133): Instantiated megafunction "altsyncram:memoria_rtl_0" with the foll
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/funcion_tanh.ram0_tanh_mem_9k_83e0ea2.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6t71.tdf
-    Info (12023): Found entity 1: altsyncram_6t71 File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/db/altsyncram_6t71.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_6t71 File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/db/altsyncram_6t71.tdf Line: 27
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "result[0]" is stuck at GND File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 72
-    Warning (13410): Pin "result[1]" is stuck at GND File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 72
-    Warning (13410): Pin "result[2]" is stuck at GND File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 72
-    Warning (13410): Pin "result[3]" is stuck at GND File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 72
+    Warning (13410): Pin "result[0]" is stuck at GND File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 72
+    Warning (13410): Pin "result[1]" is stuck at GND File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 72
+    Warning (13410): Pin "result[2]" is stuck at GND File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 72
+    Warning (13410): Pin "result[3]" is stuck at GND File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 72
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -499,9 +499,9 @@ Info (21057): Implemented 466 device resources after synthesis - the final resou
     Info (21061): Implemented 381 logic cells
     Info (21064): Implemented 20 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4878 megabytes
-    Info: Processing ended: Sun Apr 24 11:14:33 2022
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:46
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Mon May 02 10:48:32 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:29
 
 

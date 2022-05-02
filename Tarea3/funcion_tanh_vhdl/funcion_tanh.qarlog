@@ -1,0 +1,36 @@
+Quartus Prime Archive log --	C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.qarlog
+
+Archive:	C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.qar
+Date:		Mon May 02 10:50:23 2022
+Quartus Prime		17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/fixed_pkg.vhd
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/float_pkg.vhd
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.asm.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.eda.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.fit.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.fit.smsg
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.fit.summary
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.flow.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.jdi
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.map.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.map.summary
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.pin
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.qpf
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.qsf
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.sld
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.sof
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.sta.rpt
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.sta.summary
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh_assignment_defaults.qdf
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/math_utility.vhd
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/modelsim/funcion_tanh_run_msim_rtl_vhdl.do
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/modelsim/tanh_tb.v
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/simulation/modelsim/tanh_waves.do
+C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/tanh_instruct_hw.tcl
+	======= Total: 25 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

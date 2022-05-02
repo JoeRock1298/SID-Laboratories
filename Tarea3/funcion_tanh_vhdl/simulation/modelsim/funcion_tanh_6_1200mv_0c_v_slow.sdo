@@ -29,10 +29,10 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "tanh_mem_9k")
-  (DATE "04/24/2022 11:14:58")
+  (DATE "05/02/2022 10:48:54")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
-  (VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition")
+  (VERSION "Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition")
   (DIVIDER .)
   (TIMESCALE 1 ps)
 

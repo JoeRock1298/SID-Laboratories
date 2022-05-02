@@ -1,6 +1,6 @@
 Fitter report for funcion_tanh
-Sun Apr 24 11:14:47 2022
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Mon May 02 10:48:44 2022
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
 ---------------------
@@ -64,30 +64,30 @@ refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Fitter Summary                                                                   ;
-+------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Apr 24 11:14:47 2022       ;
-; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                      ; funcion_tanh                                ;
-; Top-level Entity Name              ; tanh_mem_9k                                 ;
-; Family                             ; Cyclone IV GX                               ;
-; Device                             ; EP4CGX22CF19C6                              ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 381 / 21,280 ( 2 % )                        ;
-;     Total combinational functions  ; 377 / 21,280 ( 2 % )                        ;
-;     Dedicated logic registers      ; 41 / 21,280 ( < 1 % )                       ;
-; Total registers                    ; 41                                          ;
-; Total pins                         ; 65 / 167 ( 39 % )                           ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 10,240 / 774,144 ( 1 % )                    ;
-; Embedded Multiplier 9-bit elements ; 0 / 80 ( 0 % )                              ;
-; Total GXB Receiver Channel PCS     ; 0 / 4 ( 0 % )                               ;
-; Total GXB Receiver Channel PMA     ; 0 / 4 ( 0 % )                               ;
-; Total GXB Transmitter Channel PCS  ; 0 / 4 ( 0 % )                               ;
-; Total GXB Transmitter Channel PMA  ; 0 / 4 ( 0 % )                               ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-+------------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Fitter Summary                                                                                ;
++------------------------------------+----------------------------------------------------------+
+; Fitter Status                      ; Successful - Mon May 02 10:48:44 2022                    ;
+; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                      ; funcion_tanh                                             ;
+; Top-level Entity Name              ; tanh_mem_9k                                              ;
+; Family                             ; Cyclone IV GX                                            ;
+; Device                             ; EP4CGX22CF19C6                                           ;
+; Timing Models                      ; Final                                                    ;
+; Total logic elements               ; 381 / 21,280 ( 2 % )                                     ;
+;     Total combinational functions  ; 377 / 21,280 ( 2 % )                                     ;
+;     Dedicated logic registers      ; 41 / 21,280 ( < 1 % )                                    ;
+; Total registers                    ; 41                                                       ;
+; Total pins                         ; 65 / 167 ( 39 % )                                        ;
+; Total virtual pins                 ; 0                                                        ;
+; Total memory bits                  ; 10,240 / 774,144 ( 1 % )                                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 80 ( 0 % )                                           ;
+; Total GXB Receiver Channel PCS     ; 0 / 4 ( 0 % )                                            ;
+; Total GXB Receiver Channel PMA     ; 0 / 4 ( 0 % )                                            ;
+; Total GXB Transmitter Channel PCS  ; 0 / 4 ( 0 % )                                            ;
+; Total GXB Transmitter Channel PMA  ; 0 / 4 ( 0 % )                                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                            ;
++------------------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -154,15 +154,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processors 3-4         ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -204,7 +205,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/funcion_tanh.pin.
+The pin-out file can be found in C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.pin.
 
 
 +------------------------------------------------------------------------+
@@ -1562,13 +1563,12 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119004): Automatically selected device EP4CGX22CF19C6 for design funcion_tanh
 Info (119005): Fitting design with smaller device may be possible, but smaller device must be specified
 Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
 Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
-Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device EP4CGX30CF19C6 is compatible
 Info (169124): Fitter converted 5 user pins into dedicated programming pins
@@ -1585,7 +1585,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN M10 (CLK13, DIFFCLK_7n, REFCLK0n)) File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 13
+Info (176353): Automatically promoted node clk~input (placed in PIN M10 (CLK13, DIFFCLK_7n, REFCLK0n)) File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 13
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G17
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1625,18 +1625,18 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 1 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV GX Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin clk uses I/O standard 2.5 V at M10 File: C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 13
-Info (144001): Generated suppressed messages file C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/funcion_tanh.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5354 megabytes
-    Info: Processing ended: Sun Apr 24 11:14:47 2022
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:15
+    Info (169178): Pin clk uses I/O standard 2.5 V at M10 File: C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/ROM_sincrona_tanh.vhd Line: 13
+Info (144001): Generated suppressed messages file C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 5677 megabytes
+    Info: Processing ended: Mon May 02 10:48:44 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/jose_/Documents/UPV/MUISE_21_22/SID-Laboratories/Tarea3/funcion_tanh_vhdl/funcion_tanh.fit.smsg.
+The suppressed messages can be found in C:/Users/jororoc/Documents/QDesign/Tarea3/funcion_tanh_vhdl/funcion_tanh.fit.smsg.
 
 

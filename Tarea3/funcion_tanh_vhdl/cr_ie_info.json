@@ -7,16 +7,16 @@
 	"error" : {
 		"executable" : "quartus_sh",
 		"comment" : "none",
-		"error_message" : "Access Violation at 0X00007FFBDDA1B0D4",
+		"error_message" : "Access Violation at 0X00007FFEF44DB3E4",
 		"source_file" : "unknown",
 		"line" : "0",
-		"stack_trace" : "\t0x7ffbdda1b0d3: DB_HDB + 0x1b0d3 (?set_compile_status@HDB_NAMESPACE@@QEAAXW4CMP_STATUS_ENUM@1@@Z + 0x17)\n\t0x7ffbcb1d01a2: db_qtk_tcl + 0x201a2 (qtk_get_output_persona_filename + 0x122)\n\t 0x5aa24410: tcl86 + 0x14410 (TclInvokeStringCommand + 0xf0)\n\t 0x5aa261e2: tcl86 + 0x161e2 (TclNRRunCallbacks + 0x62)\n\t 0x5aa27a65: tcl86 + 0x17a65 (TclEvalEx + 0xa65)\n\t 0x5aab6f8b: tcl86 + 0xa6f8b (Tcl_FSEvalFileEx + 0x22b)\n\t 0x5aab5646: tcl86 + 0xa5646 (Tcl_EvalFile + 0x36)\n\t0x7ffc09c62606: comp_qexe + 0x12606 (?qexe_evaluate_tcl_script@@YA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z + 0x376)\n\t0x7ffc09c61864: comp_qexe + 0x11864 (qexe_do_tcl + 0x334)\n\t0x7ffc09c65fe6: comp_qexe + 0x15fe6 (qexe_run + 0x2d6)\n\t0x7ffc09c66e51: comp_qexe + 0x16e51 (?qexe_standard_main@@YAHPEAVQEXE_FRAMEWORK@@PEAPEBUQEXE_OPTION_DEFINITION@@HPEAPEBD@Z + 0xc1)\n\t0x7ff606f94ed2: quartus_sh + 0x4ed2 (?qsh_main@@YAHHPEAPEBD@Z + 0x52)\n\t0x7ffc133e2e98: CCL_MSG + 0x12e98 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)\n\t0x7ffc133e467e: CCL_MSG + 0x1467e (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x6e)\n\t0x7ffc134e6660: ccl_mem + 0x16660 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x70)\n\t0x7ffc133e2761: CCL_MSG + 0x12761 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)\n\t0x7ff606f95396: quartus_sh + 0x5396 (__tmainCRTStartup + 0x10e)\n\t0x7ffc26367033: KERNEL32 + 0x17033 (BaseThreadInitThunk + 0x13)\n\t0x7ffc279c2650: ntdll + 0x52650 (RtlUserThreadStart + 0x20)\n",
+		"stack_trace" : "\t0x7ffef44db3e3: DB_HDB + 0x1b3e3 (?set_compile_status@HDB_NAMESPACE@@QEAAXW4CMP_STATUS_ENUM@1@@Z + 0x17)\n\t0x7ffec62201a2: db_qtk_tcl + 0x201a2 (qtk_get_output_persona_filename + 0x122)\n\t 0x59b44410: tcl86 + 0x14410 (TclInvokeStringCommand + 0xf0)\n\t 0x59b461e2: tcl86 + 0x161e2 (TclNRRunCallbacks + 0x62)\n\t 0x59b47a65: tcl86 + 0x17a65 (TclEvalEx + 0xa65)\n\t 0x59bd6f8b: tcl86 + 0xa6f8b (Tcl_FSEvalFileEx + 0x22b)\n\t 0x59bd5646: tcl86 + 0xa5646 (Tcl_EvalFile + 0x36)\n\t0x7fff08602606: comp_qexe + 0x12606 (?qexe_evaluate_tcl_script@@YA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z + 0x376)\n\t0x7fff08601864: comp_qexe + 0x11864 (qexe_do_tcl + 0x334)\n\t0x7fff08605fe6: comp_qexe + 0x15fe6 (qexe_run + 0x2d6)\n\t0x7fff08606e51: comp_qexe + 0x16e51 (?qexe_standard_main@@YAHPEAVQEXE_FRAMEWORK@@PEAPEBUQEXE_OPTION_DEFINITION@@HPEAPEBD@Z + 0xc1)\n\t0x7ff7e6d04ed2: quartus_sh + 0x4ed2 (?qsh_main@@YAHHPEAPEBD@Z + 0x52)\n\t0x7fff10ca2e98: CCL_MSG + 0x12e98 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)\n\t0x7fff10ca467e: CCL_MSG + 0x1467e (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x6e)\n\t0x7fff10e06660: ccl_mem + 0x16660 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x70)\n\t0x7fff10ca2761: CCL_MSG + 0x12761 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)\n\t0x7ff7e6d05396: quartus_sh + 0x5396 (__tmainCRTStartup + 0x10e)\n\t0x7fff29897033: KERNEL32 + 0x17033 (BaseThreadInitThunk + 0x13)\n\t0x7fff2aea2650: ntdll + 0x52650 (RtlUserThreadStart + 0x20)\n",
 		"subsystem" : "unknown"
 	},
 	"quartus" : {
 		"quartus_bits" : "64",
-		"version" : "17.1.0",
-		"build" : "590",
-		"edition" : "Lite Edition"
+		"version" : "17.1.1",
+		"build" : "593",
+		"edition" : "Standard Edition"
 	}
 }

@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE AUTO
 set_global_assignment -name TOP_LEVEL_ENTITY tanh_mem_9k
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:56:29  APRIL 23, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION "17.1.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.1 Standard Edition"
 set_global_assignment -name VHDL_FILE ROM_sincrona_tanh.vhd
 set_global_assignment -name VHDL_FILE math_utility.vhd
 set_global_assignment -name VHDL_FILE float_pkg.vhd
