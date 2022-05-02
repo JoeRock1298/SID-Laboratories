@@ -151,7 +151,7 @@ refer to the applicable agreement for further details.
 		(text "we_n" (rect 213 355 450 720)(font "Arial" (color 0 0 0)))
 		(text "sw_external_connection" (rect 69 371 270 755)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 213 395 462 800)(font "Arial" (color 0 0 0)))
-		(text " nios_system_tec2 " (rect 398 416 904 842)(font "Arial" ))
+		(text " system " (rect 445 416 938 842)(font "Arial" ))
 		(line (pt 208 32)(pt 272 32)(line_width 1))
 		(line (pt 272 32)(pt 272 416)(line_width 1))
 		(line (pt 208 416)(pt 272 416)(line_width 1))

@@ -1,0 +1,35 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios_system_tec3.key -pg 1 -lvl 4 -y 410
+preplace inst nios_system_tec3.cpu.cpu -pg 1
+preplace inst nios_system_tec3.sw -pg 1 -lvl 4 -y 670
+preplace inst nios_system_tec3.jtag_uart -pg 1 -lvl 4 -y 210
+preplace inst nios_system_tec3.sdram -pg 1 -lvl 4 -y 30
+preplace inst nios_system_tec3.clk_50 -pg 1 -lvl 1 -y 540
+preplace inst nios_system_tec3.led -pg 1 -lvl 4 -y 770
+preplace inst nios_system_tec3.cpu.reset_bridge -pg 1
+preplace inst nios_system_tec3.cpu.clock_bridge -pg 1
+preplace inst nios_system_tec3.cpu -pg 1 -lvl 1 -y 350
+preplace inst nios_system_tec3.sysid -pg 1 -lvl 4 -y 590
+preplace inst nios_system_tec3.performance_counter_0 -pg 1 -lvl 4 -y 130
+preplace inst nios_system_tec3.clock_crossing_io -pg 1 -lvl 3 -y 270
+preplace inst nios_system_tec3.tanh_instruct_0 -pg 1 -lvl 4 -y 550
+preplace inst nios_system_tec3.pll -pg 1 -lvl 2 -y 450
+preplace inst nios_system_tec3.timer -pg 1 -lvl 4 -y 310
+preplace inst nios_system_tec3 -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>nios_system_tec3</net_container>(SLAVE)clk_50.clk_in,(SLAVE)nios_system_tec3.clk_50_clk_in) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>nios_system_tec3</net_container>(SLAVE)performance_counter_0.reset,(SLAVE)timer.reset,(MASTER)clk_50.clk_reset,(SLAVE)clock_crossing_io.m0_reset,(SLAVE)clock_crossing_io.s0_reset,(SLAVE)jtag_uart.reset,(SLAVE)sdram.reset,(SLAVE)key.reset,(SLAVE)led.reset,(SLAVE)sw.reset,(SLAVE)pll.reset,(SLAVE)sysid.reset,(MASTER)cpu.debug_reset_request,(SLAVE)cpu.reset) 1 0 4 200 510 600 400 860 240 1150
+preplace netloc EXPORT<net_container>nios_system_tec3</net_container>(SLAVE)nios_system_tec3.led_external_connection,(SLAVE)led.external_connection) 1 0 4 NJ 800 NJ 800 NJ 800 NJ
+preplace netloc EXPORT<net_container>nios_system_tec3</net_container>(MASTER)pll.outclk1,(MASTER)nios_system_tec3.pll_sdram) 1 2 3 NJ 480 NJ 540 NJ
+preplace netloc FAN_OUT<net_container>nios_system_tec3</net_container>(SLAVE)sysid.control_slave,(SLAVE)led.s1,(MASTER)clock_crossing_io.m0,(SLAVE)sw.s1,(SLAVE)key.s1,(SLAVE)timer.s1) 1 3 1 1070
+preplace netloc FAN_OUT<net_container>nios_system_tec3</net_container>(SLAVE)timer.irq,(MASTER)cpu.irq,(SLAVE)jtag_uart.irq,(SLAVE)key.irq) 1 1 3 580 290 NJ 260 1170
+preplace netloc EXPORT<net_container>nios_system_tec3</net_container>(SLAVE)nios_system_tec3.key_external_connection,(SLAVE)key.external_connection) 1 0 4 NJ 610 NJ 610 NJ 610 NJ
+preplace netloc FAN_OUT<net_container>nios_system_tec3</net_container>(SLAVE)cpu.clk,(SLAVE)clock_crossing_io.s0_clk,(SLAVE)jtag_uart.clk,(SLAVE)performance_counter_0.clk,(MASTER)pll.outclk0,(SLAVE)sdram.clk) 1 0 4 180 310 NJ 310 800 200 1170
+preplace netloc INTERCONNECT<net_container>nios_system_tec3</net_container>(MASTER)cpu.data_master,(SLAVE)cpu.debug_mem_slave,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)sdram.s1,(SLAVE)performance_counter_0.control_slave,(SLAVE)clock_crossing_io.s0,(MASTER)cpu.instruction_master) 1 0 4 180 490 560 380 820 180 1130
+preplace netloc EXPORT<net_container>nios_system_tec3</net_container>(SLAVE)nios_system_tec3.clk_50_clk_in_reset,(SLAVE)clk_50.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>nios_system_tec3</net_container>(MASTER)pll.outclk2,(SLAVE)led.clk,(SLAVE)sysid.clk,(SLAVE)key.clk,(SLAVE)sw.clk,(SLAVE)clock_crossing_io.m0_clk,(SLAVE)timer.clk) 1 2 2 880 220 1110
+preplace netloc EXPORT<net_container>nios_system_tec3</net_container>(SLAVE)sw.external_connection,(SLAVE)nios_system_tec3.sw_external_connection) 1 0 4 NJ 700 NJ 700 NJ 700 NJ
+preplace netloc EXPORT<net_container>nios_system_tec3</net_container>(SLAVE)sdram.wire,(SLAVE)nios_system_tec3.sdram_wire) 1 0 4 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc POINT_TO_POINT<net_container>nios_system_tec3</net_container>(SLAVE)pll.refclk,(MASTER)clk_50.clk) 1 1 1 620
+levelinfo -pg 1 0 150 1520
+levelinfo -hier nios_system_tec3 160 320 670 930 1220 1430
