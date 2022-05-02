@@ -1,0 +1,269 @@
+Restore Archived Project report for DE2_115_Media_Computer
+Mon May 02 11:41:14 2022
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Mon May 02 11:41:14 2022 ;
+; Revision Name                   ; DE2_115_Media_Computer                ;
+; Top-level Entity Name           ; DE2_115_Media_Computer_mpeiro         ;
+; Family                          ; Cyclone IV E                          ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/jororoc/Documents/QDesign/Tarea4_1/DE2_115_Computer_RTOS_p1.qar' into the 'C:/Users/jororoc/Documents/QDesign/Tarea4_1/DE2_115_Computer_RTOS_p1_restored/' directory
+Info: Generated report 'DE2_115_Media_Computer.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Mon May 02 11:41:14 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Files Restored                                                                                                            ;
++---------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                 ;
++---------------------------------------------------------------------------------------------------------------------------+
+; qar_info.json                                                                                                             ;
+; DE2_115_Media_Computer.qpf                                                                                                ;
+; DE2_115_Media_Computer.qsf                                                                                                ;
+; DE2_115_Media_Computer_mpeiro.v                                                                                           ;
+; ServoControl_hw.tcl                                                                                                       ;
+; assignment_defaults.qdf                                                                                                   ;
+; db/DE2_115_Media_Computer.db_info                                                                                         ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.db_info                                                         ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.cmp.dfp                                          ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.cmp.logdb                                        ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.map.dpi                                          ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.map.kpt                                          ;
+; mtl_touch_hw.tcl                                                                                                          ;
+; nios_system_pwm_rtos.qsys                                                                                                 ;
+; nios_system_pwm_rtos.sopcinfo                                                                                             ;
+; nios_system_pwm_rtos/nios_system_pwm_rtos.cmp                                                                             ;
+; nios_system_pwm_rtos/synthesis/nios_system_pwm_rtos.debuginfo                                                             ;
+; nios_system_pwm_rtos/synthesis/nios_system_pwm_rtos.qip                                                                   ;
+; nios_system_pwm_rtos/synthesis/nios_system_pwm_rtos.regmap                                                                ;
+; nios_system_pwm_rtos/synthesis/nios_system_pwm_rtos.v                                                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/ADC_CONTROL.v                                                                   ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_CRC16_Generator.vhd                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_CRC7_Generator.vhd                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_Card_48_bit_Command_Generator.vhd                                  ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_Card_Avalon_Interface.vhd                                          ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_Card_Buffer.vhd                                                    ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_Card_Clock.vhd                                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_Card_Control_FSM.vhd                                               ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_Card_Interface.vhd                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_Card_Memory_Block.vhd                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_Card_Response_Receiver.vhd                                         ;
+; nios_system_pwm_rtos/synthesis/submodules/Altera_UP_SD_Signal_Trigger.vhd                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/PWM_Generator.v                                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_avalon_sc_fifo.v                                                         ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_avalon_st_pipeline_base.v                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_avalon_st_pipeline_stage.sv                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_default_burst_converter.sv                                               ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_incr_burst_converter.sv                                                  ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_address_alignment.sv                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_arbitrator.sv                                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_burst_adapter.sv                                                  ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv                                             ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_burst_adapter_new.sv                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv                                           ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_burst_uncompressor.sv                                             ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_master_agent.sv                                                   ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_master_translator.sv                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_reorder_memory.sv                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_slave_agent.sv                                                    ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_slave_translator.sv                                               ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_traffic_limiter.sv                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_merlin_width_adapter.sv                                                  ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_reset_controller.sdc                                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_reset_controller.v                                                       ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_reset_synchronizer.v                                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_tristate_controller_aggregator.sv                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_tristate_controller_translator.sv                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_altpll.v                                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_audio_bit_counter.v                                                   ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_audio_in_deserializer.v                                               ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_audio_out_serializer.v                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init.v                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_d5m.v                                             ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_dc2.v                                             ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_lcm.v                                             ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_ltm.v                                             ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_ob_adv7180.v                                      ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_ob_adv7181.v                                      ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_ob_audio.v                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_ob_de10_standard.v                                ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_ob_de1_soc.v                                      ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_ob_de2_115.v                                      ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_auto_init_ob_de2i_150.v                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_av_config_serial_bus_controller.v                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_avalon_video_vga_timing.v                                             ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_character_lcd_communication.v                                         ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_character_lcd_initialization.v                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_clock_edge.v                                                          ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_ps2.v                                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_ps2_command_out.v                                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_ps2_data_in.v                                                         ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_rs232_counters.v                                                      ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_rs232_in_deserializer.v                                               ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_rs232_out_serializer.v                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_slow_clock_generator.v                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_sync_fifo.v                                                           ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_video_128_character_rom.v                                             ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_video_alpha_blender_normal.v                                          ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_video_alpha_blender_simple.v                                          ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_video_char_mode_rom_128.mif                                           ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_video_fb_color_rom.mif                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_video_fb_color_rom.v                                                  ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_video_scaler_multiply_height.v                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_video_scaler_multiply_width.v                                         ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_up_video_scaler_shrink.v                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/altera_wrap_burst_converter.sv                                                  ;
+; nios_system_pwm_rtos/synthesis/submodules/avalon_ltm_touch_config.v                                                       ;
+; nios_system_pwm_rtos/synthesis/submodules/avalon_servoCTRL.v                                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/avalon_slave_MM_interface.v                                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_HEX3_HEX0.v                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_HEX7_HEX4.v                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_alpha_blending.v                                           ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_audio.v                                                    ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_audio_config.v                                             ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_audio_pll.v                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_avalon_st_adapter.v                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_avalon_st_adapter_channel_adapter_0.sv                     ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_char_lcd.v                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu.v                                                      ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu.ocp                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu.sdc                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu.v                                                  ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_bht_ram.mif                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_dc_tag_ram.mif                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_debug_slave_sysclk.v                               ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_debug_slave_tck.v                                  ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_debug_slave_wrapper.v                              ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_ic_tag_ram.mif                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_mult_cell.v                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_ociram_default_contents.mif                        ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_rf_ram_a.mif                                       ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_rf_ram_b.mif                                       ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_cpu_cpu_test_bench.v                                       ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_flash_bridge.sv                                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_flash_controller.v                                         ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_green_leds.v                                               ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_irq_mapper.sv                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_jtag_uart.v                                                ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0.v                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_avalon_st_adapter.v                      ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_avalon_st_adapter_001.v                  ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_avalon_st_adapter_003.v                  ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_avalon_st_adapter_003_error_adapter_0.sv ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv     ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_cmd_demux.sv                             ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_cmd_demux_001.sv                         ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_cmd_demux_002.sv                         ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_cmd_mux.sv                               ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_cmd_mux_001.sv                           ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_cmd_mux_003.sv                           ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_cmd_mux_022.sv                           ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_cmd_mux_026.sv                           ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_router.sv                                ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_router_001.sv                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_router_002.sv                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_router_003.sv                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_router_004.sv                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_router_006.sv                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_router_025.sv                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_router_029.sv                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_rsp_demux.sv                             ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_rsp_demux_001.sv                         ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_rsp_demux_003.sv                         ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_rsp_demux_022.sv                         ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_rsp_demux_026.sv                         ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_rsp_mux.sv                               ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_rsp_mux_001.sv                           ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mm_interconnect_0_rsp_mux_002.sv                           ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mtl_char_buffer.v                                          ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mtl_controller.v                                           ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mtl_dual_clock_buffer.v                                    ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mtl_pixel_buffer_dma.v                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mtl_rgb_resampler.v                                        ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_mtl_scaler.v                                               ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_onchip_memory.hex                                          ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_onchip_memory.v                                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_performance_counter.v                                      ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_ps2_key.v                                                  ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_pushbuttons.v                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_red_leds.v                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_sdram.v                                                    ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_sdram_test_component.v                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_serial_port.v                                              ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_sram.v                                                     ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_switches.v                                                 ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_sys_sdram_pll.v                                            ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_sysid.v                                                    ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_timer.v                                                    ;
+; nios_system_pwm_rtos/synthesis/submodules/nios_system_pwm_rtos_video_pll.v                                                ;
+; output_files/DE2_115_Media_Computer.jdi                                                                                   ;
+; output_files/DE2_115_Media_Computer.sld                                                                                   ;
+; output_files/DE2_115_Media_Computer.sof                                                                                   ;
+; output_files/stp1.stp                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Files Not Restored                                                                        ;
++-------------------------------------------------------------------------------------------+
+; File Name                                                                                 ;
++-------------------------------------------------------------------------------------------+
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.cmp.cdb          ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.cmp.hdb          ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.cmp.rcfdb        ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.map.cdb          ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.map.hbdb.cdb     ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.map.hbdb.hb_info ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.map.hbdb.hdb     ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.map.hbdb.sig     ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.root_partition.map.hdb          ;
+; incremental_db/compiled_partitions/DE2_115_Media_Computer.rrp.hdb                         ;
++-------------------------------------------------------------------------------------------+
+
+

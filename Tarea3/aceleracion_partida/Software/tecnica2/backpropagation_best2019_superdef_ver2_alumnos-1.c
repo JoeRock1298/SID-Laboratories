@@ -6,8 +6,8 @@
 #include <math.h>
 #include "system.h"
 #include "altera_avalon_performance_counter.h"
-#define DER_TANGENTE_TOP_INST(A) __builtin_custom_fnf(ALT_CI_DER_TANGENTE_H2_TOP_0_1_N,(A))
-#define TANGENTE_TOP_INST(A) __builtin_custom_fnf(ALT_CI_TANGENTE_H2_TOP_0_1_N,(A))
+//#define DER_TANGENTE_TOP_INST(A) __builtin_custom_fnf(ALT_CI_DER_TANGENTE_H2_TOP_0_1_N,(A))
+//#define TANGENTE_TOP_INST(A) __builtin_custom_fnf(ALT_CI_TANGENTE_H2_TOP_0_1_N,(A))
 
 //// Data dependent settings ////
 #define numInputs  2

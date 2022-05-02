@@ -1,5 +1,5 @@
 Flow report for tecnica2
-Mon May 02 10:45:35 2022
+Mon May 02 11:24:34 2022
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -37,24 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------------+
-; Flow Summary                                                                           ;
-+-----------------------------+----------------------------------------------------------+
-; Flow Status                 ; Successful - Mon May 02 10:45:35 2022                    ;
-; Quartus Prime Version       ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
-; Revision Name               ; tecnica2                                                 ;
-; Top-level Entity Name       ; tecnica2                                                 ;
-; Family                      ; Cyclone V                                                ;
-; Device                      ; 5CSEMA5F31C6                                             ;
-; Timing Models               ; Final                                                    ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                                ;
-; Total registers             ; N/A until Partition Merge                                ;
-; Total pins                  ; N/A until Partition Merge                                ;
-; Total virtual pins          ; N/A until Partition Merge                                ;
-; Total block memory bits     ; N/A until Partition Merge                                ;
-; Total PLLs                  ; N/A until Partition Merge                                ;
-; Total DLLs                  ; N/A until Partition Merge                                ;
-+-----------------------------+----------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Flow Summary                                                                               ;
++---------------------------------+----------------------------------------------------------+
+; Flow Status                     ; Successful - Mon May 02 11:24:09 2022                    ;
+; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                   ; tecnica2                                                 ;
+; Top-level Entity Name           ; tecnica2                                                 ;
+; Family                          ; Cyclone V                                                ;
+; Device                          ; 5CSEMA5F31C6                                             ;
+; Timing Models                   ; Final                                                    ;
+; Logic utilization (in ALMs)     ; 3,957 / 32,070 ( 12 % )                                  ;
+; Total registers                 ; 5593                                                     ;
+; Total pins                      ; 235 / 457 ( 51 % )                                       ;
+; Total virtual pins              ; 0                                                        ;
+; Total block memory bits         ; 83,472 / 4,065,280 ( 2 % )                               ;
+; Total DSP Blocks                ; 7 / 87 ( 8 % )                                           ;
+; Total HSSI RX PCSs              ; 0                                                        ;
+; Total HSSI PMA RX Deserializers ; 0                                                        ;
+; Total HSSI TX PCSs              ; 0                                                        ;
+; Total HSSI PMA TX Serializers   ; 0                                                        ;
+; Total PLLs                      ; 1 / 6 ( 17 % )                                           ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                            ;
++---------------------------------+----------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/02/2022 10:44:47 ;
+; Start date & time ; 05/02/2022 11:19:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tecnica2            ;
 +-------------------+---------------------+
@@ -73,7 +78,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------+--------------------------------------------------------------------+---------------+----------------------+------------+
 ; Assignment Name                                   ; Value                                                              ; Default Value ; Entity Name          ; Section Id ;
 +---------------------------------------------------+--------------------------------------------------------------------+---------------+----------------------+------------+
-; COMPILER_SIGNATURE_ID                             ; 242211430917466.165148108706552                                    ; --            ; --                   ; --         ;
+; COMPILER_SIGNATURE_ID                             ; 242211430917466.165148315907012                                    ; --            ; --                   ; --         ;
 ; FITTER_EFFORT                                     ; Standard Fit                                                       ; Auto Fit      ; --                   ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                            ; 85                                                                 ; --            ; --                   ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                            ; 0                                                                  ; --            ; --                   ; --         ;
@@ -101,35 +106,44 @@ refer to the applicable agreement for further details.
 ; ROUTER_TIMING_OPTIMIZATION_LEVEL                  ; MAXIMUM                                                            ; Normal        ; --                   ; --         ;
 ; SLD_FILE                                          ; nios_system_tec2/synthesis/nios_system_tec2.regmap                 ; --            ; --                   ; --         ;
 ; SLD_FILE                                          ; nios_system_tec2/synthesis/nios_system_tec2.debuginfo              ; --            ; --                   ; --         ;
-; SLD_INFO                                          ; QSYS_NAME nios_system_tec2 HAS_SOPCINFO 1 GENERATION_ID 1650395614 ; --            ; nios_system_tec2     ; --         ;
+; SLD_INFO                                          ; QSYS_NAME nios_system_tec2 HAS_SOPCINFO 1 GENERATION_ID 1651483083 ; --            ; nios_system_tec2     ; --         ;
 ; SOPCINFO_FILE                                     ; nios_system_tec2/synthesis/../../nios_system_tec2.sopcinfo         ; --            ; --                   ; --         ;
 ; SYNTHESIS_ONLY_QIP                                ; On                                                                 ; --            ; --                   ; --         ;
 +---------------------------------------------------+--------------------------------------------------------------------+---------------+----------------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:48     ; 1.0                     ; 5106 MB             ; 00:01:12                           ;
-; Total                  ; 00:00:48     ; --                      ; --                  ; 00:01:12                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:01:05     ; 1.0                     ; 5177 MB             ; 00:01:27                           ;
+; Fitter                    ; 00:03:21     ; 1.2                     ; 7240 MB             ; 00:07:39                           ;
+; Assembler                 ; 00:00:14     ; 1.0                     ; 4924 MB             ; 00:00:14                           ;
+; TimeQuest Timing Analyzer ; 00:00:24     ; 1.9                     ; 5465 MB             ; 00:00:39                           ;
+; Total                     ; 00:05:04     ; --                      ; --                  ; 00:09:59                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+------------------------+------------------+------------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
-+------------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; labpro01         ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off tarea_aceleracion -c tecnica2 --disable_all_banners --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off tarea_aceleracion -c tecnica2
+quartus_fit --read_settings_files=off --write_settings_files=off tarea_aceleracion -c tecnica2
+quartus_asm --read_settings_files=off --write_settings_files=off tarea_aceleracion -c tecnica2
+quartus_sta tarea_aceleracion -c tecnica2
 
 
 
