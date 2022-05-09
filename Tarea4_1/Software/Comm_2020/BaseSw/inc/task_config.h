@@ -72,6 +72,7 @@ OS_STK	  chequeomotor_stk[TASK_STACKSIZE];
 
 /* Definition of Message Queue */
 #define   MSG_QUEUE_SIZE  30           /*Size of message queue used in example*/
+#define   MSG_QUEUE_SIZE_E5  9           /*Size of message queue used in example*/
 OS_EVENT  *msgqueue;                   /*Message queue pointer */
 void      *msgqueueTbl[MSG_QUEUE_SIZE];/*Storage for messages*/
 

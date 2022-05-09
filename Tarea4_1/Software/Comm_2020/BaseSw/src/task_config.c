@@ -191,7 +191,8 @@ void getsem_task3(void* pdata)
   INT8U return_code = OS_NO_ERR;
   while (1)
   {
-    OSSemPend(shared_resource_sem, 0, &return_code);
+    //OSSemPend(shared_resource_sem, 0, &return_code);
+    OSSemPend(shared_resource_sem, 100, &return_code); /*Ejercicio 2 g*/
     strcpy(&sem_owner_task_name[0], "getsem_task3");
     alt_ucosii_check_return_code(return_code);
     getsem_task3_got_sem++;
@@ -207,7 +208,7 @@ void getsem_task4(void* pdata)
   BOOLEAN stopper=1;
   while (1)
   {
- //   OSSemPend(shared_resource_sem, 0, &return_code);
+    //OSSemPend(shared_resource_sem, 0, &return_code);
     OSSemAccept(shared_resource_sem);
 	return_code=OSSemQuery(shared_resource_sem,&sem_data);
 	alt_ucosii_check_return_code(return_code);
@@ -221,10 +222,12 @@ void getsem_task4(void* pdata)
 		strcpy(&sem_owner_task_name[0], "getsem_task4");
 		alt_ucosii_check_return_code(return_code);
 		getsem_task4_got_sem++;
-	}
+	//}
 
-  //  OSSemPost(shared_resource_sem);
-    OSTimeDlyHMSM(0, 0, 0, 130);
+    //OSSemPost(shared_resource_sem); // comentar para el apartado d y f
+    //OSTimeDlyHMSM(0, 0, 0, 130);
+    OSTimeDlyHMSM(0, 0, 5, 0); /*Ejercicio 2 f*/
+	}
   }
 }
 
@@ -310,7 +313,7 @@ void send_task(void* pdata)
      alt_ucosii_check_return_code(return_code);
     if(queue_data.OSNMsgs < MSG_QUEUE_SIZE) /*Check the number of messages*/
      {                                       /*in the message queue*/
-       if (queue_data.OSNMsgs == 9)
+       if (queue_data.OSNMsgs == MSG_QUEUE_SIZE_E5) // Size de 9
        {
      	  return_code = OSQPostFront(msgqueue, (void *)&mensaje1[0]); //introducimos el mensaje secreto como LIFO sin Broadcast
      	  alt_ucosii_check_return_code(return_code);
@@ -358,7 +361,7 @@ void receive_task1(void* pdata)
     number_of_messages_received_task1++;
     resultado=strcmp(msg,"ESTE ES EL MENSAJE SECRETO");
 // EJERCICIO 5 APARTADO D //
-/*    if (resultado==0){
+    if (resultado==0){
      return_code=OSQFlush(msgqueue);
      alt_ucosii_check_return_code(return_code);
      printf("La cola se ha vaciado\n");
@@ -366,7 +369,7 @@ void receive_task1(void* pdata)
     else
      {
     }
-*/
+
     OSTimeDlyHMSM(0, 0, 3, 0);
 
   }
@@ -415,7 +418,8 @@ int initOSDataStructs(void)
   INT8U ErrorFlags = OS_NO_ERR;
 
   msgqueue = OSQCreate(&msgqueueTbl[0], MSG_QUEUE_SIZE);
-  shared_resource_sem = OSSemCreate(1);
+  //shared_resource_sem = OSSemCreate(1);
+  shared_resource_sem = OSSemCreate(3); /*ejercicio 2 e*/
   //Ejercicio 4 EFG
   EstadoMotor = OSFlagCreate(0x00, &ErrorFlags);
   alt_ucosii_check_return_code(ErrorFlags);
@@ -553,7 +557,7 @@ int initCreateTasks(void)
                              0);
   alt_ucosii_check_return_code(return_code);
 
-  return_code = OSTaskCreateExt(read_switches,
+  /*return_code = OSTaskCreateExt(read_switches,
                               NULL,
                               (void *)&read_switches_stk[TASK_STACKSIZE],
                               READ_SWITCHES_PRIORITY,
@@ -562,9 +566,10 @@ int initCreateTasks(void)
                               TASK_STACKSIZE,
                               NULL,
                               0);
-   alt_ucosii_check_return_code(return_code);
+   alt_ucosii_check_return_code(return_code);*/
 
    // EJERCICIO 2
+  /*
 
    return_code = OSTaskCreateExt(getsem_task3,
                               NULL,
@@ -613,7 +618,7 @@ int initCreateTasks(void)
                                  TASK_STACKSIZE,
                                  NULL,
                                  0);
-      alt_ucosii_check_return_code(return_code);
+      alt_ucosii_check_return_code(return_code);*/
 
    // EJERCICIO 4
 
