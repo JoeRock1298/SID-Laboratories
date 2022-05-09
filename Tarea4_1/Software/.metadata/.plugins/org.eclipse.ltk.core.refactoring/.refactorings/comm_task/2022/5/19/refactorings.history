@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;comm_task/alt_ucosii_simple_error_check-1.h&apos; to &apos;alt_ucosii_simple_error_check.h&apos;" description="Rename resource &apos;alt_ucosii_simple_error_check-1.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="alt_ucosii_simple_error_check-1.h" name="alt_ucosii_simple_error_check.h" stamp="1652086762066" updateReferences="true"/>
+</session>
