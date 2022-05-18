@@ -132,7 +132,7 @@ OS_STK *OSTaskStkInit(void (*task)(void *pd), void *pdata, OS_STK *pstk, INT16U 
 */
 void OSTaskCreateHook (OS_TCB *ptcb)
 {
-   // ptcb = ptcb;                       /* Prevent compiler warning */
+    ptcb = ptcb;                       /* Prevent compiler warning */
 }
 
 
@@ -149,7 +149,7 @@ void OSTaskCreateHook (OS_TCB *ptcb)
 */
 void OSTaskDelHook (OS_TCB *ptcb)
 {
-    //ptcb = ptcb;                       /* Prevent compiler warning                                     */
+    ptcb = ptcb;                       /* Prevent compiler warning                                     */
 }
 
 /*

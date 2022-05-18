@@ -1,9 +1,9 @@
-13:05:59 **** Incremental Build of configuration Nios II for project Stats_MTL ****
+11:05:41 **** Incremental Build of configuration Nios II for project Stats_MTL ****
 make all 
 Info: Building ../Stats_MTL_bsp/
 C:/intelFPGA/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Stats_MTL_bsp/
 [BSP build complete]
 [Stats_MTL build complete]
 
-13:06:00 Build Finished (took 1s.222ms)
+11:05:43 Build Finished (took 1s.224ms)
 
